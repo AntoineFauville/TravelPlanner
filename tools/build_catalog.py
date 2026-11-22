@@ -31,6 +31,39 @@ COORDS = {
     "Itsukushima Shrine": (34.2960, 132.3198), "Nelson's Dockyard": (17.0072, -61.7640), "Isle of Pines (New Caledonia)": (-22.6167, 167.4833),
     "Great Mosque of Kairouan": (35.6817, 10.1042), "Tsingy de Bemaraha National Park": (-18.75, 44.75),
     "Tana Toraja Regency": (-2.97, 119.90), "Haʻamonga ʻa Maui": (-21.1367, -175.0481),
+    "Tarxien Temples": (35.8692, 14.512),
+    "Prehistoric Rock Art Sites in the Côa Valley": (41.08, -7.112),
+    "Cave of Niaux": (42.8203, 1.5936),
+    "Giants' grave": (41.0506, 9.358),
+    "Rock carvings at Alta": (69.9469, 23.1878),
+    "Ale's Stones": (55.3826, 14.0543),
+    "Cradle of Humankind": (-25.925, 27.767),
+    "Twyfelfontein": (-20.5956, 14.3722),
+    "Mzoura": (35.4042, -5.9444),
+    "Liangzhu culture": (30.3956, 119.9908),
+    "Gochang, Hwasun and Ganghwa Dolmen Sites": (35.448, 126.648),
+    "Tamgaly": (43.8033, 75.535),
+    "Chinchorro mummies": (-18.516, -70.181),
+    "Stone spheres of Costa Rica": (8.911, -83.477),
+    "Zeugma Mosaic Museum": (37.0753, 37.3856),
+    "Matera": (40.6664, 16.6106),
+    "Little Petra": (30.375, 35.4519),
+    "Nalanda mahavihara": (25.1367, 85.4438),
+    "Dazu Rock Carvings": (29.7011, 105.705),
+    "Carajía": (-6.164, -78.021),
+    "Ruins of Quilmes": (-26.464, -66.035),
+    "Leluh archaeological site": (5.3325, 163.021),
+    "Jebel Fihrayn": (24.947, 45.992),
+    "Mount Kilimanjaro": (-3.0674, 37.3556),
+    "Skeleton Coast": (-20.0, 13.35),
+    "Hunza Valley": (36.3167, 74.65),
+    "Pamir Highway": (38.17, 73.97),
+    "Yuanyang County, Yunnan": (23.12, 102.78),
+    "Cenote": (20.8, -88.5),
+    "General Carrera Lake": (-46.649, -72.627),
+    "Quebrada de Humahuaca": (-23.2, -65.35),
+    "Amazon rainforest": (-3.13, -59.9),
+    "Hallstatt": (47.5622, 13.6493),
 }
 # Wikipedia article to take the photo from, when the main one has a map or logo.
 PHOTO_FROM = {
@@ -60,13 +93,12 @@ PHOTO_FILE = {
 def get(params):
     params = dict(params, format="json", formatversion="2")
     req = urllib.request.Request(API + "?" + urllib.parse.urlencode(params), headers=UA)
-    for attempt in range(5):
+    for attempt in range(15):
         try:
             with urllib.request.urlopen(req, timeout=40) as r:
                 return json.load(r)
         except Exception as e:  # rate limit or network hiccup
-            print("  retry:", e)
-            time.sleep(4 * (attempt + 1))
+            time.sleep(min(60, int(getattr(e, "headers", None) and e.headers.get("Retry-After") or 0) or 5 * (attempt + 1)))
     raise SystemExit("Wikipedia did not answer")
 
 
@@ -128,16 +160,18 @@ def credits_for(files):
 
 
 def main():
-    rows = []
-    with open(os.path.join(ROOT, "tools", "sites.txt"), encoding="utf-8") as f:
-        for n, line in enumerate(f, 1):
+    rows, names = [], set()
+    for fname in ("sites.txt", "sites_prehistory.txt", "sites_nature.txt"):
+        for n, line in enumerate(open(os.path.join(ROOT, "tools", fname), encoding="utf-8"), 1):
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
             p = line.split("|")
-            if len(p) != 9:
-                raise SystemExit(f"sites.txt line {n}: expected 9 fields, got {len(p)}: {line[:60]}")
-            rows.append(p)
+            if len(p) not in (9, 13):
+                raise SystemExit(f"{fname} line {n}: expected 9 or 13 fields, got {len(p)}: {line[:60]}")
+            if p[1] or p[0] not in names:
+                rows.append(p[:9])
+            names.add(p[0])
 
     titles = [r[0] for r in rows]
     pages = pages_for(titles)
@@ -178,6 +212,8 @@ def main():
         s = {"id": sid, "name": name or title, "country": country, "type": kind, "region": region, "days": float(days),
              "months": months(when), "why": why, "lat": round(c[0], 4), "lon": round(c[1], 4),
              "wiki": "https://en.wikipedia.org/wiki/" + urllib.parse.quote(pg.get("title", title).replace(" ", "_"))}
+        if pg.get("missing"):
+            del s["wiki"]
         if url:
             s["img"] = url
             s["credit"] = cred.get(fname, {})

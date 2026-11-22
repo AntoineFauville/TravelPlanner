@@ -1,10 +1,11 @@
-import { loadData, LABEL } from './data.js';
+import { loadData, LABEL, HOMES, setHome } from './data.js';
 import { state, save, onChange, exportText, importText } from './store.js';
 import { $, $$, esc, toast } from './util.js';
 import { initMap, setView, events, map, pad } from './map.js';
 import { drawCatalogue, refreshCard } from './catalogue.js';
-import { initDiscover, drawDiscover, resetCard, onWho } from './discover.js';
+import { initDiscover, drawDiscover, resetCard, onWho, onWhere } from './discover.js';
 import { initDetail, openDetail, closeDetail, openId, draw as drawDetail } from './detail.js';
+import { initPort, portOpen, drawPort } from './port.js';
 import { initTravel, enterTravel, drawTravel } from './travel.js';
 import { initHolidays, enterHolidays, drawHolidays } from './holidays.js';
 import { initSailing, enterSailing, drawSailing, onPort, onCountry } from './sailing.js';
@@ -48,6 +49,7 @@ function settings() {
   d.innerHTML = `<form method="dialog" class="stack">
     <h2>Settings</h2>
     <div class="grid2">${[0, 1].map(i => `<label class="f">Person ${i + 1}<input data-person="${i}" value="${esc(state.people[i])}" maxlength="20"></label>`).join('')}</div>
+    <div class="grid2"><label class="f">Your trips start in<select data-set="home">${Object.keys(HOMES).map(h => `<option ${h === state.home ? 'selected' : ''}>${h}</option>`).join('')}</select></label><label class="f">Car range, km per tank<input type="number" min="200" max="2000" step="50" data-set="range" value="${state.range}"></label></div>
     <div class="stack tight"><h3>Backup</h3>
       <p class="sm soft">Your ratings and plans are saved in this browser on this computer. Save a backup file now and then, or to move to another computer.</p>
       <div class="row"><button type="button" class="btn" data-do="export">Save backup</button><button type="button" class="btn" data-do="import">Load backup</button><input type="file" accept=".json,application/json" hidden></div></div>
@@ -62,6 +64,8 @@ function initSettings() {
       state.people[+e.target.dataset.person] = e.target.value.trim() || `Person ${+e.target.dataset.person + 1}`;
       save('people');
     }
+    if (e.target.dataset.set === 'home') { state.home = e.target.value; setHome(state.home); save('all'); }
+    if (e.target.dataset.set === 'range') { state.range = Math.min(2000, Math.max(200, +e.target.value || 1200)); save('all'); }
     if (e.target.type === 'file' && e.target.files[0]) {
       try { importText(await e.target.files[0].text()); toast('Backup loaded.'); d.close(); go(view); } catch (err) { toast(err instanceof SyntaxError ? 'This file is not a TravelPlanner backup.' : err.message); }
     }
@@ -120,9 +124,10 @@ async function start() {
     console.error(e);
     return;
   }
-  initDetail(); initTravel(); initHolidays(); initSailing(); initSettings(); initDiscover(go);
+  initDetail(); initTravel(); initHolidays(); initSailing(); initSettings(); initDiscover(go); initPort();
   onWho(() => save('who'));
-  $('#nav').addEventListener('click', e => { const v = e.target.dataset.view; if (v) go(v); });
+  onWhere(id => openDetail(id));
+  $('#nav').addEventListener('click', e => { const v = e.target.closest('button')?.dataset.view; if (v) go(v); });
   $('#who').addEventListener('click', e => {
     if (e.target.dataset.who === undefined) return;
     state.who = +e.target.dataset.who;
@@ -140,7 +145,7 @@ async function start() {
     drawWho();
     if (view === 'catalogue') { if (what === 'rating') $$('.pc').forEach(c => { if (c.matches(':hover') || c.contains(document.activeElement) || c.dataset.id === openId()) refreshCard(c.dataset.id); }); else drawCatalogue(); }
     if (view === 'discover') { if (what === 'who') resetCard(); drawDiscover(); }
-    if (openId()) { const y = $('#detail').scrollTop; drawDetail(); $('#detail').scrollTop = y; }
+    if (openId() || portOpen()) { const y = $('#detail').scrollTop; if (openId()) drawDetail(); else drawPort(); $('#detail').scrollTop = y; }
     redraw(what);
   });
   events.addEventListener('place', e => openDetail(e.detail, false));

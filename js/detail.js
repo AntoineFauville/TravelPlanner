@@ -5,14 +5,19 @@ import { $, esc, MONTHS, monthRange } from './util.js';
 import { rateBar, badge } from './scale.js';
 import { gallery } from './photos.js';
 import { facts } from './discover.js';
+import { mustButton } from './port.js';
 import { select, flyTo, pad } from './map.js';
 
 let open = null;
 export const openId = () => open;
+// another panel (a port) may borrow this space
+let release = null;
+export function takeOver(fn) { open = null; release?.(); release = fn; select(null); }
 
 export function openDetail(id, fly = true) {
   const p = placeById(id);
   if (!p) return;
+  release?.(); release = null;
   open = id;
   document.body.classList.add('has-detail');
   const el = $('#detail');
@@ -26,6 +31,7 @@ export function openDetail(id, fly = true) {
 }
 
 export function closeDetail() {
+  release?.(); release = null;
   open = null;
   $('#detail').hidden = true;
   document.body.classList.remove('has-detail');
@@ -55,6 +61,7 @@ export function draw() {
         <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=${p.lat},${p.lon}">Maps</a>
         ${p.wiki ? `<a class="btn" target="_blank" rel="noopener" href="${esc(p.wiki)}">Wikipedia</a>` : ''}
       </div>
+      ${document.body.dataset.view === 'sailing' ? mustButton(v.port.id) : ''}
       <div class="stack tight">
         ${[0, 1].map(w => `<div><div class="sm soft" style="margin-bottom:4px">${esc(state.people[w])}</div>${rateBar(p.id, w)}</div>`).join('')}
       </div>
@@ -97,5 +104,5 @@ export function initDetail() {
     if (k === 'days') v = Math.min(90, Math.max(0.5, +v || 1));
     setExtra(open, { [k]: v });
   });
-  addEventListener('keydown', e => { if (e.key === 'Escape' && open && !document.querySelector('dialog[open]')) closeDetail(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !el.hidden && !document.querySelector('dialog[open]')) closeDetail(); });
 }

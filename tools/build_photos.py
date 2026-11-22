@@ -25,11 +25,15 @@ EN = "https://en.wikipedia.org/w/api.php"
 MAX = 6
 # photos to leave out, one Commons file name per line
 SKIP = {x.strip().replace("_", " ") for x in open(os.path.join(ROOT, "tools", "photos_skip.txt"), encoding="utf-8")}
-QUICK = "quick" in sys.argv      # article photos only
+QUICK = "quick" in sys.argv      # use only what is already in the cache
 BAD = re.compile(r"\b(maps?|karte|mapa|carte|plan|plano|layout|diagram|logo|flag|coat|seal|stamp|coins?|topographw*|relief map|banknote|portrait|locat|locator|satellite|"
                  r"nasa|iss\d*|landsat|sentinel|chart|graph|drawing|engraving|lithograph|painting|sketch|book|manuscript|page|poster|"
                  r"sign|banner|montage|collage|bust|statuette|museum|louvre|british museum|cropped face|president|minister|icon|symbol|"
                  r"reconstruction|model|render|3d|illustration|postcard|18\d\d|19[0-4]\d)\b", re.I)
+
+
+def cached(url):
+    return os.path.exists(os.path.join(CACHE, hashlib.md5(url.encode()).hexdigest() + ".json"))
 
 
 def fetch(url, pause=3.0):
@@ -60,7 +64,10 @@ def fetch(url, pause=3.0):
 
 
 def api(base, **p):
-    return fetch(base + "?" + urllib.parse.urlencode(dict(p, action="query", format="json", formatversion=2)))
+    url = base + "?" + urllib.parse.urlencode(dict(p, action="query", format="json", formatversion=2))
+    if QUICK and "generator" in p and not cached(url):      # quick: no new searches
+        return {}
+    return fetch(url)
 
 
 INFO = dict(prop="imageinfo", iiprop="size|url|mime|extmetadata", iiurlwidth=960, iiextmetadatafilter="Artist|LicenseShortName")
@@ -82,7 +89,7 @@ def clean(page):
 
 def main():
     cat = json.load(open(os.path.join(ROOT, "data", "catalog.json"), encoding="utf-8"))
-    titles = {s["id"]: urllib.parse.unquote(s["wiki"].rsplit("/wiki/", 1)[1]).replace("_", " ") for s in cat}
+    titles = {s["id"]: urllib.parse.unquote(s.get("wiki", "/wiki/" + s["name"]).rsplit("/wiki/", 1)[1]).replace("_", " ") for s in cat}
     qids = {}
     tl = list(titles.values())
     for i in range(0, len(tl), 40):
@@ -121,7 +128,7 @@ def main():
     for n, s in enumerate(cat, 1):
         title, quality = titles[s["id"]], []
         article = [info[f] for f in files[s["id"]] if info.get(f)]
-        if qids.get(title) and not QUICK:
+        if qids.get(title):
             q = api(COMMONS, generator="search", gsrnamespace=6, gsrlimit=20,
                     gsrsearch=f"haswbstatement:P180={qids[title]} haswbstatement:P6731=Q63348069|P6731=Q63348049|P6731=Q63348040", **INFO)
             pages = sorted(q.get("query", {}).get("pages", []), key=lambda p: p.get("index", 99))
@@ -154,7 +161,7 @@ def main():
         for c in rest:
             if len(picks) < 3:
                 add(c, 2)
-        if len(picks) < 3 and not QUICK:        # few photos so far: plain search by name
+        if len(picks) < 3:        # few photos so far: plain search by name
             q = api(COMMONS, generator="search", gsrnamespace=6, gsrlimit=15, gsrsearch=f"{title} filetype:bitmap filew:>1600", **INFO)
             for p in sorted(q.get("query", {}).get("pages", []), key=lambda p: p.get("index", 99)):
                 c = clean(p)
@@ -164,10 +171,21 @@ def main():
         if n % 25 == 0:
             print(n, "places", flush=True)
 
-    with open(os.path.join(ROOT, "data", "photos.json"), "w", encoding="utf-8") as f:
+    # catalogue photos that are maps, satellite views or logos: shown last when there are better ones
+    manual = {"cradle-of-humankind", "shimao", "glacier-bay", "vatnajokull-ice-caves", "isle-of-skye", "fitz-roy-el-chalten", "south-georgia", "samaria-gorge",
+              "danakil-erta-ale", "rangiroa", "lake-natron-ol-doinyo-lengai", "yakushima", "jeju", "tubbataha-reefs", "similan-islands", "lake-toba", "skeleton-coast",
+              "richat-eye-of-the-sahara", "etosha", "jebel-irhoud", "liangzhu-jade-city", "peninsula-valdes", "pamir-highway", "makgadikgadi-salt-pans", "kuk-swamp"}
+    keep = {"lascaux-the-dordogne", "chauvet-cave", "dendera", "caracol", "hadrian-s-wall", "murujuga-rock-art", "tassili-n-ajjer", "zorats-karer-carahunge", "samothrace", "phaistos"}
+    out["_last"] = sorted(s["id"] for s in cat if s.get("img") and out[s["id"]] and s["id"] not in keep and (
+        s["id"] in manual or re.search(r"\.(svg|png|gif)", s["img"], re.I) or BAD.search(re.sub(r"[_\-.,()]", " ", urllib.parse.unquote(s["img"].rsplit("/", 1)[-1])))))
+    print("shown last:", out["_last"])
+    print("unknown:", manual - {s["id"] for s in cat})
+    target = os.path.join(ROOT, "data", "photos.json")
+    with open(target + ".tmp", "w", encoding="utf-8") as f:
         f.write("{\n" + ",\n".join(json.dumps(k) + ":" + json.dumps(v, ensure_ascii=False, separators=(",", ":")) for k, v in out.items()) + "\n}\n")
-    few = [k for k, v in out.items() if len(v) < 2]
-    print("photos:", sum(map(len, out.values())), " places with fewer than 2 extra:", len(few), few)
+    os.replace(target + ".tmp", target)
+    few = [k for k, v in out.items() if k != "_last" and len(v) < 2]
+    print("photos:", sum(len(v) for k, v in out.items() if k != "_last"), " places with fewer than 2 extra:", len(few), few)
 
 
 main()

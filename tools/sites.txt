@@ -22,7 +22,7 @@ Byblos||Lebanon|ancient|Levant|1|4-6,9-10|Phoenician port inhabited for 7,000 ye
 Palmyra||Syria|ancient|Levant|1|3-5,9-11|Desert caravan city, damaged by war and slowly reopening.|w
 Western Wall|Old City of Jerusalem|Jerusalem|sacred|Levant|3|3-5,9-11|Three faiths within one square kilometre.|w
 Masada||Israel|fort|Levant|1|3-5,9-11|Herod's fortress above the Dead Sea.|w
-Göbekli Tepe||Turkey|temple|Eastern Turkey|1|4-6,9-10|The oldest known temple: 11,500 years, older than farming.|
+Göbekli Tepe||Turkey|prehistory|Eastern Turkey|1|4-6,9-10|The oldest known temple: 11,500 years, older than farming.|
 Mount Nemrut||Turkey|tomb|Eastern Turkey|1|5-9|Giant stone heads of gods on a mountaintop at sunrise.|
 Ani||Turkey|ancient|Eastern Turkey|1|5-9|Ruined medieval capital of "1,001 churches".|
 Sumela Monastery||Turkey|sacred|Eastern Turkey|1|5-9|Monastery clinging to a cliff in misty forest.|
@@ -44,9 +44,9 @@ Pompeii||Italy|ancient|Italy|1|4-6,9-10|A Roman city stopped in a single day.|
 Paestum||Italy|temple|Italy|0.5|4-6,9-10|Three Greek temples standing almost complete.|
 Valle dei Templi|Valley of the Temples|Italy|temple|Sicily & Malta|1|4-6,9-10|Doric temples on a ridge above the sea.|
 Segesta||Italy|temple|Sicily & Malta|0.5|4-6,9-10|A lone unfinished temple on a green hill.|
-Ħal Saflieni Hypogeum|Hypogeum & Maltese temples|Malta|temple|Sicily & Malta|3|4-6,9-10|Underground temple 5,000 years old; only a few visitors per hour.|
-Ġgantija||Malta|temple|Sicily & Malta|1|4-6,9-10|Free-standing temples older than the pyramids.|
-Su Nuraxi (Barumini)|Su Nuraxi nuraghe|Italy|ancient|Sardinia & Corsica|1|4-6,9-10|Bronze Age towers of a vanished island culture.|
+Ħal Saflieni Hypogeum|Hypogeum & Maltese temples|Malta|prehistory|Sicily & Malta|3|4-6,9-10|Underground temple 5,000 years old; only a few visitors per hour.|
+Ġgantija||Malta|prehistory|Sicily & Malta|1|4-6,9-10|Free-standing temples older than the pyramids.|
+Su Nuraxi (Barumini)|Su Nuraxi nuraghe|Italy|prehistory|Sardinia & Corsica|1|4-6,9-10|Bronze Age towers of a vanished island culture.|
 Diocletian's Palace|Split & Diocletian's Palace|Croatia|ancient|Adriatic|2|5-9|A Roman palace that became a living town.|
 Mostar|Mostar|Bosnia and Herzegovina|city|Adriatic|1|5-9|The rebuilt Ottoman bridge and its divers.|
 Bay of Kotor||Montenegro|nature|Adriatic|2|5-9|A fjord-like bay with walled medieval towns.|
@@ -56,18 +56,18 @@ Alhambra||Spain|fort|Spain & Portugal|2|3-6,9-11|Moorish palaces of carved light
 Mosque–Cathedral of Córdoba||Spain|sacred|Spain & Portugal|1|3-6,9-11|A forest of red-and-white arches with a cathedral inside.|
 Sagrada Família|Barcelona & Sagrada Família|Spain|sacred|Spain & Portugal|3|4-6,9-10|Gaudí's basilica, finally nearing its end.|
 Santiago de Compostela Cathedral|Santiago & the Camino|Spain|sacred|Spain & Portugal|2|5-9|The end of a thousand years of walking.|
-Cave of Altamira|Altamira|Spain|ancient|Spain & Portugal|1|5-9|Painted bison 15,000 years old (seen in the replica cave).|
+Cave of Altamira|Altamira|Spain|prehistory|Spain & Portugal|1|5-9|Painted bison 15,000 years old (seen in the replica cave).|
 Convent of Christ (Tomar)|Tomar, Templar convent|Portugal|sacred|Spain & Portugal|1|4-6,9-10|Round church of the Knights Templar.|
 Sintra||Portugal|city|Spain & Portugal|1|4-6,9-10|Palaces, wells and misty gardens by the ocean.|
-Lascaux|Lascaux & the Dordogne|France|ancient|France|3|5-9|The "Sistine Chapel" of prehistory, plus castles.|
-Carnac stones||France|ancient|France|1|5-9|3,000 standing stones in rows; nobody knows why.|
+Lascaux|Lascaux & the Dordogne|France|prehistory|France|3|5-9|The "Sistine Chapel" of prehistory, plus castles.|
+Carnac stones||France|prehistory|France|1|5-9|3,000 standing stones in rows; nobody knows why.|
 Mont-Saint-Michel||France|sacred|France|1|4-6,9-10|Abbey island surrounded by racing tides.|
 Chartres Cathedral||France|sacred|France|0.5|4-10|Medieval blue glass and a walking labyrinth.|
 Pont du Gard|Provence & Pont du Gard|France|ancient|France|3|4-6,9-10|Roman aqueduct, Arles and Orange nearby.|
-Stonehenge|Stonehenge & Avebury|United Kingdom|temple|Britain & Ireland|2|5-9|The solstice circle, and the bigger one you can touch.|
-Skara Brae|Orkney & Skara Brae|United Kingdom|ancient|Britain & Ireland|3|5-8|A stone village older than Stonehenge, on a wild shore.|
-Callanish Stones||United Kingdom|temple|Britain & Ireland|2|5-8|Lonely stone circle on the Isle of Lewis.|
-Newgrange||Ireland|tomb|Britain & Ireland|1|4-10|At winter solstice the sun lights its inner chamber.|
+Stonehenge|Stonehenge & Avebury|United Kingdom|prehistory|Britain & Ireland|2|5-9|The solstice circle, and the bigger one you can touch.|
+Skara Brae|Orkney & Skara Brae|United Kingdom|prehistory|Britain & Ireland|3|5-8|A stone village older than Stonehenge, on a wild shore.|
+Callanish Stones||United Kingdom|prehistory|Britain & Ireland|2|5-8|Lonely stone circle on the Isle of Lewis.|
+Newgrange||Ireland|prehistory|Britain & Ireland|1|4-10|At winter solstice the sun lights its inner chamber.|
 Skellig Michael||Ireland|sacred|Britain & Ireland|2|5-9|Monks' beehive huts on an Atlantic rock.|
 Borgund Stave Church|Norwegian fjords & stave churches|Norway|sacred|Nordics|7|6-8|Dragon-headed wooden churches among the fjords.|
 Golden Circle (Iceland)|Iceland|Iceland|nature|Nordics|8|6-9|Geysers, glaciers, lava and Viking parliament.|
@@ -124,7 +124,7 @@ Banteay Srei||Cambodia|temple|Cambodia & Laos|0.5|11-2|Tiny pink temple with the
 Preah Vihear Temple||Cambodia|temple|Cambodia & Laos|1|11-2|Cliff-edge temple on a disputed border.|w
 Wat Phou||Laos|temple|Cambodia & Laos|1|11-2|Pre-Angkor mountain shrine above the Mekong.|
 Luang Prabang||Laos|city|Cambodia & Laos|3|11-2|Monks, rivers and golden roofs.|
-Plain of Jars||Laos|ancient|Cambodia & Laos|1|11-2|Thousands of giant stone jars, purpose uncertain.|
+Plain of Jars||Laos|prehistory|Cambodia & Laos|1|11-2|Thousands of giant stone jars, purpose uncertain.|
 Mỹ Sơn||Vietnam|temple|Vietnam|1|2-5|Hindu temples of the lost Champa kingdom.|
 Huế|Huế, imperial city|Vietnam|city|Vietnam|2|2-5|Citadel and emperors' tombs on the Perfume River.|
 Hạ Long Bay||Vietnam|nature|Vietnam|2|3-5,9-11|Thousands of limestone towers in green water.|
@@ -175,16 +175,16 @@ Nazca lines||Peru|ancient|Peru & Andes|1|5-11|Giant drawings only understood fro
 Chan Chan||Peru|ancient|North Peru|1|5-11|The largest mud-brick city in the Americas.|
 Kuélap||Peru|fort|North Peru|2|5-9|Cloud-forest fortress with a cable car and few people.|
 Chavín de Huántar||Peru|temple|North Peru|2|5-9|3,000-year-old temple with a maze beneath.|
-Caral|Caral|Peru|ancient|North Peru|1|5-11|The oldest city in the Americas, as old as the pyramids.|
+Caral|Caral|Peru|prehistory|North Peru|1|5-11|The oldest city in the Americas, as old as the pyramids.|
 Tiwanaku|Tiwanaku & Lake Titicaca|Bolivia|ancient|Peru & Andes|3|5-9|Gate of the Sun beside the highest great lake.|
 Salar de Uyuni||Bolivia|nature|Peru & Andes|3|5-11|The biggest mirror on Earth.|
 Moai|Easter Island (Rapa Nui)|Chile|ancient|South Pacific|5|10-4|A thousand giants on the world's loneliest island.|
 Torres del Paine National Park|Patagonia|Chile|nature|Patagonia|8|11-3|Granite towers, glaciers and wind.|
 Perito Moreno Glacier||Argentina|nature|Patagonia|2|11-3|A glacier that calves in front of you.|
-Cueva de las Manos||Argentina|ancient|Patagonia|1|11-3|9,000-year-old painted hands.|
+Cueva de las Manos||Argentina|prehistory|Patagonia|1|11-3|9,000-year-old painted hands.|
 Iguazu Falls||Argentina|nature|Brazil & Iguazu|2|3-5,8-10|275 waterfalls in the jungle.|
 Christ the Redeemer (statue)|Rio de Janeiro|Brazil|city|Brazil & Iguazu|4|5-10|The city with the best setting in the world.|
-Serra da Capivara National Park|Serra da Capivara|Brazil|ancient|Brazil & Iguazu|3|5-9|30,000 ancient rock paintings, hardly visited.|
+Serra da Capivara National Park|Serra da Capivara|Brazil|prehistory|Brazil & Iguazu|3|5-9|30,000 ancient rock paintings, hardly visited.|
 Ouro Preto||Brazil|city|Brazil & Iguazu|2|5-9|Baroque gold-rush town.|
 Mesa Verde National Park|Mesa Verde|United States|ancient|US Southwest|2|5-10|Villages built inside cliffs.|
 Chaco Culture National Historical Park|Chaco Canyon|United States|ancient|US Southwest|1|4-5,9-10|Great houses aligned with sun and moon.|
@@ -208,7 +208,7 @@ Isle of Pines (New Caledonia)|New Caledonia|New Caledonia|nature|South Pacific|6
 Milford Sound|New Zealand South Island|New Zealand|nature|New Zealand|12|11-4|Fjords, glaciers and stars.|
 Waitangi Treaty Grounds|Northland & Māori heritage|New Zealand|sacred|New Zealand|4|11-4|Carved meeting houses and giant kauri trees.|
 Uluru||Australia|sacred|Australia|3|5-9|Sacred red rock of the Aṉangu people.|F
-Kakadu National Park|Kakadu|Australia|ancient|Australia|3|5-9|20,000 years of Aboriginal rock art.|
+Kakadu National Park|Kakadu|Australia|prehistory|Australia|3|5-9|20,000 years of Aboriginal rock art.|
 Great Barrier Reef||Australia|nature|Australia|6|6-10|Sail through the largest living structure.|S
 Port Arthur, Tasmania|Tasmania|Australia|nature|Australia|7|12-3|Wild coast and convict ruins.|
 Lalibela|Rock churches of Lalibela|Ethiopia|sacred|Ethiopia|2|10-3|Eleven churches carved down into red rock.|w
@@ -230,7 +230,7 @@ Sossusvlei|Namib dunes|Namibia|nature|Southern Africa|4|5-9|The tallest red dune
 Table Mountain|Cape Town & the Cape|South Africa|nature|Southern Africa|5|11-4|The mountain every sailor hopes to see.|
 Kilwa Kisiwani||Tanzania|ancient|East Africa|2|6-10|Ruined Swahili sultanate on an island.|S
 Stone Town of Zanzibar|Zanzibar|Tanzania|city|East Africa|4|6-10|Spice port of carved doors.|
-Serengeti National Park|Serengeti & Ngorongoro|Tanzania|nature|East Africa|6|6-10|The great migration.|
+Serengeti National Park|Serengeti|Tanzania|nature|East Africa|6|6-10|The great migration.|
 Lamu|Lamu|Kenya|city|East Africa|3|12-3|Swahili old town without cars; arrives by dhow.|w
 Bwindi Impenetrable National Park|Mountain gorillas, Bwindi|Uganda|nature|East Africa|3|6-9|One hour face to face with gorillas.|
 Tsingy de Bemaraha National Park|Tsingy of Madagascar|Madagascar|nature|Madagascar|5|5-10|A forest of stone needles and lemurs.|

@@ -2,9 +2,17 @@ import { state, extra } from './store.js';
 import { km, n0 } from './util.js';
 import { setPhotos } from './photos.js';
 
-export const HOME = { name: 'Frankfurt', lat: 50.04, lon: 8.56 };
-export let catalog = [], ports = [], legs = [];
+// Cities you can start from. Driving times to every road trip are ready for each of them.
+export const HOMES = { 'Bingen am Rhein': [49.967, 7.895], Aachen: [50.776, 6.084], Berlin: [52.52, 13.405], Bremen: [53.079, 8.802], Cologne: [50.938, 6.96], Dortmund: [51.514, 7.465], Dresden: [51.05, 13.738], 'Düsseldorf': [51.228, 6.774], Frankfurt: [50.11, 8.682], Freiburg: [47.999, 7.842], Hamburg: [53.551, 9.994], Hanover: [52.376, 9.732], Karlsruhe: [49.007, 8.404], Kassel: [51.313, 9.498], Leipzig: [51.34, 12.373], Mannheim: [49.487, 8.466], Munich: [48.137, 11.575], 'Münster': [51.961, 7.626], Nuremberg: [49.452, 11.077], 'Saarbrücken': [49.24, 6.997], Stuttgart: [48.776, 9.183], Ulm: [48.401, 9.988] };
+export const HOME = { name: 'Bingen am Rhein', lat: 49.967, lon: 7.895 };
+export function setHome(name) {
+  const n = HOMES[name] ? name : 'Bingen am Rhein', c = HOMES[n];
+  Object.assign(HOME, { name: n, lat: c[0], lon: c[1] });
+  cache.clear();
+}
+export let catalog = [], ports = [], legs = [], trips = [];
 export const portById = new Map();
+const cache = new Map();
 
 // Ports away from the usual round-the-world track. A place near one of these is normally better flown to.
 const DETOUR = new Set(['jap', 'oki', 'vic', 'sdg', 'ush', 'bue', 'poh', 'plw', 'hob', 'mia', 'hon', 'cam', 'rio', 'pva', 'ist',
@@ -17,9 +25,13 @@ export async function loadData() {
     if (!r.ok) throw new Error(`${u}: ${r.status}`);
     return r.json();
   };
-  const [c, s, f, ph] = await Promise.all([get('data/catalog.json'), get('data/sailing.json'), get('data/facts.json').catch(() => ({})), get('data/photos.json').catch(() => ({}))]);
+  // extra photos are nice to have: never wait more than a moment for them
+  const photos = get('data/photos.json').then(setPhotos).catch(() => {});
+  const [c, s, f, tr] = await Promise.all([get('data/catalog.json'), get('data/sailing.json'), get('data/facts.json').catch(() => ({})), get('data/trips.json').catch(() => [])]);
   for (const p of c) Object.assign(p, f[p.id]);
-  setPhotos(ph);
+  await Promise.race([photos, new Promise(r => setTimeout(r, 2500))]);
+  setHome(state.home);
+  trips = tr;
   catalog = c; ports = s.ports; legs = s.legs;
   for (const p of ports) portById.set(p.id, p);
 }
@@ -28,7 +40,6 @@ export const allPlaces = () => [...catalog, ...state.own];
 export const placeById = id => catalog.find(p => p.id === id) || state.own.find(p => p.id === id);
 export const daysFor = p => extra(p.id).days || p.days;
 
-const cache = new Map();
 function geo(p) {
   const key = `${p.id}|${p.lat}|${p.lon}`;
   if (!cache.has(key)) {

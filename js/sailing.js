@@ -2,43 +2,56 @@
 import { allPlaces, ports, portById, verdict, daysFor, isDetour } from './data.js';
 import { state, score, weight, extra, save } from './store.js';
 import { $, esc, MONTHS, duration, days, n0, dateText, norm, km, toast } from './util.js';
-import { bestOrder, bestDeparture, simulate, marginal, stayFor } from './sailplan.js';
-import { drawPorts, drawRoute, showStorms, setFilter, fit, flyTo, look, zoomNow, popup } from './map.js';
+import { reach, suggestStay } from './stays.js';
+import { bestOrder, bestDeparture, simulate, marginal } from './sailplan.js';
+import { drawPorts, drawRoute, showStorms, setFilter, fit, flyTo, look, zoomNow, popup, drawBases } from './map.js';
 import { openDetail } from './detail.js';
+import { openPort } from './port.js';
 import { badge, wanted } from './scale.js';
 
 const SECTION = ['#53cfe0', '#f7a8ff', '#ffe066', '#8ef0a0', '#ff9d7a', '#a9b8ff'];
 const CLASSIC = ['lpa', 'min', 'mtq', 'sbl', 'gal', 'mqs', 'tua', 'tah', 'bor', 'vav', 'fij', 'vil', 'thu', 'kom', 'dps', 'cck', 'mau', 'reu', 'cap', 'hel', 'hor'];
 let result = null, order = [], stormMonth = 0, seen = false, popped = null;
 
-// places you can visit from a port: next to it, or a few days inland
-const reach = id => {
-  const P = portById.get(id);
-  return allPlaces().map(p => ({ p, d: km(p, P) })).filter(x => x.d <= 400 && (x.d <= 120 || verdict(x.p).v !== 'fly')).sort((a, b) => weight(b.p.id) - weight(a.p.id));
-};
-
 function add(id, quiet) {
   const s = state.sail;
   if (id === s.start || s.stops.includes(id)) return;
   s.stops.push(id);
-  if (s.stays[id] === undefined) {
-    const d = reach(id).filter(x => x.d <= 250 && verdict(x.p).v !== 'fly').reduce((a, x) => a + daysFor(x.p), 0);
-    s.stays[id] = Math.round(Math.min(42, Math.max(14, d + 7)) / 7) * 7;
-  }
   if (!quiet) { save('sail'); drawSailing(); }
 }
 function remove(id) { state.sail.stops = state.sail.stops.filter(x => x !== id); save('sail'); drawSailing(); }
-const toggle = id => (id === state.sail.start ? toast(`${portById.get(id).label} is your starting port.`) : state.sail.stops.includes(id) ? remove(id) : add(id));
 
-export function onPort(id) { toggle(id); }
+export const isStop = id => state.sail.stops.includes(id);
+export const isMust = id => state.sail.musts.includes(id);
+export function addMust(id) {
+  const s = state.sail;
+  if (id === s.start) return toast(`${portById.get(id).label} is your starting port.`);
+  if (!s.stops.includes(id)) s.stops.push(id);
+  if (!s.musts.includes(id)) s.musts.push(id);
+  save('sail');
+  drawSailing();
+  toast(`${portById.get(id).label} is a must on your world tour.`);
+}
+export function setMust(id, on) {
+  state.sail.musts = state.sail.musts.filter(x => x !== id);
+  if (on) state.sail.musts.push(id);
+  save('sail');
+  drawSailing();
+}
+export function removeStop(id) {
+  state.sail.musts = state.sail.musts.filter(x => x !== id);
+  remove(id);
+}
+
+export function onPort(id) { openPort(id); }
 export function onCountry({ name, at }) {
   const list = ports.filter(p => p.country === name);
-  if (list.length === 1) return toggle(list[0].id);
+  if (list.length === 1) return openPort(list[0].id);
   popped?.remove();
-  popped = popup(at, `<b>${esc(name)}</b>${list.map(p => `<button class="btn small" data-port="${p.id}">${state.sail.stops.includes(p.id) ? 'Remove ' : 'Add '}${esc(p.label)}</button>`).join('')}`);
+  popped = popup(at, `<b>${esc(name)}</b>${list.map(p => `<button class="btn small" data-port="${p.id}">${esc(p.label)}</button>`).join('')}`);
   popped.getElement().addEventListener('click', e => {
     const b = e.target.closest('[data-port]');
-    if (b) { popped.remove(); toggle(b.dataset.port); }
+    if (b) { popped.remove(); openPort(b.dataset.port); }
   });
 }
 
@@ -50,24 +63,28 @@ function suggest() {
     if (!wanted(p.id) || v.v === 'fly' || extra(p.id).visited) continue;
     val.set(v.port.id, (val.get(v.port.id) || 0) + s * s * (v.v === 'sail' ? 1 : 0.6));
   }
-  const top = [...val].sort((a, b) => b[1] - a[1]).slice(0, 18).map(x => x[0]);
-  if (!top.length) return toast('Rate some sailing places Super or Must in Discover first, then this builds your route.');
+  const musts = state.sail.musts.filter(id => portById.has(id) && id !== state.sail.start);
+  const top = [...new Set([...musts, ...[...val].sort((a, b) => b[1] - a[1]).map(x => x[0])])].slice(0, Math.max(18, musts.length));
+  if (!val.size) return toast('Rate some sailing places Super or Must in Discover first, then this builds your route.');
   state.sail.stops = [];
   top.forEach(id => add(id, true));
   const s = state.sail, dropped = [];
   s.auto = true;
   // leave out stops that would cost more than half a year each: those are better flown to
   for (let guard = 0; guard < 8 && s.stops.length > 3; guard++) {
-    const ord = bestOrder(s), m = marginal(s, ord, simulate(s, ord).total);
-    const worst = ord.reduce((a, b) => (m[b] > m[a] ? b : a));
-    if (m[worst] < 180) break;
+    const f = full(s), ord = bestOrder(f), m = marginal(f, ord, simulate(f, ord).total);
+    const worst = ord.filter(x => !s.musts.includes(x)).reduce((a, b) => (a === null || m[b] > m[a] ? b : a), null);
+    if (worst === null || m[worst] < 180) break;
     dropped.push(portById.get(worst).label);
     s.stops = s.stops.filter(x => x !== worst);
   }
   save('sail');
   drawSailing();
-  toast(`${s.stops.length} stops chosen from your ratings.${dropped.length ? ` Left out because each adds over half a year: ${dropped.join(', ')}.` : ''}`);
+  toast(`${s.stops.length} stop${s.stops.length === 1 ? '' : 's'} chosen from your ratings${musts.length ? ' and musts' : ''}.${dropped.length ? ` Left out because each adds over half a year: ${dropped.join(', ')}.` : ''}`);
 }
+
+// your own number of days where you set one, the suggestion everywhere else
+const full = s => ({ ...s, stays: Object.fromEntries(s.stops.map(id => [id, s.stays[id] ?? suggestStay(id).days])) });
 
 const opts = (list, cur) => list.map(([v, t]) => `<option value="${v}" ${String(v) === String(cur) ? 'selected' : ''}>${esc(t)}</option>`).join('');
 
@@ -75,11 +92,12 @@ export function drawSailing() {
   const s = state.sail, el = $('#panel'), y = el.scrollTop;
   order = s.auto ? [...ordered(s)] : s.stops.filter(x => portById.has(x) && x !== s.start);
   if (s.auto) s.stops = [...order];
-  result = order.length ? simulate(s, order) : null;
-  const extraDays = result ? marginal(s, order, result.total) : {};
+  const o = full(s);
+  result = order.length ? simulate(o, order) : null;
+  const extraDays = result ? marginal(o, order, result.total) : {};
   const years = Array.from({ length: 16 }, (_, i) => new Date().getFullYear() + i);
   el.innerHTML = `<div class="stack">
-    <h2>Sail the world</h2>
+    <h2>Sailing world tour</h2>
     <div class="grid2">
       <label class="f">Start from<select data-s="start">${opts(ports.map(p => [p.id, `${p.name}, ${p.label}`]), s.start)}</select></label>
       <label class="f">Average boat speed, knots<input type="number" min="3" max="15" step="0.5" data-s="knots" value="${s.knots}"></label>
@@ -94,7 +112,7 @@ export function drawSailing() {
     </div>
     <div class="stack tight">
       <h3>Countries and islands to visit</h3>
-      <input list="portlist" id="portq" placeholder="Click the globe, or type a name" aria-label="Add a stop">
+      <input list="portlist" id="portq" placeholder="Click a country or port, or type a name" aria-label="Add a stop">
       <datalist id="portlist">${ports.map(p => `<option value="${esc(p.label)}">${esc(p.name)}</option>`).join('')}</datalist>
       <div class="row"><button class="btn small" data-do="suggest">From our ratings</button><button class="btn small" data-do="classic">Classic route</button>${s.stops.length ? '<button class="link quiet" data-do="clear">Clear</button>' : ''}</div>
       ${order.length ? `<label class="check"><input type="checkbox" data-s="auto" ${s.auto ? 'checked' : ''}>Find the best order for us</label>` : ''}
@@ -112,24 +130,27 @@ export function drawSailing() {
 
 function stopRow(id, i, plus) {
   const p = portById.get(id), n = reach(id).filter(x => wanted(x.p.id)).length;
-  const big = plus > 150;
-  return `<div class="stop"><b>${esc(p.label)}</b>
+  const big = plus > 150 && order.length > 3, tip = suggestStay(id), mine = state.sail.stays[id];
+  return `<div class="stop"><button class="stopname" data-about="${id}">${esc(p.label)}</button>
     <span class="ops">${state.sail.auto ? '' : `<button data-up="${i}" aria-label="Earlier">↑</button><button data-down="${i}" aria-label="Later">↓</button>`}
-      <button data-stay="${id}" data-by="-7" aria-label="One week less">−</button><span class="wk">${duration(stayFor(id, state.sail))}</span><button data-stay="${id}" data-by="7" aria-label="One week more">+</button>
+      <label class="dayin"><input type="number" min="0" max="730" data-days="${id}" value="${mine ?? tip.days}" aria-label="Days in ${esc(p.label)}"> days</label>
+      <button data-must="${id}" class="${isMust(id) ? 'lit' : ''}" aria-pressed="${isMust(id)}" title="A must is never left out">Must</button>
       <button data-rm="${id}" aria-label="Remove ${esc(p.label)}">×</button></span>
-    <small class="${big ? 'warn' : ''}">${plus > 1 ? `Adds ${duration(plus)} to the voyage` : 'Almost on the way'}${big && isDetour(id) ? '. Flying here is smarter' : big ? '. A costly stop' : ''}${n ? ` · ${n} of your top places` : ''}</small></div>`;
+    <small class="${big ? 'warn' : ''}">${plus > 1 ? `Adds ${duration(plus)} to the voyage` : 'Almost on the way'}${big && isDetour(id) ? '. Flying here is smarter' : big ? '. A costly stop' : ''}${n ? ` · ${n} of your top places` : ''}</small>
+    <small>${mine === undefined ? `Suggested ${tip.days}: ${esc(tip.why)}` : `Your choice. Suggested: ${tip.days} <button class="link" data-tip="${id}">Use it</button>`}</small></div>`;
 }
 
 let orderKey = '', orderMemo = [];
 // finding the best order takes a moment, so only redo it when something that matters changed
 function ordered(s) {
-  const key = JSON.stringify([s.start, s.month, s.year, s.knots, [...s.stops].sort(), s.stays, s.home, s.safeRed]);
-  if (key !== orderKey) { orderMemo = bestOrder(s); orderKey = key; }
+  const f = full(s);
+  const key = JSON.stringify([s.start, s.month, s.year, s.knots, [...s.stops].sort().map(id => [id, f.stays[id]]), s.home, s.safeRed]);
+  if (key !== orderKey) { orderMemo = bestOrder(f); orderKey = key; }
   return orderMemo;
 }
 
 function departure() {
-  const s = state.sail, b = bestDeparture(s, order), now = result.total + result.risk;
+  const s = state.sail, b = bestDeparture(full(s), order), now = result.total + result.risk;
   if (!b || b.month === s.month || now - b.x < 14) return '';
   const gain = result.total - b.total;
   const txt = gain > 13 ? `saves ${duration(gain)}` : `avoids ${duration(result.risk - b.risk)} in storm seasons`;
@@ -187,7 +208,7 @@ function paint() {
   const s = state.sail;
   drawPorts(new Set([s.start, ...s.stops]));
   drawRoute(result ? result.items.filter(x => x.kind === 'sea').map(x => ({ line: x.line, color: SECTION[x.sec % SECTION.length] })) : []);
-  setFilter(p => verdict(p).v !== 'fly' && wanted(p.id));
+  setFilter(p => verdict(p).v !== 'fly');
   showStorms(stormMonth);
 }
 
@@ -197,7 +218,15 @@ export function initSailing() {
     if (!here()) return;
     if (e.target.id === 'portq') {
       const q = norm(e.target.value), p = ports.find(x => norm(x.label) === q) || ports.find(x => norm(`${x.label} ${x.name} ${x.country}`).includes(q));
-      if (q && p) { add(p.id); flyTo(p, 3); } else if (q) toast(`No port found for ${e.target.value}.`);
+      if (q && p) { openPort(p.id); flyTo(p, 4); } else if (q) toast(`No port found for ${e.target.value}.`);
+      return;
+    }
+    if (e.target.dataset.days) {
+      const v = e.target.value.trim();
+      if (v === '') delete state.sail.stays[e.target.dataset.days];
+      else state.sail.stays[e.target.dataset.days] = Math.max(0, Math.min(730, Math.round(+v) || 0));
+      save('sail');
+      drawSailing();
       return;
     }
     const k = e.target.dataset.s;
@@ -218,14 +247,16 @@ export function initSailing() {
     const swap = (i, j) => { if (j < 0 || j >= s.stops.length) return; [s.stops[i], s.stops[j]] = [s.stops[j], s.stops[i]]; save('sail'); drawSailing(); };
     if (d.up) swap(+d.up, +d.up - 1);
     if (d.down) swap(+d.down, +d.down + 1);
-    if (d.rm) remove(d.rm);
-    if (d.stay) { s.stays[d.stay] = Math.max(0, Math.min(364, stayFor(d.stay, s) + +d.by)); save('sail'); drawSailing(); }
+    if (d.rm) removeStop(d.rm);
+    if (d.about) { openPort(d.about); flyTo(portById.get(d.about), 4); }
+    if (d.must) setMust(d.must, !isMust(d.must));
+    if (d.tip) { delete s.stays[d.tip]; save('sail'); drawSailing(); }
     if (d.open) openDetail(d.open);
     if (d.leave) { s.month = +d.leave; save('sail'); drawSailing(); }
     if (d.month) { stormMonth = stormMonth === +d.month ? 0 : +d.month; drawSailing(); if (zoomNow() > 3) look({ zoom: 2, duration: 900 }); }
     if (d.do === 'suggest') suggest();
-    if (d.do === 'classic') { s.stops = []; CLASSIC.forEach(id => add(id, true)); s.auto = true; save('sail'); drawSailing(); look({ center: [-70, 8], zoom: 1.7, duration: 1400 }); }
-    if (d.do === 'clear') { s.stops = []; save('sail'); drawSailing(); }
+    if (d.do === 'classic') { s.stops = [...s.musts]; CLASSIC.forEach(id => add(id, true)); s.auto = true; save('sail'); drawSailing(); look({ center: [-70, 8], zoom: 1.7, duration: 1400 }); }
+    if (d.do === 'clear') { s.stops = []; s.musts = []; save('sail'); drawSailing(); }
     if (d.item) {
       const x = result.items[+d.item];
       if (x.kind === 'sea') fit([portById.get(x.a), portById.get(x.b)]); else flyTo(portById.get(x.id), 5);
@@ -234,6 +265,7 @@ export function initSailing() {
 }
 
 export function enterSailing() {
+  drawBases([]);
   drawSailing();
   if (!seen && look({})) { seen = true; const p = portById.get(state.sail.start); look({ center: [p.lon - 25, 25], zoom: 2, duration: 1400 }); }
 }

@@ -10,9 +10,14 @@ const blank = () => ({
   places: {},             // placeId -> { notes, visited, days, force, cover }
   own: [],                // places you added yourselves
   trips: [],              // saved holidays
+  home: 'Bingen am Rhein', // where your road trips start
+  homeSet: true,
+  range: 1200,            // km your car drives on one tank
+  sleep: 'roof',          // roof tent, tent or hotel
+  packed: {},             // trip title -> things ticked on its packing list
   sail: {
-    start: 'cux', month: 6, year: new Date().getFullYear() + 2, knots: 5.5, stops: [], stays: {},
-    auto: true, home: true, safeRed: true, sail: 0, rest: 4,
+    start: 'cux', month: 6, year: new Date().getFullYear() + 2, knots: 5.5, stops: [], musts: [], stays: {},
+    auto: true, home: true, safeRed: true, sail: 0, rest: 4, freeDays: true,
   },
 });
 
@@ -28,7 +33,7 @@ function toScale4(s) {
 function load() {
   try {
     const s = JSON.parse(localStorage.getItem(KEY));
-    if (s) { toScale4(s); const b = blank(); return { ...b, ...s, sail: { ...b.sail, ...s.sail } }; }
+    if (s) { if (!s.homeSet) { s.home = 'Bingen am Rhein'; s.homeSet = true; } toScale4(s); if (s.sail && !s.sail.freeDays) { s.sail.stays = {}; s.sail.freeDays = true; } const b = blank(); return { ...b, ...s, sail: { ...b.sail, ...s.sail } }; }
   } catch { /* first visit, or storage blocked */ }
   return blank();
 }

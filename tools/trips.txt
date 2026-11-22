@@ -1,0 +1,690 @@
+# Realistic holidays. T = trip:  title | country for searches | best months | how you go home: open (fly home from the last base) or back (return to the first)
+#                    B = base:  town | lat,lon | ideal/minimum nights | how you get there (drive, fly h, train h, boat h, - for the first) | farther day trips (place names, optional)
+# Places within about 75 km of a base are added by themselves. Road times come from OpenStreetMap (build_trips.py).
+T|Egypt: Cairo and the Nile|Egypt|10-4|open
+B|Cairo (Giza)|29.985,31.140|3/3|-
+B|Aswan|24.090,32.900|2/2|fly 1.5|Abu Simbel;Kom Ombo
+B|Luxor|25.700,32.640|4/3|train 3.5|Dendera;Temple of Edfu;Abydos
+T|Sinai: reefs and Mount Sinai|Egypt Sinai|3-5,9-11|open
+B|Dahab|28.510,34.514|6/4|-|Ras Mohammed reefs
+B|Saint Catherine|28.556,33.952|1/1|drive
+T|Jordan: Petra and the desert|Jordan|3-5,9-11|open
+B|Amman|31.955,35.935|3/2|-|Umm Qais;Desert castles of Jordan;Jerash
+B|Wadi Musa (Petra)|30.322,35.480|3/3|drive|Kerak castle
+B|Wadi Rum|29.576,35.420|2/1|drive
+B|Dead Sea|31.716,35.588|2/1|drive|Wadi Mujib canyon
+T|Saudi Arabia: AlUla and the rock art|Saudi Arabia AlUla|11-3|open
+B|AlUla|26.617,37.920|4/3|-
+B|Hail|27.520,41.690|2/2|drive|Jubbah & Hail rock art
+B|Riyadh|24.713,46.675|2/1|fly 1.5|Edge of the World
+T|Oman: forts, wadis and dunes|Oman|11-3|back
+B|Muscat|23.588,58.405|2/2|-
+B|Nizwa|22.933,57.530|3/2|drive|Bat & Al-Ayn beehive tombs
+B|Wahiba Sands|22.400,58.780|1/1|drive|Wahiba Sands & Wadi Shab
+B|Sur|22.567,59.529|2/1|drive
+T|Southeast Turkey: Göbekli Tepe and the first temples|Southeast Turkey Göbekli Tepe|4-6,9-10|open
+B|Gaziantep|37.066,37.383|2/1|-
+B|Şanlıurfa|37.158,38.795|3/2|drive|Karahan Tepe;Göbekli Tepe
+B|Kahta (Nemrut)|37.786,38.624|1/1|drive|Mount Nemrut
+B|Mardin|37.313,40.735|2/1|drive
+T|Cappadocia and Çatalhöyük|Cappadocia Konya|4-6,9-10|open
+B|Göreme|38.643,34.829|5/4|-|Aşıklı Höyük
+B|Konya|37.872,32.492|2/2|drive|Çatalhöyük
+T|Aegean Turkey: Ephesus, Pergamon and Troy|Aegean Turkey Ephesus Pergamon Troy|4-6,9-10|open
+B|Selçuk (Ephesus)|37.949,27.368|4/3|-|Didyma, Miletus & Priene;Aphrodisias
+B|Bergama (Pergamon)|39.120,27.180|2/1|drive
+B|Çanakkale (Troy)|40.146,26.408|2/1|drive
+T|Lycia and Pamphylia: tombs by the sea|Turkey Antalya Kas|4-6,9-11|open
+B|Antalya|36.885,30.705|4/3|-|Sagalassos;Termessos
+B|Kaş|36.200,29.640|4/3|drive|Lycian tombs: Xanthos, Myra, Letoon
+T|Pamukkale and Aphrodisias|Pamukkale|4-6,9-10|open
+B|Pamukkale|37.920,29.120|3/2|-|Aphrodisias
+T|Eastern Turkey: Ani and Lake Van|Kars Ani Van|5-9|open
+B|Kars|40.608,43.097|2/2|-
+B|Van|38.501,43.373|3/3|fly 4
+T|Istanbul|Istanbul|4-6,9-10|open
+B|Istanbul|41.008,28.980|4/3|-
+T|Georgia: Tbilisi and the high Caucasus|Georgia|6-9|open
+B|Tbilisi|41.694,44.801|4/3|-|Dmanisi
+B|Kazbegi|42.657,44.642|2/2|drive
+B|Mestia (Svaneti)|43.045,42.727|4/3|fly 4|Svaneti & Ushguli
+T|Armenia: monasteries and standing stones|Armenia|5-6,9-10|back
+B|Yerevan|40.178,44.512|4/3|-
+B|Goris|39.511,46.341|3/2|drive|Tatev Monastery;Zorats Karer (Carahunge)
+T|Baku and Gobustan|Baku Azerbaijan|4-6,9-10|open
+B|Baku|40.409,49.867|4/3|-
+T|Athens and the Peloponnese|Greece Peloponnese Delphi|4-6,9-10|back
+B|Athens|37.976,23.735|3/2|-
+B|Nafplio|37.567,22.800|4/3|drive
+B|Olympia|37.644,21.625|2/1|drive
+B|Galaxidi (Delphi)|38.378,22.386|2/2|drive
+T|Northern Greece: Meteora, Vergina and Zagori|Northern Greece Meteora Zagori|4-6,9-10|open
+B|Thessaloniki|40.640,22.944|2/2|-
+B|Kalambaka (Meteora)|39.705,21.627|2/2|drive
+B|Zagori|39.883,20.718|4/2|drive|Dodona
+T|Crete, slowly|Crete|4-6,9-10|open
+B|Heraklion|35.339,25.133|4/3|-
+B|Chania|35.514,24.018|5/4|drive|Samaria Gorge
+T|Cyclades: Delos and Santorini|Naxos Mykonos Santorini|5-6,9|open
+B|Mykonos (for Delos)|37.447,25.329|2/2|-|Delos
+B|Naxos|37.105,25.376|4/3|boat 1
+B|Santorini|36.416,25.432|3/2|boat 2
+T|Rhodes|Rhodes|4-6,9-10|open
+B|Rhodes|36.434,28.217|6/4|-
+T|Cyprus: from the Stone Age to Aphrodite|Cyprus|3-6,9-11|open
+B|Paphos|34.755,32.410|4/3|-
+B|Larnaca|34.923,33.624|3/2|drive|Choirokoitia;Salamis
+T|Malta and Gozo: older than the pyramids|Malta Gozo|4-6,9-10|open
+B|Valletta|35.899,14.514|5/3|-
+B|Gozo|36.044,14.240|2/1|drive
+T|Eastern Sicily and the volcanoes|Eastern Sicily Aeolian Islands|4-6,9-10|open
+B|Syracuse (Ortigia)|37.060,15.293|4/3|-|Piazza Armerina mosaics
+B|Taormina|37.851,15.288|3/2|drive
+B|Lipari (Stromboli)|38.467,14.954|3/2|boat 3
+T|Western Sicily, one base|Western Sicily Trapani|4-6,9-10|open
+B|Trapani|38.017,12.537|6/4|-
+T|Sardinia: towers and giants|Sardinia nuraghe|4-6,9-10|open
+B|Alghero|40.558,8.319|3/2|-
+B|Barumini|39.704,9.001|2/1|drive
+B|Arzachena|41.080,9.389|4/3|drive
+T|Rome and the Etruscans|Rome Tarquinia|4-6,9-10|open
+B|Rome|41.896,12.482|5/4|-
+B|Tarquinia|42.254,11.757|2/1|drive
+T|Naples, Pompeii and Matera|Naples Paestum Matera|4-6,9-10|open
+B|Sorrento|40.626,14.375|4/3|-
+B|Paestum|40.420,15.006|1/1|drive
+B|Matera|40.666,16.604|3/2|drive
+T|Dolomites and Ötzi|Dolomites|6-9|open
+B|Bolzano|46.498,11.354|2/1|-
+B|Ortisei|46.574,11.672|5/4|drive
+T|Split, Mostar and Kotor|Dalmatia Mostar Kotor|5-9|open
+B|Split|43.508,16.440|3/2|-
+B|Mostar|43.344,17.808|2/1|drive
+B|Kotor|42.424,18.771|4/3|drive
+T|Istria, Plitvice and Slovenia|Istria Plitvice Slovenia|4-6,9-10|back
+B|Ljubljana|46.056,14.508|3/2|-|Lake Bled & Triglav
+B|Pula|44.867,13.850|3/2|drive
+B|Plitvice|44.880,15.616|2/1|drive
+T|Montenegro: Durmitor and Tara canyon|Montenegro Durmitor|6-9|open
+B|Kotor|42.424,18.771|3/2|-
+B|Žabljak (Durmitor)|43.155,19.123|4/3|drive
+T|Albania and Ohrid|Albania Butrint Ohrid|5-9|open
+B|Sarandë (Butrint)|39.876,20.005|3/2|-
+B|Berat|40.705,19.952|1/1|drive
+B|Ohrid|41.117,20.802|4/3|drive
+T|Bulgaria: Thracians and the oldest gold|Bulgaria Rila Plovdiv Varna|5-9|open
+B|Sofia|42.698,23.322|2/2|-|Rila Monastery;Seven Rila Lakes
+B|Plovdiv|42.136,24.742|3/2|drive|Perperikon
+B|Varna|43.214,27.915|2/2|drive
+T|Serbia: Lepenski Vir and the Iron Gates|Serbia Lepenski Vir|4-10|back
+B|Belgrade|44.787,20.457|2/1|-
+B|Donji Milanovac|44.465,22.152|2/2|drive
+T|Granada, Córdoba and Antequera|Andalusia Granada Cordoba Ronda|3-5,10-11|open
+B|Granada|37.177,-3.599|3/3|-
+B|Córdoba|37.888,-4.779|2/2|drive
+B|Ronda|36.742,-5.166|3/2|drive|Antequera dolmens
+T|Ice Age Spain: Altamira and Atapuerca|Cantabria caves Picos de Europa|5-9|open
+B|Santillana del Mar|43.391,-4.108|3/2|-
+B|Cangas de Onís|43.351,-5.129|3/2|drive
+B|Burgos|42.344,-3.697|1/1|drive
+T|Barcelona|Barcelona|4-6,9-10|open
+B|Barcelona|41.387,2.170|4/3|-
+T|Santiago and Galicia|Galicia Santiago|5-9|open
+B|Santiago de Compostela|42.880,-8.545|4/3|-
+T|Lisbon, Évora and the stone circles|Portugal Lisbon Evora Tomar|3-6,9-11|open
+B|Lisbon|38.722,-9.139|4/3|-
+B|Évora|38.571,-7.910|2/2|drive
+B|Tomar|39.604,-8.415|2/1|drive
+B|Vila Nova de Foz Côa|41.082,-7.140|2/2|drive
+T|Dordogne: the painted caves|Dordogne caves Lascaux|4-6,9-10|open
+B|Sarlat|44.890,1.216|6/4|-|Pech Merle
+T|Chauvet, Provence and Verdon|Ardeche Provence Verdon|4-6,9-10|open
+B|Vallon-Pont-d'Arc|44.407,4.395|2/2|-
+B|Avignon|43.949,4.806|4/3|drive
+B|Moustiers-Sainte-Marie|43.847,6.222|2/2|drive
+T|Pyrenees: Niaux and Gavarnie|Ariege caves Gavarnie|5-9|open
+B|Foix|42.966,1.607|3/2|-
+B|Luz-Saint-Sauveur|42.872,-0.003|3/2|drive|Cirque de Gavarnie
+T|Brittany: the standing stones|Brittany Carnac Mont Saint Michel|4-9|open
+B|Carnac|47.584,-3.078|4/3|-
+B|Morlaix|48.578,-3.828|2/1|drive
+B|Mont-Saint-Michel|48.616,-1.511|1/1|drive
+T|Stonehenge, Avebury and Bath|Salisbury Avebury Bath|4-9|open
+B|Salisbury|51.069,-1.795|3/2|-
+B|Bath|51.381,-2.359|2/2|drive
+T|Hadrian's Wall|Hadrian's Wall|5-9|open
+B|Hexham|54.972,-2.101|4/3|-
+T|Scotland: Kilmartin, Skye and Lewis|Scotland Kilmartin Skye Lewis|5-9|open
+B|Kilmartin|56.133,-5.487|2/2|-
+B|Skye|57.413,-6.196|4/3|drive
+B|Lewis|58.209,-6.387|3/2|drive
+T|Orkney|Orkney|5-8|open
+B|Kirkwall|58.981,-2.960|5/3|-
+T|Ireland: passage tombs and the Burren|Ireland Newgrange Sligo Burren|5-9|open
+B|Drogheda (Newgrange)|53.717,-6.356|2/2|-
+B|Sligo|54.277,-8.476|2/2|drive
+B|Doolin (Burren)|53.016,-9.377|4/3|drive
+T|Giant's Causeway coast|Northern Ireland Causeway Coast|4-9|open
+B|Bushmills|55.206,-6.522|3/2|-
+T|Norway: fjords and stave churches|Norway Bergen Sognefjord|6-8|back
+B|Bergen|60.392,5.324|2/2|-
+B|Aurland (Sognefjord)|60.905,7.187|4/3|drive
+T|Lofoten, one island chain|Lofoten|6-8|open
+B|Svolvær|68.234,14.568|7/5|-
+T|Iceland: the south, not the ring|Iceland south coast|6-9|back
+B|Reykjavík|64.147,-21.942|2/1|-
+B|Selfoss|63.933,-21.003|2/2|drive|Iceland
+B|Skaftafell|63.985,-16.960|3/2|drive|Jökulsárlón & Iceland's south coast
+T|Faroe Islands|Faroe Islands|5-8|open
+B|Tórshavn|62.012,-6.768|6/4|-
+T|Gotland and Visby|Gotland|6-8|open
+B|Visby|57.639,18.296|4/3|-
+T|Ice Age Germany: Swabian Jura and lake villages|Swabian Jura caves Lake Constance|4-10|open
+B|Blaubeuren|48.412,9.785|3/2|-|Heuneburg
+B|Unteruhldingen|47.724,9.227|2/1|drive
+T|Nebra, Goseck and Saxon Switzerland|Nebra Saxon Switzerland|4-10|open
+B|Halle|51.483,11.970|2/2|-
+B|Bad Schandau|50.918,14.155|3/2|drive
+T|Trier and the Roman Limes|Trier Saalburg|4-10|open
+B|Trier|49.757,6.641|2/2|-
+B|Bad Homburg|50.227,8.618|2/1|drive
+T|Hallstatt and Berchtesgaden|Hallstatt Berchtesgaden|5-10|open
+B|Berchtesgaden|47.631,13.002|4/3|-
+B|Hallstatt|47.562,13.649|2/1|drive
+T|Matterhorn and Mont Blanc|Zermatt Chamonix|6-9|open
+B|Chamonix|45.924,6.869|3/2|-
+B|Zermatt|46.020,7.749|3/3|drive
+T|Jungfrau and Aletsch|Wengen Grindelwald Aletsch|6-9|open
+B|Wengen|46.605,7.922|5/3|-|Jungfrau & Aletsch glacier
+T|Kraków and the Tatras|Krakow Zakopane|5-10|open
+B|Kraków|50.062,19.937|3/3|-
+B|Zakopane|49.299,19.949|3/2|drive
+T|Prague|Prague|4-6,9-10|open
+B|Prague|50.087,14.421|4/3|-
+T|Uzbekistan by train|Uzbekistan|4-5,9-10|open
+B|Samarkand|39.654,66.975|3/2|-|Panjakent & Sarazm
+B|Bukhara|39.775,64.429|3/2|train 2
+B|Khiva|41.378,60.364|2/2|train 6
+T|Kyrgyzstan: Issyk-Kul and yurts|Kyrgyzstan|6-9|back
+B|Bishkek|42.875,74.604|1/1|-
+B|Cholpon-Ata (Issyk-Kul)|42.650,77.080|6/5|drive|Issyk-Kul & Tian Shan
+T|Nepal: Kathmandu, Chitwan and the Annapurnas|Nepal|10-4|back
+B|Kathmandu|27.715,85.312|4/3|-
+B|Chitwan|27.576,84.494|3/2|drive
+B|Pokhara|28.210,83.985|5/3|drive|Annapurna & Mustang
+T|Bhutan|Bhutan|3-5,9-11|open
+B|Paro|27.430,89.417|5/4|-
+B|Punakha|27.591,89.877|3/2|drive
+T|India: Delhi, Agra and Jaipur|India Golden Triangle Ranthambore|10-3|back
+B|Delhi|28.614,77.209|2/2|-
+B|Agra|27.177,78.008|2/1|train 2
+B|Ranthambore|26.017,76.502|2/2|train 4
+B|Jaipur|26.912,75.787|3/2|train 2.5
+T|India: Varanasi and the Buddha|Varanasi Bodh Gaya Nalanda|10-3|open
+B|Varanasi|25.318,83.010|3/3|-
+B|Bodh Gaya|24.696,84.991|3/2|train 3.5|Nalanda
+T|India: caves around Aurangabad and Mumbai|Aurangabad Ellora Ajanta Mumbai|10-3|open
+B|Aurangabad|19.876,75.343|3/3|-
+B|Mumbai|18.922,72.834|3/2|fly 1.2
+T|India: Hampi and Badami|Hampi Badami|10-3|open
+B|Hampi|15.335,76.460|4/3|-
+B|Badami|15.919,75.676|2/2|drive
+T|India: Tamil temples and Kerala|Tamil Nadu temples Kerala|12-3|open
+B|Mahabalipuram|12.620,80.194|3/2|-
+B|Thanjavur|10.787,79.138|2/2|drive
+B|Madurai|9.925,78.120|2/2|drive
+B|Alappuzha (Kerala)|9.498,76.339|4/3|drive
+T|India: Bhopal, Sanchi and Bhimbetka|Bhopal Sanchi Bhimbetka|10-3|open
+B|Bhopal|23.260,77.413|4/3|-
+T|India: Gujarat stepwells and Dholavira|Gujarat Dholavira|11-2|open
+B|Ahmedabad|23.023,72.571|3/3|-|Rani ki Vav stepwell;Lothal;Modhera sun temple
+B|Bhuj|23.242,69.667|2/2|fly 1|White Rann of Kutch
+B|Dholavira|23.886,70.213|1/1|drive
+T|Ladakh, slowly|Ladakh|6-9|open
+B|Leh|34.153,77.577|9/7|-|Ladakh
+T|Sri Lanka: the ancient cities|Sri Lanka Sigiriya Kandy Galle|1-4,7-9|open
+B|Habarana (Sigiriya)|8.037,80.753|4/3|-
+B|Kandy|7.291,80.634|2/2|drive
+B|Galle|6.033,80.217|4/2|drive
+T|Northern Thailand|Chiang Mai Sukhothai Ayutthaya|11-2|open
+B|Chiang Rai|19.910,99.833|2/1|-
+B|Chiang Mai|18.788,98.985|4/3|drive
+B|Sukhothai|17.007,99.823|2/1|drive
+B|Ayutthaya|14.353,100.568|2/1|train 4.5
+T|Southern Thailand: Khao Sok and Phang Nga|Khao Sok Phang Nga|12-4|open
+B|Khao Sok|8.909,98.529|3/2|-
+B|Phang Nga (Khao Lak)|8.634,98.247|4/3|drive|Similan Islands
+T|Angkor and the lost Khmer cities|Siem Reap Koh Ker Banteay Chhmar|11-2|open
+B|Siem Reap|13.362,103.860|6/4|-|Koh Ker;Beng Mealea
+B|Banteay Chhmar|14.071,103.100|1/1|drive
+B|Kampong Thom|12.711,104.889|1/1|drive
+T|Laos: Luang Prabang and the jars|Laos Luang Prabang Phonsavan|11-2|open
+B|Luang Prabang|19.886,102.135|4/3|-
+B|Phonsavan|19.450,103.200|2/2|drive
+B|Champasak|14.890,105.880|3/2|fly 3
+T|Vietnam: caves, Huế and Mỹ Sơn|Vietnam Phong Nha Hue Hoi An|2-5|open
+B|Hanoi|21.028,105.852|2/2|-
+B|Hạ Long|20.960,107.040|2/1|drive
+B|Phong Nha|17.608,106.310|3/2|fly 3
+B|Huế|16.464,107.590|2/2|train 3.5
+B|Hội An|15.880,108.338|3/2|drive
+T|Java: Borobudur and the volcanoes|Java Yogyakarta Bromo Ijen|5-9|open
+B|Yogyakarta|-7.797,110.370|5/4|-|Candi Sukuh & Ceto;Sangiran
+B|Bromo|-7.921,112.965|2/1|train 6
+B|Banyuwangi (Ijen)|-8.219,114.369|1/1|drive
+T|Bali|Bali Ubud|5-9|open
+B|Ubud|-8.507,115.263|7/5|-
+T|Sulawesi: the oldest art and Toraja|Sulawesi Toraja Makassar|5-9|back
+B|Makassar|-5.135,119.412|2/2|-
+B|Rantepao (Toraja)|-2.969,119.900|4/3|drive
+T|Flores and Komodo|Flores Komodo Kelimutu|4-10|open
+B|Labuan Bajo|-8.496,119.888|4/3|-|Komodo
+B|Ruteng|-8.611,120.466|2/1|drive
+B|Moni (Kelimutu)|-8.754,121.851|2/2|fly 3
+T|Sabah: Kinabalu and Danum|Sabah Borneo|3-9|open
+B|Kinabalu Park|6.006,116.543|3/2|-
+B|Danum Valley|4.965,117.804|4/3|fly 3
+T|Sarawak caves|Sarawak Mulu Niah|3-9|open
+B|Mulu|4.042,114.812|4/3|-|Mulu caves & pinnacles
+B|Miri|4.399,113.991|2/1|fly 0.6|Niah caves
+T|Japan: Kyoto, Nara and Kōya|Kyoto Nara Koya Hiroshima|3-5,10-11|open
+B|Kyoto|35.012,135.768|5/4|-|Himeji castle
+B|Mount Kōya|34.213,135.586|1/1|train 3
+B|Ise|34.487,136.709|1/1|train 3
+B|Hiroshima|34.385,132.455|2/2|train 4
+T|Japan: Tokyo, Nikkō and the Alps|Tokyo Nikko Matsumoto Fuji|4-11|back
+B|Tokyo|35.681,139.767|3/3|-
+B|Nikkō|36.750,139.600|2/1|train 2
+B|Matsumoto (Kamikōchi)|36.238,137.972|3/2|train 4.5
+B|Fujikawaguchiko|35.500,138.760|2/1|train 3
+T|Japan: Jōmon north|Aomori Jomon|5-10|open
+B|Aomori|40.822,140.747|4/3|-
+T|Korea: Gyeongju and Jeju|Korea Gyeongju Jeju|4-5,9-10|open
+B|Seoul|37.566,126.978|3/2|-
+B|Gyeongju|35.856,129.225|3/2|train 2
+B|Jeju|33.450,126.570|4/3|fly 1
+T|China: Beijing, Datong and Xi'an|Beijing Datong Pingyao Xian|4-5,9-10|open
+B|Beijing|39.904,116.407|4/4|-
+B|Datong|40.077,113.300|2/2|train 2.5
+B|Pingyao|37.190,112.180|1/1|train 3.5
+B|Xi'an|34.341,108.940|3/3|train 3
+T|China: Sichuan|Chengdu Leshan Jiuzhaigou|9-11,3-5|open
+B|Chengdu|30.573,104.067|5/4|-|Leshan Giant Buddha
+B|Jiuzhaigou|33.260,103.918|3/2|train 3
+B|Dazu|29.705,105.705|2/1|train 4
+T|China: Guilin and Zhangjiajie|Guilin Yangshuo Zhangjiajie|4-5,9-11|open
+B|Yangshuo|24.778,110.497|4/3|-
+B|Zhangjiajie|29.345,110.540|3/3|train 5
+T|China: Silk Road|Dunhuang Zhangye|6-9|open
+B|Zhangye|38.926,100.450|2/2|-
+B|Dunhuang|40.142,94.662|3/2|train 5
+T|Yunnan|Lijiang Yuanyang|9-11,3-5|open
+B|Lijiang|26.872,100.238|4/3|-
+B|Yuanyang|23.220,102.830|3/2|fly 5
+T|Tibet|Lhasa Samye|5-9|open
+B|Lhasa|29.653,91.132|6/4|-|Samye monastery
+T|Taiwan|Taipei Taroko|10-4|back
+B|Taipei|25.033,121.565|3/2|-
+B|Hualien (Taroko)|23.991,121.611|3/2|train 2.2
+T|Mongolia: Gobi and Karakorum|Mongolia|6-8|back
+B|Ulaanbaatar|47.886,106.906|1/1|-
+B|Kharkhorin|47.195,102.840|3/2|drive 5.5
+B|Ulaanbaatar again|47.886,106.906|1/1|drive 5.5
+B|Gobi (Dalanzadgad)|43.571,104.425|4/4|fly 1.5|Gobi & the Flaming Cliffs
+T|Palawan|Palawan El Nido|12-4|open
+B|El Nido|11.180,119.390|6/4|-
+T|Morocco north: Fes and Volubilis|Fes Volubilis Chefchaouen|3-5,9-11|open
+B|Fes|34.033,-5.000|4/3|-
+B|Chefchaouen|35.169,-5.264|2/2|drive
+B|Asilah|35.465,-6.034|2/1|drive
+T|Morocco south: kasbahs and dunes|Morocco Marrakech Merzouga|3-4,10-11|open
+B|Marrakesh|31.630,-7.990|3/2|-
+B|Aït Benhaddou|31.047,-7.130|2/1|drive
+B|Tinghir (Todra)|31.515,-5.533|2/1|drive
+B|Merzouga|31.080,-4.013|2/2|drive
+T|Tunisia: Carthage, Dougga and El Jem|Tunisia|3-5,10-11|open
+B|Tunis (Sidi Bou Saïd)|36.871,10.342|4/3|-|Dougga
+B|Sousse|35.826,10.638|3/2|drive
+T|Senegal and the stone circles|Senegal Gambia stone circles|11-3|back
+B|Dakar|14.693,-17.447|3/2|-
+B|Kaolack|14.151,-16.073|2/2|drive|Senegambian stone circles
+T|Tanzania: Serengeti and the cradle of humankind|Tanzania safari Olduvai|6-10|open
+B|Arusha|-3.387,36.683|1/1|-
+B|Karatu (Ngorongoro)|-3.340,35.673|2/2|drive|Olduvai Gorge & Laetoli
+B|Serengeti|-2.333,34.833|3/3|drive 4.5|Serengeti
+B|Zanzibar|-6.163,39.192|4/3|fly 2
+T|Kenya: Mara and Amboseli|Kenya safari|7-10|back
+B|Nairobi|-1.286,36.817|1/1|-
+B|Amboseli|-2.652,37.261|2/2|drive|Amboseli
+B|Naivasha|-0.717,36.431|2/1|drive|Hyrax Hill & Kariandusi
+B|Maasai Mara|-1.490,35.144|3/3|drive|Maasai Mara
+T|Rwanda and Uganda: gorillas|Rwanda Uganda gorillas|6-9|back
+B|Kigali|-1.944,30.062|1/1|-
+B|Musanze|-1.500,29.635|3/2|drive
+B|Bwindi|-1.020,29.640|3/2|drive
+T|Namibia: dunes, rock art and Etosha|Namibia self drive|5-10|back
+B|Windhoek|-22.560,17.066|1/1|-
+B|Sesriem (Sossusvlei)|-24.486,15.800|3/2|drive
+B|Swakopmund|-22.680,14.530|2/2|drive|Skeleton Coast
+B|Twyfelfontein|-20.580,14.400|2/2|drive
+B|Etosha|-19.180,15.920|3/2|drive|Etosha
+T|Victoria Falls, Chobe and the Okavango|Victoria Falls Chobe Okavango|5-9|open
+B|Victoria Falls|-17.925,25.850|2/2|-
+B|Kasane (Chobe)|-17.800,25.150|3/2|drive|Chobe
+B|Maun (Okavango)|-19.983,23.418|4/3|fly 1.5|Okavango Delta
+T|Cape Town and the caves of the first artists|Cape Town Mossel Bay|10-4|back
+B|Cape Town|-33.925,18.424|5/4|-
+B|Mossel Bay|-34.183,22.146|3/2|drive|Blombos & Pinnacle Point caves
+T|South Africa: Cradle of Humankind and Kruger|South Africa Kruger Cradle of Humankind|5-9|back
+B|Johannesburg|-26.204,28.047|2/2|-
+B|Hazyview (Kruger)|-25.043,31.126|5/4|drive|Kruger & Blyde canyon
+T|Drakensberg: San rock art|Drakensberg rock art|4-9|back
+B|Durban|-29.858,31.022|1/1|-
+B|Drakensberg|-28.690,28.940|4/3|drive|Drakensberg rock art
+T|Madagascar: baobabs and tsingy|Madagascar Morondava tsingy|5-10|back
+B|Antananarivo|-18.879,47.508|1/1|-
+B|Andasibe|-18.928,48.418|2/2|drive 4
+B|Morondava|-20.288,44.317|2/2|fly 1.2
+B|Bekopaka (Tsingy)|-19.142,44.810|3/2|drive 8|Tsingy of Madagascar
+T|Mexico City, Puebla and Oaxaca|Mexico City Puebla Oaxaca|10-4|open
+B|Mexico City|19.433,-99.133|4/3|-|Xochicalco
+B|Puebla|19.041,-98.206|2/1|drive
+B|Oaxaca|17.061,-96.725|4/3|drive
+T|Yucatán|Yucatan Merida Valladolid|11-3|open
+B|Mérida|20.967,-89.623|4/3|-|Uxmal
+B|Valladolid|20.690,-88.201|3/2|drive
+B|Tulum|20.211,-87.465|3/2|drive
+T|Chiapas: Palenque and the jungle cities|Palenque Yaxchilan San Cristobal|11-4|open
+B|Villahermosa|17.990,-92.947|1/1|-|La Venta, Olmec heads
+B|Palenque|17.510,-91.982|4/3|drive|Yaxchilán & Bonampak
+B|San Cristóbal|16.737,-92.638|3/2|drive
+T|Guatemala: Atitlán and Tikal|Guatemala Antigua Atitlan Tikal|11-4|open
+B|Antigua|14.557,-90.733|3/2|-
+B|Lake Atitlán|14.741,-91.157|3/2|drive
+B|Flores (Tikal)|16.930,-89.892|4/3|fly 3|Tikal;Yaxhá
+T|Copán and Quiriguá|Copan Quirigua|11-4|open
+B|Copán Ruinas|14.838,-89.155|3/2|-|Quiriguá
+T|Belize: Maya and the reef|Belize San Ignacio reef|12-5|open
+B|San Ignacio|17.156,-89.071|4/3|-|Caracol
+B|Caye Caulker|17.760,-88.027|4/3|boat 3|Great Blue Hole & reef;Lamanai
+T|Costa Rica: volcano, clouds and Osa|Costa Rica Arenal Monteverde Osa|12-4|open
+B|La Fortuna|10.471,-84.645|3/2|-|Monteverde & Arenal
+B|Monteverde|10.300,-84.810|3/2|drive
+B|Osa (Puerto Jiménez)|8.540,-83.305|4/3|fly 4|Stone spheres of Costa Rica;Corcovado
+T|Havana and western Cuba|Havana Cuba|12-4|open
+B|Havana|23.136,-82.359|6/4|-
+T|Colombia: Cartagena and the Lost City|Cartagena Santa Marta Lost City|12-3|open
+B|Cartagena|10.424,-75.549|3/2|-
+B|Santa Marta|11.241,-74.205|7/5|drive|Lost City (Ciudad Perdida);Tayrona
+T|Ecuador: the Andes|Ecuador Quito Cuenca|6-9|open
+B|Quito|-0.220,-78.512|3/2|-
+B|Latacunga (Cotopaxi)|-0.932,-78.616|3/2|drive
+B|Cuenca|-2.900,-79.005|3/2|fly 2|Ingapirca
+T|Galápagos|Galapagos|1-6,9-12|open
+B|Puerto Ayora|-0.742,-90.312|8/6|-|Galápagos Islands
+T|Peru: Cusco and the Sacred Valley|Peru Cusco Sacred Valley Machu Picchu|5-9|open
+B|Ollantaytambo (Sacred Valley)|-13.258,-72.263|4/3|-|Machu Picchu & Sacred Valley;Moray & Maras
+B|Cusco|-13.517,-71.979|4/3|drive|Rainbow Mountain & Ausangate
+T|Peru: Choquequirao trek|Choquequirao trek|5-9|back
+B|Cusco|-13.517,-71.979|3/2|-
+B|Choquequirao trail|-13.394,-72.873|4/4|drive 5|Choquequirao
+T|Peru: Arequipa, Colca and Titicaca|Arequipa Colca Puno Titicaca|5-10|open
+B|Arequipa|-16.399,-71.537|3/2|-
+B|Chivay (Colca)|-15.638,-71.601|2/2|drive|Arequipa & Colca canyon
+B|Puno (Titicaca)|-15.840,-70.022|2/2|drive
+T|North Peru: Caral and the Moche|North Peru Caral Trujillo Chiclayo|5-11|open
+B|Lima|-12.046,-77.043|3/2|-|Caral
+B|Trujillo|-8.112,-79.029|3/2|fly 1.5
+B|Chiclayo|-6.771,-79.841|2/1|drive
+T|North Peru: the cloud warriors|Chachapoyas Kuelap|5-9|open
+B|Chachapoyas|-6.230,-77.869|5/4|-
+T|Peru: Huaraz and Chavín|Huaraz Chavin|5-9|open
+B|Huaraz|-9.527,-77.528|6/4|-|Chavín de Huántar;Cordillera Blanca
+T|Nazca and Paracas|Nazca Paracas Lima|4-11|back
+B|Lima|-12.046,-77.043|1/1|-
+B|Paracas|-13.834,-76.251|2/1|drive
+B|Nazca|-14.835,-74.938|2/2|drive
+T|Bolivia: Tiwanaku and Uyuni|Bolivia La Paz Uyuni|5-10|open
+B|La Paz|-16.500,-68.150|3/3|-
+B|Uyuni|-20.460,-66.825|4/3|fly 1|Salar de Uyuni
+T|Atacama and the oldest mummies|San Pedro de Atacama Arica|3-5,9-11|open
+B|San Pedro de Atacama|-22.911,-68.200|4/3|-|Atacama & San Pedro
+B|Arica|-18.478,-70.321|3/2|fly 2.5
+T|Northwest Argentina|Salta Purmamarca Cafayate|4-10|back
+B|Salta|-24.783,-65.412|2/1|-
+B|Purmamarca|-23.745,-65.498|3/2|drive
+B|Salta again|-24.783,-65.412|1/1|drive
+B|Cafayate|-26.073,-65.977|3/2|drive
+T|Patagonia: glaciers and Fitz Roy|El Calafate El Chalten|11-3|back
+B|El Calafate|-50.338,-72.265|3/2|-
+B|El Chaltén|-49.331,-72.886|5/3|drive|Fitz Roy & El Chaltén
+T|Patagonia: Torres del Paine|Torres del Paine|11-3|open
+B|Puerto Natales|-51.730,-72.506|6/4|-|Patagonia
+T|Rio and Iguazú|Rio de Janeiro Iguazu|4-10|open
+B|Rio de Janeiro|-22.907,-43.173|4/3|-
+B|Foz do Iguaçu|-25.540,-54.585|3/2|fly 2
+T|Pantanal|Pantanal jaguars|7-10|open
+B|Porto Jofre|-17.361,-56.771|5/4|-|Pantanal
+T|Lençóis Maranhenses|Lencois Maranhenses|6-9|open
+B|Barreirinhas|-2.747,-42.826|5/3|-
+T|Bahia: Chapada Diamantina|Chapada Diamantina|4-10|open
+B|Lençóis|-12.563,-41.390|6/4|-
+T|Amazon from Manaus|Amazon lodge Manaus|6-11|open
+B|Amazon lodge near Manaus|-3.300,-60.500|5/4|-|Amazon from Manaus
+T|Easter Island|Easter Island|10-4|open
+B|Hanga Roa|-27.150,-109.425|5/4|-
+T|US canyons: Zion to Moab|Zion Page Monument Valley Moab|4-5,9-10|open
+B|Springdale (Zion)|37.189,-112.999|3/2|-
+B|Page|36.915,-111.456|2/2|drive
+B|Grand Canyon|36.057,-112.143|2/1|drive
+B|Monument Valley|36.983,-110.112|1/1|drive
+B|Cortez (Mesa Verde)|37.349,-108.586|2/2|drive
+B|Moab|38.573,-109.549|3/2|drive|Horseshoe Canyon, Great Gallery
+T|New Mexico: white dunes, pueblos and Chaco|Santa Fe Chaco Bandelier White Sands|4-5,9-10|open
+B|Alamogordo|32.900,-105.960|2/2|-
+B|Santa Fe|35.687,-105.938|4/3|drive
+B|Farmington (Chaco)|36.728,-108.218|2/2|drive|Chaco Canyon
+T|Yosemite|Yosemite|5-10|open
+B|Yosemite|37.745,-119.593|5/4|-
+T|Death Valley|Death Valley|11-3|open
+B|Death Valley|36.457,-116.866|4/2|-
+T|Yellowstone|Yellowstone Grand Teton|6-9|open
+B|West Yellowstone|44.662,-111.104|5/4|-|Yellowstone
+T|Canadian Rockies and dinosaurs|Banff Jasper Drumheller|6-9|back
+B|Drumheller|51.463,-112.709|2/1|-|Dinosaur Park & Drumheller
+B|Banff|51.178,-115.572|4/3|drive
+B|Jasper|52.873,-118.080|3/2|drive|Banff & Jasper
+T|Newfoundland: Vikings and Gros Morne|Newfoundland Gros Morne|6-9|back
+B|Rocky Harbour (Gros Morne)|49.591,-57.917|4/3|-|Gros Morne
+B|St. Anthony|51.370,-55.590|3/2|drive
+T|Greenland: Ilulissat|Ilulissat|6-9|open
+B|Ilulissat|69.220,-51.098|5/4|-
+T|Uluru and Kata Tjuta|Uluru Kings Canyon|5-9|open
+B|Yulara (Uluru)|-25.240,130.985|4/3|-
+T|Kakadu|Darwin Kakadu|5-9|back
+B|Darwin|-12.463,130.842|2/1|-
+B|Jabiru (Kakadu)|-12.671,132.835|4/3|drive|Kakadu
+T|Sydney, Mungo and the Blue Mountains|Sydney Blue Mountains|9-5|open
+B|Sydney|-33.869,151.209|4/3|-
+B|Katoomba|-33.715,150.312|2/2|train 2
+T|Queensland: Daintree and the reef|Cairns Daintree Great Barrier Reef|5-10|open
+B|Port Douglas|-16.484,145.464|7/5|-|Great Barrier Reef
+T|Western Australia: Ningaloo|Ningaloo Exmouth|4-8|open
+B|Exmouth (Ningaloo)|-21.930,114.126|7/5|-|Ningaloo reef
+T|Western Australia: Murujuga and Karijini|Karijini Murujuga|5-9|open
+B|Karratha (Murujuga)|-20.737,116.846|3/2|-
+B|Karijini|-22.470,118.270|4/3|drive|Karijini gorges
+T|New Zealand: the north|New Zealand North Island|11-4|open
+B|Paihia|-35.282,174.091|3/2|-
+B|Auckland|-36.850,174.763|1/1|drive
+B|Rotorua|-38.137,176.251|4/3|drive|Waitomo & Rotorua
+B|Tongariro|-39.200,175.540|2/2|drive
+T|New Zealand: the south|New Zealand South Island|11-4|open
+B|Lake Tekapo|-44.004,170.477|3/2|-
+B|Queenstown|-45.031,168.663|3/2|drive
+B|Te Anau (Milford)|-45.414,167.718|4/3|drive|New Zealand South Island
+T|Hawaiʻi, the Big Island|Hawaii Big Island|4-10|open
+B|Hilo|19.707,-155.085|4/3|-|Hawaiʻi
+B|Kona|19.640,-155.997|4/3|drive
+T|Azores: Pico and Faial|Azores Pico Faial|5-9|open
+B|Madalena (Pico)|38.536,-28.527|7/5|-
+T|Madeira|Madeira|4-10|open
+B|Funchal|32.650,-16.908|6/4|-
+T|Canaries: Teide and La Gomera|Tenerife La Gomera|1-12|open
+B|La Orotava (Tenerife)|28.390,-16.523|5/4|-
+B|La Gomera|28.092,-17.110|3/2|boat 1.5
+T|Lanzarote|Lanzarote|1-12|open
+B|Yaiza|28.956,-13.765|5/4|-
+T|Mauritius and Réunion|Reunion Mauritius|5-11|open
+B|Réunion (Cilaos)|-21.135,55.471|6/4|-
+B|Mauritius|-20.440,57.320|5/4|fly 1
+T|Seychelles|Seychelles|4-5,10-11|open
+B|Praslin|-4.330,55.740|5/4|-|Seychelles
+B|La Digue|-4.360,55.840|3/2|boat 0.5
+T|Everest base camp trek|Everest base camp trek|3-5,10-11|back
+B|Kathmandu|27.715,85.312|2/2|-
+B|Everest trail (lodges)|27.805,86.713|12/12|fly 0.6|Everest base camp
+T|Kilimanjaro|Kilimanjaro climb|1-2,6-10|back
+B|Moshi|-3.335,37.340|2/2|-
+B|Kilimanjaro huts and tents|-3.200,37.400|7/6|drive 1.5|Kilimanjaro
+T|Svalbard|Svalbard|6-8|open
+B|Longyearbyen|78.223,15.647|5/4|-
+T|Antarctica by ship|Antarctica cruise Ushuaia|12-2|back
+B|Ushuaia|-54.801,-68.303|2/1|-
+B|On the ship|-64.800,-62.900|10/9|boat 0|Antarctica
+T|Istanbul and Troy by the Dardanelles|Istanbul Troy Canakkale|4-6,9-10|back
+B|Istanbul|41.008,28.980|4/3|-
+B|Çanakkale (Troy)|40.146,26.408|2/2|drive
+T|Hattusa and Ankara|Hattusa Ankara Museum of Anatolian Civilizations|5-9|back
+B|Ankara|39.933,32.860|2/2|-
+B|Boğazkale (Hattusa)|40.019,34.615|1/1|drive
+T|Transylvania: the Dacians|Transylvania Sarmizegetusa|5-10|open
+B|Hunedoara|45.752,22.908|2/2|-|Sarmizegetusa Regia
+B|Sibiu|45.793,24.152|3/2|drive
+T|Danube Delta|Danube Delta|4-6,9|open
+B|Tulcea|45.179,28.801|5/3|-|Danube Delta
+T|Corsica: menhirs and mountains|Corsica Filitosa|4-6,9-10|open
+B|Propriano|41.676,8.904|7/5|-
+T|Valcamonica and the Alps lakes|Valcamonica|4-10|open
+B|Capo di Ponte|46.031,10.343|3/2|-
+T|Southern Sweden: Tanum and Ale's Stones|Tanum Ale's Stones|5-9|open
+B|Fjällbacka (Tanum)|58.599,11.287|3/2|-
+B|Ystad|55.430,13.820|2/2|drive 4.8
+T|Arctic Norway: Alta|Alta Norway|6-8,2-3|open
+B|Alta|69.968,23.272|4/3|-
+T|Jelling and Danish Vikings|Jelling Denmark|5-9|open
+B|Jelling|55.755,9.420|3/2|-
+T|Socotra|Socotra|10-4|open
+B|Hadibo|12.651,54.018|7/7|-
+T|Bahrain: land of Dilmun|Bahrain|11-3|open
+B|Manama|26.228,50.586|3/2|-
+T|Musandam|Musandam|11-3|open
+B|Khasab|26.180,56.247|4/3|-|Musandam fjords
+T|Algeria: Timgad and Djémila|Algeria Timgad Djemila|3-5,10-11|open
+B|Constantine|36.365,6.615|4/3|-|Timgad & Djémila
+T|Benin: Abomey and Ouidah|Benin|11-2|open
+B|Ouidah|6.363,2.085|4/3|-|Abomey & Ouidah
+T|Great Zimbabwe|Great Zimbabwe|5-9|open
+B|Masvingo|-20.074,30.833|2/2|-
+T|Mapungubwe|Mapungubwe|5-9|open
+B|Mapungubwe|-22.215,29.380|3/2|-
+T|Tsodilo Hills|Tsodilo Hills|5-9|open
+B|Shakawe|-18.365,21.842|4/3|-|Tsodilo Hills
+T|Lake Malawi|Lake Malawi|5-10|open
+B|Cape Maclear|-14.020,34.840|6/5|-|Lake Malawi
+T|South Luangwa walking safari|South Luangwa|6-10|open
+B|Mfuwe|-13.100,31.790|5/4|-|South Luangwa
+T|Copper Canyon by train|Copper Canyon Paquime|10-4|open
+B|Chihuahua|28.632,-106.069|1/1|-
+B|Creel|27.751,-107.634|4/3|train 6|Copper Canyon
+T|Baja: whales and painted caves|Baja California whales San Ignacio|1-3|open
+B|San Ignacio (Baja)|27.284,-112.899|4/3|-|Baja giant cave murals
+B|La Paz (Baja)|24.142,-110.313|4/3|fly 4|Sea of Cortez & grey whales
+T|Monarch butterflies|Michoacan monarch butterflies|12-2|open
+B|Angangueo|19.617,-100.283|2/2|-|Monarch butterfly forests
+T|El Mirador trek|El Mirador trek|2-4|back
+B|Flores|16.930,-89.892|2/1|-
+B|El Mirador jungle camps|17.755,-89.920|5/5|drive 3|El Mirador
+T|Ohio and Cahokia: the mound builders|Cahokia Serpent Mound|4-10|open
+B|St. Louis|38.627,-90.199|2/2|-
+B|Chillicothe (Ohio)|39.333,-82.982|2/2|fly 4|Serpent Mound
+T|California redwoods|Redwood national park|6-9|open
+B|Crescent City|41.756,-124.202|5/4|-|Redwoods & Olympic
+T|Glacier National Park|Glacier National Park Montana|7-9|open
+B|Whitefish|48.411,-114.338|5/4|-|Glacier National Park
+T|Alaska: Denali|Denali|6-8|open
+B|Healy (Denali)|63.857,-148.966|5/4|-|Denali
+T|Alberta: the buffalo jump|Head-Smashed-In Waterton|5-9|open
+B|Waterton|49.053,-113.911|4/3|-|Head-Smashed-In Buffalo Jump
+T|Haida Gwaii|Haida Gwaii|6-9|open
+B|Skidegate|53.268,-131.989|7/5|-|Haida Gwaii
+T|Samaipata|Samaipata Santa Cruz Bolivia|5-10|open
+B|Samaipata|-18.180,-63.876|3/2|-
+T|Moon Valley and Talampaya|Ischigualasto Talampaya|4-10|open
+B|Villa Unión|-29.317,-68.228|4/3|-|Moon Valley & Talampaya
+T|Península Valdés|Peninsula Valdes whales|9-11|open
+B|Puerto Madryn|-42.769,-65.039|4/3|-|Península Valdés
+T|Carretera Austral|Carretera Austral Marble Caves|11-3|back
+B|Coyhaique|-45.571,-72.068|2/2|-
+B|Puerto Río Tranquilo|-46.625,-72.672|4/3|drive|Marble Caves & Carretera Austral
+T|Serra da Capivara|Serra da Capivara|5-9|open
+B|São Raimundo Nonato|-9.015,-42.699|4/3|-
+T|Ouro Preto|Ouro Preto|5-9|open
+B|Ouro Preto|-20.386,-43.504|3/2|-
+T|Fernando de Noronha|Fernando de Noronha|8-12|open
+B|Fernando de Noronha|-3.854,-32.424|6/4|-
+T|San Agustín and Tierradentro|San Agustin Tierradentro|12-2,7-8|open
+B|San Agustín|1.881,-76.268|3/2|-|San Agustín
+B|Tierradentro|2.584,-76.034|2/2|drive|Tierradentro tombs
+T|Tasmania|Tasmania|12-3|open
+B|Hobart|-42.882,147.327|4/3|-|Tasmania
+B|Cradle Mountain|-41.590,145.930|3/2|drive
+T|Purnululu and the Kimberley|Bungle Bungles Kununurra|5-9|open
+B|Kununurra|-15.774,128.739|5/4|-|Bungle Bungles
+T|Shark Bay|Shark Bay|4-10|open
+B|Denham|-25.927,113.534|4/3|-|Shark Bay stromatolites
+T|Lake Mungo|Lake Mungo Mildura|4-9|open
+B|Mildura|-34.185,142.163|3/2|-|Lake Mungo
+T|Great Ocean Road and Budj Bim|Great Ocean Road Budj Bim|10-4|open
+B|Port Fairy|-38.385,142.235|4/3|-|Budj Bim eel traps
+T|K'gari|K'gari Fraser Island|5-10|open
+B|K'gari|-25.240,153.130|4/3|-|K'gari (Fraser Island)
+T|Phanom Rung and Ban Chiang|Isan Phanom Rung Ban Chiang|11-2|open
+B|Nang Rong (Phanom Rung)|14.629,102.790|2/2|-|Phanom Rung & Phimai
+B|Udon Thani|17.415,102.787|2/1|fly 4|Ban Chiang
+T|Lake Toba|Lake Toba|5-9|open
+B|Samosir|2.680,98.860|5/4|-|Lake Toba
+T|Raja Ampat|Raja Ampat|10-4|open
+B|Waisai|-0.430,130.830|8/6|-|Raja Ampat
+T|Kaziranga and Assam|Kaziranga|11-4|open
+B|Kaziranga|26.577,93.171|4/3|-|Kaziranga
+T|Konark and Odisha|Konark Puri|10-3|open
+B|Puri|19.813,85.831|4/3|-
+T|Khajuraho|Khajuraho|10-3|open
+B|Khajuraho|24.852,79.933|3/2|-
+T|Amritsar|Amritsar Golden Temple|10-3|open
+B|Amritsar|31.634,74.872|2/2|-
+T|Halebidu and Belur|Belur Halebidu Hassan|10-3|open
+B|Hassan|13.007,76.099|3/2|-
+T|Huangshan and Liangzhu|Hangzhou Huangshan|4-5,9-11|open
+B|Hangzhou|30.274,120.155|3/2|-|Liangzhu, jade city
+B|Huangshan|30.130,118.170|3/2|train 1.6|Huangshan, yellow mountains
+T|Yinxu and Longmen|Anyang Luoyang|4-5,9-10|open
+B|Anyang|36.099,114.393|2/1|-|Yinxu, Shang capital
+B|Luoyang|34.620,112.454|2/2|train 2|Longmen Grottoes
+T|Kyushu: Yoshinogari and Yakushima|Kyushu Yakushima|3-11|open
+B|Fukuoka|33.590,130.402|2/2|-|Yoshinogari
+B|Yakushima|30.380,130.660|4/3|fly 1.2|Yakushima
+T|Korean dolmens and Haeinsa|Gochang dolmens Haeinsa|4-5,9-10|open
+B|Gochang|35.436,126.702|2/1|-|Korean dolmens
+B|Haeinsa|35.801,128.098|1/1|drive|Haeinsa
+T|Tajikistan: Fann mountains|Fann Mountains Panjakent|6-9|open
+B|Panjakent|39.495,67.609|5/4|-|Fann mountains
+T|Kazakhstan: Tanbaly and Charyn|Almaty Tanbaly Charyn|4-6,9-10|open
+B|Almaty|43.238,76.946|5/3|-|Tanbaly petroglyphs;Charyn canyon
+T|Nan Madol|Pohnpei Nan Madol|1-4|open
+B|Pohnpei|6.960,158.210|5/4|-|Nan Madol
+T|Palau|Palau|11-4|open
+B|Koror|7.342,134.479|7/5|-|Palau & Jellyfish Lake
+T|Falkland Islands|Falkland Islands|11-2|open
+B|Stanley|-51.693,-57.860|7/7|-|Falkland Islands

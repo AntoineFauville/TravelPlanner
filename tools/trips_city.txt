@@ -1,0 +1,54 @@
+# City trips. C = trip: title | lat,lon | ideal/minimum nights | best months | what not to miss (museums of archaeology first)
+C|Prague|50.087,14.421|3/2|4-6,9-12|Old Town, castle, Kutná Hora bone church
+C|Vienna|48.208,16.373|3/2|4-6,9-12|Venus of Willendorf in the Natural History Museum, Carnuntum Roman city
+C|Budapest|47.498,19.040|3/2|3-6,9-11|Thermal baths, Aquincum, National Museum
+C|Kraków|50.062,19.937|3/2|4-6,9-10|Wieliczka salt mine, Krakus mound, Rynek underground
+C|Berlin|52.520,13.405|3/2|4-10|Nefertiti and the Golden Hat on Museum Island
+C|Munich|48.137,11.575|2/2|4-10|Glyptothek, State Collection of Egyptian Art
+C|Dresden|51.050,13.738|2/2|4-10|Green Vault, Zwinger, Japanese Palace
+C|Hamburg|53.551,9.994|2/2|4-10|Harbour, Archaeological Museum, Speicherstadt
+C|Trier|49.757,6.641|2/1|4-10|Porta Nigra, imperial baths, gold hoard
+C|Strasbourg|48.573,7.752|2/2|4-6,9-12|Cathedral clock, Archaeological Museum
+C|Paris|48.857,2.352|4/3|4-6,9-10|Louvre, Saint-Germain-en-Laye prehistory museum, crypt under Notre-Dame
+C|Lyon|45.764,4.836|3/2|4-6,9-10|Lugdunum Gallo-Roman theatre and museum
+C|Amsterdam|52.367,4.904|3/2|4-9|Rijksmuseum, Allard Pierson, Leiden's Egyptian temple
+C|Bruges and Ghent|51.209,3.224|3/2|4-10|Canals, Van Eyck, Gruuthuse
+C|London|51.507,-0.128|4/3|4-10|British Museum, Natural History Museum, Mithraeum
+C|Edinburgh|55.953,-3.188|3/2|5-9|National Museum with Pictish stones, Rosslyn, Cairnpapple
+C|Dublin|53.350,-6.260|3/2|4-10|Gold and bog bodies in the National Museum, day trip to Newgrange
+C|Copenhagen|55.676,12.568|3/2|4-9|Sun Chariot and Egtved Girl, Roskilde Viking ships
+C|Stockholm|59.329,18.069|3/2|5-9|Vasa ship, Gold Room, Birka by boat
+C|Oslo|59.914,10.752|3/2|5-9|Fram and Kon-Tiki, new Viking museum (check opening)
+C|Helsinki and Tallinn|60.170,24.938|4/3|5-9|National Museum, sea fortress, walled Tallinn by ferry
+C|Riga|56.949,24.105|3/2|5-9|Art nouveau, wooden villages
+C|Vilnius|54.687,25.280|3/2|5-9|Baroque lanes, Kernavė hill forts
+C|Gdańsk|54.352,18.647|3/2|5-9|Amber museum, Malbork castle
+C|Rome|41.896,12.482|4/3|3-5,10-11|Forum, Villa Giulia Etruscans, Ostia Antica
+C|Naples|40.852,14.268|4/3|3-5,10-11|Archaeological Museum, Herculaneum, underground city
+C|Florence|43.770,11.256|3/2|3-5,10-11|Chimera of Arezzo, Uffizi, Fiesole
+C|Venice|45.441,12.316|3/2|3-5,10-11|Lagoon islands, Torcello, St Mark's
+C|Bologna and Ravenna|44.494,11.343|3/2|3-5,9-11|Ravenna mosaics, Etruscan museum, food
+C|Turin|45.070,7.687|3/2|3-5,9-11|The best Egyptian museum outside Cairo
+C|Palermo|38.116,13.361|3/2|3-5,10-11|Norman mosaics, Salinas museum, Segesta
+C|Valletta|35.899,14.514|4/3|3-5,10-11|Hypogeum (book months ahead), Tarxien, Mnajdra
+C|Barcelona|41.387,2.170|4/3|3-5,9-11|Gaudí, Roman city under the Gothic quarter
+C|Madrid and Toledo|40.417,-3.704|4/3|3-5,10-11|Lady of Elche, Altamira replica, Toledo
+C|Seville|37.389,-5.984|3/2|3-5,10-11|Alcázar, Carambolo treasure, Italica, Valencina dolmens
+C|Granada|37.177,-3.599|3/2|3-5,10-11|Alhambra (book ahead), Sacromonte caves
+C|Lisbon|38.722,-9.139|4/3|3-6,9-11|Carmo museum, Sintra, Roman galleries
+C|Porto|41.158,-8.629|3/2|4-6,9-10|Douro, Citânia de Briteiros
+C|Athens|37.976,23.735|4/3|3-5,10-11|Acropolis Museum, Antikythera mechanism, Cape Sounion
+C|Thessaloniki|40.640,22.944|3/2|4-6,9-10|Vergina royal tombs, Derveni krater
+C|Istanbul|41.008,28.980|4/3|4-6,9-11|Hagia Sophia, first peace treaty, Basilica Cistern
+C|Sofia|42.698,23.322|3/2|4-6,9-10|Thracian gold, Rila, Serdica under the metro
+C|Ljubljana|46.056,14.508|2/2|4-10|The oldest wooden wheel in the world, Škocjan caves
+C|Split|43.508,16.440|3/2|4-6,9-10|Diocletian's palace, Salona
+C|Dubrovnik|42.650,18.094|3/2|4-5,10|City walls, Lokrum, Bay of Kotor
+C|Marrakesh|31.630,-7.990|4/3|3-5,10-11|Medina, Atlas day trip
+C|Fes|34.033,-5.000|4/3|3-5,10-11|Medina, Volubilis
+C|Tunis and Carthage|36.871,10.342|4/3|3-5,10-11|Bardo mosaics, Carthage, Dougga
+C|Cairo|30.044,31.236|4/4|10-4|Grand Egyptian Museum, Giza, Saqqara
+C|Tbilisi|41.694,44.801|4/3|4-6,9-10|Gold of Colchis, Dmanisi skulls, baths
+C|Yerevan|40.178,44.512|4/3|4-6,9-10|Oldest shoe, Garni, Khor Virap
+C|Baku|40.409,49.867|3/3|4-6,9-10|Gobustan carvings, old city
+C|Amman and Jerash|31.955,35.935|4/3|3-5,10-11|Ain Ghazal statues, oldest in the world, Jerash

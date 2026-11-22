@@ -4,8 +4,9 @@ import { state, rate, ratingOf, extra, setExtra } from './store.js';
 import { $, esc, days, monthRange, toast } from './util.js';
 import { LEVELS, byN, isMatch } from './scale.js';
 import { gallery, photosOf } from './photos.js';
+import { drawGlobe } from './globe.js';
 
-const TYPES = { temple: 'Temples', ancient: 'Ancient cities', tomb: 'Tombs & pyramids', sacred: 'Sacred places', fort: 'Forts', city: 'Towns', nature: 'Nature', own: 'Our own places' };
+const TYPES = { prehistory: 'Prehistory & early humans', temple: 'Temples', ancient: 'Ancient cities', tomb: 'Tombs & pyramids', sacred: 'Sacred places', fort: 'Forts', city: 'Towns', nature: 'Wonders of nature', own: 'Our own places' };
 let current = null, pics = null, busy = false, filter = '';
 const skipped = new Set(), past = [];          // past: what Undo can bring back
 export let active = false;
@@ -22,9 +23,13 @@ const pool = () => allPlaces().filter(fits);
 const todo = () => pool().filter(p => !ratingOf(p.id, state.who) && !extra(p.id).visited);
 
 function queue() {
-  const other = 1 - state.who;
+  const other = 1 - state.who, me = state.who;
+  // learn what you like: types you rate high come up earlier, types you rate low later
+  const sum = {};
+  for (const p of allPlaces()) { const r = ratingOf(p.id, me); if (r) { const k = sum[p.type || 'own'] || (sum[p.type || 'own'] = [0, 0]); k[0] += r; k[1]++; } }
+  const taste = p => { const k = sum[p.type || 'own']; return k && k[1] >= 4 ? (k[0] / k[1] - 2.4) * 0.22 : 0; };
   // places the other person loves come up a bit earlier, so matches happen sooner
-  return todo().map(p => [p, dice(p.id) - (ratingOf(p.id, other) >= 3 ? 0.4 : 0) + (skipped.has(p.id) ? 10 : 0)]).sort((a, b) => a[1] - b[1]).map(x => x[0]);
+  return todo().map(p => [p, dice(p.id) - taste(p) - (ratingOf(p.id, other) >= 3 ? 0.4 : 0) + (skipped.has(p.id) ? 10 : 0)]).sort((a, b) => a[1] - b[1]).map(x => x[0]);
 }
 
 // ---- timeline, log scale: recent centuries get as much room as early millennia
@@ -44,8 +49,9 @@ function cardHtml(p) {
   const v = verdict(p);
   return `<div class="dpics"></div>
     <div class="dinfo">
-      <div><h2>${esc(p.name)}</h2><p class="soft">${esc([...new Set([p.country, p.region])].filter(Boolean).join(' · '))}</p></div>
-      ${p.why ? `<p class="dwhy">${esc(p.why)}</p>` : ''}
+      <div class="dhead"><div><h2>${esc(p.name)}</h2><p class="soft">${esc([...new Set([p.country, p.region])].filter(Boolean).join(' · '))}</p>
+        ${p.why ? `<p class="dwhy">${esc(p.why)}</p>` : ''}</div>
+        <button class="dglobe" data-do="where" title="Show on the globe"><canvas aria-label="Where it is on the globe"></canvas></button></div>
       ${facts(p)}
       <div class="dmeta"><span>${days(daysFor(p))} to visit</span>${p.months ? `<span>Best ${monthRange(p.months)}</span>` : ''}<span class="tag ${v.v}">${LABEL[v.v]}</span></div>
       ${p.advice ? '<p class="sm warn">Check the official travel advice before planning this one.</p>' : ''}
@@ -74,6 +80,7 @@ export function drawDiscover() {
       <div class="dmore"><button class="link quiet" data-do="undo" ${past.length ? '' : 'disabled'}>Undo</button><button class="link quiet" data-do="skip">Skip for now</button><button class="link quiet" data-do="seen">We have been there</button></div>
     </div>`;
   pics = gallery($('.dpics', el), p);
+  drawGlobe($('.dglobe canvas', el), p.lat, p.lon).catch(() => $('.dglobe', el)?.remove());
   if (left[1]) { const n = photosOf(left[1])[0]; if (n) new Image().src = n.u.replace('/500px-', '/960px-'); }
 }
 
@@ -145,6 +152,7 @@ export function initDiscover(go) {
     if (d === 'all') { filter = ''; drawDiscover(); }
     if (d === 'other') { state.who = 1 - state.who; current = null; setWho(); }
     if (d === 'catalogue') go('catalogue');
+    if (d === 'where' && current) { const id = current; go('travel'); showPlace(id); }
   });
   el.addEventListener('change', e => { if (e.target.id === 'dfilter') { filter = e.target.value; current = null; drawDiscover(); } });
   addEventListener('keydown', e => {
@@ -155,6 +163,8 @@ export function initDiscover(go) {
     else if (e.key === 'Backspace') { e.preventDefault(); undo(); } else if (e.key.toLowerCase() === 's') skip();
   });
 }
+let showPlace = () => {};
+export const onWhere = fn => { showPlace = fn; };
 let setWho = () => drawDiscover();
 export const onWho = fn => { setWho = fn; };
 export const resetCard = () => { current = null; };

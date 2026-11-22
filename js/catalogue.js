@@ -6,7 +6,7 @@ import { LEVELS, levelOf, isMatch, badge, rateBar } from './scale.js';
 import { thumb } from './photos.js';
 import { openDetail } from './detail.js';
 
-const TYPES = { temple: 'Temples', ancient: 'Ancient cities', tomb: 'Tombs & pyramids', sacred: 'Sacred places', fort: 'Forts', city: 'Towns', nature: 'Nature', own: 'Our own places' };
+const TYPES = { prehistory: 'Prehistory & early humans', temple: 'Temples', ancient: 'Ancient cities', tomb: 'Tombs & pyramids', sacred: 'Sacred places', fort: 'Forts', city: 'Towns', nature: 'Wonders of nature', own: 'Our own places' };
 const f = { q: '', type: '', region: '', v: '', st: '', sort: 'priority' };
 let built = false;
 

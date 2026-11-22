@@ -12,6 +12,14 @@ for n, line in enumerate(open(os.path.join(ROOT, "tools", "facts.txt"), encoding
     if len(p) != 5:
         raise SystemExit(f"facts.txt line {n}: expected 5 fields, got {len(p)}")
     out[p[0]] = {"year": int(p[1]) if p[1] else None, "when": p[2], "civ": p[3], "fact": p[4]}
+# the newer lists carry their facts on the same line
+cat = json.load(open(os.path.join(ROOT, "data", "catalog.json"), encoding="utf-8"))
+by_name = {s["name"]: s["id"] for s in cat}
+for fname in ("sites_prehistory.txt", "sites_nature.txt"):
+    for line in open(os.path.join(ROOT, "tools", fname), encoding="utf-8"):
+        p = line.strip().split("|")
+        if len(p) == 13 and (p[1] or p[0]) in by_name:
+            out[by_name[p[1] or p[0]]] = {"year": int(p[9]) if p[9] else None, "when": p[10], "civ": p[11], "fact": p[12]}
 ids = {s["id"] for s in json.load(open(os.path.join(ROOT, "data", "catalog.json"), encoding="utf-8"))}
 for x in sorted(ids - set(out)):
     print("no facts for", x)

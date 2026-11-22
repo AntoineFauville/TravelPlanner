@@ -61,7 +61,7 @@ export function initMap() {
 }
 
 function build() {
-  for (const id of ['zones', 'countries', 'route', 'ports', 'places']) map.addSource(id, { type: 'geojson', data: empty });
+  for (const id of ['zones', 'countries', 'route', 'ports', 'places', 'bases']) map.addSource(id, { type: 'geojson', data: empty });
   const add = l => map.addLayer(l);
   const bold = ['Noto Sans Bold'];
   add({ id: 'zones', type: 'fill', source: 'zones', paint: { 'fill-color': '#ff5a4d', 'fill-opacity': 0.26 } });
@@ -90,6 +90,10 @@ function build() {
     'text-size': 12, 'text-offset': [0, 0.9], 'text-anchor': 'top', 'symbol-sort-key': ['case', ['get', 'on'], 0, 1] },
     paint: { 'text-color': '#fff', 'text-halo-color': 'rgba(4,20,28,.9)', 'text-halo-width': 1.5 } });
 
+  add({ id: 'bases', type: 'circle', source: 'bases', paint: { 'circle-radius': 7, 'circle-color': '#fff', 'circle-stroke-color': '#0f6f84', 'circle-stroke-width': 3 } });
+  add({ id: 'base-names', type: 'symbol', source: 'bases', layout: { 'text-field': ['get', 'text'], 'text-font': bold, 'text-size': 13, 'text-offset': [0, -1], 'text-anchor': 'bottom', 'text-allow-overlap': true },
+    paint: { 'text-color': '#fff', 'text-halo-color': 'rgba(4,20,28,.95)', 'text-halo-width': 1.8 } });
+
   const tip = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10, className: 'tip' });
   for (const l of ['places', 'ports']) {
     map.on('mousemove', l, e => {
@@ -110,7 +114,8 @@ function build() {
 
   map.on('click', e => {
     const box = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-    const top = map.queryRenderedFeatures(box, { layers: [view === 'sailing' ? 'ports' : 'places'] })[0];
+    const hit = l => map.queryRenderedFeatures(box, { layers: [l] })[0];
+    const top = (view === 'sailing' && hit('ports')) || hit('places');
     if (top) return fire(top.layer.id === 'ports' ? 'port' : 'place', top.properties.id);
     if (view === 'sailing') {
       const c = map.queryRenderedFeatures(e.point, { layers: ['countries'] })[0];
@@ -144,6 +149,12 @@ export function drawPorts(on) {
     for (const f of countries.features) f.properties.on = names.has(f.properties.name);
     map.getSource('countries').setData(countries);
   }
+}
+
+// the bases of a trip, with their names
+export function drawBases(list) {
+  if (!ready) return;
+  map.getSource('bases').setData(fc(list.map((b, i) => ({ type: 'Feature', properties: { text: `${list.length > 1 ? `${i + 1}. ` : ''}${b.name.replace(/ \(.*\)| again/, '')}` }, geometry: { type: 'Point', coordinates: [b.lon, b.lat] } }))));
 }
 
 // parts: [{ line:[[lon,lat]...], color, dash }]

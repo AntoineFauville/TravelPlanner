@@ -1,0 +1,178 @@
+# Wonders of nature (same 13 fields as sites_prehistory.txt)
+# --- Europe
+Plitvice Lakes National Park|Plitvice Lakes|Croatia|nature|Adriatic|1|4-6,9-10|Sixteen turquoise lakes spilling into each other.|||barriers still growing|Croatia|Moss and bacteria build the dams a centimetre a year.
+Dolomites||Italy|nature|Alps|5|6-9|Pale towers that glow pink at sunset.|||coral reefs 250 million years old|Ladin people|They were once a tropical sea floor. Locals call the glow enrosadira.
+Stromboli|Stromboli & Aeolian Islands|Italy|nature|Sicily & Malta|4|5-6,9-10|A volcano that has erupted every 20 minutes for 2,000 years.|||active for over 2,000 years|Aeolian Islands|Sailors call it the lighthouse of the Mediterranean.
+Mount Etna|Etna|Italy|nature|Sicily & Malta|1|5-10|Europe's tallest active volcano.|||about 500,000 years old|Sicily|The Greeks put the forge of the gods here. It still grows and shrinks.
+Giant's Causeway||United Kingdom|nature|Britain & Ireland|1|4-10|40,000 stone columns stepping into the sea.|||lava 60 million years old|Irish legend|A giant is said to have built it to fight another in Scotland.
+Isle of Skye||United Kingdom|nature|Britain & Ireland|3|5-9|Needles, fairy pools and sea cliffs.|||volcanoes 60 million years old|Clans of Scotland|Dinosaur footprints cross its beaches.
+Cliffs of Moher|Cliffs of Moher|Ireland|nature|Britain & Ireland|1|5-9|214 m straight down to the Atlantic.|||rock about 320 million years old|Ireland|Thirty thousand pairs of seabirds nest on them.
+Lofoten||Norway|nature|Nordics|5|6-8,2-3|Alps rising from an Arctic sea.|||rock up to 3 billion years old|Vikings and cod fishers|The largest Viking house ever found, 83 m, stood here.
+Vatnajökull|Vatnajökull ice caves|Iceland|nature|Nordics|2|11-3,6-9|Blue caves under Europe's largest glacier.|||ice up to about 1,000 years old|Iceland|Seven volcanoes lie beneath the ice.
+Faroe Islands||Faroe Islands|nature|Nordics|5|5-8|Waterfalls off cliffs into the ocean.|||volcanic, 55 million years old|Norse|A lake seems to hang above the sea. There are more sheep than people.
+Jökulsárlón|Jökulsárlón & Iceland's south coast|Iceland|nature|Nordics|2|5-9|Icebergs drift past seals to a black beach.|||lagoon since the 1930s|Iceland|It grows every year as the glacier melts.
+Saxon Switzerland|Saxon & Bohemian Switzerland|Germany|nature|Germany|2|4-10|Sandstone towers above the Elbe.|||sea sand 100 million years old|Saxony|Painters of the Romantic age came here to learn to see.
+Königssee|Königssee & Berchtesgaden|Germany|nature|Alps|2|5-10|An emerald fjord-like lake under a 1,800 m wall.|||carved in the last Ice Age|Bavaria|Boatmen play a trumpet to the echo.
+Eisriesenwelt|Eisriesenwelt ice cave|Austria|nature|Alps|1|5-10|The largest ice cave in the world.|||cave up to 100 million years old|Austria|42 km long, and lit by hand lamps.
+Škocjan Caves|Škocjan & Postojna caves|Slovenia|nature|Alps|2|4-10|A river roaring through an underground canyon.|||formed over millions of years|Slovenia|The canyon is 146 m deep. The olm, a blind dragon, lives in the dark.
+Triglav National Park|Lake Bled & Triglav|Slovenia|nature|Alps|3|5-9|Island church, emerald Soča and limestone peaks.|||carved by glaciers|Slovenia|Every Slovene is meant to climb Triglav once.
+Durmitor|Durmitor & Tara canyon|Montenegro|nature|Adriatic|2|6-9|Europe's deepest canyon, best by raft.|||carved over millions of years|Montenegro|1,300 m deep in places.
+Verdon Gorge||France|nature|France|2|5-9|Turquoise water 700 m below.|||limestone from a Jurassic sea|Provence|Thirty caves here were lived in by early people.
+Dune of Pilat||France|nature|France|1|4-10|A 100 m wall of sand eating a forest.|||about 4,000 years old|France|It moves inland up to five metres a year.
+Mont Blanc|Chamonix & Mont Blanc|France|nature|Alps|2|6-9|The roof of the Alps from a cable car.|||rising for 30 million years|Savoy|First climbed in 1786, the birth of mountaineering.
+Matterhorn|Matterhorn & Zermatt|Switzerland|nature|Alps|2|6-9|The perfect mountain.|||a piece of Africa on top of Europe|Switzerland|Its peak is African rock pushed over the Alps.
+Aletsch Glacier|Jungfrau & Aletsch glacier|Switzerland|nature|Alps|2|6-9|The longest river of ice in the Alps.|||shaped by the last Ice Age|Switzerland|20 km long and shrinking fast. See it soon.
+Cirque de Gavarnie||France|nature|Spain & Portugal|1|6-9|A natural theatre with a 420 m waterfall.|||carved by Ice Age glaciers|Pyrenees|Victor Hugo called it the colosseum of nature.
+Picos de Europa||Spain|nature|Spain & Portugal|3|6-9|Limestone peaks minutes from the sea.|||limestone 300 million years old|Asturias|The first peaks sailors saw when coming home from America.
+Bardenas Reales||Spain|nature|Spain & Portugal|1|3-5,9-11|A badland desert in green Navarre.|||carved from lake mud|Spain|Castildetierra looks like a fairy chimney.
+Timanfaya National Park|Timanfaya, Lanzarote|Spain (Canaries)|nature|Atlantic islands|2|1-12|Fire mountains where hay burns in a hole.|||erupted 1730 to 1736|Lanzarote|Six years of eruption buried a quarter of the island.
+Garajonay National Park|La Gomera & its cloud forest|Spain (Canaries)|nature|Atlantic islands|3|1-12|A laurel forest from the age before ice.|||forest type 20 million years old|Guanche|People here whistle across valleys, a language taught at school.
+Samaria Gorge||Greece|nature|Greek islands|1|5-10|Walk 16 km down to the Libyan sea.|||cut over millions of years|Crete|At the Iron Gates the walls are 4 m apart.
+Vikos Gorge|Vikos gorge & Zagori|Greece|nature|Greece|2|5-10|One of the deepest gorges for its width.|||limestone millions of years old|Zagori villages|Stone bridges and healers who gathered its herbs.
+Rila Mountain|Seven Rila Lakes|Bulgaria|nature|Balkans|1|7-9|Glacier lakes on seven steps.|||carved by Ice Age glaciers|Bulgaria|White-dressed dancers greet the sun here every August.
+Danube Delta||Romania|nature|Balkans|3|4-6,9|Europe's largest wetland, full of pelicans.|||delta about 10,000 years old|Lipovan fishers|Over 300 kinds of birds. Some villages have only boats.
+Białowieża Forest||Poland|nature|Central Europe|2|5-10|The last primeval forest of the European plain, with bison.|||forest since the Ice Age|Poland and Belarus|All wild European bison come from a handful saved here and in zoos.
+High Tatras||Slovakia|nature|Central Europe|3|6-9|The smallest high mountains in the world.|||carved by glaciers|Slovakia and Poland|Chamois, bears and a hundred mountain lakes.
+# --- Africa and Middle East
+White Desert National Park|White Desert|Egypt|nature|Egypt & the Nile|2|10-4|Chalk mushrooms glowing under the stars.|||sea floor 80 million years old|Bahariya oasis|Shells lie on the sand of a vanished ocean.
+Ras Muhammad National Park|Ras Mohammed reefs|Egypt|nature|Jordan & Sinai|3|3-6,9-11|One of the best coral walls in the world.|||reef at the tip of Sinai|Bedouin|Shark Reef drops 800 m.
+Wadi Mujib|Wadi Mujib canyon|Jordan|nature|Jordan & Sinai|1|4-10|Walk up a river between red walls.|||cut to the lowest place on Earth|Jordan|The biblical Arnon.
+Jebel Fihrayn|Edge of the World|Saudi Arabia|nature|Arabia|1|11-3|A 300 m cliff over an ancient sea bed.|||sea floor 150 million years old|Najd|Corals and shells lie under your feet.
+AlUla|AlUla & Elephant Rock|Saudi Arabia|nature|Arabia|2|11-3|Sandstone arches and an oasis of 2 million palms.|||people for 7,000 years|Dadan and Lihyan|Thousands of stone rectangles older than the pyramids lie around it.
+Wahiba Sands|Wahiba Sands & Wadi Shab|Oman|nature|Arabia|3|11-3|Singing dunes, then swimming into a hidden cave.|||dunes shaped in the Ice Age|Bedouin of Oman|Turtles nest on the beach nearby.
+Musandam Peninsula|Musandam fjords|Oman|nature|Arabia|2|11-3|Desert fjords with dolphins, by dhow.|||drowned valleys|Kumzari fishers|A village here speaks its own mix of Persian, Arabic and more.
+Richat Structure|Richat, Eye of the Sahara|Mauritania|nature|West Africa|4|11-2|A 40 km bull's-eye seen from space.|w||rock up to 600 million years old|Sahara|Not a crater but a dome worn flat. Some thought it was Atlantis.
+Lakes of Ounianga|Ounianga lakes|Chad|nature|North Africa|4|11-2|Blue lakes in the driest Sahara.|w||fed by rain 10,000 years old|Teda people|Water evaporates and is replaced from deep below.
+Erg Chebbi|Erg Chebbi dunes|Morocco|nature|Morocco|2|10-4|Orange dunes 150 m high.|||Sahara sands|Amazigh nomads|Pink flamingos come when rain fills its lake.
+Todgha Gorge|Todra & Dades gorges|Morocco|nature|Morocco|1|3-5,9-11|Red walls 300 m high, 10 m apart.|||cut through the Atlas|Amazigh|Fossils are sold on every corner.
+Danakil Depression|Danakil & Erta Ale|Ethiopia|nature|Ethiopia|4|11-2|Acid pools in neon yellow and a lava lake.|w||three plates tearing apart|Afar|One of the hottest lived-in places. A new ocean will be born here.
+Simien Mountains National Park|Simien Mountains|Ethiopia|nature|Ethiopia|3|10-3|Cliffs with thousands of grazing baboons.|w||lava 30 million years old|Amhara|Geladas are the last grass-eating monkeys.
+Mount Kilimanjaro|Kilimanjaro|Tanzania|nature|East Africa|7|1-2,6-10|Walk from jungle to ice on the Equator.|||about 1 million years old|Chagga|Its glaciers may be gone by about 2050.
+Ngorongoro Conservation Area|Ngorongoro crater|Tanzania|nature|East Africa|1|6-10|A lost world inside a dead volcano.|||collapsed 2.5 million years ago|Maasai|25,000 large animals live in one bowl.
+Lake Natron|Lake Natron & Ol Doinyo Lengai|Tanzania|nature|East Africa|2|6-10|A red lake of flamingos below a volcano of cold black lava.|||the Great Rift Valley|Maasai|The lava is as thin as water and turns white. It is the mountain of god.
+Maasai Mara|Maasai Mara|Kenya|nature|East Africa|3|7-10|River crossings of the great migration.|||savanna shaped by herders|Maasai|Big cats in every direction.
+Amboseli National Park|Amboseli|Kenya|nature|East Africa|2|6-10,1-2|Giant elephants before Kilimanjaro.|||lake dry for 10,000 years|Maasai|Its elephant families have been studied since 1972.
+Volcanoes National Park|Volcanoes National Park|Rwanda|nature|East Africa|3|6-9|Gorillas in the bamboo where Dian Fossey lived.|||volcanoes in a row|Rwanda|Over half of her gorillas' families are still followed.
+Rwenzori Mountains|Rwenzori, Mountains of the Moon|Uganda|nature|East Africa|7|6-8,12-2|Giant plants and tropical glaciers.|||raised by the Rift|Bakonzo|Ptolemy wrote of them 1,900 years ago as the source of the Nile.
+Murchison Falls|Murchison Falls|Uganda|nature|East Africa|2|12-2,6-9|The Nile squeezed through a 7 m gap.|||the Nile|Uganda|Crocodiles up to five metres wait below.
+Lake Malawi||Malawi|nature|Southern Africa|4|5-10|An inland sea with more fish species than any lake.|||1 to 2 million years old|Chewa|Up to a thousand kinds of cichlid, nearly all found only here.
+South Luangwa National Park|South Luangwa|Zambia|nature|Southern Africa|3|6-10|The home of the walking safari.|||valley of the Rift|Zambia|Leopards by night, carmine bee-eaters by the thousand.
+Mana Pools National Park|Mana Pools|Zimbabwe|nature|Southern Africa|3|6-10|Elephants standing on two legs under winter thorns.|||Zambezi flood plain|Zimbabwe|You may walk and canoe among wild animals.
+Chobe National Park|Chobe|Botswana|nature|Southern Africa|2|5-10|The most elephants on Earth.|||Chobe river|San and Basarwa|Perhaps 100,000 elephants drink here.
+Makgadikgadi Pan|Makgadikgadi salt pans|Botswana|nature|Southern Africa|2|5-9|A white horizon with meerkats on your shoulder.|||lake dried 10,000 years ago|San|One study places the cradle of modern humans here.
+Etosha National Park|Etosha|Namibia|nature|Southern Africa|3|6-10|Waterholes where everyone must come.|||salt pan seen from space|San and Ovambo|At night black rhinos come to lit waterholes.
+Fish River Canyon||Namibia|nature|Southern Africa|1|5-9|Africa's largest canyon.|||cut over 500 million years|Nama|A serpent is said to have dug it while fleeing hunters.
+Skeleton Coast||Namibia|nature|Southern Africa|2|5-10|Shipwrecks and seals between fog and dunes.|||Atlantic desert|San|They called it the land God made in anger.
+Kruger National Park|Kruger & Blyde canyon|South Africa|nature|Southern Africa|4|5-9|Big five, then a green canyon.|||park since 1926|South Africa|Larger than Slovenia, with 250 San rock art sites.
+Isalo National Park|Isalo|Madagascar|nature|Madagascar|2|5-10|Sandstone canyons with natural pools and lemurs.|||Jurassic sandstone|Bara|Cliff tombs are opened and turned by families.
+Andasibe-Mantadia National Park|Andasibe rainforest|Madagascar|nature|Madagascar|2|5-11|The song of the indri, the largest lemur.|||island alone for 88 million years|Madagascar|It sounds like a whale in the trees.
+# --- Asia
+Mount Everest|Everest base camp|Nepal|nature|Tibet & Nepal|13|3-5,10-11|Walk to the foot of the highest mountain.|||sea floor 470 million years old on top|Sherpa|The summit is made of sea creatures. It still rises millimetres a year.
+Annapurna Massif|Annapurna & Mustang|Nepal|nature|Tibet & Nepal|9|3-5,10-11|From rice fields to a desert kingdom.|||crash of India into Asia|Gurung, Thakali, Loba|Mustang's cliffs hide thousands of cave rooms 2,000 years old.
+Chitwan National Park|Chitwan|Nepal|nature|Tibet & Nepal|2|10-3|Rhinos and tigers below the Himalaya.|||saved hunting ground|Tharu|Rhinos went from under 100 to about 700.
+Kaziranga National Park|Kaziranga|India|nature|East India|3|11-4|Two thirds of the world's one-horned rhinos.|||Brahmaputra floods|Assam|Two thousand rhinos in tall grass.
+Valley of Flowers National Park|Valley of Flowers|India|nature|North India|5|7-8|A high valley blooming in the monsoon.|||Himalaya|Garhwal|Over 500 kinds of flowers, found by lost climbers in 1931.
+Ladakh|Ladakh|India|nature|North India|7|6-9|Moonland with monasteries and blue lakes.|||sea bed lifted to 4,000 m|Ladakhi Buddhists|Snow leopards and prayer flags.
+Rann of Kutch|White Rann of Kutch|India|nature|West India|2|11-2|A salt desert that shines at full moon.|||old arm of the sea|Kutch|Wild asses and flamingo cities. Dholavira lies inside it.
+Sundarbans||Bangladesh|nature|East India|3|11-2|Mangroves with swimming tigers.|||Ganges delta|Bengal|Honey collectors pray to the forest goddess Bonbibi.
+Kerala backwaters|Kerala backwaters|India|nature|South India|3|11-3|Palm canals by houseboat.|||lagoons behind the sea|Kerala|Snake boats race with a hundred rowers.
+Ranthambore National Park|Ranthambore tigers|India|nature|North India|2|10-5|Tigers among palace ruins.|||royal hunting ground|Rajasthan|The fort above is 1,000 years old.
+Hunza Valley|Hunza & the Karakoram|Pakistan|nature|Pakistan|7|5-10|Apricots, glaciers and 7,000 m walls.|w||fastest rising mountains|Burusho|They speak a language related to no other.
+Fann Mountains|Fann mountains|Tajikistan|nature|Silk Road|4|6-9|Turquoise lakes named for seven sisters.|||Pamir-Alay|Tajiks|One lake is said to hold Alexander's horse.
+Pamir Highway|Pamir Highway|Tajikistan|nature|Silk Road|9|6-9|Roof of the world by road.|w||raised by India's push|Pamiri|Marco Polo rode here past sheep now named after him.
+Issyk-Kul|Issyk-Kul & Tian Shan|Kyrgyzstan|nature|Silk Road|6|6-9|Warm lake among snow peaks and yurts.|||one of the deepest lakes|Kyrgyz nomads|It never freezes, and drowned towns lie on its bed.
+Charyn Canyon|Charyn canyon|Kazakhstan|nature|Central Asia|1|4-6,9-10|A valley of castles in red clay.|||12 million years|Kazakh steppe|A little Grand Canyon with ancient ash trees.
+Darvaza gas crater|Darvaza, door to hell|Turkmenistan|nature|Silk Road|1|4-5,9-10|A burning pit in the desert, now fading.|||burning since about 1971|Karakum|Said to have been lit to burn for a week. The flames are dying down.
+Lake Baikal||Russia|nature|Siberia|5|2-3,7-8|The oldest and deepest lake, with clear ice.|w||25 million years old|Buryats|A fifth of the world's fresh water, and seals far from any sea.
+Kamchatka Peninsula|Kamchatka|Russia|nature|Siberia|9|7-9|Volcanoes, geysers and bears fishing salmon.|w||30 active volcanoes|Itelmen and Koryak|The Valley of Geysers was found only in 1941.
+Flaming Cliffs|Gobi & the Flaming Cliffs|Mongolia|nature|Mongolia|4|6-9|Where the first dinosaur eggs were found.|||75 million years old|Gobi nomads|A Velociraptor was found here still fighting.
+Mount Fuji||Japan|nature|Japan|2|7-9,11-2|The perfect cone.|||about 100,000 years old|Japan|Sacred for over 1,000 years. It last erupted in 1707.
+Shiretoko National Park|Shiretoko|Japan|nature|Japan|3|2-3,6-9|Drift ice in winter and bears in summer.|||Hokkaido|Ainu|The name means end of the Earth in Ainu.
+Yakushima||Japan|nature|Japan|3|3-11|Cedars that may be 7,000 years old in moss.|||trees over 2,000 years old|Japan|The forest behind Princess Mononoke. It rains 35 days a month, people say.
+Kamikōchi|Kamikōchi & Japanese Alps|Japan|nature|Japan|2|5-10|Clear river under sharp peaks, with monkeys.|||volcanic valley|Japan|Cars are not allowed.
+Jeju Island|Jeju|South Korea|nature|Korea|3|4-6,9-11|Lava tubes, a crater above the sea and diving grandmothers.|||volcanic, 2 million years old|Jeju|The haenyeo dive for shells without air into their eighties.
+Taroko National Park|Taroko gorge|Taiwan|nature|Taiwan|2|10-4|A canyon of marble.|||rising marble|Truku|Parts are closed since the 2024 earthquake, so check first.
+Li River|Guilin & Li River|China|nature|China|3|4-5,9-11|Karst peaks in the mist by raft.|||karst 300 million years old|China|The view on the 20 yuan note.
+Huangshan|Huangshan, yellow mountains|China|nature|China|2|4-6,9-11|Granite, twisted pines and a sea of clouds.|||granite 125 million years old|China|The mountains of every Chinese painting.
+Zhangye National Geopark|Zhangye rainbow mountains|China|nature|China: Silk Road|1|6-9|Hills striped red and yellow.|||24 million years of sand|Silk Road|Best after rain at sunset.
+Jiuzhaigou|Jiuzhaigou|China|nature|China|2|9-11|Lakes of peacock colours with sunken trees.|||shaped by glaciers and lime|Tibetan and Qiang|Nine Tibetan villages gave it its name.
+Tiger Leaping Gorge||China|nature|China|2|4-5,9-11|The Yangtze 3,700 m below the peaks.|||cut by the Yangtze|Naxi|A tiger is said to have jumped across at its 25 m neck.
+Yuanyang County, Yunnan|Yuanyang rice terraces|China|nature|China|2|12-3|Mirrors of water down whole mountains.|||carved for 1,300 years|Hani|Three thousand steps in one slope.
+Phong Nha-Kẻ Bàng National Park|Phong Nha & Sơn Đoòng caves|Vietnam|nature|Vietnam|3|2-8|The largest cave in the world, with its own jungle.|||limestone 400 million years old|Vietnam|A 40-storey building would fit inside Sơn Đoòng.
+Khao Sok National Park|Khao Sok|Thailand|nature|Thailand|2|12-4|Float-house lake in ancient rainforest.|||forest over 100 million years old|Thailand|Older than the Amazon, with the giant rafflesia flower.
+Phang Nga Bay||Thailand|nature|Thailand|2|12-4|Sea caves and leaning islands by kayak.|||limestone drowned by the sea|Moken sea people|Paintings 3,000 years old mark the cliffs.
+Similan Islands|Similan Islands|Thailand|nature|Thailand|3|11-4|Granite boulders and whale sharks.|||granite 65 million years old|Moken|The Moken read the sea and escaped the 2004 tsunami.
+Gunung Mulu National Park|Mulu caves & pinnacles|Malaysia|nature|Borneo|4|3-9|Three million bats pour out at dusk.|||caves over millions of years|Penan and Berawan|Deer Cave's passage is among the largest in the world.
+Danum Valley Conservation Area|Danum Valley|Malaysia|nature|Borneo|3|3-10|Untouched rainforest with orangutans.|||forest 130 million years old|Borneo|The tallest tropical tree, over 100 m, stands here.
+Tanjung Puting National Park|Tanjung Puting orangutans|Indonesia|nature|Borneo|3|6-9|Sleep on a river boat among orangutans.|||peat rivers|Dayak|Studied here since 1971.
+Mount Bromo|Bromo & Ijen|Indonesia|nature|Java & Bali|3|5-9|A crater in a sea of sand, and blue fire.|||caldera 45,000 years old|Tenggerese Hindus|Ijen's acid lake is the largest, and its sulphur burns blue.
+Kelimutu|Kelimutu & Flores|Indonesia|nature|Eastern Indonesia|2|4-10|Three crater lakes that change colour.|||volcanic|Lio|Souls of the dead are said to live in them.
+Lake Toba||Indonesia|nature|Sumatra|3|5-9|A lake in the greatest volcano eruption of human times.|||erupted 74,000 years ago|Batak|The blast darkened the whole world. How hard it hit our ancestors is debated.
+Chocolate Hills|Bohol & Chocolate Hills|Philippines|nature|Philippines|2|12-5|A thousand round hills, brown in spring.|||coral raised from the sea|Philippines|The tiny tarsier lives here with eyes bigger than its brain.
+Tubbataha Reefs Natural Park|Tubbataha reefs|Philippines|nature|Philippines|6|3-6|Atoll walls far out at sea.|S||reef of 15 million years|Sulu Sea|Only open three months a year, by boat.
+Jellyfish Lake|Palau & Jellyfish Lake|Palau|nature|North Pacific|5|11-4|Swim with golden jellyfish that do not sting.|||lake cut off 12,000 years ago|Palauans|They follow the sun across the lake each day.
+# --- Australia and the Pacific
+Kata Tjuta|Kata Tjuta & Kings Canyon|Australia|nature|Australia|2|5-9|Thirty-six red domes beside Uluru.|F||rock 500 million years old|Aṉangu|Its men's stories are too sacred to tell.
+Purnululu National Park|Bungle Bungles|Australia|nature|Western Australia|2|5-9|Striped beehive towers.|||360 million years old|Gija and Jaru|Known to outsiders only since 1983.
+Karijini National Park|Karijini gorges|Australia|nature|Western Australia|3|4-9|Swim through slots of iron rock.|||2.5 billion years old|Banjima, Innawonga, Kurrama|Among the oldest rock you can touch.
+Ningaloo Coast|Ningaloo reef|Australia|nature|Western Australia|4|3-8|Swim with whale sharks from the beach.|S||fringing reef|Baiyungu and Yinigurdira|Shell beads 32,000 years old were found here.
+Shark Bay|Shark Bay stromatolites|Australia|nature|Western Australia|2|4-10|Living rocks like the first life on Earth.|||life form 3.5 billion years old|Malgana|Such mats made the oxygen we breathe.
+K'gari|K'gari (Fraser Island)|Australia|nature|Australia|3|5-10|Rainforest and clear lakes on pure sand.|||largest sand island|Butchulla|Its name means paradise.
+Blue Mountains (New South Wales)|Sydney & the Blue Mountains|Australia|nature|Australia|4|9-5|Harbour city, then blue eucalyptus canyons.|||sandstone 250 million years old|Gadigal, Dharug, Gundungurra|The Wollemi pine, a dinosaur tree, was found alive here in 1994.
+Daintree Rainforest|Daintree|Australia|nature|Australia|3|5-10|The oldest rainforest meets the reef.|||about 180 million years old|Kuku Yalanji|Cassowaries, birds like dinosaurs, plant its trees.
+Kimberley (Western Australia)|The Kimberley|Australia|nature|Western Australia|8|5-9|Horizontal waterfalls and Gwion figures.|S||coast of the first navigators|Wunambal, Gaambera and others|Elegant painted figures here are at least 12,000 years old.
+Lord Howe Island||Australia|nature|South Pacific|4|9-5|Only 400 visitors at a time.|||volcano 7 million years old|No native people|A stick insect thought extinct was found on a sea spire nearby.
+Tongariro National Park|Tongariro|New Zealand|nature|New Zealand|2|11-4|Emerald lakes and Mount Doom.|||volcanoes 275,000 years old|Ngāti Tūwharetoa|A chief gave the peaks to the nation in 1887 to keep them sacred.
+Waitomo Glowworm Caves|Waitomo & Rotorua|New Zealand|nature|New Zealand|3|10-4|A starry sky of glowworms, then geysers.|||caves 30 million years in the making|Māori|The stars are hunting larvae.
+Aoraki / Mount Cook|Aoraki Mount Cook & Tekapo|New Zealand|nature|New Zealand|2|11-4|Blue lakes and the darkest skies.|||rising Southern Alps|Ngāi Tahu|Aoraki was a boy frozen to stone in his canoe.
+# --- North America
+Yosemite National Park|Yosemite & giant sequoias|United States|nature|US West|3|5-10|Granite walls a kilometre high.|||granite 100 million years old|Ahwahneechee|El Capitan is the test of every climber.
+Death Valley|Death Valley|United States|nature|US Southwest|2|11-3|Hottest place on Earth, with sliding stones.|||basin still sinking|Timbisha Shoshone|56.7 degrees in 1913.
+Zion National Park|Zion & Bryce|United States|nature|US Southwest|3|4-5,9-10|Walk up a river canyon, then stand above stone needles.|||sand dunes 180 million years old|Southern Paiute|Bryce's towers were people turned to stone by Coyote.
+Antelope Canyon|Antelope Canyon & Horseshoe Bend|United States|nature|US Southwest|1|3-10|Light beams in a slot of red waves.|||cut by flash floods|Navajo|Navajo guides lead you in.
+Arches National Park|Arches & Canyonlands|United States|nature|US Southwest|2|4-5,9-10|Two thousand stone arches.|||salt bed 300 million years old|Ute and Pueblo|They fall and form: one collapsed in 2008.
+White Sands National Park|White Sands & Carlsbad|United States|nature|US Southwest|2|3-5,10-11|White gypsum dunes with the oldest footprints in America.|||footprints up to 23,000 years old|First Americans|A woman carried a child past a giant sloth here.
+Everglades National Park|Everglades|United States|nature|US East|2|12-4|River of grass with alligators and manatees.|||about 5,000 years old|Seminole and Miccosukee|The only place with both crocodiles and alligators.
+Redwood National and State Parks|Redwoods & Olympic|United States|nature|US West|4|6-9|The tallest trees on Earth.|||trees up to 2,000 years old|Yurok and Tolowa|Hyperion is about 116 m tall.
+Glacier National Park (U.S.)|Glacier National Park|United States|nature|US West|3|7-9|Backbone of the world.|||rock 1.4 billion years old|Blackfeet|Of 150 glaciers about 25 remain.
+Denali National Park and Preserve|Denali|United States|nature|Alaska|3|6-9|North America's highest peak and grizzlies.|||rising 60 million years|Koyukon|Denali means the high one.
+Glacier Bay Basin|Glacier Bay|United States|nature|Alaska|2|6-8|Ice falls into a bay of whales.|S||ice filled it in 1750|Tlingit|The glacier retreated 100 km in 200 years.
+Banff National Park|Banff & Jasper|Canada|nature|Canada|6|6-9|Milky turquoise lakes under the Rockies.|||rock up to 600 million years old|Stoney Nakoda|The Icefields road is one of the great drives.
+Dinosaur Provincial Park|Dinosaur Park & Drumheller|Canada|nature|Canada|2|5-9|Badlands with over 50 kinds of dinosaur.|||75 million years old|Blackfoot|New skeletons appear after every storm.
+Gros Morne National Park|Gros Morne|Canada|nature|Canada|3|6-9|Walk on the Earth's mantle.|||up to 1.2 billion years old|Mi'kmaq and Norse nearby|The place that proved continents move.
+Kluane National Park and Reserve|Kluane & Yukon|Canada|nature|Canada|4|6-9|The largest ice field outside the poles.|||highest mountains of Canada|Southern Tutchone|See it from a small plane.
+Niagara Falls||Canada|nature|Canada|1|5-10|A lake falling over an edge.|||about 12,000 years old|Haudenosaunee|It has moved 11 km upstream.
+Ilulissat Icefjord|Ilulissat icefjord|Greenland|nature|Arctic|4|6-9|Icebergs as big as cities.|||ice up to 250,000 years old|Inuit|It probably launched the iceberg that sank the Titanic.
+Copper Canyon|Copper Canyon|Mexico|nature|Northern Mexico|4|9-4|Deeper than the Grand Canyon, by train.|||volcanic|Rarámuri runners|The Rarámuri run 100 km in sandals.
+Monarch Butterfly Biosphere Reserve|Monarch butterfly forests|Mexico|nature|Central Mexico|1|12-3|Millions of butterflies sleeping in fir trees.|||yearly for ages|Mazahua and Purépecha|They arrive on the Day of the Dead and are seen as souls.
+Cenote|Cenotes of Yucatán|Mexico|nature|Maya world|2|11-4|Swim in blue wells of the underworld.|||ring left by the dinosaur asteroid|Maya|Skeletons 13,000 years old lie in the flooded caves.
+Espíritu Santo Island|Sea of Cortez & grey whales|Mexico|nature|Baja California|5|1-4|Whales that come to be touched.|||rift 5 million years old|Baja California|Cousteau called it the aquarium of the world.
+Corcovado National Park|Corcovado|Costa Rica|nature|Central America|3|12-4|The wildest rainforest of Central America.|||Osa peninsula|Costa Rica|2.5 percent of all species on Earth live here.
+Monteverde Cloud Forest Reserve|Monteverde & Arenal|Costa Rica|nature|Central America|4|12-4|Hanging bridges in clouds, then a volcano.|||cloud forest|Quakers and Ticos|Peace-seeking Quakers saved the forest in 1951.
+# --- South America
+Atacama Desert|Atacama & San Pedro|Chile|nature|Atacama|4|3-5,9-11|Driest desert, geysers and the clearest sky.|||dry for millions of years|Atacameño|Some weather stations never saw rain.
+General Carrera Lake|Marble Caves & Carretera Austral|Chile|nature|Patagonia|5|11-3|Blue caverns in a glacier lake.|||6,000 years of waves|Patagonia|The road south is one of the last wild ones.
+Valdes Peninsula|Península Valdés|Argentina|nature|Patagonia|2|9-11|Whales, and orcas that hunt on the beach.|||Patagonian coast|Tehuelche|You can hear right whales breathe at night.
+Iberá Wetlands|Iberá wetlands|Argentina|nature|Brazil & Iguazu|3|8-11|Floating islands, and jaguars coming back.|||old bed of the Paraná|Guaraní|Iberá means shining water.
+Quebrada de Humahuaca|Humahuaca & the 14-colour mountain|Argentina|nature|Northwest Argentina|4|4-10|Painted hills on a 10,000-year road.|||road for 10,000 years|Omaguaca and Inca|Villages still bury gifts for Pachamama.
+Ischigualasto Provincial Park|Moon Valley & Talampaya|Argentina|nature|Northwest Argentina|2|4-10|Where the first dinosaurs walked.|||230 million years old|Argentina|Eoraptor, among the oldest dinosaurs, comes from here.
+Los Glaciares National Park|Fitz Roy & El Chaltén|Argentina|nature|Patagonia|4|11-3|Granite spires with smoke-like clouds.|||granite 18 million years old|Tehuelche|They called it Chaltén, smoking mountain.
+Vinicunca|Rainbow Mountain & Ausangate|Peru|nature|Peru & Andes|2|5-9|Stripes at 5,000 m, uncovered by melting snow.|||minerals millions of years old|Quechua herders|Nobody visited it before about 2013.
+Colca Canyon|Arequipa & Colca canyon|Peru|nature|Peru & Andes|3|5-11|Condors rising from a canyon twice the Grand Canyon.|||volcanic|Collagua and Cabana|The frozen Inca girl Juanita is in Arequipa.
+Huascarán National Park|Cordillera Blanca|Peru|nature|North Peru|4|5-9|Turquoise lakes below ice pyramids.|||highest tropical range|Quechua|Chavín lies just across the pass.
+Manú National Park|Manu rainforest|Peru|nature|Peru & Andes|5|5-10|From cloud forest to macaw cliffs.|||Amazon headwaters|Matsigenka|More birds than the whole of Europe.
+Amazon rainforest|Amazon from Manaus|Brazil|nature|Amazon|5|6-11|Where a black river and a white one refuse to mix.|||55 million years old|Hundreds of peoples|Under the trees lie lost garden cities with roads.
+Pantanal|Pantanal|Brazil|nature|Brazil & Iguazu|4|7-10|The best place on Earth to see jaguars.|||largest wetland|Guató and others|Jaguars hunt caimans by day.
+Lençóis Maranhenses National Park|Lençóis Maranhenses|Brazil|nature|Northeast Brazil|3|6-9|White dunes full of blue lagoons.|||rain pools each year|Brazil|Fish appear in pools that were dry sand.
+Chapada Diamantina National Park|Chapada Diamantina|Brazil|nature|Northeast Brazil|4|4-10|Table mountains and blue cave lakes.|||1.6 billion years old|Diamond hunters|A sunbeam lights Poço Encantado at midday.
+Fernando de Noronha||Brazil|nature|Northeast Brazil|4|8-12|Dolphins by the hundred in clear bays.|||volcanic top|Brazil|Darwin stopped here in 1832.
+Mount Roraima|Mount Roraima|Venezuela|nature|Venezuela|6|12-4|A lost-world table in the clouds.|w||1.7 billion years old|Pemón|It inspired Conan Doyle's Lost World.
+Angel Falls||Venezuela|nature|Venezuela|4|6-11|The tallest waterfall, 979 m.|w||table mountains 1.7 billion years old|Pemón|The water turns to mist before it lands.
+Caño Cristales||Colombia|nature|Colombia|2|7-11|The river of five colours.|w||rock 1.2 billion years old|Colombia|A plant turns red for a few months.
+Tayrona National Natural Park|Tayrona|Colombia|nature|Colombia|2|12-3,7-8|Jungle beaches below snow peaks.|||Sierra Nevada coast|Kogi and Tairona|The highest coastal mountains in the world.
+Cotopaxi|Quito, Cotopaxi & Quilotoa|Ecuador|nature|Ecuador|4|6-9,12-1|Snow cone and a green crater lake.|||active volcano|Andean Quechua|From here the summit of Chimborazo is the farthest point from the Earth's centre.
+Yasuní National Park|Yasuní Amazon|Ecuador|nature|Ecuador|4|12-3,7-8|More tree species in a hectare than in North America.|||Ice Age refuge|Waorani|Some families here refuse all contact.
+# --- the far south and far north
+South Georgia|South Georgia|South Georgia|nature|South Atlantic|6|11-3|Half a million king penguins under glaciers.|S||Andes drowned in the sea|Whalers and Shackleton|Shackleton crossed it without a map to save his men.
+Falkland Islands|Falkland Islands|Falkland Islands|nature|South Atlantic|5|11-2|Five kinds of penguins and white beaches.|||islands of old Gondwana|British|Darwin met its fox-like wolf, now extinct.
+Tristan da Cunha|Tristan da Cunha|Saint Helena|nature|South Atlantic|4|12-3|The most remote village on Earth.|S||volcano 200,000 years old|Seven families|Seven days by ship from Cape Town, with no airport.

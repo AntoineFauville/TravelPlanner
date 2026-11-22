@@ -5,7 +5,7 @@ import { $, esc, norm, days, toast, km } from './util.js';
 import { badge, wanted } from './scale.js';
 import { thumb } from './photos.js';
 import { openDetail, openId } from './detail.js';
-import { setFilter, fit, drawRoute } from './map.js';
+import { setFilter, fit, drawRoute, drawBases } from './map.js';
 
 const ui = { show: 'all', v: '', limit: 60 };
 let busy = '';
@@ -165,4 +165,4 @@ export function initTravel() {
   });
 }
 
-export function enterTravel() { drawRoute([]); drawTravel(); }
+export function enterTravel() { drawRoute([]); drawBases([]); drawTravel(); }

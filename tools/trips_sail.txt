@@ -1,0 +1,180 @@
+# Rent a boat for a week or two. S = trip: title | search words | best months | level (learn, easy, medium, hard) | days ideal/min | licence and boat | why
+# B = stop: name | lat,lon | nights | what to do there       (the first is the charter base; you sail back to it unless marked open)
+S|Kiel Bay and the Danish South Sea|yacht charter Kiel Danish South Sea|6-8|learn|7/4|SBF See (German sea licence); sailing schools and skippers in Kiel|The best place near home to learn: short hops, pretty harbours, no tides.
+B|Kiel|54.340,10.160|1|Sailing capital of Germany
+B|Maasholm|54.684,9.990|1|Schlei fjord, near Haithabu
+B|Sønderborg|54.909,9.786|1|Castle and straits
+B|Ærøskøbing|54.890,10.410|2|The prettiest little town of Denmark
+B|Bagenkop|54.752,10.675|1|Langeland cliffs and wild horses
+S|IJsselmeer and the Frisian towns|yacht charter IJsselmeer|5-9|learn|7/4|No licence needed for most charter boats under 15 m|Shallow inland sea and traditional flat-bottomed boats. Easiest start of all.
+B|Lemmer|52.845,5.711|1|Frisian harbour
+B|Stavoren|52.885,5.360|1|Oldest town of Friesland
+B|Enkhuizen|52.703,5.292|1|Open-air Zuiderzee museum
+B|Hoorn|52.640,5.062|1|Golden Age harbour
+B|Urk|52.662,5.600|1|Former island
+S|Mecklenburg lakes by houseboat|Hausboot Mecklenburgische Seenplatte|5-9|learn|7/3|No licence on many lakes with a charter certificate|Not sailing but a first taste of living on board.
+B|Waren (Müritz)|53.516,12.680|1|Müritz national park
+B|Röbel|53.378,12.606|1|Quiet harbour
+B|Mirow|53.275,12.813|1|Castle island
+B|Rheinsberg|53.099,12.896|1|Palace by the lake
+S|Rügen and Hiddensee|yacht charter Rügen Hiddensee|6-8|easy|7/4|SBF See|White cliffs and a car-free island.
+B|Breege|54.617,13.340|1|Bodden lagoon
+B|Hiddensee (Kloster)|54.586,13.111|2|Lighthouse and dunes
+B|Stralsund|54.315,13.098|1|Hanseatic harbour
+B|Greifswald|54.097,13.450|1|Caspar David Friedrich
+S|Stockholm archipelago|yacht charter Stockholm archipelago|6-8|easy|7/5|ICC or SBF See usually accepted|24,000 islands, anchor alone to a rock each night.
+B|Saltsjöbaden|59.279,18.312|1|Charter base
+B|Sandhamn|59.288,18.917|1|Outer island village
+B|Möja|59.420,18.890|1|Fishing hamlets
+B|Finnhamn|59.480,18.820|1|Swimming rocks
+B|Birka (Björkö)|59.335,17.545|1|Viking town in Lake Mälaren
+S|Swedish west coast|yacht charter Bohuslän|6-8|easy|7/5|ICC or SBF See|Granite islands, seals and shrimp.
+B|Gothenburg|57.690,11.850|1|Charter base
+B|Marstrand|57.887,11.583|1|Fortress
+B|Gullholmen|58.179,11.403|1|Oldest fishing village
+B|Smögen|58.354,11.222|1|Boardwalk
+B|Fjällbacka|58.599,11.287|1|Near the Tanum carvings
+B|Lysekil|58.275,11.435|1|Sea aquarium
+B|Åstol|57.922,11.588|1|Houses on bare rock
+S|Gulf of Morbihan and Quiberon|yacht charter Morbihan Vannes|5-9|medium|7/5|No state licence for sailing in France, but charter firms ask for a CV; strong tides|Sail between megaliths: Gavrinis, Er Lannic and the Broken Menhir.
+B|La Trinité-sur-Mer|47.587,-3.024|1|Carnac next door
+B|Île-aux-Moines|47.597,-2.846|1|Near Gavrinis passage tomb
+B|Houat|47.391,-2.957|1|White beaches
+B|Belle-Île|47.347,-3.154|2|Cliffs painted by Monet
+B|Île de Groix|47.646,-3.447|1|Convex beach, dolmens
+S|Scotland: Oban to the Hebrides|yacht charter Oban Hebrides|5-8|hard|10/7|ICC or Day Skipper, tidal experience needed; skippers available|Fingal's Cave, Iona and whisky, for experienced crews or with a skipper.
+B|Oban|56.415,-5.472|1|Charter base
+B|Tobermory|56.623,-6.066|1|Painted harbour
+B|Staffa and Iona|56.335,-6.391|1|Fingal's Cave, the cradle of Scottish Christianity
+B|Canna|57.056,-6.490|1|Puffins
+B|Loch Scavaig (Skye)|57.194,-6.166|1|Anchor below the Cuillin
+B|Arisaig|56.905,-5.850|1|Skerries and seals
+B|Tobermory again|56.623,-6.066|1|Whisky
+B|Crinan|56.091,-5.557|1|Near Kilmartin's stones
+S|Split, Vis and Hvar|yacht charter Split Vis Hvar|5-6,9|easy|7/5|Licence accepted in Croatia plus VHF radio certificate, or hire a skipper|The classic first charter: steady wind and an island every two hours.
+B|Split|43.508,16.440|1|Diocletian's palace
+B|Milna (Brač)|43.326,16.450|1|Quiet bay
+B|Hvar|43.172,16.441|1|Grapčeva cave and lavender
+B|Vis|43.061,16.183|2|Blue cave, Issa Greek ruins
+B|Maslinica (Šolta)|43.397,16.207|1|Seven islets
+S|Kornati and Šibenik|yacht charter Kornati Šibenik|5-6,9|easy|7/5|Licence accepted in Croatia plus VHF, or a skipper|A moonscape of 89 islands and a river with waterfalls.
+B|Šibenik|43.735,15.890|1|Cathedral
+B|Skradin|43.817,15.924|1|Krka waterfalls by dinghy
+B|Žut|43.868,15.310|1|Anchorage
+B|Kornat|43.820,15.260|2|National park
+B|Zlarin|43.699,15.836|1|Coral island
+S|Ionian islands from Lefkas|yacht charter Lefkas Ionian flotilla|5-6,9|learn|7/5|Licence plus a second experienced crew member; flotillas with a lead boat|The gentlest Greek sailing, ideal as flotilla for beginners.
+B|Nydri (Lefkas)|38.706,20.711|1|Flotilla base
+B|Meganisi|38.664,20.780|1|Turquoise bays
+B|Kioni (Ithaca)|38.449,20.690|2|Odysseus' island
+B|Fiskardo (Kefalonia)|38.459,20.577|1|Venetian harbour
+B|Kastos|38.569,20.912|1|Tiny island
+S|Saronic gulf from Athens|yacht charter Athens Saronic Epidaurus|4-6,9-10|easy|7/5|Licence plus a second experienced crew member, or a skipper|Sail to a temple, a theatre and car-free Hydra.
+B|Athens (Alimos)|37.913,23.704|1|Acropolis before you leave
+B|Aegina|37.747,23.428|1|Temple of Aphaia
+B|Palaia Epidavros|37.636,23.160|1|Taxi to the great theatre
+B|Poros|37.499,23.453|1|Lemon forest
+B|Hydra|37.350,23.466|1|No cars, donkeys
+B|Cape Sounion|37.652,24.025|1|Anchor below Poseidon's temple
+S|Cyclades: Paros, Delos and Naxos|yacht charter Paros Cyclades Delos|5-6,9|hard|10/7|Licence and experience: the Meltemi wind is strong in July and August|Anchor by Delos and walk the sacred island before the ferries.
+B|Paros|37.085,25.149|1|Charter base
+B|Naxos|37.105,25.376|2|Portara, kouros statues
+B|Delos and Rineia|37.396,25.240|1|Sacred island
+B|Mykonos|37.447,25.329|1|Chora
+B|Syros|37.442,24.941|1|Ermoupoli
+B|Despotiko|36.962,25.004|1|New-found Apollo temple
+S|Dodecanese from Kos|yacht charter Kos Dodecanese|5-6,9-10|medium|7/6|Licence plus experienced crew member, or a skipper|Asclepius, a volcano you can walk into, and sponge islands.
+B|Kos|36.894,27.288|1|Asklepieion
+B|Nisyros|36.617,27.131|1|Walk into the crater
+B|Tilos|36.420,27.386|1|Dwarf elephant cave
+B|Symi|36.617,27.838|2|Coloured harbour
+B|Datça or Knidos|36.686,27.375|1|Knidos, if you clear into Turkey
+S|Lycian coast from Göcek|gulet or yacht charter Göcek Fethiye Kekova|5-6,9-10|easy|7/5|Licence required, or take a gulet with crew|Rock tombs and a sunken city, with swimming in pine bays.
+B|Göcek|36.752,28.940|1|Charter base
+B|Fethiye|36.623,29.108|1|Lycian tombs
+B|Kalkan|36.262,29.414|1|Xanthos and Patara by taxi
+B|Kaş|36.198,29.638|1|Lycian theatre
+B|Kekova|36.190,29.860|1|Sunken city
+B|Kalkan again|36.262,29.414|1|Dinner over the bay
+B|Gemiler island|36.553,29.069|1|Byzantine island of St Nicholas
+S|La Maddalena and southern Corsica|yacht charter La Maddalena Bonifacio|5-6,9|medium|7/5|Licence or skipper; strong winds in the strait|Pink granite and the white cliffs of Bonifacio.
+B|Portisco|41.031,9.524|1|Charter base
+B|La Maddalena|41.213,9.407|2|National park
+B|Lavezzi|41.341,9.256|1|Granite anchorage
+B|Bonifacio|41.387,9.159|1|Cliff town
+B|Porto Pollo|41.189,9.326|1|Windy bay
+S|Aeolian islands|yacht charter Aeolian Islands Milazzo|5-6,9|medium|7/5|Licence or skipper; few sheltered harbours|Watch Stromboli erupt from your own deck.
+B|Portorosa|38.126,15.113|1|Charter base
+B|Vulcano|38.418,14.957|1|Crater walk
+B|Lipari|38.467,14.954|1|Obsidian museum
+B|Panarea|38.637,15.077|1|Bronze Age village
+B|Stromboli|38.807,15.235|1|Night eruption
+B|Salina|38.555,14.872|1|Capers and wine
+S|Elba and the Tuscan islands|yacht charter Elba Tuscan archipelago|5-6,9|easy|7/5|Licence or skipper|Napoleon, iron mines and Etruscans.
+B|Punta Ala|42.806,10.735|1|Charter base
+B|Giglio|42.360,10.919|1|Clear water
+B|Porto Azzurro (Elba)|42.764,10.397|1|Mines
+B|Marciana Marina|42.806,10.197|2|Monte Capanne
+S|Balearics: Mallorca and Menorca|yacht charter Mallorca Menorca|5-6,9-10|medium|7/6|Licence or skipper|Menorca has 1,500 prehistoric monuments, and coves to anchor below them.
+B|Alcúdia|39.840,3.133|1|Roman Pollentia
+B|Ciutadella (Menorca)|40.001,3.836|1|Naveta des Tudons
+B|Maó|39.888,4.266|1|Trepucó, great harbour
+B|Cala Galdana|39.937,3.958|1|Talayots
+B|Ciutadella again|40.001,3.836|1|Lithica quarries
+S|Malta and Gozo by boat|yacht charter Malta Gozo Comino|4-6,9-10|easy|7/4|Licence or skipper|Temples from the sea, and the Blue Lagoon at night.
+B|Valletta|35.893,14.507|1|Grand Harbour
+B|Comino|36.013,14.327|1|Blue Lagoon
+B|Mġarr (Gozo)|36.025,14.299|2|Ġgantija by taxi
+B|Marsaxlokk|35.842,14.543|1|Fishing harbour
+S|Canaries: Tenerife, La Gomera, El Hierro|yacht charter Tenerife La Gomera|10-5|hard|10/7|Licence and experience: strong wind between the islands|Real ocean swell, good practice for the world tour.
+B|Las Galletas (Tenerife)|28.007,-16.661|1|Charter base
+B|San Sebastián (La Gomera)|28.090,-17.109|2|Columbus' last stop
+B|La Restinga (El Hierro)|27.641,-17.982|2|End of the old world
+B|La Palma|28.677,-17.767|2|Caldera
+S|British Virgin Islands|yacht charter British Virgin Islands|12-5|easy|10/7|Charter CV, or a skipper|The easiest tropical sailing in the world.
+B|Tortola|18.421,-64.615|1|Charter base
+B|Norman Island|18.318,-64.619|1|Caves of Treasure Island
+B|Virgin Gorda (The Baths)|18.432,-64.443|2|Granite caves
+B|Anegada|18.727,-64.387|1|Coral island
+B|Jost Van Dyke|18.443,-64.750|1|Beach bars
+S|Grenadines|yacht charter Grenadines Tobago Cays|12-5|medium|10/7|Charter CV, or a skipper|Turtles, reefs and steady trade wind.
+B|St Vincent|13.131,-61.197|1|Charter base
+B|Bequia|13.006,-61.238|1|Boat builders
+B|Mustique|12.879,-61.188|1|Quiet bay
+B|Tobago Cays|12.632,-61.357|2|Turtles
+B|Union Island|12.600,-61.430|1|Kite beach
+S|Belize reef|yacht charter Belize Placencia|12-5|easy|10/7|Charter CV, or a skipper|Catamaran inside the second largest reef, with Maya cities ashore.
+B|Placencia|16.514,-88.366|1|Charter base
+B|Ranguana Caye|16.330,-88.160|1|Palm dot
+B|South Water Caye|16.813,-88.083|1|Snorkelling
+B|Tobacco Caye|16.900,-88.062|1|Reef edge
+S|San Blas with a crew|San Blas sailing crewed catamaran|12-4|learn|7/4|Crewed boats only|Live with a captain among Guna islands. A perfect test of life on board.
+B|Cartí|9.450,-78.980|1|Jeep from Panama City
+B|Lemon Cays|9.560,-78.860|2|Wreck to snorkel
+B|Holandes Cays|9.590,-78.700|2|Reef lagoon
+S|Phang Nga and Phi Phi|yacht charter Phuket Phang Nga|12-4|easy|10/7|Charter CV, or a skipper|Limestone towers, sea caves and painted cliffs.
+B|Phuket (Ao Po)|8.070,98.440|1|Charter base
+B|Ko Panyee|8.335,98.505|1|Stilt village and rock paintings
+B|Railay|8.011,98.838|1|Climbing cliffs
+B|Phi Phi|7.740,98.778|1|Bays
+B|Ko Racha|7.600,98.365|1|Clear water
+S|Seychelles by catamaran|yacht charter Seychelles Praslin|4-5,10-11|easy|10/7|Licence or skipper|Granite beaches you can only reach by boat.
+B|Mahé (Eden Island)|-4.640,55.475|1|Charter base
+B|Praslin|-4.330,55.740|2|Vallée de Mai
+B|Curieuse|-4.283,55.728|1|Giant tortoises
+B|La Digue|-4.350,55.827|2|Anse Source d'Argent
+S|Tahiti's Leeward islands|yacht charter Raiatea Bora Bora|5-10|easy|12/9|Charter CV, or a skipper|Lagoon sailing from the holy island of Raiatea: a taste of the world tour.
+B|Raiatea|-16.734,-151.442|2|Marae Taputapuatea
+B|Huahine|-16.720,-151.040|2|Marae of Maeva
+B|Taha'a|-16.620,-151.500|1|Coral garden
+B|Bora Bora|-16.500,-151.770|3|The lagoon
+S|Whitsundays|yacht charter Whitsundays bareboat|6-10|learn|8/6|No licence needed, full briefing given|Reef, white sand and Aboriginal rock art in sheltered water.
+B|Airlie Beach|-20.268,148.716|1|Charter base
+B|Nara Inlet|-20.155,148.910|1|Ngaro rock art, 9,000 years
+B|Whitehaven|-20.280,149.040|1|White silica beach
+B|Hook Island|-20.060,148.940|2|Coral bays
+S|Tonga: whales of Vavaʻu|yacht charter Vavau Tonga|7-10|easy|12/9|Charter CV, or a skipper|Forty islands in a maze, with humpback whales.
+B|Neiafu|-18.651,-173.984|1|Harbour of refuge
+B|Kapa (Swallows' Cave)|-18.690,-174.040|1|Swim-in cave
+B|Nuku|-18.720,-174.070|1|Sandbank
+B|Hunga|-18.700,-174.130|2|Lagoon

@@ -13,6 +13,8 @@ export function photosOf(p) {
   const list = [];
   if (p.img) list.push({ u: p.img, ...(p.credit || {}) });
   list.push(...(book[p.id] || p.photos || []));
+  // an article's own picture is sometimes a map or a flag: show real photos first
+  if (p.img && list.length > 1 && book._last?.includes(p.id)) list.push(list.shift());
   const cover = extra(p.id).cover, i = list.findIndex(x => x.u === cover);
   if (i > 0) list.unshift(...list.splice(i, 1));
   return list;

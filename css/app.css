@@ -175,6 +175,11 @@ body:is([data-view=catalogue], [data-view=discover]) #top { background: #081318;
 .dinfo { padding: 24px 26px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .dinfo h2 { font-size: 30px; }
 .dwhy { font-size: 17px; line-height: 1.4; }
+.dhead { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; }
+.dhead .dwhy { margin-top: 12px; }
+.dglobe { border: 0; background: none; padding: 0; border-radius: 50%; line-height: 0; }
+.dglobe canvas { width: 150px; height: 150px; display: block; }
+.dglobe:hover { filter: brightness(1.15); }
 .dmeta { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; color: var(--soft); }
 .dact { display: grid; gap: 8px; }
 .dlevels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
@@ -190,7 +195,45 @@ body:is([data-view=catalogue], [data-view=discover]) #top { background: #081318;
 .dsum b { display: block; font: 750 34px/1 var(--head); color: var(--lv); }
 body[data-view=discover] #toast { bottom: auto; top: calc(var(--top) + 58px); }
 
+/* ---- holidays */
+.tabs { display: flex; gap: 3px; padding: 3px; border-radius: 10px; background: #0b1d25; }
+.tabs button { flex: 1; border: 0; background: none; border-radius: 8px; padding: 7px 8px; font-size: 14px; font-weight: 600; color: var(--soft); white-space: nowrap; }
+.tabs button:hover { color: var(--text); }
+.tabs button[aria-pressed=true] { background: var(--raise); color: var(--text); }
+.tabs.wrap { flex-wrap: wrap; background: none; padding: 0; gap: 6px; }
+.tabs.wrap button { flex: none; border: 1px solid var(--line); padding: 5px 11px; }
+.tabs.wrap button[aria-pressed=true] { background: var(--text); border-color: var(--text); color: var(--ink); }
+.ghead { display: flex; justify-content: space-between; align-items: baseline; padding-top: 6px; }
+.ghead h3 { font-size: 19px; }
+.pack { border-top: 1px solid var(--line); padding-top: 6px; }
+.pack h4 { margin: 12px 0 5px; }
+.pack .check { align-items: flex-start; padding: 3px 0; line-height: 1.35; }
+.pack .check input { margin-top: 2px; }
+.card .rowitem img, .card .rowitem .ph { width: 46px; height: 40px; }
+.sht { display: none; }
+.cardhead { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; width: 100%; border: 0; background: none; padding: 0; text-align: left; }
+.cardhead:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+.cardhead span { white-space: nowrap; font-size: 14px; }
+h4 { margin: 0; font: 650 15px/1.25 var(--head); }
+.leg { margin: 0; padding: 4px 0 4px 14px; border-left: 2px dashed var(--soft); margin-left: 6px; font-size: 13.5px; color: var(--soft); }
+.base { display: flex; flex-direction: column; gap: 2px; padding-top: 4px; }
+.rowitem.dim { opacity: .7; }
+a.link { color: var(--sail); flex: none; font-size: 13.5px; }
+summary { cursor: pointer; padding: 4px 0; font-weight: 600; }
+summary.sm { font-weight: 500; color: var(--soft); }
+
+/* ---- ports */
+.pglobe { width: 92px; height: 92px; flex: none; }
+.hero.bare { height: 54px !important; }
+.onroute { font-weight: 600; color: var(--sail); }
+.months span.st { background: #a13a32; color: #fff; }
+.stopname { border: 0; background: none; padding: 0; font-weight: 600; text-align: left; }
+.stopname:hover { text-decoration: underline; text-underline-offset: 3px; }
+.stop .ops button.lit { background: #ff5f86; color: var(--ink); font-weight: 700; }
+
 /* ---- sailing */
+.dayin { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; color: var(--soft); }
+.dayin input { width: 62px; padding: 4px 6px; color: var(--text); font-variant-numeric: tabular-nums; }
 .totals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 10px; }
 .totals b { display: block; font: 700 20px/1.15 var(--head); font-variant-numeric: tabular-nums; }
 .totals .big { grid-column: 1/-1; }
@@ -252,13 +295,15 @@ dialog::backdrop { background: rgba(2, 8, 11, .7); }
   .bar input[type=search] { grid-column: 1/-1; max-width: none; }
   #panel, #detail { background: #0b1920; }
   .has-detail .maplibregl-ctrl-bottom-right { right: 0; }
-  #nav button { padding: 7px 6px; }
+  #nav button { padding: 7px 5px; font-size: 13.5px; }
+  .lng { display: none; } .sht { display: inline; }
   #discover { padding: calc(var(--top) + 2px) 10px 10px; gap: 8px; }
   .dtop { gap: 10px; }
   .dtop select { max-width: 130px; padding: 5px 6px; }
   .dcard { grid-template-columns: 1fr; grid-template-rows: 42% minmax(0, 1fr); }
   .dinfo { padding: 14px 16px; gap: 12px; }
   .dinfo h2 { font-size: 23px; }
+  .dglobe canvas { width: 96px; height: 96px; }
   .dwhy { font-size: 16px; }
   .dlevels { grid-template-columns: 1fr 1fr; gap: 7px; }
   .dlevels button { min-height: 46px; font-size: 14px; padding: 6px 8px; }

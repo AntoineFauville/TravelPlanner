@@ -66,7 +66,7 @@ function hop(from, to, t, o) {
   return path;
 }
 
-export const stayFor = (id, o) => o.stays[id] ?? 14;
+export const stayFor = (id, o) => o.stays[id] ?? 7;
 
 // o: { start, month, year, knots, stops, stays, home, safeRed, sail (months per section, 0 = one go), rest (months at home) }
 export function simulate(o, order) {

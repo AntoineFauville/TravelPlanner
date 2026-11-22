@@ -1,0 +1,245 @@
+# Road trips with your own car from Germany. R = trip: title | search words | best months | countries crossed (ISO codes) | gear tags | why
+# gear tags: camp alpine nordic coast hot cave hike ferry gravel swim bike winter
+# B = base: town | lat,lon | ideal/minimum nights | how you get there (- for the first) | farther day trips (place names) | what not to miss
+# ---------- long weekends
+R|Black Forest and Alsace|Black Forest Alsace road trip|4-10|DE,FR|hike,bike|Panorama road, half-timbered villages and Grünewald's altar in Colmar.
+B|Triberg|48.131,8.234|2/1|-||Schwarzwaldhochstrasse, Triberg waterfalls
+B|Colmar|48.079,7.358|2/1|drive||Unterlinden museum, Eguisheim, Haut-Koenigsbourg castle
+R|Ice Age caves of the Swabian Jura|Swabian Jura caves Blaubeuren|4-10|DE|hike,cave|The oldest art and music in the world, two hours from half of Germany.
+B|Blaubeuren|48.412,9.785|2/1|-||Urmu museum with the Venus, Blautopf, Hohle Fels cave
+B|Bad Urach|48.493,9.399|1/1|drive||Waterfall, Heidengraben Celtic city
+R|Harz, Nebra and Naumburg|Harz Nebra Naumburg road trip|4-10|DE|hike|Witches' mountain, the oldest picture of the sky and a master's cathedral.
+B|Wernigerode|51.834,10.785|2/1|-||Brocken steam train, Rammelsberg mine, Quedlinburg
+B|Naumburg|51.152,11.810|2/1|drive|Nebra sky disc & Goseck circle|Cathedral, Nebra Ark, Goseck circle
+R|Saxon and Bohemian Switzerland|Saxon Switzerland Bohemian Switzerland|4-10|DE,CZ|hike|Sandstone towers on both sides of the border.
+B|Bad Schandau|50.918,14.155|3/2|-||Bastei, Schrammsteine, Pravčická gate, Tiské stěny
+R|Moselle and Eifel volcanoes|Moselle Eifel volcanoes|4-10|DE|hike,bike|Eltz castle, crater lakes and wine slopes.
+B|Cochem|50.147,7.167|2/1|-||Burg Eltz, Calmont via ferrata
+B|Daun|50.197,6.832|2/1|drive||Maar crater lakes, Vulkanstrasse
+R|Luxembourg's Little Switzerland and the Ardennes|Mullerthal Ardennes road trip|4-10|LU,BE|hike|Mossy rock labyrinths, castles and the caves of Han.
+B|Echternach|49.812,6.421|2/1|-||Mullerthal trail, Vianden castle
+B|La Roche-en-Ardenne|50.183,5.576|2/1|drive||Caves of Han, Wéris megaliths, Bouillon castle
+R|Rügen and the Baltic coast|Rügen Stralsund|5-9|DE|coast,swim,bike|White chalk cliffs and beech forest by the sea.
+B|Sassnitz|54.516,13.643|3/2|-||Königsstuhl cliffs, Cape Arkona, megaliths of Lancken-Granitz
+R|Lake Constance and Appenzell|Lake Constance Appenzell|5-10|DE,CH|hike,swim|Stilt houses of the Stone Age, then cliff inns in the Alps.
+B|Meersburg|47.694,9.271|2/1|-||Pile dwellings, Mainau, Reichenau monastery
+B|Appenzell|47.331,9.409|2/1|drive||Aescher cliff inn, Seealpsee, Ebenalp prehistoric cave
+R|Allgäu and the Lech valley|Allgäu Lechtal Füssen|5-10|DE,AT|hike,alpine|Castles, gorges and the last wild river of the northern Alps.
+B|Füssen|47.571,10.701|2/1|-||Neuschwanstein, Tegelberg
+B|Oberstdorf|47.410,10.279|2/1|drive||Breitachklamm, Nebelhorn
+R|Berchtesgaden and Salzburg|Berchtesgaden Salzburg|5-10|DE,AT|hike,alpine,cave|Königssee, an ice cave and Mozart's town.
+B|Berchtesgaden|47.631,13.002|3/2|-||Königssee by boat, Eisriesenwelt, Hallein Celtic salt mine
+R|Altmühltal fossils and Franconian Switzerland|Altmühltal Solnhofen Fränkische Schweiz|4-10|DE|hike,cave,bike|Find your own fossils where Archaeopteryx was found.
+B|Eichstätt|48.890,11.184|2/1|-||Fossil quarries, Roman Limes, Archaeopteryx museum
+B|Pottenstein|49.771,11.409|2/1|drive||Devil's Cave, rock villages, breweries
+R|Vosges: Route des Crêtes|Route des Crêtes Vosges|6-10|FR|hike,alpine|A crest road of meadows, lakes and farm inns.
+B|Gérardmer|48.072,6.877|2/1|-||Hohneck, lakes, Route des Crêtes
+B|Munster|48.040,7.137|1/1|drive||Petit Ballon, Colmar
+R|Champagne and Verdun|Reims Champagne Verdun|4-10|FR||Cathedral of kings, chalk cellars and the memory of 1916.
+B|Verdun|49.160,5.384|1/1|-||Fort Douaumont
+B|Reims|49.258,4.032|2/1|drive||Cathedral, cellars, Épernay
+R|Bohemian Forest and Český Krumlov|Cesky Krumlov Bohemian Forest|4-10|DE,CZ|hike|A fairy-tale river town and deep forest.
+B|Passau|48.574,13.465|1/1|-||Three rivers, cathedral organ
+B|Český Krumlov|48.811,14.315|2/2|drive||Castle, rafting, Šumava lakes
+R|Vikings and Hanseatic brick: Haithabu and Lübeck|Haithabu Schleswig Lübeck|4-10|DE|coast|The greatest Viking town of the north and the queen of the Hansa.
+B|Schleswig|54.515,9.569|2/1|-||Haithabu Viking museum, Danevirke, Gottorf bog bodies
+B|Lübeck|53.866,10.687|1/1|drive||Holstentor, Hansa museum
+R|Wadden Sea and North Frisia|Husum Halligen Wattwandern|5-9|DE|coast,bike|Walk on the sea floor to tiny islands.
+B|Husum|54.477,9.052|3/2|-||Mudflat walk, Halligen, St. Peter-Ording
+R|Teutoburg Forest and Externsteine|Externsteine Detmold Kalkriese|4-10|DE|hike|Sacred rocks and the battle that stopped Rome.
+B|Detmold|51.938,8.879|2/1|-||Externsteine, Hermann monument, Kalkriese battlefield
+R|Zeeland and Ghent|Zeeland Ghent|5-9|NL,BE|coast,swim,bike|Dunes, sea walls and Flemish masters.
+B|Middelburg|51.499,3.611|2/1|-||Delta works, Domburg beach
+B|Ghent|51.054,3.725|2/1|drive||Van Eyck's altar, canals
+R|Middle Rhine castles|Rhine castles Loreley|4-10|DE|hike,bike|Forty castles in sixty kilometres.
+B|Bacharach|50.059,7.768|2/1|-||Marksburg, Loreley, Rheinsteig
+# ---------- one to two weeks
+R|Dolomites passes|Dolomites road trip passes|6-9|AT,IT|alpine,hike,camp|The most beautiful mountain roads in Europe, with time to walk.
+B|Ortisei|46.574,11.672|4/2|-||Sella, Gardena and Pordoi passes, Seceda
+B|Cortina d'Ampezzo|46.537,12.137|3/2|drive||Tre Cime, Giau pass, Lago di Braies
+B|Bolzano|46.498,11.354|1/1|drive||Ötzi the Iceman
+R|Swiss high passes|Swiss passes road trip Furka Grimsel|6-9|CH|alpine,hike,camp|Furka, Grimsel and Susten, the Aletsch glacier and the Matterhorn.
+B|Andermatt|46.636,8.594|2/2|-||Furka, Susten and Gotthard passes, Rhône glacier
+B|Fiesch (Aletsch)|46.404,8.135|3/2|drive|Jungfrau & Aletsch glacier|Eggishorn view of the Aletsch glacier
+B|Täsch (Zermatt)|46.068,7.775|3/2|drive|Matterhorn & Zermatt|Matterhorn, car-free Zermatt by train
+R|Ötzi's valley, Stelvio and the Engadine|Stelvio Merano Engadine road trip|6-9|AT,IT,CH|alpine,hike,camp|48 hairpins, the Iceman and Romansh villages.
+B|Merano|46.671,11.159|3/2|-||Ötzi museum in Bolzano, archeoParc Schnals
+B|Bormio|46.467,10.370|2/1|drive||Stelvio and Gavia passes
+B|Scuol|46.797,10.298|2/2|drive||Swiss National Park, Guarda
+R|Slovenia: Bled, Soča and the caves|Slovenia road trip Soča Bled Škocjan|5-9|AT,SI|alpine,hike,camp,cave,swim|Emerald rivers and the largest underground canyon in Europe.
+B|Bled|46.369,14.114|2/2|-|Lake Bled & Triglav|Vintgar gorge, Lake Bohinj
+B|Bovec (Soča)|46.338,13.552|3/2|drive||Vršič pass, rafting the Soča
+B|Štanjel (Karst)|45.822,13.844|2/2|drive|Škocjan & Postojna caves|Škocjan caves, Piran on the coast
+R|Grossglockner, Hohe Tauern and Carinthia|Grossglockner road Hohe Tauern|6-9|AT|alpine,hike,camp,swim|The high road of the Alps, then warm lakes.
+B|Zell am See|47.323,12.797|2/1|-||Krimml waterfalls, Kaprun
+B|Heiligenblut|47.040,12.842|2/1|drive||Grossglockner road, Pasterze glacier
+B|Millstatt|46.804,13.571|3/2|drive||Lake Millstatt, Malta valley, Celtic town of Magdalensberg
+R|High Tatras and Slovak caves|Slovakia road trip Tatras Spiš caves|6-9|CZ,SK,PL|alpine,hike,camp,cave|Small high mountains, ice caves and the largest castle ruin.
+B|Olomouc|49.594,17.251|1/1|-||Holy Trinity column
+B|Ždiar (Tatras)|49.272,20.262|4/3|drive||Lomnický peak, Belianska cave
+B|Spišské Podhradie|49.000,20.752|2/1|drive||Spiš castle, Levoča, Dobšinská ice cave
+B|Kraków|50.062,19.937|2/1|drive||Wieliczka, Old Town
+R|Moravia: mammoth hunters and caves|Moravia Pálava Dolní Věstonice Moravian Karst|4-10|CZ,AT|hike,cave,bike|Home of a 27,000-year-old Venus, with wine cellars.
+B|Mikulov|48.806,16.638|3/2|-||Dolní Věstonice Archeopark, Pálava hills
+B|Brno|49.195,16.608|2/1|drive||Moravian Karst, Macocha abyss
+R|Auvergne volcanoes|Auvergne volcanoes road trip|5-10|FR|hike,camp|Eighty sleeping volcanoes in a green row.
+B|Orcival|45.683,2.842|3/2|-||Puy de Dôme, Puy de Sancy
+B|Salers|45.139,2.494|2/1|drive||Puy Mary, Cantal
+B|Le Puy-en-Velay|45.043,3.885|2/1|drive||Chapel on a needle of lava
+R|Dordogne: painted caves by car|Dordogne caves road trip Lascaux|4-6,9-10|FR|cave,hike,swim,camp|Original Ice Age paintings, cliffs, castles and canoe rivers.
+B|Vézelay|47.464,3.748|1/1|-||Basilica on the way to Santiago, Arcy caves
+B|Sarlat|44.890,1.216|6/4|drive|Pech Merle|Lascaux IV, Font-de-Gaume, Rouffignac, canoe to Beynac
+R|Chauvet, Cévennes and Tarn gorges|Ardèche Cévennes Tarn road trip|5-6,9-10|FR|cave,hike,swim,camp|The oldest great paintings and the deepest gorges of France.
+B|Vallon-Pont-d'Arc|44.407,4.395|3/2|-||Chauvet 2, Ardèche by canoe, Orgnac cave
+B|Florac|44.325,3.594|3/2|drive||Tarn and Jonte gorges, vultures
+B|Nîmes|43.837,4.360|2/1|drive||Roman arena, Pont du Gard
+R|Route des Grandes Alpes|Route des Grandes Alpes|6-9|FR,CH|alpine,hike,camp|From Lake Geneva to the sea over sixteen passes.
+B|Annecy|45.899,6.129|1/1|-||Lake and old town
+B|Bourg-Saint-Maurice|45.618,6.769|2/1|drive||Iseran pass
+B|Briançon|44.899,6.643|2/2|drive||Galibier, Izoard, Écrins
+B|Barcelonnette|44.387,6.652|2/1|drive||La Bonette, the highest road
+B|Menton|43.774,7.497|2/1|drive||The sea at last
+R|Provence, Verdon and Luberon|Provence Verdon Luberon road trip|4-6,9-10|FR|hike,swim,camp|Turquoise gorge, ochre villages and Roman stone.
+B|Moustiers-Sainte-Marie|43.847,6.222|3/2|-||Verdon gorge by kayak
+B|Roussillon|43.902,5.293|3/2|drive||Ochre cliffs, Gordes, Sénanque
+B|Arles|43.677,4.628|2/1|drive|Provence & Pont du Gard|Roman arena, Camargue, Pont du Gard
+R|Brittany: megaliths by car|Brittany road trip megaliths Crozon|5-9|FR|coast,hike,camp,swim|Standing stones, wild capes and the oldest buildings of Europe.
+B|Mont-Saint-Michel|48.616,-1.511|1/1|-||The abbey at high tide
+B|Morlaix|48.578,-3.828|2/1|drive||Cairn of Barnenez, Pink Granite Coast
+B|Crozon|48.245,-4.489|2/1|drive||Cliffs, Pointe de Pen-Hir
+B|Carnac|47.584,-3.078|4/3|drive||Alignments, Gavrinis by boat, Table des Marchands
+R|Normandy coast|Normandy road trip Etretat Bayeux|5-9|FR|coast,hike|Chalk arches, the Bayeux tapestry and the landing beaches.
+B|Honfleur|49.419,0.233|2/1|-||Étretat arches
+B|Bayeux|49.277,-0.703|2/2|drive||Tapestry, D-Day beaches
+B|Mont-Saint-Michel|48.616,-1.511|1/1|drive||The abbey
+R|Burgundy and the Jura|Burgundy Jura road trip|5-10|FR|hike,bike|Caesar's victory at Alésia, wine abbeys and blind valleys with waterfalls.
+B|Beaune|47.026,4.840|2/1|-||Hospices, Cluny, Bibracte
+B|Semur-en-Auxois|47.490,4.333|2/1|drive||Alésia, Vix treasure, Fontenay
+B|Baume-les-Messieurs|46.707,5.646|2/1|drive||Blind valleys, Hérisson waterfalls
+R|Jutland: bog people and North Sea|Jutland road trip Ribe Moesgaard Skagen|5-9|DK|coast,camp,swim|Vikings, bog bodies and the point where two seas meet.
+B|Ribe|55.328,8.762|2/1|-||Oldest town of Denmark, Wadden Sea
+B|Klitmøller|57.043,8.474|2/1|drive||Cold Hawaii, Rubjerg Knude dunes
+B|Skagen|57.721,10.583|2/1|drive||Grenen, where two seas meet
+B|Aarhus|56.153,10.211|2/2|drive|Jelling|Moesgaard museum with Grauballe Man, Jelling
+R|Danish islands and southern Sweden|Møn Copenhagen Ystad Kivik road trip|5-9|DK,SE|coast,camp,swim,bike|Chalk cliffs, passage graves and stone ships.
+B|Møn|54.987,12.287|2/1|-||Møns Klint, passage graves
+B|Copenhagen|55.676,12.568|2/1|drive||National Museum, Roskilde Viking ships
+B|Ystad|55.430,13.820|3/2|drive||Ale's Stones, Kivik king's grave
+R|Swedish west coast: Tanum|Bohuslän Tanum road trip|6-8|DK,SE|coast,camp,swim,hike|Granite islands and Bronze Age ships carved in rock.
+B|Marstrand|57.887,11.583|2/1|-||Fortress island
+B|Fjällbacka|58.599,11.287|4/3|drive||Tanum carvings, Koster islands by boat
+B|Mariestad (Vänern)|58.710,13.824|2/1|drive||Ekehagen prehistoric village, Läckö castle
+R|Masuria and Białowieża|Masuria Białowieża road trip|5-9|PL|camp,swim,bike,hike|A thousand lakes and the last primeval forest, with bison.
+B|Toruń|53.014,18.598|1/1|-||Copernicus' brick town, Biskupin Iron Age village on the way
+B|Mikołajki|53.802,21.572|3/2|drive||Lakes by kayak, Wolf's Lair
+B|Białowieża|52.700,23.867|3/2|drive||Bison, strict reserve with a guide
+B|Warsaw|52.230,21.011|1/1|drive||Old Town
+R|Polish Baltic: moving dunes and Gdańsk|Gdańsk Łeba dunes Malbork|5-9|PL|coast,swim,bike|Walking dunes, amber and the largest castle on Earth.
+B|Łeba|54.761,17.555|3/2|-||Słowiński moving dunes
+B|Gdańsk|54.352,18.647|3/2|drive||Amber, Malbork castle
+R|Ticino, Como and Valcamonica|Ticino Lake Como Valcamonica|4-6,9-10|CH,IT|alpine,hike,swim|Palm lakes, then 200,000 prehistoric carvings.
+B|Bellinzona|46.195,9.024|2/1|-||Three castles, Verzasca valley
+B|Varenna (Como)|46.010,9.284|2/1|drive||Lake villages by boat
+B|Capo di Ponte|46.031,10.343|3/2|drive|Valcamonica rock art|Naquane rock carvings, Lake Iseo
+R|Aosta, Gran Paradiso and Langhe|Aosta Gran Paradiso Langhe road trip|6-9|CH,IT,FR|alpine,hike|Roman Alps, ibex and wine hills.
+B|Aosta|45.737,7.320|2/1|-||Roman theatre, megaliths of Saint-Martin
+B|Cogne (Gran Paradiso)|45.608,7.357|2/2|drive||Ibex, waterfalls
+B|Barolo|44.611,7.943|3/2|drive||Vineyards, truffles
+R|Tuscany and the Etruscans|Tuscany Etruscans Volterra Pitigliano road trip|4-6,9-10|AT,IT|hike,swim|Tomb roads cut in tuff, hot springs and hill towns.
+B|Volterra|43.402,10.861|3/2|-||Etruscan museum, San Gimignano
+B|Pitigliano|42.635,11.670|3/2|drive||Vie Cave, Saturnia hot springs
+B|Orvieto|42.718,12.111|2/1|drive||Underground city, Civita di Bagnoregio
+R|Istria and the Kvarner islands|Istria Cres Krk road trip|5-9|AT,SI,HR|coast,swim,camp,ferry|Roman Pula, griffon vultures and clear water.
+B|Rovinj|45.081,13.638|3/2|-||Pula arena, Brijuni islands
+B|Cres|44.960,14.408|3/2|drive||Lubenice, vultures, beaches
+R|Plitvice, Velebit and Krk|Plitvice Paklenica Krk road trip|5-6,9|AT,SI,HR|hike,swim,camp|Lakes, canyons and the sea in one loop.
+B|Plitvice|44.880,15.616|2/1|-|Plitvice Lakes|Upper and lower lakes early
+B|Starigrad (Paklenica)|44.295,15.440|3/2|drive||Paklenica gorge, Zrmanja river
+B|Krk|45.027,14.575|2/1|drive||Beaches, Baška
+R|Hungary: Danube bend, Eger and Balaton|Hungary road trip Eger Balaton|4-10|AT,HU|swim,bike,cave|Thermal water, caves and wine.
+B|Budapest|47.498,19.040|2/2|-||Baths, Aquincum Roman city
+B|Eger|47.903,20.377|2/1|drive||Aggtelek caves, wine cellars
+B|Balatonfüred|46.961,17.872|3/2|drive||Lake, Tapolca cave, Tihany
+R|Southern England: Stonehenge to Cornwall|Southern England road trip Stonehenge Jurassic Coast Cornwall|5-9|FR,GB|coast,hike,camp,ferry|Stone circles, fossils and Celtic cliffs, by Channel ferry or tunnel.
+B|Salisbury|51.069,-1.795|2/2|-||Stonehenge, Avebury
+B|Lyme Regis|50.725,-2.937|2/1|drive||Jurassic Coast fossils
+B|Penzance|50.119,-5.537|4/3|drive||Mên-an-Tol, Lanyon Quoit, Minack theatre
+# ---------- two to three weeks
+R|Norway fjords by car|Norway fjords road trip Hirtshals Kristiansand|6-8|DK,NO|nordic,camp,hike,ferry|Cliffs, stave churches and free camping under the midnight light.
+B|Lysebotn|59.055,6.640|2/1|-||Kjerag, Preikestolen
+B|Odda|60.069,6.546|2/2|drive||Trolltunga, Hardangerfjord orchards
+B|Aurland|60.905,7.187|3/2|drive|Norwegian fjords & stave churches|Flåm railway, Borgund stave church
+B|Geiranger|62.101,7.206|2/2|drive||Trollstigen, fjord by kayak
+B|Lom (Jotunheimen)|61.838,8.567|3/2|drive||Sognefjell road, Besseggen ridge
+R|Sweden: lakes, rock art and Gotland|Sweden road trip Gotland Tanum|6-8|DK,SE|nordic,camp,swim,ferry|Wild camping by lakes, then a Viking island.
+B|Fjällbacka|58.599,11.287|3/2|-||Tanum carvings
+B|Tiveden|58.730,14.600|2/2|drive||Primeval forest and lakes
+B|Visby (Gotland)|57.639,18.296|5/4|boat 7||Walled town, stone ships, sea stacks
+B|Öland|56.660,16.640|3/2|boat 4.5||Iron Age forts, alvar plain
+R|Scotland by car: Kilmartin to Orkney|Scotland road trip Kilmartin Skye Orkney|5-9|NL,GB|nordic,coast,hike,camp,ferry|Stone circles and islands, by night ferry from IJmuiden.
+B|Kilmartin|56.133,-5.487|2/2|-||Cairns and carved rocks
+B|Skye|57.413,-6.196|4/3|drive||Quiraing, dinosaur footprints
+B|Ullapool|57.896,-5.160|3/2|drive||Assynt mountains, Bone Caves
+B|Kirkwall (Orkney)|58.981,-2.960|4/3|drive||Skara Brae, Brodgar, Maeshowe
+R|Ireland by ferry|Ireland road trip ferry Cherbourg Rosslare|5-9|FR,IE|coast,hike,ferry|From passage tombs to the edge of Europe.
+B|Dingle|52.141,-10.268|3/2|-||Beehive huts, Skellig view
+B|Doolin (Burren)|53.016,-9.377|3/2|drive||Cliffs, Poulnabrone
+B|Sligo|54.277,-8.476|3/2|drive||Carrowmore, Carrowkeel
+B|Drogheda (Newgrange)|53.717,-6.356|2/2|drive||Newgrange, Knowth
+R|Grand tour of the painted caves|Ice Age cave art road trip Chauvet Niaux Lascaux Altamira|5-6,9-10|FR,ES|cave,hike,camp|Chauvet, Niaux, Altamira and Lascaux in one journey.
+B|Vallon-Pont-d'Arc|44.407,4.395|2/2|-||Chauvet 2
+B|Foix|42.966,1.607|3/2|drive||Niaux, Mas-d'Azil, La Vache
+B|San Sebastián|43.318,-1.981|1/1|drive||Ekainberri cave, food
+B|Santillana del Mar|43.391,-4.108|4/3|drive||Altamira, El Castillo, Covalanas
+B|Arcachon|44.652,-1.168|1/1|drive|Dune of Pilat|Dune of Pilat
+B|Sarlat|44.890,1.216|4/3|drive|Pech Merle|Lascaux, Font-de-Gaume, Rouffignac
+R|Pyrenees from side to side|Pyrenees road trip Gavarnie Ordesa Bardenas|6-9|FR,ES|alpine,hike,camp,cave|Caves, cirques and a desert.
+B|Foix|42.966,1.607|2/2|-||Niaux cave, Montségur
+B|Luz-Saint-Sauveur|42.872,-0.003|3/2|drive|Cirque de Gavarnie|Gavarnie, Tourmalet
+B|Torla (Ordesa)|42.627,-0.112|3/2|drive||Ordesa canyon
+B|Olite (Bardenas)|42.482,-1.650|2/1|drive|Bardenas Reales|Bardenas Reales desert
+B|San Sebastián|43.318,-1.981|2/1|drive||Food, Ekainberri cave
+R|Corsica by ferry|Corsica road trip ferry Livorno|5-6,9-10|AT,IT,FR|coast,hike,swim,camp,ferry|Mountains in the sea and warriors of stone.
+B|Saint-Florent|42.682,9.303|3/2|-||Cap Corse, Patrimonio menhir
+B|Corte|42.306,9.150|3/2|drive||Restonica gorges
+B|Propriano|41.676,8.904|4/3|drive|Filitosa|Filitosa, Cauria menhirs
+B|Bonifacio|41.387,9.159|2/1|drive||White cliffs, Lavezzi islands
+R|Sardinia by ferry: towers and giants|Sardinia road trip ferry nuraghe|4-6,9-10|AT,IT|coast,hike,swim,camp,ferry|Seven thousand towers, giants' tombs and the clearest water.
+B|Arzachena|41.080,9.389|3/2|-||Coddu Vecchiu, La Maddalena
+B|Dorgali|40.291,9.586|3/2|drive||Tiscali hidden village, Gorropu canyon
+B|Barumini|39.704,9.001|2/1|drive||Su Nuraxi
+B|Alghero|40.558,8.319|3/2|drive||Monte d'Accoddi, Neptune's cave
+R|Western Balkans: Plitvice, Mostar, Kotor, Durmitor|Balkans road trip Plitvice Mostar Kotor Durmitor|5-6,9|AT,SI,HR,BA,ME|alpine,hike,swim,camp|Lakes, bridges, fjord and Europe's deepest canyon.
+B|Plitvice|44.880,15.616|2/1|-|Plitvice Lakes|Lakes early in the morning
+B|Mostar|43.344,17.808|2/1|drive||Stećci tombstones of Radimlja, Blagaj
+B|Kotor|42.424,18.771|3/2|drive||Walls, Lipci rock art
+B|Žabljak (Durmitor)|43.155,19.123|3/2|drive||Tara rafting, Black Lake
+B|Sarajevo|43.856,18.413|2/1|drive||Ottoman bazaar, Visoko hills
+R|Transylvania and the Dacian mountains|Transylvania road trip Sarmizegetusa Transfăgărășan|6-9|AT,HU,RO|alpine,hike,camp|The lost Dacian capital, bears and the Transfăgărășan.
+B|Budapest|47.498,19.040|1/1|-||Baths
+B|Hunedoara|45.752,22.908|2/2|drive|Sarmizegetusa Regia|Sarmizegetusa Regia, Corvin castle
+B|Sibiu|45.793,24.152|3/2|drive||Transfăgărășan, Cârța
+B|Brașov|45.657,25.601|3/2|drive||Fortified churches, bears
+B|Sighișoara|46.219,24.792|2/1|drive||Medieval citadel, fortified churches
+R|Albania, Ohrid and the Albanian Alps|Albania road trip Theth Ohrid Butrint|5-6,9-10|AT,SI,HR,ME,AL,MK,IT|alpine,hike,swim,camp,gravel,ferry|Wild mountains and Greek ruins, home by ferry over Italy.
+B|Shkodër|42.068,19.513|3/2|-||Theth valley, Koman lake ferry
+B|Ohrid|41.117,20.802|3/2|drive||Bay of Bones lake village
+B|Berat|40.705,19.952|2/1|drive||City of a thousand windows
+B|Sarandë (Butrint)|39.876,20.005|3/2|drive||Butrint
+R|Northern Greece and the Peloponnese by ferry|Greece road trip ferry Ancona Igoumenitsa Zagori Delphi|4-6,9-10|AT,IT,GR|hike,swim,camp,ferry,hot|Ferry from Ancona or Venice, then oracle to oracle.
+B|Zagori|39.883,20.718|3/2|-|Vikos gorge & Zagori;Dodona|Vikos gorge, Dodona
+B|Kalambaka (Meteora)|39.705,21.627|2/2|drive||Meteora, Theopetra cave
+B|Galaxidi (Delphi)|38.378,22.386|2/2|drive||Delphi
+B|Nafplio|37.567,22.800|4/3|drive||Mycenae, Epidaurus, Tiryns
+B|Olympia|37.644,21.625|1/1|drive||Olympia, ferry home from Patras
+R|Baltic states and the Curonian dunes|Baltics road trip Curonian Spit Riga Vilnius|6-8|PL,LT,LV|nordic,camp,swim,bike|Bison, walking dunes, bogs and quiet Baltic towns.
+B|Białowieża|52.700,23.867|2/1|-||Bison forest
+B|Augustów|53.844,22.979|1/1|drive||Lakes by kayak
+B|Nida (Curonian Spit)|55.305,20.999|3/2|drive||Great dunes, amber
+B|Riga|56.949,24.105|2/1|drive||Art nouveau, Ķemeri bog
+B|Vilnius|54.687,25.280|2/1|drive||Baroque lanes, Kernavė hill forts
+R|Puglia, Matera and Paestum|Puglia Matera road trip|4-6,9-10|AT,IT|hot,swim,hike|Cave city, dolmens and Greek temples at the heel of Italy.
+B|Sulmona|42.048,13.926|1/1|-||Abruzzo mountains
+B|Matera|40.666,16.604|3/2|drive||Cave houses, Neolithic villages
+B|Ostuni|40.729,17.578|3/2|drive||Dolmens, trulli, beaches
+B|Paestum|40.420,15.006|2/1|drive||Temples
