@@ -1,0 +1,248 @@
+# id | year (negative = BC, empty = natural or not datable) | when, in words | civilisation or people | what makes it remarkable
+pyramids-of-giza|-2560|around 2560 BC|Old Kingdom Egypt|Khufu's pyramid was the tallest building on Earth for about 3,800 years. Its sides line up almost exactly with north.
+saqqara|-2650|around 2650 BC|Old Kingdom Egypt|Imhotep stacked six stone platforms for King Djoser and invented the pyramid. Later pyramids here carry the oldest religious texts known.
+karnak-temple|-1950|from about 1950 BC|Middle and New Kingdom Egypt|Around thirty pharaohs added to it. It was the home of Amun, king of the gods, and the richest temple in Egypt.
+luxor-temple|-1390|around 1390 BC|New Kingdom Egypt|Begun by Amenhotep III, finished by Ramesses II. A Roman chapel and a working mosque stand inside its walls.
+valley-of-the-kings|-1500|from about 1500 BC|New Kingdom Egypt|Over sixty tombs are known. Tutankhamun's was found almost intact in 1922 after 3,200 years.
+temple-of-hatshepsut|-1470|around 1470 BC|New Kingdom Egypt|Built for a woman who ruled as pharaoh for some twenty years. Her successor tried to erase her name.
+abu-simbel|-1260|around 1260 BC|New Kingdom Egypt|Twice a year the rising sun reaches the statues deep inside. The whole hill was cut up and raised 65 m in the 1960s.
+philae|-370|from about 370 BC|Late Egypt and Ptolemies|One of the last places where the old gods were worshipped. The final dated hieroglyphs were carved here in AD 394.
+temple-of-edfu|-237|237 to 57 BC|Ptolemaic Egypt|Dedicated to Horus and buried in sand for centuries, which is why it survives so completely.
+dendera|-54|from 54 BC|Ptolemaic and Roman Egypt|Temple of Hathor, goddess of love and music. Cleopatra is carved on its back wall.
+siwa-oasis|-600|temple from about 600 BC|Amazigh (Berber) and Egypt|Its oracle told Alexander he was the son of a god. People here still speak Siwi, a Berber language.
+saint-catherine-s-monastery|550|around AD 550|Byzantine Empire|Built where tradition places the burning bush. Its library of ancient manuscripts is second only to the Vatican's.
+petra|-100|mostly 1st century BC to 1st century AD|Nabataeans|Arab traders who grew rich on incense and became masters of desert water. The Treasury is 39 m of solid carved cliff.
+jerash|-63|Roman city from 63 BC|Greco-Roman|One of ten allied cities called the Decapolis. Its colonnaded street still shows chariot ruts.
+wadi-rum||carved over millions of years|Thamudic and Nabataean tribes|Around 25,000 rock carvings and 20,000 inscriptions record 12,000 years of people passing through.
+hegra-madain-salih|1|1st century AD|Nabataeans|Over a hundred carved tombs. Many carry the date, the owner's name and even the mason's signature.
+baalbek|-15|from about 15 BC|Phoenician and Roman|Its foundation stones weigh around 800 tons each. How they were moved is still debated.
+byblos|-5000|settled about 5000 BC|Phoenicians|It traded papyrus to the Greeks, who named books, and so the Bible, after it.
+palmyra|100|1st to 3rd century AD|Palmyrene and Roman|Queen Zenobia led it in revolt and briefly took Egypt from Rome.
+old-city-of-jerusalem|-1000|city since before 1000 BC|Jewish, Christian, Islamic|The Dome of the Rock (AD 691) stands on the site of the Jewish Temple, minutes from the Holy Sepulchre.
+masada|-35|around 35 BC|Herodian Judea|Jewish rebels held out here against Rome until AD 73 or 74. The siege ramp is still there.
+gobekli-tepe|-9500|around 9500 BC|Stone Age hunter-gatherers|Seven thousand years older than the pyramids, before pottery, metal or writing. It overturned the idea that farming came before temples.
+mount-nemrut|-50|around 50 BC|Kingdom of Commagene|King Antiochus mixed Greek and Persian gods and seated himself among them. His tomb has never been found.
+ani|970|capital from AD 961|Medieval Armenia|At its height it rivalled Constantinople. It was abandoned after Mongols, earthquakes and moved trade routes.
+sumela-monastery|386|founded about AD 386|Byzantine Greeks|Monks lived on this ledge, around 300 m above the valley floor, until 1923.
+istanbul-hagia-sophia|537|AD 537|Byzantine, then Ottoman|Built in under six years. Its dome was the largest enclosed space in the world for nearly a thousand years.
+ephesus|-1000|Greek city from about 1000 BC|Greek and Roman|Home of the Temple of Artemis, one of the Seven Wonders. The sea has since moved several kilometres away.
+cappadocia|400|churches from about AD 400|Early Christians|Underground towns such as Derinkuyu go down eighteen levels and could shelter thousands.
+hattusa|-1650|from about 1650 BC|Hittites|A superpower that fought Ramesses II and then signed one of the oldest surviving peace treaties.
+pamukkale-hierapolis|-190|city from about 190 BC|Greek and Roman|Romans came for the hot water. A cave here breathed deadly gas and was called the gate to the underworld.
+acropolis-of-athens|-447|447 to 432 BC|Classical Greece|The Parthenon's lines are very slightly curved so that they look straight. It has been temple, church and mosque.
+delphi|-800|from about 800 BC|Ancient Greece|Kings asked the Pythia before going to war. "Know thyself" was carved at the entrance.
+meteora|1350|from about 1350|Byzantine Orthodox|Monks first went up by rope and net. Six of twenty-four monasteries are still lived in.
+mycenae|-1350|around 1350 BC|Mycenaeans|The warriors of Homer's Troy stories. Gold death masks were found in its royal graves.
+olympia|-776|games from 776 BC|Ancient Greece|Wars paused for the games for over a thousand years. The Olympic flame is still lit here.
+knossos|-1900|around 1900 BC|Minoans|Europe's first great civilisation, with bull-leaping, running water and a script nobody can read.
+delos|-900|sanctuary from about 900 BC|Ancient Greece|So sacred that nobody was allowed to be born or die here. Later a huge, tax-free Roman port.
+santorini-akrotiri|-1600|buried about 1600 BC|Minoan world|Three-storey houses with fresh wall paintings, sealed by one of the largest eruptions in human history.
+ancient-rome|-753|legend says 753 BC; Colosseum AD 80|Roman Empire|The Pantheon is still the largest unreinforced concrete dome in the world after 1,900 years.
+pompeii|-600|founded about 600 BC, buried AD 79|Roman|Bakeries with bread, election slogans and bodies caught in ash. A third is still unexcavated.
+paestum|-550|around 550 BC|Greek colony of Poseidonia|Three temples better preserved than most in Greece, and a rare painted tomb of a diver.
+valley-of-the-temples|-510|510 to 430 BC|Greek Sicily|Akragas was one of the richest Greek cities. The Temple of Concordia survived by becoming a church.
+segesta|-420|around 420 BC|Elymians|Built by a people who claimed to descend from Troy, and left without a roof. Nobody knows why.
+hypogeum-maltese-temples|-3600|around 3600 BC|Temple builders of Malta|An underground sanctuary carved with antler and stone. One chamber makes a deep voice echo through the whole complex.
+ggantija|-3600|around 3600 BC|Temple builders of Malta|Older than Stonehenge and the pyramids. Locals believed giants had built it.
+su-nuraxi-nuraghe|-1500|around 1500 BC|Nuragic Sardinia|A tower of dry stone in a ruined village. Sardinia has some 7,000 such towers and no written records of who built them.
+split-diocletian-s-palace|305|AD 305|Roman|Built for the only Roman emperor who retired, to grow cabbages. About 3,000 people live inside its walls.
+mostar|1566|bridge of 1566|Ottoman Empire|The single arch stood 427 years until it was destroyed in 1993. It was rebuilt with the same stone.
+bay-of-kotor|-200|settled before 200 BC|Illyrian, Roman, Venetian|Not a real fjord but a drowned river canyon. Kotor's walls climb 260 m up the mountain.
+butrint|-800|from about 800 BC|Greek, Roman, Byzantine|Virgil says Trojan refugees founded it. A baptistery floor shows a whole paradise in mosaic.
+rila-monastery|927|founded about 927|Medieval Bulgaria|Founded by a hermit who lived in a cave nearby. It kept the Bulgarian language alive under Ottoman rule.
+alhambra|1238|from 1238|Nasrid Granada|The last Muslim palace of Spain. Its walls carry around 10,000 inscriptions, many of them poems.
+mosquecathedral-of-cordoba|785|from AD 785|Umayyad Al-Andalus|Over 850 columns, many reused from Roman buildings. Córdoba was then one of the largest cities in Europe.
+barcelona-sagrada-familia|1882|begun 1882|Catalan Modernism|Gaudí knew he would never see it finished. "My client is not in a hurry," he said of God.
+santiago-the-camino|1075|cathedral from 1075|Medieval Christian Europe|Pilgrims have walked here for over a thousand years to the tomb said to be of Saint James.
+altamira|-15000|up to 36,000 years ago|Ice Age hunters|When it was found in 1879 experts called it fake, because they thought early people could not paint so well.
+tomar-templar-convent|1160|from 1160|Knights Templar|When the Templars were banned, Portugal simply renamed them. They later financed the voyages of discovery.
+sintra|1000|Moorish castle, palaces to 1854|Moorish and Romantic Portugal|The Quinta da Regaleira has a spiral well used for secret initiations, never for water.
+lascaux-the-dordogne|-17000|around 17,000 years ago|Ice Age hunters|Found by four teenagers in 1940. Nearly 2,000 figures, some animals over five metres long.
+carnac-stones|-4500|around 4500 BC|Neolithic Brittany|Rows of stones run for kilometres. Legend says they are a Roman army turned to stone.
+mont-saint-michel|708|founded 708|Medieval Normandy|The tide can rise 14 m. The abbey was never taken in the Hundred Years' War.
+chartres-cathedral|1194|1194 to 1220|Gothic France|Most of its original windows survive, in a blue glassmakers have struggled to copy.
+provence-pont-du-gard|50|around AD 50|Roman Gaul|The aqueduct drops only about 12 m in 50 km. It was built without mortar on its arches.
+stonehenge-avebury|-3000|from about 3000 BC|Neolithic Britain|The smaller bluestones were brought over 200 km from Wales. Its axis follows the solstice sun.
+orkney-skara-brae|-3180|around 3180 BC|Neolithic Orkney|Stone beds, dressers and indoor drains, hidden under a dune until a storm in 1850.
+callanish-stones|-2900|around 2900 BC|Neolithic Scotland|Every 18.6 years the moon seems to roll along the hills and set among the stones.
+newgrange|-3200|around 3200 BC|Neolithic Ireland|For about 17 minutes at winter solstice, sunrise lights the tomb. It was built 600 years before Giza.
+skellig-michael|600|around the 6th century|Early Irish monks|A dozen monks lived on this rock for centuries, 600 steps above the Atlantic.
+norwegian-fjords-stave-churches|1180|around 1180|Norse Christian|Dragons guard the roof beside the crosses. Once there were over a thousand such churches; 28 remain.
+iceland|930|parliament founded 930|Norse|Þingvellir held one of the oldest parliaments in the world, in the rift between two continents.
+visby|1250|walls from about 1250|Hanseatic League|A merchant city so rich that its fall to the Danes in 1361 became a legend.
+krakow-wieliczka|1290|mine from the 13th century|Medieval Poland|Miners carved chapels, lakes and chandeliers of salt for 700 years, down to 327 m.
+prague|870|castle from about 870|Bohemia|The largest ancient castle complex in the world. The astronomical clock has run since 1410.
+kyiv|1037|begun in the 11th century|Kyivan Rus|Saint Sophia's mosaics survive almost unchanged from the time of the first Slavic Christian state.
+mtskheta-tbilisi|1010|1010 to 1029|Kingdom of Georgia|Georgia became Christian around 326. Legend says Christ's robe is buried beneath the cathedral.
+gergeti-trinity-church|1350|14th century|Kingdom of Georgia|Built at 2,170 m. In times of danger, the country's treasures were hidden here.
+svaneti-ushguli|1000|towers from about the 9th to 13th century|Svan people|Each family had its own defence tower. Ushguli is among the highest villages in Europe, at around 2,100 m.
+geghard-garni|77|Garni AD 77, Geghard 1215|Armenia|Half of the monastery is carved inside the cliff. Armenia was the first Christian state, around 301.
+tatev-monastery|895|9th century|Armenia|A medieval university above a gorge. It had a swaying pillar said to warn of earthquakes.
+persepolis|-518|from 518 BC|Persian Empire|Delegations of 23 nations are carved bringing gifts. Alexander burned it in 330 BC.
+isfahan|1598|from 1598|Safavid Persia|"Isfahan is half the world," people said. The square was laid out for polo and is one of the largest on Earth.
+ur-babylon|-2100|around 2100 BC|Sumer and Babylon|Mesopotamia gave us the first cities, writing and laws. Tradition makes Ur the birthplace of Abraham.
+samarkand|1420|1417 to 1660|Timurid Empire|Tamerlane's capital. His grandson Ulugh Beg measured the year here to within a minute.
+bukhara|850|city over 2,000 years old|Samanid Persia and Silk Road|Genghis Khan levelled the city but is said to have spared the 46 m minaret because it amazed him.
+khiva|1600|mostly 16th to 19th century|Khanate of Khiva|An oasis town on the desert road to Persia, known for its slave market and its turquoise towers.
+merv|-500|from about 500 BC|Persian and Seljuk|Around 1150 perhaps half a million people lived here. The Mongols destroyed it in 1221.
+mogao-caves|366|from AD 366|Silk Road Buddhism|492 painted caves. A sealed library opened in 1900 held some 50,000 documents and the oldest dated printed book.
+xi-an-terracotta-army|-210|around 210 BC|Qin dynasty China|Guards the first emperor, whose tomb mound is still unopened. Records speak of rivers of mercury inside.
+beijing-great-wall|1420|palace 1420, wall mostly 14th to 17th century|Ming dynasty China|Twenty-four emperors lived in the Forbidden City. All the walls together measure over 21,000 km.
+longmen-grottoes|493|from AD 493|Northern Wei and Tang China|The great Buddha is said to have the face of Empress Wu, the only woman to rule China in her own name.
+leshan-giant-buddha|713|AD 713 to 803|Tang dynasty China|A monk had it carved to calm the rivers. The stone that fell in did make the water safer.
+zhangjiajie||sandstone 380 million years old|Tujia people|Over 3,000 quartz pillars. One was renamed after the film Avatar.
+lhasa-potala-palace|1645|rebuilt from 1645, first in 637|Tibetan Buddhism|A thousand rooms and 13 storeys above Lhasa, winter home of the Dalai Lamas until 1959.
+mount-kailash||sacred for well over 1,000 years|Hindu, Buddhist, Jain, Bön|The home of Shiva. Pilgrims walk 52 km around it; climbing it is forbidden.
+kathmandu-valley|400|stupas from about the 5th century|Newar civilisation|Three royal cities in one valley. A young girl is still chosen as the living goddess Kumari.
+lumbini|-563|traditionally 563 BC|Birth of Buddhism|Emperor Ashoka's pillar of 249 BC marks the Buddha's birthplace, with a pond and a sacred tree.
+bhutan-tiger-s-nest|1692|temple 1692, cave since the 8th century|Himalayan Buddhism|Guru Rinpoche is said to have flown here on a tigress. Bhutan measures Gross National Happiness.
+agra-taj-mahal|1632|1632 to 1653|Mughal Empire|Shah Jahan built it for Mumtaz Mahal. Around 20,000 people worked on it, and it changes colour through the day.
+varanasi|-1000|lived in for about 3,000 years|Hindu India|One of the oldest living cities on Earth. Hindus believe that dying here frees the soul.
+khajuraho|950|950 to 1050|Chandela dynasty|Of 85 temples about 25 survive, saved by the jungle. Only a tenth of the carvings are erotic.
+golden-temple-amritsar|1589|1589, gilded 1830|Sikh faith|Open on four sides to welcome everyone. The free kitchen has never closed.
+jaipur-rajasthan|1592|from 1592|Rajput kingdoms|Warrior clans who built hill forts and mirrored halls where one candle lights a whole room.
+ellora-ajanta|-200|Ajanta from 200 BC, Ellora to AD 1000|Buddhist, Hindu and Jain India|The Kailasa temple was cut top-down from one mountain. Some 200,000 tons of rock were removed.
+sanchi|-250|3rd century BC|Maurya Empire|Begun by Ashoka, who turned to Buddhism after a terrible war. Early carvings show the Buddha only as a footprint or tree.
+hampi|1336|1336 to 1565|Vijayanagara Empire|Once the second largest city in the world after Beijing. One temple has pillars that ring like music.
+meenakshi-temple-madurai|1600|mostly 17th century, older origin|Tamil Nayaks|Every night the god is carried to the goddess's room, and every morning woken with song.
+great-living-chola-temples|1010|1003 to 1010|Chola Empire|The capstone weighs around 80 tons and sits 60 m up. The Cholas sailed as far as Sumatra.
+mahabalipuram|700|7th to 8th century|Pallava kingdom|A port of the sea trade to Asia. The 2004 tsunami uncovered carvings that had been under sand.
+konark-sun-temple|1250|around 1250|Eastern Ganga dynasty|The wheels work as sundials. Sailors called it the Black Pagoda and used it to navigate.
+sigiriya|477|AD 477|Ancient Sri Lanka|A king who murdered his father built his palace up here. The mirror wall has poems left by visitors over 1,000 years ago.
+kandy-temple-of-the-tooth|1595|tooth kept in Kandy since about 1595|Kingdom of Kandy|Whoever held the relic had the right to rule. Each summer it parades with a hundred elephants.
+anuradhapura|-380|from about 380 BC|Ancient Sri Lanka|Capital for some 1,300 years. One brick stupa was among the tallest buildings of its age, after the pyramids.
+bagan|1050|1044 to 1287|Pagan Empire|Over 10,000 temples were built in about 250 years. Some 2,200 remain.
+shwedagon-pagoda|1000|perhaps 6th to 10th century, legend says older|Mon and Burmese Buddhism|Said to hold eight hairs of the Buddha. Its tip carries thousands of diamonds.
+sukhothai|1238|from 1238|First Thai kingdom|Its name means dawn of happiness. Thai script was created here.
+ayutthaya|1350|1350 to 1767|Kingdom of Siam|Around 1700 it was one of the world's largest cities, with Dutch, Japanese and Persian quarters.
+chiang-mai-temples|1383|Doi Suthep 1383|Lanna kingdom|A white elephant carrying a relic climbed the mountain, circled three times and died, so they built here.
+white-temple|1997|begun 1997|Thai artist Chalermchai Kositpipat|A private life's work planned to be finished around 2070. Superheroes appear among the murals.
+angkor|1130|9th to 13th century|Khmer Empire|The largest city of the pre-industrial world, run on canals and reservoirs. It faces west, towards death and Vishnu.
+banteay-srei|967|AD 967|Khmer Empire|Built by a scholar, not a king. The carving is so fine that people called it the citadel of women.
+preah-vihear-temple|1000|9th to 12th century|Khmer Empire|An 800 m causeway climbs to a cliff 525 m above the plain. Two countries took it to court.
+wat-phou|1050|11th century, sacred from the 5th|Khmer Empire|A natural stone peak shaped like a Shiva symbol made this mountain holy before Angkor existed.
+luang-prabang|1353|royal capital from 1353|Lan Xang, kingdom of a million elephants|Each dawn hundreds of monks walk silently for rice.
+plain-of-jars|-500|about 500 BC or earlier|Unknown Iron Age people|Over 2,000 jars up to three metres high, linked to burials. Legend says giants brewed rice wine in them.
+my-son|400|4th to 13th century|Champa|Bricks joined so finely that nobody is sure how. Most of it was bombed in 1969.
+hue-imperial-city|1804|from 1804|Nguyen dynasty Vietnam|A forbidden city modelled on Beijing. Each emperor designed his own tomb as a garden.
+ha-long-bay||limestone, up to 500 million years in the making|Cua Van fishing people|Legend says a dragon's tail cut the valleys and its jewels became the islands.
+borobudur|800|around AD 800|Sailendra dynasty, Java|A walk up to enlightenment past 2,600 carved panels. It lay under ash and jungle for centuries.
+prambanan|850|around AD 850|Mataram kingdom, Java|Built by Hindu rivals about an hour from Buddhist Borobudur. Legend: a thousand temples in one night.
+bali-temples|1000|Besakih from about the 11th century|Balinese Hinduism|In 1963 lava from Mount Agung passed within metres of Besakih. The island has tens of thousands of temples.
+komodo||dragons about 4 million years old|Manggarai and Bugis islanders|The largest lizards alive, up to three metres, with venom. Only around 3,000 are left in the wild.
+tana-toraja|1700|living tradition, graves some centuries old|Toraja people|Families keep their dead at home for months or years before a great funeral with buffalo.
+raja-ampat||reef in the heart of the Coral Triangle|Papuan Maya people|Around 1,400 kinds of fish and three quarters of all coral species.
+batu-caves-kuala-lumpur|1890|temple since 1890|Tamil Hindus in Malaysia|Caves 400 million years old. Over a million people come for Thaipusam.
+borneo-kinabalu||rainforest about 130 million years old|Kadazan-Dusun people|Older than the Amazon. The mountain is believed to be where souls rest.
+banaue-rice-terraces|-100|traditionally 2,000 years old, perhaps younger|Ifugao people|Carved by hand from the forest down. End to end they would circle half the Earth.
+palawan-el-nido||people here for about 47,000 years|Tagbanua and Cuyonon people|Cliffs of ancient coral and limestone. Tabon Cave holds some of the oldest human remains in the Philippines.
+kyoto-temples|794|capital from 794|Imperial Japan|Capital for over a thousand years. It was taken off the atomic bomb list in 1945 because of its beauty.
+nara-todai-ji|752|AD 752|Nara period Japan|The bronze Buddha weighs about 500 tons. Squeezing through a hole in a pillar is said to bring luck.
+miyajima-hiroshima|1168|shrine in this form from 1168|Shinto Japan|The whole island was sacred, so commoners had to arrive by boat through the gate.
+ise-grand-shrine|690|rebuilt every 20 years since 690|Shinto Japan|Always new and always ancient. The next rebuilding is planned for 2033.
+mount-koya|816|founded 816|Shingon Buddhism|Monks still bring meals twice a day to the founder, who is believed to be meditating since 835.
+nikko|1617|1617 to 1636|Tokugawa shoguns|The tomb of the first shogun, with the three wise monkeys. One pillar is left wrong on purpose.
+gyeongju-bulguksa|528|first 528, rebuilt 751|Silla kingdom, Korea|Nearby royal mounds held golden crowns. Silla ruled for almost a thousand years.
+haeinsa|802|founded 802, blocks 1251|Goryeo Korea|81,258 printing blocks with almost no errors, kept dry for centuries by the building's own ventilation.
+mongolia-karakorum|1220|city 1220, monastery 1585|Mongol Empire|Capital of the largest land empire in history. Its stones were reused to build the monastery.
+teotihuacan-mexico-city|-100|about 100 BC to AD 550|Unknown people of Teotihuacan|Home to 100,000 people or more. The Aztecs found it empty and named it the place where gods were made.
+monte-alban-oaxaca|-500|from about 500 BC|Zapotecs|One of the first cities in the Americas, with some of its earliest writing.
+palenque|630|7th century|Classic Maya|King Pakal ruled for 68 years. His tomb, deep in a pyramid, held a mask of jade.
+chichen-itza|900|about 600 to 1200|Maya and Toltec influence|A clap at the pyramid's foot echoes like the sacred quetzal bird. The steps count 365.
+uxmal|800|about 700 to 1000|Puuc Maya|The Magician's pyramid has rounded sides. Over 20,000 cut stones cover the Governor's Palace.
+calakmul|500|about AD 200 to 900|Classic Maya, Snake kingdom|Tikal's great rival. One pyramid is 45 m high and you may climb above the jungle.
+tulum|1200|about 1200 to 1500|Late Maya|A walled port for obsidian and jade, seen by the first Spanish ships.
+tikal|700|about 400 BC to AD 900|Classic Maya|Laser scans showed tens of thousands of hidden buildings around it. Temple IV rises to about 65 m.
+antigua-lake-atitlan|1543|city 1543|Spanish colonial and living Maya|Ruined by the earthquake of 1773. Twelve villages around the lake still speak Maya languages.
+caracol|550|about AD 330 to 900|Classic Maya|It defeated Tikal in 562. Its pyramid is still among the tallest structures in Belize.
+lamanai|-700|lived in for some 3,000 years|Maya|Its name means submerged crocodile. People stayed here long after other Maya cities fell.
+copan|740|about AD 426 to 820|Classic Maya|A stairway of some 2,200 glyphs is the longest known Maya text.
+joya-de-ceren|600|buried about AD 600|Maya farmers|A village left so fast that meals stayed on the table. It shows ordinary Maya life, not kings.
+great-blue-hole-reef||cave formed over 150,000 years ago|Maya sea traders nearby|A cave that collapsed when seas rose. It is 300 m wide and some 125 m deep.
+san-blas-islands||self-governed since the revolt of 1925|Guna people|Around 365 islands. The Guna won their autonomy and sew their history into molas.
+havana|1519|founded 1519|Spanish Empire|All the treasure of the Americas gathered here before sailing to Spain.
+st-lucia-the-pitons||volcanic plugs 200,000 to 300,000 years old|Kalinago people|The island changed hands between France and Britain fourteen times.
+antigua-nelson-s-dockyard|1725|from 1725|British Royal Navy|Nelson hated his years here. It is the only Georgian dockyard still in use.
+lost-city-ciudad-perdida|800|around AD 800|Tairona|Reached by about 1,200 stone steps. The Kogi, their descendants, still guard these mountains.
+cartagena|1533|founded 1533|Spanish Empire|Pirates attacked it so often that Spain built 11 km of walls.
+san-agustin|1|about AD 1 to 900|Unknown San Agustín culture|The largest group of religious monuments in South America, and we do not know their makers' name.
+galapagos-islands||islands up to about 4 million years old|No native people|Finches and tortoises that differ from island to island led Darwin to evolution.
+machu-picchu-sacred-valley|1450|around 1450|Inca Empire|A royal estate used for less than a century. The Spanish never found it.
+cusco-sacsayhuaman|1200|capital from about 1200|Inca Empire|The navel of the world. Its walls use blocks over 100 tons, fitted without mortar.
+nazca-lines|-500|500 BC to AD 500|Nazca|Hundreds of drawings. New ones are still being found with drones and artificial intelligence.
+chan-chan|900|about 900 to 1470|Chimú|Perhaps 40,000 people lived in this city of mud, until the Inca marched them away.
+kuelap|500|from about AD 500|Chachapoya, the cloud warriors|Walls up to 20 m high at 3,000 m. Their round houses were full of carved diamonds.
+chavin-de-huantar|-1000|around 1000 BC|Chavín|Priests used dark tunnels, the roar of water and conch trumpets to overwhelm visitors.
+caral|-2600|around 2600 BC|Norte Chico|As old as Giza. No weapons or walls were found, but plenty of flutes.
+tiwanaku-lake-titicaca|600|about AD 500 to 1000|Tiwanaku|The Inca believed the world began at this lake, at 3,800 m. The Gate of the Sun is one block.
+salar-de-uyuni||lake dried about 12,000 years ago|Aymara people|10,000 square kilometres of salt, so flat that satellites use it for calibration.
+easter-island-rapa-nui|1250|about 1250 to 1500|Rapa Nui (Polynesian)|Nearly 1,000 statues. Islanders say they walked, and tests show that they could have.
+patagonia||granite about 12 million years old|Tehuelche and Kawésqar|The towers were cut by ice. People have lived here for over 10,000 years.
+perito-moreno-glacier||part of the third largest ice reserve|Tehuelche land|The front is 5 km wide and 70 m high. Every few years it dams a lake and bursts.
+cueva-de-las-manos|-7300|from about 7300 BC|Patagonian hunters|Hundreds of stencilled hands, nearly all left ones, sprayed through bone pipes.
+iguazu-falls||lava about 130 million years old|Guaraní people|The Guaraní say a jealous god split the river to stop two lovers fleeing by canoe.
+rio-de-janeiro|1565|founded 1565, statue 1931|Portuguese Brazil|For 13 years Rio was the capital of the Portuguese Empire, the only time a European empire was ruled from a colony.
+serra-da-capivara|-10000|art up to about 12,000 years old or more|First Americans|Over 1,000 painted sites. Some finds may push back the date people reached America.
+ouro-preto|1711|founded 1711|Portuguese Brazil|In its gold rush it was bigger than New York. Aleijadinho carved its churches after losing his fingers.
+mesa-verde|1190|about 1190 to 1300|Ancestral Pueblo|Cliff Palace had some 150 rooms. They left within a generation, probably because of drought.
+chaco-canyon|850|850 to 1150|Ancestral Pueblo|Walls follow solstice and moon. Arrow-straight roads lead out across the desert.
+grand-canyon-monument-valley||up to 1.8 billion years of rock|Hopi, Havasupai, Navajo|The Hopi say their ancestors came into this world through the canyon.
+cahokia|1050|about 1050 to 1350|Mississippian culture|Around 1100 it was as big as London. Its main mound covers more ground than the Great Pyramid.
+yellowstone||last giant eruption 640,000 years ago|Shoshone, Crow and others|The first national park (1872) sits on a supervolcano with half the world's geysers.
+hawaii|1000|settled about 1000 to 1200|Polynesians|They crossed 4,000 km of ocean by stars and swell. Kīlauea is the home of the goddess Pele.
+l-anse-aux-meadows|1021|1021|Norse|Wood cut here was dated to exactly 1021, almost five centuries before Columbus.
+haida-gwaii|1800|people for over 12,000 years|Haida|Totem poles at SGang Gwaay are left to return to the earth, as tradition asks.
+nan-madol|1180|about 1180 to 1600|Saudeleur dynasty|Called the Venice of the Pacific. Some 750,000 tons of basalt were moved, and nobody knows how.
+raiatea-marae-taputapuatea|1000|about 1000|Ancient Polynesia|Canoes left from here for Hawaiʻi and New Zealand, carrying a stone to found new temples.
+marquesas-islands|1100|settled about 1000 to 1200|Marquesans|Their full-body tattooing was the finest in the Pacific. Gauguin and Jacques Brel are buried here.
+bora-bora||volcano about 7 million years old|Polynesians|Its first name was Pora Pora, first born. The Americans built its airstrip in 1943.
+tuamotu-atolls||coral rings on sunken volcanoes|Paʻumotu people|The largest group of atolls on Earth. Every July thousands of groupers gather in Fakarava's pass.
+cook-islands|1000|settled about AD 1000|Cook Islands Māori|The great canoes that settled New Zealand are said to have left from Rarotonga.
+tonga|-850|settled about 850 BC|Lapita, then Tongan Empire|The first place in Polynesia to be settled. Its sea empire lasted centuries and its monarchy still reigns.
+samoa|-800|settled about 800 BC|Polynesians|Pulemelei is the largest ancient mound in Polynesia. Robert Louis Stevenson is buried above Apia.
+fiji|-1000|settled about 1000 BC|Lapita, then Fijians|Fire-walkers on Beqa island still cross white-hot stones.
+vanuatu-mount-yasur|-1000|settled about 1000 BC|Lapita, then Ni-Vanuatu|Mount Yasur has erupted almost without pause for centuries. Over 100 languages are spoken.
+new-caledonia|-1000|settled about 1000 BC|Kanak people|The Lapita culture that settled the Pacific is named after a beach here.
+new-zealand-south-island|1300|settled about 1300|Māori|The last large land people ever reached. Milford Sound was carved by glaciers.
+northland-maori-heritage|1840|treaty of 1840|Māori|Where Māori chiefs and the British Crown signed a treaty. The kauri Tāne Mahuta may be 2,000 years old.
+uluru||rock about 550 million years old|Aṉangu|Its caves and marks are the stories of ancestors. Climbing ended in 2019 out of respect.
+kakadu|-18000|art up to 20,000 years old or more|Aboriginal Australians|People nearby for up to 65,000 years: the oldest living culture on Earth.
+great-barrier-reef||today's reef about 8,000 years old|Aboriginal and Torres Strait Islanders|2,300 km long. Aboriginal stories remember the time when the sea rose over the land.
+tasmania|1830|Port Arthur 1830; people for 40,000 years|Palawa and British convicts|A prison where some were kept in total silence, amid some of the cleanest air in the world.
+rock-churches-of-lalibela|1200|around 1200|Zagwe Ethiopia|A new Jerusalem carved downwards from the rock. Legend says angels worked the night shift.
+aksum|300|about 100 to 900|Kingdom of Aksum|One of the great powers of its age beside Rome and Persia. The tallest obelisk was 33 m, a single stone.
+pyramids-of-meroe|-300|about 300 BC to AD 350|Kingdom of Kush|Sudan has more pyramids than Egypt. Warrior queens called Kandakes fought Rome.
+leptis-magna|200|Roman glory about AD 200|Phoenician and Roman|Home town of Emperor Septimius Severus, who rebuilt it in marble.
+el-jem-carthage|238|amphitheatre about AD 238|Roman Africa|It held 35,000 people. Carthage, Hannibal's city, was burned by Rome in 146 BC.
+kairouan|670|founded AD 670|Early Islamic Maghreb|The mosque's minaret is one of the oldest in the world. Its prayer hall reuses Roman columns.
+timgad-djemila|100|AD 100|Roman Africa|A town for retired soldiers. A stone game board there reads: hunt, bathe, play, laugh, that is life.
+volubilis-fes|-25|Volubilis from 3rd century BC, Fes 789|Berber, Roman, Idrisid|Fes has the oldest continuously running university, founded in 859, by tradition by a woman.
+ait-benhaddou-the-desert|1650|mostly 17th century, older site|Amazigh (Berber)|A caravan stop between Timbuktu and Marrakesh. It has been Jerusalem and Egypt in many films.
+djenne|1907|mosque 1907, first 13th century|Mali Empire heritage|Every year the whole town replasters the mosque by hand in one day.
+abomey-ouidah|1645|about 1645 to 1900|Kingdom of Dahomey|A kingdom with an army of women. Vodun began here and crossed the ocean with the enslaved.
+goree-dakar|1444|Europeans from 1444|Senegal and Atlantic trade|The House of Slaves and its door of no return became a symbol for millions.
+great-zimbabwe|1100|about 1100 to 1450|Shona ancestors|Colonists refused to believe that Africans had built it. Chinese porcelain was found inside.
+victoria-falls||gorges cut over 100,000 years|Tonga and Kololo peoples|1.7 km wide and 108 m high. At full moon the spray makes a rainbow at night.
+okavango-delta||a river that never reaches the sea|San and Bayei peoples|The San have lived here for tens of thousands of years. The flood arrives in the dry season.
+namib-dunes||desert at least 55 million years old|Nama and San peoples|Perhaps the oldest desert on Earth. The dead trees of Deadvlei have stood for some 600 years.
+cape-town-the-cape||mountain of rock some 450 million years old|Khoisan, Dutch, Cape Malay|Robben Island held Nelson Mandela for 18 years. Sailors called it the Cape of Storms.
+kilwa-kisiwani|1000|about 800 to 1500|Swahili coast|It controlled the gold of Great Zimbabwe and minted its own coins.
+zanzibar|1830|Stone Town mostly 19th century|Swahili, Omani, Indian|The sultan of Oman moved his capital here for the cloves.
+serengeti-ngorongoro||footprints 3.7 million years old nearby|Maasai; cradle of humankind|Olduvai Gorge and Laetoli show our earliest ancestors. Over a million wildebeest walk past.
+lamu|1370|around 1370|Swahili coast|The oldest Swahili town still lived in, with more donkeys than cars.
+mountain-gorillas-bwindi||forest over 25,000 years old|Batwa people|About half of the 1,000 or so mountain gorillas left on Earth live here.
+tsingy-of-madagascar||limestone about 200 million years old|Vazimba legends|Tsingy means where one cannot walk barefoot. Most species here live nowhere else.
+avenue-of-the-baobabs||trees up to 800 years old or more|Sakalava people|Called mothers of the forest. They are the last of a dense forest that once stood here.
+mauritius||volcanic, about 8 million years old|No native people; Creole|Home of the dodo, gone by 1681. Le Morne's cliffs sheltered people escaping slavery.
+reunion||volcanic, about 2 million years old|Creole|One of the most active volcanoes in the world. The inner valleys were settled by escaped slaves.
+seychelles||granite about 750 million years old|Creole|Pieces of a lost continent, with the largest seed of any plant, the coco de mer.
+maldives|-300|settled by about 300 BC|Dhivehi|Buddhist for over a thousand years until 1153. The islands lie on average 1.5 m above the sea.
+socotra||isolated for around 20 million years|Soqotri people|A third of its plants grow nowhere else. Their red resin was sold to Rome as dragon's blood.
+oman-nizwa-the-desert|1650|fort about 1650, irrigation far older|Omani imams|Its tower has traps for boiling date syrup. Water channels from about AD 500 still run.
+saint-helena|1502|found 1502|No native people; British|Napoleon died here in 1821. Its tortoise Jonathan, hatched about 1832, is the oldest land animal ever recorded.
+azores||islands up to 8 million years old|Portuguese settlers|Pico, 2,351 m, is the highest mountain of Portugal. Whaling lookouts now guide whale watchers.
+canary-islands|1|settled about 2,000 years ago|Guanche (Berber)|The Guanche mummified their dead and whistled a language across the valleys.
+madeira|1420|settled 1420|Portuguese|Over 2,000 km of hand-cut channels carry water across the island.
+cape-verde|1462|settled 1462|Creole|The first European town in the tropics. Morna, the music of longing, was born here.
+svalbard||found 1596|No native people|The Global Seed Vault here keeps over a million crop samples safe in permafrost.
+antarctica||ice up to 34 million years old|No people|It holds about 60 percent of the planet's fresh water and belongs to no one.

@@ -1,0 +1,341 @@
+# The sailing network. Two sections. Planning guide only, not for navigation.
+#
+# [ports]  id | port | destination label | country name on the map | lat | lon | weather zone | flags | note
+#   order of the lines = order around the world, westwards. flags: L = good place to leave the boat and fly home
+# [legs]   from > to   : good months : distance factor (optional) : flags (optional)
+#          from - to   means the same months work both ways.  flags: R = Red Sea / Gulf of Aden security risk, C = canal
+
+[ports]
+bgo|Bergen|Norway|Norway|60.40|5.20|NEU||Gateway to the fjords.
+kie|Kiel|Germany (Baltic)|Germany|54.45|10.20|NEU|L|
+cux|Cuxhaven|Germany (North Sea)|Germany|53.95|8.60|NEU|L|
+ijm|IJmuiden|Netherlands|Netherlands|52.47|4.50|NEU|L|
+kin|Kinsale|Ireland|Ireland|51.65|-8.50|NEU||
+fal|Falmouth|England|United Kingdom|50.10|-5.00|NEU|L|The traditional ocean departure.
+lar|La Rochelle|France (Atlantic)|France|46.10|-1.30|NEU|L|
+cor|A Coruña|Spain (Galicia)|Spain|43.45|-8.45|NEU|L|Wait here for good weather after Biscay.
+lis|Lisbon|Portugal|Portugal|38.60|-9.50|MED|L|
+gib|Gibraltar|Gibraltar & Andalusia|Spain|36.05|-5.40|MED|L|
+pal|Palma|Balearic Islands|Spain|39.45|2.60|MED|L|
+cag|Cagliari|Sardinia|Italy|39.10|9.15|MED|L|
+tun|Tunis (Sidi Bou Said)|Tunisia|Tunisia|36.95|10.45|MED|L|
+sir|Siracusa|Sicily|Italy|37.00|15.40|MED|L|
+mlt|Valletta|Malta|Malta|35.95|14.60|MED|L|
+spl|Split|Croatia|Croatia|43.40|16.30|MED|L|
+cfu|Corfu|Ionian Greece & Albania|Greece|39.55|19.70|MED|L|
+pir|Athens (Piraeus)|Greece|Greece|37.80|23.55|MED|L|
+her|Heraklion|Crete|Greece|35.45|25.15|MED||
+ist|Istanbul|Istanbul|Turkey|40.90|28.90|MED|L|
+mrm|Marmaris|Turkey|Turkey|36.75|28.25|MED|L|
+lim|Limassol|Cyprus|Cyprus|34.55|33.05|MED|L|
+psd|Port Said|Egypt (Mediterranean)|Egypt|31.40|32.40|MED||North end of the Suez Canal.
+rab|Rabat|Morocco|Morocco|34.05|-6.95|MED||
+aga|Agadir|Southern Morocco|Morocco|30.35|-9.75|CAN||
+fun|Funchal|Madeira|Portugal|32.55|-16.90|CAN||
+lpa|Las Palmas|Canary Islands|Spain|28.10|-15.35|CAN|L|Where most Atlantic crossings begin.
+dak|Dakar|Senegal|Senegal|14.65|-17.50|CAN||
+min|Mindelo|Cape Verde|Cabo Verde|16.90|-25.05|CAN|L|Shortens the crossing to about 2,100 miles.
+bar|Barbados|Barbados|Barbados|13.10|-59.75|NA||
+slu|Rodney Bay|Saint Lucia|Saint Lucia|14.10|-61.05|NA||
+mtq|Le Marin|Martinique|France|14.40|-60.95|NA|L|
+ant|English Harbour|Antigua|Antigua and Barb.|16.95|-61.75|NA||
+bvi|Tortola|British Virgin Islands|British Virgin Is.|18.35|-64.65|NA||
+gre|St George's|Grenada|Grenada|12.00|-61.85|NA|L|
+tri|Chaguaramas|Trinidad|Trinidad and Tobago|10.75|-61.75|SAFE|L|South of most hurricanes; big boatyards.
+cur|Curaçao|Curaçao|Curaçao|12.05|-68.95|SAFE|L|Outside the usual hurricane belt.
+dom|Samaná|Dominican Republic|Dominican Rep.|19.15|-69.25|NA||
+jam|Port Antonio|Jamaica|Jamaica|18.25|-76.45|NA||
+cub|Cienfuegos|Cuba|Cuba|21.95|-80.50|NA||
+isl|Isla Mujeres|Mexico (Yucatán)|Mexico|21.25|-86.70|NA||
+bel|Belize City|Belize|Belize|17.40|-88.00|NA||
+rdu|Río Dulce|Guatemala|Guatemala|15.90|-88.65|SAFE|L|Famous hurricane hole; leave the boat and see Tikal.
+nas|Nassau|Bahamas|Bahamas|25.15|-77.40|NA||
+mia|Miami|Florida|United States of America|25.70|-80.00|NA|L|
+ctg|Cartagena|Colombia|Colombia|10.40|-75.70|SAFE|L|
+sbl|San Blas Islands|San Blas, Panama|Panama|9.70|-78.80|SAFE||
+col|Colón (Shelter Bay)|Panama (Caribbean side)|Panama|9.45|-79.92|SAFE|L|
+bal|Panama City|Panama (Pacific side)|Panama|8.80|-79.50|SAFE|L|
+gol|Golfito|Costa Rica|Costa Rica|8.40|-83.30|SAFE|L|
+pva|Puerto Vallarta|Mexico (Pacific)|Mexico|20.55|-105.50|NEP|L|
+sdg|San Diego|California|United States of America|32.60|-117.30|NPAC|L|
+vic|Victoria|Western Canada|Canada|48.30|-123.50|NPAC|L|
+hon|Hilo|Hawaiʻi|United States of America|19.80|-154.95|NEP||
+gal|Puerto Ayora|Galápagos|Ecuador|-0.85|-90.35|SAFE||Permit, agent and hull inspection needed.
+eas|Hanga Roa|Easter Island|Chile|-27.10|-109.50|SAFE||Open anchorage: you need calm weather.
+pit|Pitcairn|Pitcairn|Pitcairn Is.|-25.05|-130.15|SP||
+gam|Mangareva|Gambier Islands|Fr. Polynesia|-23.20|-134.95|SP||
+mqs|Nuku Hiva|Marquesas|Fr. Polynesia|-9.00|-140.10|SPE|L|Few cyclones reach here.
+tua|Fakarava|Tuamotus|Fr. Polynesia|-16.00|-145.75|SP||
+tah|Papeete|Tahiti|Fr. Polynesia|-17.45|-149.60|SP|L|
+bor|Bora Bora & Raiatea|Leeward Society Islands|Fr. Polynesia|-16.55|-151.85|SP|L|
+rar|Rarotonga|Cook Islands|Cook Is.|-21.15|-159.80|SP||
+niu|Alofi|Niue|Niue|-19.05|-169.98|SP||
+api|Apia|Samoa|Samoa|-13.75|-171.75|SP||
+vav|Vavaʻu|Tonga|Tonga|-18.65|-174.10|SP||
+fij|Vuda Point|Fiji|Fiji|-17.65|177.30|SP|L|
+opu|Bay of Islands|New Zealand|New Zealand|-35.15|174.30|SAFE|L|Where the South Pacific fleet hides from cyclones.
+hob|Hobart|Tasmania|Australia|-43.15|147.50|SAFE|L|
+nou|Nouméa|New Caledonia|New Caledonia|-22.45|166.35|SP||
+vil|Port Vila|Vanuatu|Vanuatu|-17.80|168.15|SP||
+hir|Honiara|Solomon Islands|Solomon Is.|-9.35|159.95|SP||
+lou|Louisiades|Papua New Guinea|Papua New Guinea|-10.75|152.60|SP||
+poh|Pohnpei|Micronesia|Micronesia|7.05|158.10|SAFE||
+plw|Koror|Palau|Palau|7.30|134.35|NWP||
+bri|Brisbane|Australia (Brisbane)|Australia|-27.00|153.40|SP|L|
+cns|Cairns|Great Barrier Reef|Australia|-16.70|145.95|SP|L|
+thu|Thursday Island|Torres Strait|Australia|-10.55|142.10|SP||
+dar|Darwin|Australia (Darwin)|Australia|-12.30|130.60|SI|L|
+raj|Sorong|Raja Ampat|Indonesia|-0.85|131.15|SAFE||
+kup|Kupang|Timor|Indonesia|-10.15|123.40|SI||
+kom|Labuan Bajo|Komodo|Indonesia|-8.40|119.85|SAFE||
+dps|Bali (Serangan)|Bali|Indonesia|-8.80|115.30|SAFE|L|
+sem|Semarang|Java|Indonesia|-6.85|110.40|SAFE||
+sin|Singapore|Singapore|Singapore|1.20|103.75|SAFE|L|
+kkb|Kota Kinabalu|Borneo|Malaysia|6.00|115.95|SAFE|L|
+pue|Puerto Princesa|Philippines (Palawan)|Philippines|9.65|118.80|NWP||
+oki|Okinawa|Okinawa|Japan|26.15|127.60|NWP||
+jap|Hiroshima (Inland Sea)|Japan|Japan|33.70|132.40|NWP|L|
+cam|Sihanoukville|Cambodia|Cambodia|10.55|103.40|SAFE||
+lan|Langkawi|Malaysia|Malaysia|6.25|99.70|SAFE|L|No cyclones, good yards.
+phu|Phuket|Thailand|Thailand|7.75|98.30|SAFE|L|
+gle|Galle|Sri Lanka|Sri Lanka|5.98|80.20|NI||
+coc|Kochi|South India|India|9.95|76.15|NI|L|
+uli|Uligan|Maldives|Maldives|7.05|72.95|NIS||
+cck|Cocos (Keeling)|Cocos Islands|Indian Ocean Ter.|-12.05|96.85|SI||
+sey|Victoria|Seychelles|Seychelles|-4.60|55.50|SAFE|L|
+zan|Zanzibar|Tanzania|Tanzania|-6.15|39.15|SAFE||
+kil|Kilifi|Kenya|Kenya|-3.65|39.92|SAFE|L|
+nos|Nosy Be|Madagascar|Madagascar|-13.35|48.05|SI||
+mau|Port Louis|Mauritius|Mauritius|-20.15|57.45|SI||
+reu|Le Port|Réunion|France|-20.90|55.25|SI|L|
+ric|Richards Bay|South Africa (east)|South Africa|-28.85|32.15|SAFE|L|
+cap|Cape Town|South Africa|South Africa|-33.85|18.35|CAPE|L|
+wal|Walvis Bay|Namibia|Namibia|-22.85|14.40|SAFE||
+hel|Jamestown|Saint Helena|Saint Helena|-15.90|-5.75|SAFE||
+asc|Georgetown|Ascension|Saint Helena|-7.90|-14.45|SAFE||
+ush|Ushuaia|Patagonia|Argentina|-54.95|-67.20|CAPE|L|Only for very experienced crews.
+bue|Buenos Aires|Argentina|Argentina|-34.65|-58.00|SAFE|L|
+rio|Rio de Janeiro|Brazil (Rio)|Brazil|-23.05|-43.15|SAFE|L|
+rec|Recife|Brazil (northeast)|Brazil|-8.05|-34.75|SAFE|L|
+bda|St George's|Bermuda|Bermuda|32.35|-64.60|NA||
+hor|Horta|Azores|Portugal|38.50|-28.55|AZO|L|Every boat paints its name on the harbour wall.
+sal|Salalah|Oman|Oman|16.85|54.00|NI||
+dji|Djibouti|Djibouti|Djibouti|11.70|43.25|SAFE||
+ptg|Port Ghalib|Egypt (Red Sea, Luxor)|Egypt|25.50|34.70|SAFE|L|Luxor is a half-day drive inland.
+aqa|Aqaba|Jordan|Jordan|29.40|34.93|SAFE|L|Petra and Wadi Rum on the doorstep.
+sue|Suez|Suez|Egypt|29.85|32.55|SAFE||
+
+[legs]
+bgo-cux:5-8
+kie-cux:4-10
+cux-ijm:4-9
+ijm-fal:4-9
+kin-fal:5-9
+kin>cor:6-8
+fal-lar:5-9
+lar-cor:5-9
+fal>cor:5-8
+cor>fal:5-8:1.2
+cor-lis:5-10
+lis-gib:4-10
+lis>fun:5-10
+gib>lpa:4-11
+gib-rab:5-10
+rab>aga:5-11
+aga>lpa:1-12
+lis>rab:5-10
+fun>lpa:5-11
+gib-pal:4-10
+pal-cag:5-10
+cag-tun:5-10
+cag-sir:5-10
+tun-mlt:5-10
+sir-mlt:4-10
+sir-cfu:5-10
+cfu-spl:5-9
+cfu-pir:5-10
+mlt-her:5-10
+pir-her:5-10
+pir-mrm:5-10
+her-mrm:5-10
+pir-ist:5-9
+mrm-lim:5-10
+her-psd:4-10
+lim-psd:4-11
+lpa>min:10-4
+lpa>slu:11-2
+lpa>mtq:11-2
+lpa>dak:10-3
+dak>min:11-4
+min>bar:11-4
+min>gre:11-4
+min>mtq:11-4
+min>rec:10-2
+bar>slu:12-6
+bar>gre:12-6
+bar>tri:12-6
+slu-mtq:12-6
+mtq-ant:12-6
+ant>bvi:12-6
+slu>gre:12-6
+gre-tri:1-12
+gre>cur:12-7
+tri>cur:1-12
+slu>cur:12-6
+bvi>dom:12-5
+dom>jam:12-5
+dom>nas:12-5
+jam>cub:12-5
+jam>col:12-5
+jam>rdu:12-5
+cub>isl:12-5
+isl>bel:12-5
+bel-rdu:1-12
+rdu>col:3-6:1.2
+isl>mia:3-6
+mia-nas:12-6
+cur>ctg:4-11
+cur>sbl:12-7
+cur>col:12-7
+slu>sbl:12-5
+ctg>sbl:1-12
+sbl>ctg:4-11:1.2
+sbl-col:1-12
+col-bal:1-12:1:C
+nas>bda:4-6
+mia>bda:4-6
+ant>bda:4-6
+bvi>bda:4-6
+ant>hor:4-6:1.1
+bda>hor:5-7
+hor>lis:5-8
+hor>fal:5-8
+hor>gib:5-8
+hor>cor:6-8
+bal>gal:1-7
+bal-gol:12-5
+gol>gal:1-6
+gol>pva:12-4
+sdg>pva:11-3
+vic>sdg:7-9
+pva>mqs:3-5
+pva>hon:3-5
+sdg>hon:5-7
+sdg>mqs:3-5
+hon>poh:11-4
+hon>api:4-6
+hon>vic:6-8:1.2
+gal>mqs:3-8
+gal>eas:12-5
+eas>pit:11-4
+pit>gam:11-5
+eas>mqs:3-6
+gam>tua:4-9
+gam>tah:4-9
+gam>mqs:3-5
+mqs>tua:4-10
+tua>tah:4-10
+tah>bor:4-10
+bor>rar:5-10
+bor>niu:5-10
+bor>api:5-10
+rar>niu:5-10
+rar>vav:5-10
+niu>vav:6-10
+api>vav:5-10
+api>fij:5-10
+vav>fij:5-10
+vav>opu:10-11
+fij>opu:10-11
+nou>opu:10-11
+opu>fij:4-6
+opu>vav:4-6
+opu>nou:4-7
+opu>bri:2-4
+opu>hob:1-3
+hob>bri:3-5
+hob>opu:1-3
+bri>opu:11-12
+fij>vil:5-10
+fij>nou:5-10
+vil>nou:6-10
+nou>vil:5-9
+nou>bri:9-11
+vil>bri:9-11
+vil>hir:5-9
+vil>thu:6-9
+hir>lou:5-9
+lou>thu:6-9
+bri>cns:4-9
+cns>thu:5-9
+thu>dar:5-9
+dar>kup:5-10
+kup>kom:5-10
+kom>dps:5-10
+dar>dps:5-10
+dps>sem:5-10
+dps>sin:6-10
+sem>sin:6-10
+raj-kom:3-5,9-11
+kup>raj:9-11
+poh>plw:12-4
+plw>raj:12-4
+plw>pue:12-4
+sin-kkb:4-10
+kkb-pue:3-10
+pue>oki:3-5
+oki>jap:3-5
+jap>oki:10-11
+oki>pue:11-12
+jap>vic:6-7
+sin-cam:3-5,9-11
+sin-lan:1-12
+lan-phu:1-12
+phu>gle:12-3
+lan>gle:12-3
+gle>uli:12-4
+gle>coc:12-3
+coc>uli:12-4
+uli>sal:1-3
+coc>sal:1-3
+uli>sey:1-4
+gle>sey:1-3
+dps>cck:5-10
+dar>cck:5-10
+lan>cck:6-9:1.1
+cck>mau:6-10
+mau-reu:5-11
+mau>ric:9-11
+reu>ric:9-11
+reu>nos:5-10
+sey>nos:4-5,10-11
+sey>zan:5-9
+nos>zan:5-10
+zan-kil:1-12
+zan>nos:10-11:1.2
+nos>ric:8-11
+ric>cap:11-3
+cap>wal:12-5
+wal>hel:1-5
+cap>hel:12-4
+cap>rio:12-4
+hel>asc:1-6
+hel>rec:1-6
+hel>rio:1-5
+asc>bar:1-5
+asc>gre:1-5
+asc>hor:4-6
+rec>gre:1-6
+rec>tri:1-7
+rec>hor:4-6:1.1
+rec>rio:9-3
+rio>rec:4-8:1.3
+rio-bue:10-4
+bue-ush:11-2
+ush>cap:1-3
+sal>dji:1-3:1:R
+dji>ptg:1-5:1.2:R
+ptg>sue:3-11:1.2
+ptg-aqa:3-11
+aqa>sue:3-11
+sue-psd:1-12:1:C

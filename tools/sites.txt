@@ -1,0 +1,250 @@
+# Curated catalogue. One place per line:
+# Wikipedia title | display name (blank = title) | country | type | trip region | days | best months | why go | flags
+# types: temple, ancient, sacred, tomb, fort, city, nature     flags: w = check travel advice first, S = force "sail", F = force "fly"
+Giza pyramid complex|Pyramids of Giza|Egypt|tomb|Egypt & the Nile|2|10-4|The last standing wonder of the ancient world, with the Sphinx at its feet.|
+Saqqara||Egypt|tomb|Egypt & the Nile|1|10-4|The step pyramid: the first great stone building ever raised.|
+Karnak|Karnak Temple|Egypt|temple|Egypt & the Nile|1|10-4|A forest of 134 giant columns built over 2,000 years.|
+Luxor Temple||Egypt|temple|Egypt & the Nile|0.5|10-4|Best at night, joined to Karnak by an avenue of sphinxes.|
+Valley of the Kings||Egypt|tomb|Egypt & the Nile|1|10-4|Painted tombs of Tutankhamun, Seti and the Ramesses.|
+Mortuary Temple of Hatshepsut|Temple of Hatshepsut|Egypt|temple|Egypt & the Nile|0.5|10-4|Clean terraces cut under a golden cliff by a female pharaoh.|
+Abu Simbel||Egypt|temple|Egypt & the Nile|1|10-4|Four colossal Ramesses statues, moved block by block to save them.|
+Philae temple complex|Philae|Egypt|temple|Egypt & the Nile|0.5|10-4|Island temple of Isis, reached by small boat.|
+Temple of Edfu||Egypt|temple|Egypt & the Nile|0.5|10-4|The best preserved temple in Egypt, roof and all.|
+Dendera Temple complex|Dendera|Egypt|temple|Egypt & the Nile|0.5|10-4|Its painted zodiac ceilings have kept their blues.|
+Siwa Oasis||Egypt|nature|Egypt & the Nile|3|10-4|Desert oracle that Alexander the Great came to consult.|
+Saint Catherine's Monastery||Egypt|sacred|Jordan & Sinai|2|10-4|Working monastery since the 6th century below Mount Sinai.|
+Petra||Jordan|ancient|Jordan & Sinai|2|3-5,9-11|Rose-red city carved into canyon walls by the Nabataeans.|
+Jerash||Jordan|ancient|Jordan & Sinai|0.5|3-5,9-11|One of the most complete Roman cities outside Italy.|
+Wadi Rum||Jordan|nature|Jordan & Sinai|2|3-5,9-11|Red desert valleys with Nabataean carvings and Bedouin camps.|
+Hegra (Mada'in Salih)|Hegra (Madâin Sâlih)|Saudi Arabia|tomb|Arabia|2|11-3|Petra's quieter sister city, standing in open desert.|
+Baalbek||Lebanon|temple|Levant|1|4-6,9-10|Roman temples on some of the largest cut stones ever moved.|w
+Byblos||Lebanon|ancient|Levant|1|4-6,9-10|Phoenician port inhabited for 7,000 years.|w
+Palmyra||Syria|ancient|Levant|1|3-5,9-11|Desert caravan city, damaged by war and slowly reopening.|w
+Western Wall|Old City of Jerusalem|Jerusalem|sacred|Levant|3|3-5,9-11|Three faiths within one square kilometre.|w
+Masada||Israel|fort|Levant|1|3-5,9-11|Herod's fortress above the Dead Sea.|w
+Göbekli Tepe||Turkey|temple|Eastern Turkey|1|4-6,9-10|The oldest known temple: 11,500 years, older than farming.|
+Mount Nemrut||Turkey|tomb|Eastern Turkey|1|5-9|Giant stone heads of gods on a mountaintop at sunrise.|
+Ani||Turkey|ancient|Eastern Turkey|1|5-9|Ruined medieval capital of "1,001 churches".|
+Sumela Monastery||Turkey|sacred|Eastern Turkey|1|5-9|Monastery clinging to a cliff in misty forest.|
+Hagia Sophia|Istanbul & Hagia Sophia|Turkey|sacred|Western Turkey|3|4-6,9-10|Cathedral, mosque, museum, mosque: 1,500 years of empire.|
+Ephesus||Turkey|ancient|Western Turkey|1|4-6,9-10|Roman streets leading to the Library of Celsus.|
+Göreme|Cappadocia|Turkey|nature|Western Turkey|3|4-6,9-10|Cave churches, underground cities and balloons at dawn.|
+Hattusa||Turkey|ancient|Western Turkey|1|5-9|Lost capital of the Hittites and its lion gate.|
+Pamukkale|Pamukkale & Hierapolis|Turkey|nature|Western Turkey|1|4-6,9-10|White travertine pools below a Roman spa town.|
+Acropolis of Athens||Greece|temple|Greece|2|4-6,9-10|The Parthenon and the birthplace of so many ideas.|
+Delphi||Greece|temple|Greece|1|4-6,9-10|The oracle's mountain sanctuary, the ancient world's navel.|
+Meteora||Greece|sacred|Greece|2|4-6,9-10|Monasteries balanced on top of rock pillars.|
+Mycenae||Greece|ancient|Greece|0.5|4-6,9-10|Agamemnon's citadel and its Lion Gate.|
+Olympia, Greece|Olympia|Greece|temple|Greece|0.5|4-6,9-10|Where the Olympic Games were born.|
+Knossos||Greece|ancient|Greek islands|1|4-6,9-10|Minoan palace behind the Minotaur legend.|
+Delos||Greece|temple|Greek islands|1|5-10|Uninhabited sacred island, birthplace of Apollo.|
+Akrotiri (prehistoric city)|Santorini & Akrotiri|Greece|ancient|Greek islands|3|5-10|Bronze Age town buried by the volcano you sleep on.|
+Colosseum|Ancient Rome|Italy|ancient|Italy|3|4-6,9-10|Colosseum, Forum, Pantheon: an empire within walking distance.|
+Pompeii||Italy|ancient|Italy|1|4-6,9-10|A Roman city stopped in a single day.|
+Paestum||Italy|temple|Italy|0.5|4-6,9-10|Three Greek temples standing almost complete.|
+Valle dei Templi|Valley of the Temples|Italy|temple|Sicily & Malta|1|4-6,9-10|Doric temples on a ridge above the sea.|
+Segesta||Italy|temple|Sicily & Malta|0.5|4-6,9-10|A lone unfinished temple on a green hill.|
+Ħal Saflieni Hypogeum|Hypogeum & Maltese temples|Malta|temple|Sicily & Malta|3|4-6,9-10|Underground temple 5,000 years old; only a few visitors per hour.|
+Ġgantija||Malta|temple|Sicily & Malta|1|4-6,9-10|Free-standing temples older than the pyramids.|
+Su Nuraxi (Barumini)|Su Nuraxi nuraghe|Italy|ancient|Sardinia & Corsica|1|4-6,9-10|Bronze Age towers of a vanished island culture.|
+Diocletian's Palace|Split & Diocletian's Palace|Croatia|ancient|Adriatic|2|5-9|A Roman palace that became a living town.|
+Mostar|Mostar|Bosnia and Herzegovina|city|Adriatic|1|5-9|The rebuilt Ottoman bridge and its divers.|
+Bay of Kotor||Montenegro|nature|Adriatic|2|5-9|A fjord-like bay with walled medieval towns.|
+Butrint||Albania|ancient|Adriatic|1|5-9|Greek, Roman and Venetian ruins in a lagoon.|
+Rila Monastery||Bulgaria|sacred|Balkans|1|5-9|Striped arches and frescoes deep in the mountains.|
+Alhambra||Spain|fort|Spain & Portugal|2|3-6,9-11|Moorish palaces of carved light and water.|
+Mosque–Cathedral of Córdoba||Spain|sacred|Spain & Portugal|1|3-6,9-11|A forest of red-and-white arches with a cathedral inside.|
+Sagrada Família|Barcelona & Sagrada Família|Spain|sacred|Spain & Portugal|3|4-6,9-10|Gaudí's basilica, finally nearing its end.|
+Santiago de Compostela Cathedral|Santiago & the Camino|Spain|sacred|Spain & Portugal|2|5-9|The end of a thousand years of walking.|
+Cave of Altamira|Altamira|Spain|ancient|Spain & Portugal|1|5-9|Painted bison 15,000 years old (seen in the replica cave).|
+Convent of Christ (Tomar)|Tomar, Templar convent|Portugal|sacred|Spain & Portugal|1|4-6,9-10|Round church of the Knights Templar.|
+Sintra||Portugal|city|Spain & Portugal|1|4-6,9-10|Palaces, wells and misty gardens by the ocean.|
+Lascaux|Lascaux & the Dordogne|France|ancient|France|3|5-9|The "Sistine Chapel" of prehistory, plus castles.|
+Carnac stones||France|ancient|France|1|5-9|3,000 standing stones in rows; nobody knows why.|
+Mont-Saint-Michel||France|sacred|France|1|4-6,9-10|Abbey island surrounded by racing tides.|
+Chartres Cathedral||France|sacred|France|0.5|4-10|Medieval blue glass and a walking labyrinth.|
+Pont du Gard|Provence & Pont du Gard|France|ancient|France|3|4-6,9-10|Roman aqueduct, Arles and Orange nearby.|
+Stonehenge|Stonehenge & Avebury|United Kingdom|temple|Britain & Ireland|2|5-9|The solstice circle, and the bigger one you can touch.|
+Skara Brae|Orkney & Skara Brae|United Kingdom|ancient|Britain & Ireland|3|5-8|A stone village older than Stonehenge, on a wild shore.|
+Callanish Stones||United Kingdom|temple|Britain & Ireland|2|5-8|Lonely stone circle on the Isle of Lewis.|
+Newgrange||Ireland|tomb|Britain & Ireland|1|4-10|At winter solstice the sun lights its inner chamber.|
+Skellig Michael||Ireland|sacred|Britain & Ireland|2|5-9|Monks' beehive huts on an Atlantic rock.|
+Borgund Stave Church|Norwegian fjords & stave churches|Norway|sacred|Nordics|7|6-8|Dragon-headed wooden churches among the fjords.|
+Golden Circle (Iceland)|Iceland|Iceland|nature|Nordics|8|6-9|Geysers, glaciers, lava and Viking parliament.|
+Visby||Sweden|city|Nordics|2|6-8|Walled Hanseatic town on a Baltic island.|
+Wieliczka Salt Mine|Kraków & Wieliczka|Poland|city|Central Europe|3|4-10|A cathedral carved entirely in salt.|
+Prague Castle|Prague|Czech Republic|city|Central Europe|3|4-6,9-10|A skyline of spires, close to home.|
+Saint Sophia Cathedral, Kyiv|Kyiv|Ukraine|sacred|Eastern Europe|2|5-9|Golden mosaics of Kyivan Rus.|w
+Svetitskhoveli Cathedral|Mtskheta & Tbilisi|Georgia|sacred|Caucasus|3|5-6,9-10|Georgia's holiest church, then wine and baths.|
+Gergeti Trinity Church||Georgia|sacred|Caucasus|2|6-9|Hilltop church below Mount Kazbek.|
+Ushguli|Svaneti & Ushguli|Georgia|nature|Caucasus|4|6-9|Medieval tower villages under 5,000 m peaks.|
+Geghard|Geghard & Garni|Armenia|sacred|Caucasus|2|5-6,9-10|Monastery carved into a mountain, near a Roman temple.|
+Tatev Monastery||Armenia|sacred|Caucasus|2|5-6,9-10|Reached by one of the longest cable cars on Earth.|
+Persepolis||Iran|ancient|Iran|2|3-5,10-11|Ceremonial capital of the Persian empire.|w
+Naqsh-e Jahan Square|Isfahan|Iran|sacred|Iran|3|3-5,10-11|The most beautiful tilework in the Islamic world.|w
+Ziggurat of Ur|Ur & Babylon|Iraq|temple|Mesopotamia|4|11-3|Where cities and writing began.|w
+Registan|Samarkand|Uzbekistan|sacred|Silk Road|3|4-5,9-10|Three towering blue madrasas on one square.|
+Bukhara||Uzbekistan|city|Silk Road|2|4-5,9-10|Complete Silk Road town around an ancient minaret.|
+Itchan Kala|Khiva|Uzbekistan|city|Silk Road|1|4-5,9-10|Mud-walled desert city, beautiful at dusk.|
+Merv||Turkmenistan|ancient|Silk Road|1|4-5,9-10|Once perhaps the largest city on Earth.|
+Mogao Caves||China|sacred|China: Silk Road|2|5-9|A thousand years of Buddhist painting in the desert.|
+Terracotta Army|Xi'an & Terracotta Army|China|tomb|China|3|4-5,9-10|8,000 clay soldiers, no two faces alike.|
+Forbidden City|Beijing & Great Wall|China|city|China|4|4-5,9-10|Imperial palace, Temple of Heaven and the wall.|
+Longmen Grottoes||China|temple|China|1|4-5,9-10|100,000 Buddhas cut into river cliffs.|
+Leshan Giant Buddha||China|temple|China|1|4-5,9-10|A 71 m Buddha watching three rivers meet.|
+Zhangjiajie National Forest Park|Zhangjiajie|China|nature|China|3|4-5,9-10|Floating-mountain stone pillars.|
+Potala Palace|Lhasa & Potala Palace|China (Tibet)|sacred|Tibet & Nepal|4|5-9|The Dalai Lamas' palace at 3,700 m (permit needed).|
+Mount Kailash||China (Tibet)|sacred|Tibet & Nepal|7|5-9|Peak sacred to four religions, never climbed.|
+Boudhanath|Kathmandu valley|Nepal|temple|Tibet & Nepal|4|10-4|Stupas, pagodas and living goddesses.|
+Lumbini||Nepal|sacred|Tibet & Nepal|1|10-4|Birthplace of the Buddha.|
+Paro Taktsang|Bhutan & Tiger's Nest|Bhutan|sacred|Tibet & Nepal|6|3-5,9-11|Monastery hanging from a 900 m cliff.|
+Taj Mahal|Agra & Taj Mahal|India|tomb|North India|2|10-3|Go at sunrise. It is better than the photos.|
+Varanasi||India|sacred|North India|2|10-3|Fire and prayer on the Ganges, 3,000 years running.|
+Khajuraho Group of Monuments|Khajuraho|India|temple|North India|1|10-3|Temples famous for their sensual carvings.|
+Golden Temple|Golden Temple, Amritsar|India|sacred|North India|1|10-3|The Sikh temple that feeds 100,000 people a day.|
+Amber Fort|Jaipur & Rajasthan|India|fort|North India|6|10-3|Desert forts, palaces and painted towns.|
+Ellora Caves|Ellora & Ajanta|India|temple|West India|2|10-3|An entire temple carved downward from one rock.|
+Sanchi||India|temple|North India|1|10-3|The oldest Buddhist stupa in India.|
+Hampi||India|ancient|South India|3|10-3|Ruined empire scattered among giant boulders.|
+Meenakshi Temple|Meenakshi Temple, Madurai|India|temple|South India|1|12-3|Towers covered with 33,000 painted figures.|
+Brihadisvara Temple, Thanjavur|Great Living Chola Temples|India|temple|South India|2|12-3|A thousand-year-old granite tower.|
+Shore Temple|Mahabalipuram|India|temple|South India|1|12-3|Seaside temples and rock-cut chariots.|
+Konark Sun Temple||India|temple|East India|2|10-3|A stone chariot for the sun with 24 carved wheels.|
+Sigiriya||Sri Lanka|fort|Sri Lanka|1|1-4,7-9|Palace on top of a 180 m rock.|
+Temple of the Tooth|Kandy & Temple of the Tooth|Sri Lanka|temple|Sri Lanka|2|1-4,7-9|Holds a tooth of the Buddha.|
+Anuradhapura||Sri Lanka|ancient|Sri Lanka|2|1-4,7-9|Huge brick stupas and a tree planted in 288 BC.|
+Bagan||Myanmar|temple|Myanmar|3|11-2|2,000 temples on one plain.|w
+Shwedagon Pagoda||Myanmar|temple|Myanmar|1|11-2|A hill of gold above Yangon.|w
+Sukhothai Historical Park|Sukhothai|Thailand|ancient|Thailand|1|11-2|Quiet lotus ponds and walking Buddhas.|
+Ayutthaya Historical Park|Ayutthaya|Thailand|ancient|Thailand|1|11-2|Burned capital; a Buddha head held in tree roots.|
+Wat Phra That Doi Suthep|Chiang Mai temples|Thailand|temple|Thailand|3|11-2|Three hundred temples and a golden one above.|
+Wat Rong Khun|White Temple|Thailand|temple|Thailand|1|11-2|A dazzling modern temple of white and mirrors.|
+Angkor Wat|Angkor|Cambodia|temple|Cambodia & Laos|4|11-2|The largest religious complex ever built.|
+Banteay Srei||Cambodia|temple|Cambodia & Laos|0.5|11-2|Tiny pink temple with the finest Khmer carving.|
+Preah Vihear Temple||Cambodia|temple|Cambodia & Laos|1|11-2|Cliff-edge temple on a disputed border.|w
+Wat Phou||Laos|temple|Cambodia & Laos|1|11-2|Pre-Angkor mountain shrine above the Mekong.|
+Luang Prabang||Laos|city|Cambodia & Laos|3|11-2|Monks, rivers and golden roofs.|
+Plain of Jars||Laos|ancient|Cambodia & Laos|1|11-2|Thousands of giant stone jars, purpose uncertain.|
+Mỹ Sơn||Vietnam|temple|Vietnam|1|2-5|Hindu temples of the lost Champa kingdom.|
+Huế|Huế, imperial city|Vietnam|city|Vietnam|2|2-5|Citadel and emperors' tombs on the Perfume River.|
+Hạ Long Bay||Vietnam|nature|Vietnam|2|3-5,9-11|Thousands of limestone towers in green water.|
+Borobudur||Indonesia|temple|Java & Bali|1|5-9|The largest Buddhist monument in the world.|
+Prambanan||Indonesia|temple|Java & Bali|1|5-9|Soaring Hindu towers an hour from Borobudur.|
+Besakih Temple|Bali temples|Indonesia|temple|Java & Bali|5|5-9|Mother temple on a volcano, plus Tanah Lot and Uluwatu.|
+Komodo National Park|Komodo|Indonesia|nature|Eastern Indonesia|3|4-10|Dragons, pink beaches and manta rays.|
+Tana Toraja Regency|Tana Toraja|Indonesia|tomb|Eastern Indonesia|3|5-9|Boat-shaped houses and cliff graves.|
+Raja Ampat Islands|Raja Ampat|Indonesia|nature|Eastern Indonesia|7|10-4|The richest coral reefs on the planet.|S
+Batu Caves|Batu Caves & Kuala Lumpur|Malaysia|temple|Malaysia & Singapore|2|12-3,6-8|Rainbow stairs to a Hindu cave temple.|
+Kinabalu Park|Borneo & Kinabalu|Malaysia|nature|Borneo|6|3-9|Orangutans, rainforest and a granite peak.|
+Banaue Rice Terraces||Philippines|nature|Philippines|3|12-4|2,000-year-old terraces like stairs to the sky.|
+El Nido, Palawan|Palawan & El Nido|Philippines|nature|Philippines|5|12-4|Lagoons between black cliffs, made for boats.|
+Fushimi Inari-taisha|Kyoto temples|Japan|temple|Japan|5|3-5,10-11|Ten thousand red gates and seventeen world heritage sites.|
+Tōdai-ji|Nara & Tōdai-ji|Japan|temple|Japan|1|3-5,10-11|A great bronze Buddha among wandering deer.|
+Itsukushima Shrine|Miyajima & Hiroshima|Japan|temple|Japan|2|3-5,10-11|The gate that floats at high tide.|
+Ise Grand Shrine||Japan|temple|Japan|1|3-5,10-11|Rebuilt every twenty years for over a millennium.|
+Kōya-san|Mount Kōya|Japan|sacred|Japan|2|4-11|Sleep in a temple beside a forest cemetery.|
+Nikkō Tōshō-gū|Nikkō|Japan|temple|Japan|1|4-11|Gilded shrine in cedar forest near Tokyo.|
+Bulguksa|Gyeongju & Bulguksa|South Korea|temple|Korea|2|4-5,9-10|Silla kingdom capital full of royal mounds.|
+Haeinsa||South Korea|temple|Korea|1|4-5,9-10|81,000 woodblocks of Buddhist scripture.|
+Erdene Zuu Monastery|Mongolia & Karakorum|Mongolia|sacred|Mongolia|9|6-8|Genghis Khan's capital and endless steppe.|
+Teotihuacan|Teotihuacan & Mexico City|Mexico|ancient|Central Mexico|4|11-4|Pyramids so old the Aztecs thought gods built them.|
+Monte Albán|Monte Albán & Oaxaca|Mexico|ancient|Central Mexico|3|10-4|Zapotec city on a flattened mountaintop.|
+Palenque||Mexico|ancient|Maya world|1|11-4|Jungle temples and King Pakal's hidden tomb.|
+Chichen Itza||Mexico|ancient|Maya world|1|11-4|A serpent of shadow descends at the equinox.|
+Uxmal||Mexico|ancient|Maya world|1|11-4|The most elegant Maya architecture.|
+Calakmul||Mexico|ancient|Maya world|1|11-4|Pyramids rising from a vast biosphere jungle.|
+Tulum||Mexico|ancient|Maya world|1|11-4|Maya port on a Caribbean cliff.|
+Tikal||Guatemala|ancient|Maya world|2|11-4|Temples above the canopy, howler monkeys at dawn.|
+Antigua Guatemala|Antigua & Lake Atitlán|Guatemala|city|Maya world|4|11-4|Colonial streets, volcanoes and a Maya lake.|
+Caracol|Caracol|Belize|ancient|Maya world|1|12-4|Belize's largest Maya city, deep in forest.|
+Lamanai||Belize|ancient|Maya world|1|12-4|Reached by river past crocodiles.|
+Copán||Honduras|ancient|Maya world|1|11-4|The Maya's finest sculptors and a stairway of text.|
+Joya de Cerén||El Salvador|ancient|Maya world|1|11-4|Maya farm village preserved by ash.|w
+Great Blue Hole|Great Blue Hole & reef|Belize|nature|Caribbean|2|12-5|Dive site on the world's second largest barrier reef.|S
+Guna Yala|San Blas Islands|Panama|nature|Caribbean|5|12-4|Palm islets run by the Guna people; best by boat.|S
+Old Havana|Havana|Cuba|city|Caribbean|4|12-4|Faded grandeur and music.|
+Pitons (Saint Lucia)|St Lucia & the Pitons|Saint Lucia|nature|Caribbean|4|12-5|Twin volcanic spires straight out of the sea.|S
+Nelson's Dockyard|Antigua & Nelson's Dockyard|Antigua and Barbuda|fort|Caribbean|3|12-5|Georgian naval yard, still full of sailing boats.|S
+Ciudad Perdida|Lost City (Ciudad Perdida)|Colombia|ancient|Colombia|5|12-3,7-8|Four-day jungle trek to a city older than Machu Picchu.|
+Cartagena, Colombia|Cartagena|Colombia|city|Colombia|3|12-4|Walled Caribbean port.|
+San Agustín Archaeological Park|San Agustín|Colombia|ancient|Colombia|2|12-2,6-9|Hundreds of unexplained stone guardians.|w
+Galápagos Islands||Ecuador|nature|Galápagos|8|1-6,9-12|Animals that never learned to fear us.|
+Machu Picchu|Machu Picchu & Sacred Valley|Peru|ancient|Peru & Andes|4|5-9|The Inca city in the clouds.|
+Cusco|Cusco & Sacsayhuamán|Peru|city|Peru & Andes|2|5-9|Inca walls so tight a blade won't fit.|
+Nazca lines||Peru|ancient|Peru & Andes|1|5-11|Giant drawings only understood from the air.|
+Chan Chan||Peru|ancient|North Peru|1|5-11|The largest mud-brick city in the Americas.|
+Kuélap||Peru|fort|North Peru|2|5-9|Cloud-forest fortress with a cable car and few people.|
+Chavín de Huántar||Peru|temple|North Peru|2|5-9|3,000-year-old temple with a maze beneath.|
+Caral|Caral|Peru|ancient|North Peru|1|5-11|The oldest city in the Americas, as old as the pyramids.|
+Tiwanaku|Tiwanaku & Lake Titicaca|Bolivia|ancient|Peru & Andes|3|5-9|Gate of the Sun beside the highest great lake.|
+Salar de Uyuni||Bolivia|nature|Peru & Andes|3|5-11|The biggest mirror on Earth.|
+Moai|Easter Island (Rapa Nui)|Chile|ancient|South Pacific|5|10-4|A thousand giants on the world's loneliest island.|
+Torres del Paine National Park|Patagonia|Chile|nature|Patagonia|8|11-3|Granite towers, glaciers and wind.|
+Perito Moreno Glacier||Argentina|nature|Patagonia|2|11-3|A glacier that calves in front of you.|
+Cueva de las Manos||Argentina|ancient|Patagonia|1|11-3|9,000-year-old painted hands.|
+Iguazu Falls||Argentina|nature|Brazil & Iguazu|2|3-5,8-10|275 waterfalls in the jungle.|
+Christ the Redeemer (statue)|Rio de Janeiro|Brazil|city|Brazil & Iguazu|4|5-10|The city with the best setting in the world.|
+Serra da Capivara National Park|Serra da Capivara|Brazil|ancient|Brazil & Iguazu|3|5-9|30,000 ancient rock paintings, hardly visited.|
+Ouro Preto||Brazil|city|Brazil & Iguazu|2|5-9|Baroque gold-rush town.|
+Mesa Verde National Park|Mesa Verde|United States|ancient|US Southwest|2|5-10|Villages built inside cliffs.|
+Chaco Culture National Historical Park|Chaco Canyon|United States|ancient|US Southwest|1|4-5,9-10|Great houses aligned with sun and moon.|
+Grand Canyon|Grand Canyon & Monument Valley|United States|nature|US Southwest|4|4-5,9-10|Two billion years of rock.|
+Cahokia||United States|ancient|US East|1|4-10|Earth pyramids of North America's lost metropolis.|
+Yellowstone National Park|Yellowstone|United States|nature|US West|4|6-9|Geysers, bison and hot springs in rainbow colours.|
+Hawaii (island)|Hawaiʻi|United States|nature|North Pacific|8|4-10|Temples of the Polynesian voyagers and living volcanoes.|
+L'Anse aux Meadows||Canada|ancient|Canada|2|6-9|Proof the Vikings reached America.|
+Haida Gwaii|Haida Gwaii|Canada|ancient|Canada|5|6-9|Weathered totem poles on misty islands.|
+Nan Madol||Micronesia|ancient|North Pacific|4|1-4|A ruined city of 92 islets on a coral reef.|S
+Taputapuatea|Raiatea & Marae Taputapuatea|French Polynesia|temple|South Pacific|4|5-10|The sacred heart all Polynesian voyages began from.|S
+Nuku Hiva|Marquesas Islands|French Polynesia|nature|South Pacific|10|4-10|Tiki ruins, waterfalls and wild horses.|S
+Bora Bora||French Polynesia|nature|South Pacific|4|5-10|The lagoon of all lagoons.|S
+Fakarava|Tuamotu atolls|French Polynesia|nature|South Pacific|7|5-10|Dive the pass with hundreds of sharks.|S
+Rarotonga|Cook Islands|Cook Islands|nature|South Pacific|5|5-10|Friendly, green and slow.|S
+Haʻamonga ʻa Maui|Tonga|Tonga|ancient|South Pacific|7|6-10|Stone trilithon, royal tombs and humpback whales.|S
+Samoa|Samoa|Samoa|nature|South Pacific|6|5-10|Lava pools and the largest Polynesian mound.|S
+Yasawa Islands|Fiji|Fiji|nature|South Pacific|8|5-10|Three hundred islands and endless welcome.|S
+Mount Yasur|Vanuatu & Mount Yasur|Vanuatu|nature|South Pacific|5|5-10|Stand on the rim of an erupting volcano.|S
+Isle of Pines (New Caledonia)|New Caledonia|New Caledonia|nature|South Pacific|6|5-10|The largest lagoon in the world.|S
+Milford Sound|New Zealand South Island|New Zealand|nature|New Zealand|12|11-4|Fjords, glaciers and stars.|
+Waitangi Treaty Grounds|Northland & Māori heritage|New Zealand|sacred|New Zealand|4|11-4|Carved meeting houses and giant kauri trees.|
+Uluru||Australia|sacred|Australia|3|5-9|Sacred red rock of the Aṉangu people.|F
+Kakadu National Park|Kakadu|Australia|ancient|Australia|3|5-9|20,000 years of Aboriginal rock art.|
+Great Barrier Reef||Australia|nature|Australia|6|6-10|Sail through the largest living structure.|S
+Port Arthur, Tasmania|Tasmania|Australia|nature|Australia|7|12-3|Wild coast and convict ruins.|
+Lalibela|Rock churches of Lalibela|Ethiopia|sacred|Ethiopia|2|10-3|Eleven churches carved down into red rock.|w
+Aksum|Aksum|Ethiopia|ancient|Ethiopia|1|10-3|Giant stelae, said to guard the Ark.|w
+Meroë|Pyramids of Meroë|Sudan|tomb|Sudan|2|11-2|Two hundred Nubian pyramids in the sand.|w
+Leptis Magna||Libya|ancient|North Africa|1|10-4|The grandest Roman ruins in Africa.|w
+Amphitheatre of El Jem|El Jem & Carthage|Tunisia|ancient|North Africa|4|3-5,10-11|A colosseum in a desert town.|
+Great Mosque of Kairouan|Kairouan|Tunisia|sacred|North Africa|1|3-5,10-11|One of Islam's oldest mosques.|
+Timgad|Timgad & Djémila|Algeria|ancient|North Africa|3|3-5,10-11|A perfect Roman street grid, nearly alone.|w
+Volubilis|Volubilis & Fes|Morocco|ancient|Morocco|3|3-5,9-11|Roman mosaics and the world's largest medieval maze.|
+Aït Benhaddou|Aït Benhaddou & the desert|Morocco|fort|Morocco|4|3-5,9-11|Mud-brick fortress on the caravan road.|
+Great Mosque of Djenné|Djenné|Mali|sacred|West Africa|2|11-2|The largest mud building in the world.|w
+Royal Palaces of Abomey|Abomey & Ouidah|Benin|city|West Africa|4|11-2|Kings of Dahomey and the home of Vodun.|
+Island of Gorée|Gorée & Dakar|Senegal|city|West Africa|3|11-4|Quiet island with a heavy memory.|
+Great Zimbabwe||Zimbabwe|ancient|Southern Africa|1|5-9|Dry-stone royal city that named a country.|
+Victoria Falls||Zimbabwe|nature|Southern Africa|2|4-8|"The smoke that thunders".|
+Okavango Delta||Botswana|nature|Southern Africa|5|6-9|A river that ends in a desert full of elephants.|
+Sossusvlei|Namib dunes|Namibia|nature|Southern Africa|4|5-9|The tallest red dunes and dead white trees.|
+Table Mountain|Cape Town & the Cape|South Africa|nature|Southern Africa|5|11-4|The mountain every sailor hopes to see.|
+Kilwa Kisiwani||Tanzania|ancient|East Africa|2|6-10|Ruined Swahili sultanate on an island.|S
+Stone Town of Zanzibar|Zanzibar|Tanzania|city|East Africa|4|6-10|Spice port of carved doors.|
+Serengeti National Park|Serengeti & Ngorongoro|Tanzania|nature|East Africa|6|6-10|The great migration.|
+Lamu|Lamu|Kenya|city|East Africa|3|12-3|Swahili old town without cars; arrives by dhow.|w
+Bwindi Impenetrable National Park|Mountain gorillas, Bwindi|Uganda|nature|East Africa|3|6-9|One hour face to face with gorillas.|
+Tsingy de Bemaraha National Park|Tsingy of Madagascar|Madagascar|nature|Madagascar|5|5-10|A forest of stone needles and lemurs.|
+Avenue of the Baobabs|Avenue of the Baobabs|Madagascar|nature|Madagascar|2|5-10|Upside-down trees at sunset.|
+Le Morne Brabant|Mauritius|Mauritius|nature|Indian Ocean|5|5-11|Lagoon mountain with a story of freedom.|
+Piton de la Fournaise|Réunion|Réunion|nature|Indian Ocean|5|5-11|Active volcano and green amphitheatres.|
+Vallée de Mai|Seychelles|Seychelles|nature|Indian Ocean|6|4-5,10-11|Prehistoric palm forest and granite beaches.|
+Maldives||Maldives|nature|Indian Ocean|6|1-4|A thousand islands best seen from a boat.|
+Socotra||Yemen|nature|Arabia|7|10-4|Dragon's blood trees found nowhere else.|w
+Nizwa Fort|Oman: Nizwa & the desert|Oman|fort|Arabia|6|11-3|Forts, wadis and frankincense.|
+Saint Helena||Saint Helena|nature|South Atlantic|5|12-5|Napoleon's exile, two thousand km from anywhere.|S
+Pico Island|Azores|Portugal (Azores)|nature|Atlantic islands|7|5-9|Volcanoes, whales and vineyards in lava.|
+Teide|Canary Islands|Spain (Canaries)|nature|Atlantic islands|6|1-12|Volcano above the clouds, start of every Atlantic crossing.|
+Madeira|Madeira|Portugal (Madeira)|nature|Atlantic islands|5|4-10|Levada walks on a green mountain in the sea.|
+São Nicolau, Cape Verde|Cape Verde|Cape Verde|nature|Atlantic islands|6|11-6|Music, dry peaks and trade winds.|S
+Svalbard||Norway|nature|Arctic|6|6-8|Polar bears and midnight sun.|
+Antarctic Peninsula|Antarctica|Antarctica|nature|Antarctica|11|12-2|The last wild continent.|
