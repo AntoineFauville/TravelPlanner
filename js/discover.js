@@ -5,6 +5,7 @@ import { $, esc, days, monthRange, toast } from './util.js';
 import { LEVELS, byN, isMatch } from './scale.js';
 import { riskOf, riskHtml, interest } from './costs.js';
 import { fillSummary, summary } from './summary.js';
+import { fameHtml } from './fame.js';
 import { gallery, photosOf } from './photos.js';
 import { drawGlobe } from './globe.js';
 
@@ -59,7 +60,7 @@ function cardHtml(p) {
   return `<div class="dpics"></div>
     <div class="dinfo">
       <div class="dhead"><div><h2>${esc(p.name)}</h2><p class="soft">${esc([...new Set([p.country, p.region])].filter(Boolean).join(' · '))}</p>
-        ${p.why ? `<p class="dwhy">${esc(p.why)}</p>` : ''}</div>
+        ${p.why ? `<p class="dwhy">${esc(p.why)}</p>` : ''}${fameHtml(p)}</div>
         <button class="dglobe" data-do="where" title="Show on the globe"><canvas aria-label="Where it is on the globe"></canvas></button></div>
       ${facts(p)}
       <p class="dabout" hidden></p>
@@ -67,6 +68,7 @@ function cardHtml(p) {
       ${riskHtml(p)}
       <div class="row"><a class="btn small" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`${p.name} ${p.country || ''}`)}">Google Search</a>
         <a class="btn small" target="_blank" rel="noopener" href="https://www.google.com/search?udm=2&amp;q=${q(`${p.name} ${p.country || ''}`)}">More photos</a>
+        <a class="btn small" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=${q(`${p.name} ${p.country || ''}`)}" title="Google Maps shows the stars and reviews">Reviews on Google Maps</a>
         ${p.wiki ? `<a class="btn small" target="_blank" rel="noopener" href="${esc(p.wiki)}">Wikipedia</a>` : ''}</div>
     </div>`;
 }

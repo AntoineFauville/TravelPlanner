@@ -44,9 +44,10 @@ export async function loadData() {
   // extra photos are nice to have: never wait more than a moment for them
   const photos = get('data/photos.json').then(setPhotos).catch(() => {});
   const home = HOMES[state.home] ? state.home : 'Bingen am Rhein';
-  const [c, more, s, f, tr, co, dr] = await Promise.all([get('data/catalog.json'), get('data/catalog_more.json').catch(() => []), get('data/sailing.json'), get('data/facts.json').catch(() => ({})), get('data/trips.json').catch(() => []), get('data/countries.json'), loadDrive(home)]);
+  const [c, more, fame, s, f, tr, co, dr] = await Promise.all([get('data/catalog.json'), get('data/catalog_more.json').catch(() => []), get('data/fame.json').catch(() => ({})), get('data/sailing.json'), get('data/facts.json').catch(() => ({})), get('data/trips.json').catch(() => []), get('data/countries.json'), loadDrive(home)]);
   for (const p of c) Object.assign(p, f[p.id]);
   c.push(...more.map(grow));
+  for (const p of c) if (fame[p.id]) p.fame = fame[p.id];
   await Promise.race([photos, new Promise(r => setTimeout(r, 2500))]);
   setHome(state.home);
   trips = tr; countries = co; drive = { ...dr, _home: home };

@@ -119,6 +119,11 @@ body:is([data-view=catalogue], [data-view=discover]) #top { background: #081318;
 .bar input[type=search] { flex: 1 1 200px; max-width: 280px; }
 .bar .prog { margin-left: auto; font-size: 14px; color: var(--soft); font-variant-numeric: tabular-nums; }
 .zones { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 14px; }
+.fame { margin: 0; font-size: 14px; color: var(--soft); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.fame b { color: var(--text); font-weight: 650; }
+.fame.top b::before { content: '★ '; color: #ffd166; }
+.fame span { font-size: 13px; }
+.meta .rk { color: var(--text); }
 .dabout { margin: 0; font-size: 15px; line-height: 1.5; color: var(--soft); }
 .tl + .dabout { margin-top: 20px; }
 .dround { margin: 0; text-align: center; color: var(--soft); font-size: 14px; }

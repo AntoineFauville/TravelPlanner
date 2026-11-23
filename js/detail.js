@@ -6,6 +6,7 @@ import { rateBar, badge } from './scale.js';
 import { gallery } from './photos.js';
 import { facts } from './discover.js';
 import { fillSummary } from './summary.js';
+import { fameHtml } from './fame.js';
 import { mustButton } from './port.js';
 import { C, isoOf, euro, foodDay, visaLine, riskHtml } from './costs.js';
 import { select, flyTo, pad } from './map.js';
@@ -64,12 +65,13 @@ export function draw() {
         ${badge(p.id)}
       </div>
       ${p.why ? `<p>${esc(p.why)}</p>` : ''}
+      ${fameHtml(p)}
       ${facts(p)}
       <p class="about soft" hidden></p>
       <div class="row">
         <a class="btn main" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(query)}">Google Search</a>
         <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?udm=2&amp;q=${q(query)}">Photos</a>
-        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=${p.lat},${p.lon}">Maps</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=${q(query)}" title="Google Maps shows the stars and reviews">Maps and reviews</a>
         ${p.wiki ? `<a class="btn" target="_blank" rel="noopener" href="${esc(p.wiki)}">Wikipedia</a>` : ''}
       </div>
       ${document.body.dataset.view === 'sailing' ? mustButton(v.port.id) : ''}

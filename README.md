@@ -49,6 +49,7 @@ Sailing results are planning estimates. Not for navigation.
 | `js/scale.js` | The five rating levels |
 | `js/summary.js` | A few lines from Wikipedia, fetched only for the place on screen |
 | `tools/build_wikidata.py` | Castles, theme parks, zoos, parks, cities and more from Wikidata into `data/catalog_more.json`. Run after `build_catalog.py` |
+| `tools/build_fame.py`, `js/fame.js` | How well known each place is (Wikipedia readers a month) and its rank among places of the same kind |
 | `tools/sites_extra.txt` | Events, train journeys, regions, activity spots and castles near home |
 | `tools/facts.txt` | Age, civilisation and story. Edit, then run `python tools/build_facts.py` |
 | `tools/build_photos.py` | Collects the extra photos into `data/photos.json` |
