@@ -102,6 +102,44 @@ def months(lat):
     return m if lat > 0 else sorted((x + 5) % 12 + 1 for x in m)
 
 
+# Approximate start years for well-known sites where Wikidata has no usable date (negative = BC)
+YEARS = {
+    "Schwerin Castle": 973, "Bergpark Wilhelmshöhe": 1696, "Thracian Tomb of Kazanlak": -350, "Royal Palace of Aranjuez": 1564,
+    "Museo di Capodimonte": 1738, "Heliopolis": -3000, "Lala Mustafa Pasha Mosque": 1298, "Temple of Heaven": 1420,
+    "Saint Sophia Cathedral": 1209, "Bayon": 1190, "Pashupatinath Temple": 400, "Hedeby": 770, "Djemila": 96, "Thermopylae": -480,
+    "Avebury": -2850, "Birka": 750, "Carnuntum": 6, "Sardis": -700, "Maison Carrée": 2, "Pella": -400, "Tiryns": -1400,
+    "Sirmium": -100, "Philippi": -356, "Abu Mena": 350, "Alesia": -52, "Igel Column": 250, "Veii": -900, "Kerkouane": -600,
+    "Stari Ras": 900, "M'zab": 1012, "Hill of Tara": -3000, "Köneürgenç": 1000, "Sammallahdenmäki": -1500, "Dorestad": 600,
+    "Tanis": -1070, "Bethsaida": -1000, "Offa's Dyke": 785, "Stabiae": -700, "Abusir": -2450, "Mozia": -800,
+    "Colonia Iulia Urbs Triumphalis Tarraco": -218, "Cannae": -216, "Myra": -500, "Gordion": -900, "Esna": -180, "Biskupin": -738,
+    "Gorham's Cave": -55000, "Bubastis": -2500, "Nemea": -573, "Roman amphitheatre of Durrës": 100, "Theatre of Thorikos": -500,
+    "Heraion of Samos": -800, "Nisa": -250, "Ajloun": 1184, "Abydos": -700, "Gamla Uppsala": 500, "Herakleopolis Magna": -2160,
+    "Porta Maggiore": 52, "Avaris": -1800, "Maes Howe": -2800, "Nekhen": -3500, "Sounion": -440, "Cyzicus": -675,
+    "Laodicea on the Lycus": -261, "Kültepe": -2000, "Oxyrhynchus": -300, "Urquhart Castle": 1230, "Vulci": -800, "Viminacium": 50,
+    "Phocaea": -900, "Mantineia": -500, "Assos": -900, "Aqua Claudia": 38, "Ramesseum": -1270, "Derinkuyu underground city": -800,
+    "Thyatira": -290, "Calydon": -800, "Beni Hasan": -2000, "Metapontum": -680, "Naucratis": -650, "Alacahöyük": -2500,
+    "Smyrna": -3000, "Zakros": -1900, "Zubarah": 1765, "Heraclea Minoa": -500, "Aspendos": -500, "Kasubi Tombs": 1882, "Milad Tower": 2007,
+    # cities whose Wikidata date is missing or tells another story (a conquest, a charter)
+    "Istanbul": -660, "Cologne": 50, "Barcelona": -15, "Florence": -59, "Naples": -600, "New York City": 1624, "Tokyo": 1457,
+    "Singapore": 1819, "Hong Kong": 1841, "Tel Aviv": 1909, "Dubai": 1833, "Macau": 1557, "Vatican City": 1929, "Athens": -1400,
+}
+
+
+def dates(qids):
+    """founding date, start date or first written record, when Wikidata has one: {qid: year}"""
+    out = {}
+    for i in range(0, len(qids), 300):
+        q = """SELECT ?item ?inc ?st ?rec WHERE { VALUES ?item { %s }
+  OPTIONAL { ?item wdt:P571 ?inc } OPTIONAL { ?item wdt:P580 ?st } OPTIONAL { ?item wdt:P1249 ?rec } }""" % " ".join("wd:" + x for x in qids[i:i + 300])
+        for b in fetch("https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(q))["results"]["bindings"]:
+            for k in ("inc", "st", "rec"):
+                m = re.match(r"(-?)0*(\d+)-", b.get(k, {}).get("value", ""))
+                if m:
+                    y, qid = (-int(m[2]) if m[1] else int(m[2])), b["item"]["value"].rsplit("/", 1)[1]
+                    out[qid] = min(y, out.get(qid, y))
+    return out
+
+
 def readers(titles):
     """English Wikipedia readers over the last 60 days, 50 articles per request: how many people care about a city"""
     out = {}
@@ -223,6 +261,15 @@ def main():
             n += 1
         print(f"{kind:10} {len(items):5} found, {n} kept")
 
+    # a year for the timeline: from Wikidata, else from the list above (city founding dates only when old)
+    found = dates([p["q"] for p in picks if "year" not in p])
+    for p in picks:
+        y = found.get(p["q"])
+        if "year" not in p and p["name"] in YEARS:
+            p["year"] = YEARS[p["name"]]
+        if "year" not in p and y is not None and (p["type"] != "city" or y < 1500):
+            p["year"] = y
+    print(sum("year" in p for p in picks), "of", len(picks), "have a year")
     with open(os.path.join(ROOT, "data", "catalog_more.json"), "w", encoding="utf-8") as f:
         f.write("[\n" + ",\n".join(json.dumps(p, ensure_ascii=False, separators=(",", ":")) for p in picks) + "\n]\n")
     print(len(picks), "places written,", len(old) + len(picks), "in all")

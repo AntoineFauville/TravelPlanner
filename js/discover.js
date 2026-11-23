@@ -43,7 +43,7 @@ function queue() {
 // ---- timeline, log scale: recent centuries get as much room as early millennia
 const MARKS = [[-9500, 'Göbekli Tepe'], [-2560, 'Pyramids'], [-27, 'Rome'], [1492, 'Columbus']];
 const NOW = new Date().getFullYear();
-const at = y => 100 * (1 - Math.log(1 + Math.max(0, NOW - y) / 100) / Math.log(1 + 18000 / 100));
+const at = y => Math.max(0, 100 * (1 - Math.log(1 + Math.max(0, NOW - y) / 100) / Math.log(1 + 18000 / 100)));   // older than 18,000 years sits at the left end
 const line = y => `<div class="tl" aria-hidden="true"><i style="left:${at(y)}%"></i>${MARKS.map(([m, t]) => `<span style="left:${at(m)}%">${t}</span>`).join('')}<span class="now">Today</span></div>`;
 
 const yearText = y => (y < 0 ? `${-y} BC` : y < 1000 ? `${y} AD` : `${y}`);
