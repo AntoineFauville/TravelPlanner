@@ -1,6 +1,8 @@
 import { loadData, LABEL, HOMES, setHome } from './data.js';
 import { state, save, onChange, exportText, importText } from './store.js';
 import { $, $$, esc, toast } from './util.js';
+import { ZONES } from './costs.js';
+import { openCloud, account, invite, leave } from './cloud.js';
 import { initMap, setView, events, map, pad } from './map.js';
 import { drawCatalogue, refreshCard } from './catalogue.js';
 import { initDiscover, drawDiscover, resetCard, onWho, onWhere } from './discover.js';
@@ -44,17 +46,26 @@ function redraw(what) {
 }
 
 // ---- settings
+const WANT = [[1, 'Very much'], [0.7, 'Some'], [0.4, 'A little'], [0, 'Not at all']];
 function settings() {
   const d = $('#settings');
   d.innerHTML = `<form method="dialog" class="stack">
     <h2>Settings</h2>
-    <div class="grid2">${[0, 1].map(i => `<label class="f">Person ${i + 1}<input data-person="${i}" value="${esc(state.people[i])}" maxlength="20"></label>`).join('')}</div>
+    <div class="grid2">${[0, 1].map(i => `<label class="f">Person ${i + 1}, ${['Belgian', 'Georgian'][i]} passport<input data-person="${i}" value="${esc(state.people[i])}" maxlength="20"></label>`).join('')}</div>
     <div class="grid2"><label class="f">Your trips start in<select data-set="home">${Object.keys(HOMES).map(h => `<option ${h === state.home ? 'selected' : ''}>${h}</option>`).join('')}</select></label><label class="f">Car range, km per tank<input type="number" min="200" max="2000" step="50" data-set="range" value="${state.range}"></label></div>
+    <div class="stack tight"><h3>Parts of the world</h3>
+      <p class="sm soft">How much you want to go there. Discover shows the places you care about first, and holiday ideas follow it. Places you rated keep your rating.</p>
+      <div class="zones">${Object.entries(ZONES).map(([k, t]) => { const v = state.zones[k] ?? 1; return `<label class="f">${t}<select data-zone="${k}">${WANT.map(([n, w]) => `<option value="${n}" ${n === v ? 'selected' : ''}>${w}</option>`).join('')}</select></label>`; }).join('')}</div></div>
+    <div class="stack tight"><h3>Account</h3>
+      ${(() => { const a = account(); return `<p class="sm">Signed in as <b>${esc(a.email)}</b>. ${a.people > 1 ? 'Your plan is shared: you both see and change the same ratings and trips.' : 'Only you use this plan so far.'}</p>
+      ${a.people < 2 ? `<div class="row"><input type="email" data-invite placeholder="Your partner's email" aria-label="Partner's email" style="flex:1"><button type="button" class="btn" data-do="invite">Invite</button></div>
+      <p class="sm soft">They sign in with this email (Google, or email and password) and join your plan. Invite them before they rate anything: what their browser had is replaced by your plan.${a.invited.length ? ` Invited: ${a.invited.map(esc).join(', ')}.` : ''}</p>` : ''}`; })()}
+      <div class="row"><button type="button" class="btn" data-do="signout">Sign out</button></div></div>
     <div class="stack tight"><h3>Backup</h3>
       <p class="sm soft">Your ratings and plans are saved in this browser on this computer. Save a backup file now and then, or to move to another computer.</p>
       <div class="row"><button type="button" class="btn" data-do="export">Save backup</button><button type="button" class="btn" data-do="import">Load backup</button><input type="file" accept=".json,application/json" hidden></div></div>
     <button class="btn main" style="align-self:flex-start">Done</button></form>`;
-  d.showModal();
+  if (!d.open) d.showModal();
 }
 function initSettings() {
   const d = $('#settings');
@@ -65,6 +76,7 @@ function initSettings() {
       save('people');
     }
     if (e.target.dataset.set === 'home') { state.home = e.target.value; setHome(state.home); save('all'); }
+    if (e.target.dataset.zone) { state.zones = { ...state.zones, [e.target.dataset.zone]: +e.target.value }; resetCard(); save('all'); }
     if (e.target.dataset.set === 'range') { state.range = Math.min(2000, Math.max(200, +e.target.value || 1200)); save('all'); }
     if (e.target.type === 'file' && e.target.files[0]) {
       try { importText(await e.target.files[0].text()); toast('Backup loaded.'); d.close(); go(view); } catch (err) { toast(err instanceof SyntaxError ? 'This file is not a TravelPlanner backup.' : err.message); }
@@ -73,6 +85,8 @@ function initSettings() {
   d.addEventListener('click', e => {
     const a = e.target.dataset.do;
     if (a === 'import') $('input[type=file]', d).click();
+    if (a === 'signout') leave();
+    if (a === 'invite') invite($('[data-invite]', d).value).then(() => { toast('Invitation saved. They can sign in now.'); settings(); }).catch(err => toast(err.message));
     if (a === 'export') {
       const link = document.createElement('a');
       link.href = URL.createObjectURL(new Blob([exportText()], { type: 'application/json' }));
@@ -115,6 +129,7 @@ function spin() {
 }
 
 async function start() {
+  await openCloud();          // shows the 404 page until someone signs in
   drawWho();
   stars();
   addEventListener('resize', () => { stars(); pad(); });

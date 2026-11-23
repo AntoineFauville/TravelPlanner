@@ -53,6 +53,17 @@ B|Middelburg|51.499,3.611|2/1|-||Delta works, Domburg beach
 B|Ghent|51.054,3.725|2/1|drive||Van Eyck's altar, canals
 R|Middle Rhine castles|Rhine castles Loreley|4-10|DE|hike,bike|Forty castles in sixty kilometres.
 B|Bacharach|50.059,7.768|2/1|-||Marksburg, Loreley, Rheinsteig
+R|Castles of Luxembourg|Luxembourg castles road trip Vianden|4-10|LU|hike|Vianden, Bourscheid, Clervaux and Beaufort: a castle on every hill, two hours from home.
+B|Vianden|49.935,6.208|2/1|-||Vianden castle and chairlift, Bourscheid, Clervaux and The Family of Man, Esch-sur-Sûre
+B|Echternach|49.812,6.421|1/1|drive||Beaufort castles, Larochette, Mullerthal rocks, Luxembourg City casemates on the way home
+R|Europa-Park weekend|Europa-Park Rust|4-11|DE|swim|Germany's best theme park, with Rulantica water world next door.
+B|Rust|48.266,7.722|2/1|-||Europa-Park, Rulantica, Colmar or Strasbourg for an evening
+R|Phantasialand and Cologne|Phantasialand Brühl Cologne|4-11|DE||Themed worlds and wild rides, then the cathedral city.
+B|Brühl|50.800,6.880|2/1|-||Phantasialand, Augustusburg palace, Cologne cathedral
+R|Efteling and Dutch towns|Efteling Kaatsheuvel|4-10|NL||A fairytale park older than Disneyland Paris, and canals in 's-Hertogenbosch.
+B|Kaatsheuvel|51.649,5.043|2/1|-||Efteling, 's-Hertogenbosch, Loevestein castle
+R|Disneyland Paris|Disneyland Paris road trip|1-12|FR||Two parks, Sleeping Beauty's castle and Paris half an hour away.
+B|Marne-la-Vallée|48.867,2.783|3/2|-||Disneyland and Walt Disney Studios, a day in Paris, Vaux-le-Vicomte
 # ---------- one to two weeks
 R|Dolomites passes|Dolomites road trip passes|6-9|AT,IT|alpine,hike,camp|The most beautiful mountain roads in Europe, with time to walk.
 B|Ortisei|46.574,11.672|4/2|-||Sella, Gardena and Pordoi passes, Seceda
@@ -164,6 +175,13 @@ R|Southern England: Stonehenge to Cornwall|Southern England road trip Stonehenge
 B|Salisbury|51.069,-1.795|2/2|-||Stonehenge, Avebury
 B|Lyme Regis|50.725,-2.937|2/1|drive||Jurassic Coast fossils
 B|Penzance|50.119,-5.537|4/3|drive||Mên-an-Tol, Lanyon Quoit, Minack theatre
+R|Loire châteaux|Loire Valley châteaux road trip|4-10|FR|bike|Chambord, Chenonceau and the royal river: the garden of France.
+B|Amboise|47.413,0.982|3/2|-||Château d'Amboise, Clos Lucé of Leonardo, Chenonceau, Chambord
+B|Saumur|47.260,-0.076|2/1|drive||Saumur château, Fontevraud abbey, troglodyte villages, Villandry gardens on the way
+R|King Ludwig's castles|Neuschwanstein Linderhof Herrenchiemsee road trip|5-10|DE,AT|hike,alpine,swim|All three of the fairytale king's castles, lakes and mountain huts.
+B|Füssen|47.571,10.701|2/1|-||Neuschwanstein, Hohenschwangau, Tegelberg
+B|Oberammergau|47.597,11.067|2/1|drive||Linderhof, Ettal abbey, Wieskirche, Zugspitze
+B|Prien am Chiemsee|47.857,12.346|2/1|drive||Herrenchiemsee palace, Fraueninsel, Salzburg
 # ---------- two to three weeks
 R|Norway fjords by car|Norway fjords road trip Hirtshals Kristiansand|6-8|DK,NO|nordic,camp,hike,ferry|Cliffs, stave churches and free camping under the midnight light.
 B|Lysebotn|59.055,6.640|2/1|-||Kjerag, Preikestolen

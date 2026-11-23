@@ -3,11 +3,12 @@ import { portById, legs, daysFor } from './data.js';
 import { state } from './store.js';
 import { $, esc, MONTHS, monthRange, n0 } from './util.js';
 import { badge } from './scale.js';
-import { gallery, photosOf } from './photos.js';
+import { gallery, photosOf, tiny } from './photos.js';
 import { drawGlobe } from './globe.js';
 import { ZONES, pad } from './map.js';
 import { reach, suggestStay } from './stays.js';
 import { closeDetail, openDetail, takeOver } from './detail.js';
+import { C, landOf, euro, visaLine, visaHard } from './costs.js';
 import { addMust, removeStop, setMust, isStop, isMust } from './sailing.js';
 
 let id = null;
@@ -18,7 +19,7 @@ const LONG = { 'Fr. Polynesia': 'French Polynesia', 'Cook Is.': 'Cook Islands', 
 const land = p => LONG[p.country] || p.country;
 
 // Wikipedia article about the area, where the label alone would not find it
-const WIKI = { kie: 'Kiel', cux: 'Cuxhaven', lar: 'La Rochelle', cor: 'A Coruña', gib: 'Gibraltar', pal: 'Balearic Islands', cfu: 'Ionian Islands', ist: 'Istanbul', psd: 'Port Said', aga: 'Agadir',
+const WIKI = { kie: 'Kiel', bre: 'Camaret-sur-Mer', cux: 'Cuxhaven', lar: 'La Rochelle', cor: 'A Coruña', gib: 'Gibraltar', pal: 'Balearic Islands', cfu: 'Ionian Islands', ist: 'Istanbul', psd: 'Port Said', aga: 'Agadir',
   rdu: 'Río Dulce (Guatemala)', isl: 'Isla Mujeres', sbl: 'San Blas Islands', col: 'Colón, Panama', bal: 'Panama City', pva: 'Puerto Vallarta', sdg: 'San Diego', vic: 'Victoria, British Columbia',
   mqs: 'Marquesas Islands', tua: 'Tuamotus', bor: 'Leeward Islands (Society Islands)', vav: 'Vavaʻu', fij: 'Fiji', opu: 'Bay of Islands', bri: 'Brisbane', cns: 'Cairns', thu: 'Torres Strait Islands', dar: 'Darwin, Northern Territory',
   raj: 'Raja Ampat Islands', kup: 'Timor', kom: 'Komodo National Park', sem: 'Semarang', kkb: 'Borneo', pue: 'Palawan', oki: 'Okinawa Island', jap: 'Seto Inland Sea', cam: 'Sihanoukville', lan: 'Langkawi', phu: 'Phuket Province',
@@ -41,6 +42,14 @@ export function mustButton(pid) {
   if (!isStop(pid)) return `<button class="btn main" data-mustadd="${pid}">Add ${esc(p.label)} as a must on the itinerary</button>`;
   return `<div class="row"><span class="onroute">${esc(p.label)} is on your itinerary${isMust(pid) ? ' as a must' : ''}</span>
     ${isMust(pid) ? '' : `<button class="btn small" data-mustadd="${pid}">Make it a must</button>`}<button class="btn small" data-stopoff="${pid}">Remove</button></div>`;
+}
+
+function papers(p) {
+  const iso = landOf(p.id);
+  if (!iso) return '';
+  const c = C(iso), v = visaLine(iso);
+  return `<div class="card stack tight sm"><p><span class="soft">Costs here:</span> groceries ${euro(c.food)}, eating out ${euro(c.out)} per person and day. Marina about ${euro(c.marina)} a night.${c.clear ? ` Clearing in with the boat about ${euro(c.clear)}.` : ''}</p>
+    ${v ? `<p class="${visaHard(iso) ? 'warn' : ''}"><span class="soft">Visa.</span> ${v}</p>` : ''}</div>`;
 }
 
 export function openPort(pid) {
@@ -75,6 +84,7 @@ export function drawPort() {
         <div class="months">${MONTHS.map((m, i) => `<span class="${z?.months.includes(i + 1) ? 'st' : good.has(i + 1) ? 'y' : ''}">${m[0]}</span>`).join('')}</div>
         <p class="sm ${z ? 'warn' : 'soft'}">${z ? `${z.name[0].toUpperCase() + z.name.slice(1)}: ${monthRange([...z.months].sort((a, b) => a - b))}` : 'No tropical storm season here.'}${p.leave ? ' Good place to leave the boat and fly home.' : ''}</p></div>
       <p class="sm"><b>Suggested stay: ${tip.days} days.</b> ${esc(tip.why[0].toUpperCase() + tip.why.slice(1))}.${mine !== undefined ? ` You chose ${mine}.` : ''}</p>
+      ${papers(p)}
       ${near.length ? `<div><h3>What you can reach from here</h3>${near.map(x => `<button class="rowitem" data-port-place="${esc(x.p.id)}">${thumbOf(x.p)}<div><b>${esc(x.p.name)}</b><small>${n0(x.d)} km away, ${daysFor(x.p)} day${daysFor(x.p) === 1 ? '' : 's'}</small></div>${badge(x.p.id, '<span class="lv">–</span>')}</button>`).join('')}</div>` : '<p class="sm soft">Nothing from the catalogue is close to this port.</p>'}
       ${before.length ? `<p class="sm"><span class="soft">Boats come from</span> ${before.map(hop).join(', ')}</p>` : ''}
       ${nearest.length ? `<p class="sm"><span class="soft">and sail on to</span> ${nearest.map(hop).join(', ')}</p>` : ''}
@@ -97,7 +107,7 @@ export function drawPort() {
     t.innerHTML = `${esc(a.text)} <a class="sm" target="_blank" rel="noopener" href="${esc(a.url)}">Wikipedia</a>`;
   });
 }
-const thumbOf = p => { const f = photosOf(p)[0]; return f ? `<img loading="lazy" alt="" src="${esc(f.u.replace('/960px-', '/250px-').replace('/500px-', '/250px-'))}">` : '<span class="ph"></span>'; };
+const thumbOf = p => { const f = photosOf(p)[0]; return f ? `<img loading="lazy" alt="" src="${esc(tiny(f.u))}">` : '<span class="ph"></span>'; };
 
 export function initPort() {
   $('#detail').addEventListener('click', e => {

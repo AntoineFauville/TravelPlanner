@@ -4,7 +4,7 @@ import { splitDateLine, esc } from './util.js';
 import { levelOf, byN } from './scale.js';
 
 /* global maplibregl, topojson */
-export const COLORS = { sail: '#53cfe0', inland: '#9fe08a', fly: '#ffb24d' };
+export const COLORS = { sail: '#53cfe0', inland: '#9fe08a', drive: '#cda9ff', fly: '#ffb24d' };
 export let map;
 let ready = false;
 export const events = new EventTarget();
@@ -135,7 +135,7 @@ export function drawPlaces() {
   map.getSource('places').setData(fc(list.map(p => {
     const s = score(p.id);
     return { type: 'Feature', geometry: { type: 'Point', coordinates: [p.lon, p.lat] }, properties: {
-      id: p.id, name: p.name, sub: `${p.country || ''}${s ? ` · ${byN(levelOf(p.id)).text}` : ''}`, score: s,
+      id: p.id, name: p.name, sub: `${p.country || ''}${s ? ` · ${byN(levelOf(p.id)).text}` : ''}`, score: s ? s - 1 : 0,   // 0 to 4: "not interested" stays small
       sel: p.id === selected, color: extra(p.id).visited ? '#b7c2c4' : COLORS[verdict(p).v] } };
   })));
 }

@@ -159,9 +159,13 @@ def credits_for(files):
     return out
 
 
+def sid_taken(n, ids):
+    return slug(n) in ids
+
+
 def main():
     rows, names = [], set()
-    for fname in ("sites.txt", "sites_prehistory.txt", "sites_nature.txt"):
+    for fname in ("sites.txt", "sites_prehistory.txt", "sites_nature.txt", "sites_extra.txt"):
         for n, line in enumerate(open(os.path.join(ROOT, "tools", fname), encoding="utf-8"), 1):
             line = line.strip()
             if not line or line.startswith("#"):
@@ -196,11 +200,15 @@ def main():
     out, ids = [], set()
     for title, name, country, kind, region, days, when, why, flags in rows:
         pg = pages[title]
-        c = COORDS.get(title) or next(((x["lat"], x["lon"]) for x in pg.get("coordinates", [])), None)
+        flags, _, at = flags.partition("@")
+        c = (tuple(map(float, at.split(","))) if at else None) or COORDS.get(title) or next(((x["lat"], x["lon"]) for x in pg.get("coordinates", [])), None)
         if pg.get("missing"):
             print("MISSING PAGE ", title)
         if not c:
             print("NO COORDINATES", title)
+            continue
+        if sid_taken(name or title, ids):
+            print("SKIPPED DOUBLE", name or title)
             continue
         fname, url = imgs[title]
         if not url:

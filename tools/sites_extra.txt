@@ -1,0 +1,245 @@
+# Events, train journeys, regions and activity spots (same 13 fields; flags carry @lat,lon)
+# Wikipedia title | name | country | type | region | days | best months | why | flags | year | when | who | what makes it remarkable
+# --- big moments with a date
+Solar eclipse of August 2, 2027|Total solar eclipse in Luxor|Egypt|event|Egypt & the Nile|5|8|Six minutes of totality over the temples of Luxor, the longest for a century.|@25.70,32.64|2027|2 August 2027|Seen from Spain, Morocco and Egypt|The Moon covers the Sun for up to 6 min 23 s, the longest eclipse on land until 2114.
+Cádiz|Total solar eclipse in Cádiz|Spain|event|Spain & Portugal|3|8|Totality over Andalusia, a day's drive from home.|@36.53,-6.29|2027|2 August 2027|Southern Spain|Cádiz and Tarifa sit under the 2027 eclipse path for about 4 minutes.
+Solar eclipse of July 22, 2028|Total solar eclipse in Sydney|Australia|event|Australia|6|7|Totality over a whole city: Sydney goes dark for 3 minutes.|@-33.87,151.21|2028|22 July 2028|Australia and New Zealand|The first total eclipse over Sydney since 1857.
+Oberammergau Passion Play|Oberammergau Passion Play 2030|Germany|event|Germany|2|5-10|Played by the villagers every ten years since 1634.|@47.597,11.067|2030|May to October 2030|Villagers of Oberammergau|Half the village takes part, after a vow made during the plague.
+2028 Summer Olympics|Olympic Games Los Angeles|United States|event|US West|8|7|LA hosts its third Olympics.|@34.05,-118.24|2028|14 to 30 July 2028|Los Angeles|Los Angeles also held the Games in 1932 and 1984.
+2030 Winter Olympics|Winter Olympics in the French Alps|France|event|Alps|4|2|Close to home: ski events in Savoie and the Riviera.|@45.92,6.87|2030|February 2030|French Alps and Nice|Venues spread from Chamonix to Nice.
+2030 FIFA World Cup|Football World Cup 2030|Spain|event|Spain & Portugal|7|6-7|A World Cup in Spain, Portugal and Morocco.|@40.42,-3.70|2030|June to July 2030|Spain, Portugal, Morocco|The centenary World Cup, with opening games in South America.
+Expo 2030|World Expo Riyadh|Saudi Arabia|event|Arabia|4|10-3|The next world's fair.|@24.71,46.68|2030|October 2030 to March 2031|Riyadh|World expos take place every five years.
+Documenta|documenta 16 in Kassel|Germany|event|Germany|2|6-9|The world's great art show, every five years, close to home.|@51.315,9.497|2027|June to September 2027|Kassel|It began in 1955 to bring modern art back to Germany.
+Venice Biennale|Venice Biennale of Art|Italy|event|Italy|3|5-11|Art pavilions of the world in Venetian gardens.|@45.43,12.36|2026|Odd years for art, even years for architecture|Venice|Founded in 1895, the oldest of all biennials.
+Kumbh Mela|Kumbh Mela|India|event|North India|3|1-2|The largest gathering of people on Earth.|@25.43,81.88|2027|Nashik 2027, Prayagraj 2037|Hindu pilgrims|Tens of millions bathe in the river on a single day.
+# --- every year
+Oktoberfest|Oktoberfest|Germany|event|Germany|2|9-10|Beer tents, costumes and rides in Munich.|@48.131,11.549|2027|Late September to early October|Munich|It began as a royal wedding party in 1810.
+Carnival of Venice|Venice Carnival|Italy|event|Italy|3|2|Masks and costumes in winter Venice.|@45.434,12.338|2027|February, before Lent|Venice|Masks let nobles and commoners mix freely.
+Cologne Carnival|Cologne Carnival|Germany|event|Germany|2|2|Six days of costumes and parades, very close to home.|@50.938,6.960|2027|February, the week before Lent|Cologne, Mainz, Düsseldorf|Mainz's carnival is two steps from Bingen too.
+Binche Carnival|Gilles of Binche carnival|Belgium|event|Benelux|1|2-3|Men in wax masks throw oranges to the crowd.|@50.410,4.165|2027|Shrove Tuesday|Binche|A UNESCO masterpiece of living heritage.
+Rio Carnival||Brazil|event|Brazil & Iguazu|5|2-3|Samba schools parade through the night.|@-22.911,-43.197|2027|February or March|Rio de Janeiro|Each samba school prepares a whole year for 80 minutes.
+Running of the bulls|San Fermín, Pamplona|Spain|event|Spain & Portugal|3|7|White and red, bulls in the streets, a week of party.|@42.818,-1.644|2027|6 to 14 July|Pamplona|Hemingway made it famous in The Sun Also Rises.
+Las Fallas||Spain|event|Spain & Portugal|3|3|Giant figures burned in the streets of Valencia.|@39.470,-0.376|2027|15 to 19 March|Valencia|One figure each year is saved from the fire by public vote.
+Holy Week in Seville|Semana Santa, Seville|Spain|event|Spain & Portugal|4|3-4|Silent processions with candles and drums.|@37.389,-5.984|2027|The week before Easter|Seville|Some floats weigh over two tons, carried by forty men.
+Edinburgh Festival Fringe|Edinburgh Festival|United Kingdom|event|Britain & Ireland|4|8|The world's largest arts festival.|@55.953,-3.188|2027|August|Edinburgh|Thousands of shows in a month, in every room of the city.
+Up Helly Aa||United Kingdom|event|Britain & Ireland|3|1|Vikings burn a longship in the Shetland winter.|@60.155,-1.145|2027|Last Tuesday of January|Lerwick, Shetland|A thousand torch-bearers march through town.
+Tomorrowland (festival)|Tomorrowland|Belgium|event|Benelux|3|7|The world's best known electronic music festival.|@51.091,4.384|2027|Two weekends in July|Boom|Tickets sell out in minutes worldwide.
+Rock am Ring and Rock im Park|Rock am Ring|Germany|event|Germany|3|6|Rock festival on a racetrack in the Eifel.|@50.335,6.947|2027|Early June|Nürburgring|One of the largest rock festivals in the world.
+Glastonbury Festival||United Kingdom|event|Britain & Ireland|4|6|Five days of music on a farm under the Tor.|@51.158,-2.585|2027|Late June|Pilton, Somerset|It started in 1970 with free milk from the farm.
+Stonehenge|Solstice at Stonehenge|United Kingdom|event|Britain & Ireland|2|6|Watch the sun rise over the Heel Stone with thousands.|@51.179,-1.826|2027|20 or 21 June|Druids and dawn watchers|One of the few times you may walk among the stones.
+Newgrange|Solstice at Newgrange (by lottery)|Ireland|event|Britain & Ireland|2|12|Seventeen minutes of sunlight inside a 5,000-year-old tomb.|@53.695,-6.476|2027|21 December|Lottery winners|Thousands apply every year for a few places inside.
+El Castillo, Chichen Itza|Equinox serpent at Chichen Itza|Mexico|event|Maya world|2|3,9|A shadow serpent crawls down the pyramid.|@20.683,-88.569|2027|Around 21 March|Thousands of visitors|Seven triangles of light form the snake's body.
+Abu Simbel temples|Abu Simbel Sun Festival|Egypt|event|Egypt & the Nile|2|2,10|Sunrise reaches the gods in the dark sanctuary.|@22.337,31.626|2027|22 February and 22 October|Abu Simbel|The effect survived the temple's move in the 1960s.
+Inti Raymi||Peru|event|Peru & Andes|3|6|The Inca festival of the sun, re-enacted in Cusco.|@-13.509,-71.981|2027|24 June|Cusco|Banned by the Spanish, revived in 1944.
+Day of the Dead|Day of the Dead in Oaxaca|Mexico|event|Central Mexico|4|10-11|Candlelit cemeteries and marigold altars.|@17.061,-96.725|2027|31 October to 2 November|Oaxaca|Families picnic with their ancestors.
+Naadam||Mongolia|event|Mongolia|4|7|Wrestling, archery and horse races on the steppe.|@47.886,106.906|2027|11 to 13 July|Ulaanbaatar and every province|Child jockeys ride 25 km across the steppe.
+Holi||India|event|North India|3|3|Colours thrown in the streets of Mathura and Vrindavan.|@27.580,77.700|2027|March full moon|Mathura and Vrindavan|Celebrates the god Krishna and the end of winter.
+Songkran||Thailand|event|Thailand|4|4|The whole country has a water fight for New Year.|@18.788,98.985|2027|13 to 15 April|Chiang Mai, Bangkok|Originally gently pouring water over elders' hands.
+Yi Peng|Yi Peng lantern festival|Thailand|event|Thailand|3|11|Thousands of lanterns rise over Chiang Mai.|@18.788,98.985|2027|November full moon|Chiang Mai|Releases misfortune into the sky.
+Cherry blossom front|Cherry blossom in Kyoto|Japan|event|Japan|5|3-4|Hanami picnics under pink trees.|@35.012,135.768|2027|Late March to early April|Kyoto, Tokyo|The forecast is followed like the weather.
+Gion Matsuri||Japan|event|Japan|3|7|Giant festival floats pulled through Kyoto.|@35.004,135.775|2027|All of July|Kyoto|Over 1,100 years old, started to calm an epidemic.
+Harbin International Ice and Snow Sculpture Festival|Harbin Ice Festival|China|event|China|3|1-2|A city of ice palaces lit in colour.|@45.80,126.53|2027|January to February|Harbin|Blocks are cut from the frozen Songhua river.
+White Nights Festival|White Nights in St Petersburg|Russia|event|Russia|3|6|Midnight sun over palaces and drawbridges.|w@59.939,30.315|2027|June|St Petersburg|The Scarlet Sails show fills the Neva with a red-sailed ship.
+Midsummer|Midsummer in Sweden|Sweden|event|Nordics|3|6|Flower crowns and maypoles on the lightest night.|@59.329,18.069|2027|Weekend nearest 24 June|All of Sweden|Swedes dance like little frogs round the pole.
+Northern lights|Northern lights in Tromsø|Norway|event|Arctic|4|10-3|The aurora dancing over a fjord.|@69.649,18.956|2027|September to March, dark nights|Tromsø|Solar maximum around 2025 makes the next years strong.
+Great Migration|Great Migration river crossings|Kenya|event|East Africa|5|7-10|Wildebeest leap into the Mara river past crocodiles.|@-1.490,35.144|2027|July to October|Maasai Mara and Serengeti|About 1.5 million animals walk a 3,000 km circle.
+Monarch butterfly migration|Monarch butterflies arrive|Mexico|event|Central Mexico|2|12-2|Millions of butterflies cover the fir trees.|@19.617,-100.283|2027|December to February|Michoacán|No butterfly makes the whole round trip: it takes four generations.
+Albuquerque International Balloon Fiesta||United States|event|US Southwest|3|10|Five hundred balloons rise at dawn.|@35.196,-106.598|2027|Early October|Albuquerque|The largest balloon festival in the world.
+Burning Man||United States|event|US West|7|8-9|A temporary city of art in the desert.|@40.786,-119.206|2027|Late August|Black Rock Desert|The city of 70,000 disappears without trace.
+Christmas market|Christmas markets of Alsace|France|event|France|3|11-12|Strasbourg and Colmar under lights and mulled wine.|@48.581,7.751|2027|Late November to December|Strasbourg, Colmar|Strasbourg's market dates from 1570.
+Nuremberg Christkindlesmarkt|Nuremberg Christmas market|Germany|event|Germany|2|12|The most famous German Christmas market.|@49.454,11.077|2027|Advent|Nuremberg|Opened by the Christkind from the church balcony.
+Hogmanay|Hogmanay in Edinburgh|United Kingdom|event|Britain & Ireland|3|12-1|New Year with fireworks over the castle.|@55.949,-3.199|2027|31 December|Edinburgh|Begins with a torchlight procession.
+Festival of San Juan|Feast of San Juan, A Coruña|Spain|event|Spain & Portugal|2|6|Bonfires on every beach on midsummer night.|@43.370,-8.396|2027|23 June|Galicia|People jump the fire for luck.
+Palio di Siena||Italy|event|Italy|2|7-8|A wild horse race round the Campo.|@43.318,11.332|2027|2 July and 16 August|Siena|Riders race bareback, and the horse can win alone.
+Pushkar Camel Fair||India|event|North India|3|11|Tens of thousands of camels at a desert lake.|w@26.489,74.551|2027|November|Pushkar|One of the largest livestock fairs in the world.
+Timkat||Ethiopia|event|Ethiopia|3|1|Epiphany processions with the tablets of the Ark in Lalibela.|w@12.032,39.041|2027|19 January|Ethiopian Orthodox|The night is spent in prayer around a pool.
+Latacunga|Mama Negra festival|Ecuador|event|Ecuador|2|9,11|Costumed parade in the Andes.|@-0.934,-78.616|2027|September and November|Latacunga|Mixes Andean, African and Catholic traditions.
+Carnival of Santa Cruz de Tenerife|Santa Cruz de Tenerife Carnival|Spain (Canaries)|event|Atlantic islands|4|2-3|Europe's answer to Rio, with warm weather.|@28.464,-16.251|2027|February|Santa Cruz de Tenerife|Once held a record with 250,000 dancers.
+Feast of Saint Patrick|St Patrick's Day in Dublin|Ireland|event|Britain & Ireland|3|3|Parades and music in the whole city.|@53.350,-6.260|2027|17 March|Dublin|The festival lasts five days.
+Festival of Lights (Lyon)|Fête des Lumières in Lyon|France|event|France|2|12|The city of Lyon lit with art installations.|@45.764,4.836|2027|Around 8 December|Lyon|Started as candles placed in windows in 1852.
+Montreux Jazz Festival||Switzerland|event|Alps|3|7|Jazz and more on Lake Geneva.|@46.431,6.911|2027|July|Montreux|Deep Purple's Smoke on the Water tells of its 1971 fire.
+Rhine in Flames|Rhine in Flames at Bingen|Germany|event|Germany|1|7|Fireworks and lit ships on the Rhine, at your doorstep.|@49.967,7.895|2027|First Saturday of July|Bingen and Rüdesheim|Five events every summer along the Rhine.
+# --- train journeys
+Trans-Siberian Railway||Russia|train|Russia|8|5-9|9,289 km from Moscow to Vladivostok.|w@56.0,92.9|1916|Opened 1916|Russian Railways|It crosses eight time zones in a week.
+Glacier Express||Switzerland|train|Alps|1|1-12|The slowest express in the world, over 291 bridges.|@46.636,8.594|1930|Since 1930|Zermatt to St. Moritz|Eight hours across the Alps through the Oberalp pass.
+Bernina Express||Switzerland|train|Alps|1|1-12|From glaciers to palm trees in four hours.|@46.410,10.020|1910|Line from 1910|St. Moritz to Tirano|The Brusio spiral viaduct turns the train in a circle.
+Flåm Line|Flåm Railway|Norway|train|Nordics|1|5-9|One of the steepest normal railways on Earth.|@60.86,7.11|1940|Since 1940|Myrdal to Flåm|It drops 865 m in 20 km past waterfalls.
+Bergen Line|Bergen Line|Norway|train|Nordics|1|1-12|Oslo to Bergen over the Hardangervidda plateau.|@60.60,7.50|1909|Since 1909|Norwegian railways|The highest main line in northern Europe.
+West Highland Line|West Highland Line and the Jacobite|United Kingdom|train|Britain & Ireland|1|5-10|Over the Glenfinnan viaduct by steam train.|@56.876,-5.432|1901|Since 1901|Fort William to Mallaig|Harry Potter's Hogwarts Express crosses here.
+Venice Simplon-Orient-Express||United Kingdom|train|Europe|2|3-11|The classic luxury train from London or Paris to Venice.|@48.850,2.350|1982|Since 1982|Belmond|The carriages are original 1920s cars.
+Settle–Carlisle line|Settle–Carlisle Railway|United Kingdom|train|Britain & Ireland|1|4-10|Over the Ribblehead viaduct through the Dales.|@54.210,-2.370|1876|Since 1876|Northern England|Saved from closure in 1989 by a public campaign.
+Harz Narrow Gauge Railways|Harz steam railway to the Brocken|Germany|train|Germany|1|1-12|Steam trains up the witches' mountain.|@51.800,10.617|1899|Since 1899|Harz|One of the longest narrow-gauge networks in Europe.
+Douro line|Douro Valley railway|Portugal|train|Spain & Portugal|1|4-10|Along the river between port wine terraces.|@41.162,-7.787|1887|Since 1887|Porto to Pocinho|Historic steam trains run in summer.
+Semmering railway||Austria|train|Alps|1|4-10|The first mountain railway, a World Heritage site.|@47.633,15.830|1854|1854|Gloggnitz to Mürzzuschlag|Built before anyone knew trains could climb mountains.
+Inlandsbanan||Sweden|train|Nordics|3|6-8|Slow summer train through Lapland's forests.|@63.18,14.64|1937|Summers only|Kristinehamn to Gällivare|The driver stops to let you see reindeer.
+Ofoten Line|Arctic Circle train to Narvik|Norway|train|Arctic|1|1-12|Through Arctic mountains to a fjord.|@68.43,17.43|1902|Since 1902|Kiruna to Narvik|Built to carry iron ore to an ice-free port.
+Rocky Mountaineer||Canada|train|Canada|3|4-10|Daylight-only train through the Canadian Rockies.|@51.178,-115.572|1990|April to October|Vancouver to Banff and Jasper|It stops at night so you miss nothing.
+The Ghan||Australia|train|Australia|3|1-12|Adelaide to Darwin through the red centre.|@-23.698,133.880|2004|All year|Adelaide to Darwin|Named after Afghan camel drivers who opened the route.
+TranzAlpine||New Zealand|train|New Zealand|1|1-12|Coast to coast over the Southern Alps.|@-42.94,171.56|1987|Daily|Christchurch to Greymouth|Through Arthur's Pass and the Waimakariri gorge.
+California Zephyr||United States|train|US West|3|5-10|Chicago to San Francisco through the Rockies.|@39.74,-105.0|1949|Daily|Amtrak|The most scenic route in the US network.
+Darjeeling Himalayan Railway||India|train|North India|1|10-5|The toy train into the tea hills.|@27.041,88.266|1881|Since 1881|Darjeeling|Loops and zigzags climb 2,000 m.
+Main Line (Sri Lanka)|Kandy to Ella train|Sri Lanka|train|Sri Lanka|1|1-4,7-9|Through tea plantations on a blue train.|@6.866,81.046|1920|Daily|Sri Lanka Railways|Often called the most beautiful train ride on Earth.
+Qinghai–Tibet railway||China (Tibet)|train|Tibet & Nepal|2|5-9|The highest railway in the world.|@33.0,91.9|2006|Since 2006|Xining to Lhasa|Carriages are pressurised with oxygen at 5,072 m.
+Eastern and Oriental Express||Malaysia|train|Malaysia & Singapore|3|1-12|Luxury train through Malaysia's jungle.|@3.14,101.69|1993|Season|Belmond|Restarted in 2024 after a pause.
+Rovos Rail||South Africa|train|Southern Africa|3|1-12|Pretoria to Victoria Falls in Edwardian carriages.|@-25.75,28.19|1989|All year|Rovos Rail|Its longest trip runs 6,100 km to Dar es Salaam.
+Aguas Calientes, Peru|Train to Machu Picchu|Peru|train|Peru & Andes|1|4-11|Along the Urubamba gorge to Aguas Calientes.|@-13.258,-72.263|1913|Daily|PeruRail|The only way to Machu Picchu except walking.
+Copper Canyon Railway|El Chepe, Copper Canyon train|Mexico|train|Northern Mexico|2|10-4|Through 86 tunnels into the canyons.|@27.75,-107.63|1961|Daily|Chihuahua to Los Mochis|It took 90 years to build.
+Domodossola–Locarno railway|Domodossola–Locarno railway|Switzerland|train|Alps|1|4-10|From Locarno through the valley of a hundred valleys.|@46.17,8.68|1923|Since 1923|Locarno to Domodossola|Crosses 83 bridges in 52 km.
+# --- regions to roam
+Scottish Highlands||United Kingdom|region|Britain & Ireland|7|5-9|Glens, lochs and castles at the edge of Europe.|@57.12,-4.71|||Scotland|Some of the emptiest land in Europe.
+Cairngorms National Park|Cairngorms|United Kingdom|region|Britain & Ireland|4|5-9|The largest national park in Britain.|@57.08,-3.67|||Scotland|Home of the only wild reindeer herd in Britain.
+Lake District||United Kingdom|region|Britain & Ireland|4|5-9|Lakes, fells and Wordsworth's cottages.|@54.46,-3.09|||England|England's largest national park.
+Cinque Terre||Italy|region|Italy|3|4-6,9-10|Five coloured villages on cliffs above the sea.|@44.128,9.713|||Liguria|A trail joins the villages along the coast.
+Amalfi Coast||Italy|region|Italy|4|4-6,9-10|Lemon terraces and towns hanging over the sea.|@40.634,14.602|||Campania|The road is so narrow buses reverse to pass.
+Tuscany||Italy|region|Italy|7|4-6,9-10|Cypress roads, hill towns and wine.|@43.35,11.0|||Tuscany|Home of the Renaissance and the Etruscans.
+Provence||France|region|France|6|5-6,9|Lavender, markets and Roman stone.|@43.94,5.08|||Provence|Lavender is best in early July.
+Loire Valley|Loire Valley châteaux|France|region|France|5|4-10|The garden of France and its royal castles.|@47.40,0.98|||Loire|Over 300 châteaux line the river.
+Dordogne (river)|Périgord and the Dordogne|France|region|France|6|5-9|Castles, caves and duck farms on a canoe river.|@44.85,1.2|||Périgord|Has the densest cluster of Ice Age caves in the world.
+Basque Country (greater region)|Basque Country|Spain|region|Spain & Portugal|5|5-10|Food, surf beaches and green hills.|@43.1,-2.3|||Basques|Basque is unrelated to any other living language.
+Algarve||Portugal|region|Spain & Portugal|6|3-10|Golden cliffs and sea caves.|@37.08,-8.2|||Portugal|Benagil cave is reached by kayak.
+Black Forest||Germany|region|Germany|4|4-10|Dark forest, cuckoo clocks and waterfalls.|@48.3,8.15|||Baden-Württemberg|The source of the Danube is here.
+Bavarian Alps||Germany|region|Alps|5|5-10|Lakes, king's castles and alpine huts.|@47.6,11.0|||Bavaria|Zugspitze is Germany's highest point.
+Salzkammergut||Austria|region|Alps|5|5-10|Lakes and salt towns made for The Sound of Music.|@47.70,13.60|||Upper Austria|Salt was mined here for 7,000 years.
+Swiss Alps||Switzerland|region|Alps|7|6-9|Glaciers, trains and lakes.|@46.56,8.1|||Switzerland|48 peaks over 4,000 m.
+Lake Garda||Italy|region|Italy|5|4-10|The largest Italian lake, from olives to mountains.|@45.64,10.66|||Lombardy and Veneto|Wind sports in the north, beaches in the south.
+Moselle wine|Moselle valley|Germany|region|Germany|3|4-10|The steepest vineyards in the world above river loops.|@49.98,7.12|||Rhineland-Palatinate|Romans brought the vines.
+Upper Middle Rhine Valley||Germany|region|Germany|2|4-10|Castles on every rock, at your doorstep.|@50.08,7.75|||Rhineland|A World Heritage site starting at Bingen.
+Bohemian Switzerland||Czech Republic|region|Central Europe|3|4-10|Sandstone gates and gorges by boat.|@50.88,14.33|||Czechia|Pravčická brána is Europe's largest natural arch.
+Norwegian fjords|Fjord Norway|Norway|region|Nordics|10|5-9|Waterfalls falling into deep blue fjords.|@61.20,6.80|||Western Norway|Sognefjord reaches 205 km inland.
+Swedish Lapland||Sweden|region|Arctic|7|6-8,12-3|Midnight sun, reindeer and the Ice Hotel.|@67.85,20.22|||Sámi|The Ice Hotel is rebuilt every winter.
+Finnish Lakeland||Finland|region|Nordics|6|6-8|A labyrinth of 50,000 lakes and saunas.|@62.0,27.5|||Finland|Saimaa has its own rare ringed seal.
+Westfjords|Westfjords|Iceland|region|Nordics|5|6-8|Iceland's wildest corner with puffins.|@65.8,-22.5|||Iceland|Few roads, almost no people.
+Dalmatia||Croatia|region|Adriatic|7|5-6,9|Stone towns and a thousand islands.|@43.5,16.4|||Croatia|Dalmatian dogs are named after it.
+Peloponnese||Greece|region|Greece|7|4-6,9-10|Myths in every valley.|@37.5,22.4|||Greece|Sparta, Mycenae and Olympia are all here.
+Zagori||Greece|region|Greece|4|5-10|Stone villages and bridges in the Pindus mountains.|@39.88,20.72|||Epirus|46 villages joined by old mule paths.
+Transylvania||Romania|region|Balkans|7|5-10|Fortified churches, bears and Dracula's castle.|@46.0,24.9|||Romania|Saxon villages have stood for 800 years.
+Masuria||Poland|region|Central Europe|5|6-8|A land of 2,000 lakes.|@53.8,21.6|||Poland|Kayakers can travel for weeks by water.
+Saxon Switzerland||Germany|region|Germany|3|4-10|Rock towers above the Elbe.|@50.92,14.15|||Saxony|Birthplace of free climbing.
+Hautes Fagnes|High Fens and Eifel|Belgium|region|Benelux|2|4-10|Peat bogs on boardwalks near the German border.|@50.50,6.10|||Belgium|The highest point of Belgium is a few metres higher thanks to a tower.
+Ardennes||Belgium|region|Benelux|3|4-10|Forest, rivers and castles, two hours away.|@50.00,5.50|||Belgium and Luxembourg|Its caves of Han are visited by tram.
+Mullerthal|Little Switzerland, Luxembourg|Luxembourg|region|Benelux|2|4-10|Mossy sandstone canyons for walking.|@49.79,6.33|||Luxembourg|The Mullerthal Trail is 112 km long.
+Côte d'Azur|French Riviera|France|region|France|5|5-6,9|Coastal towns, perched villages and blue sea.|@43.70,7.27|||France|Matisse, Picasso and Chagall all painted here.
+Corsica||France|region|France|8|5-6,9|A mountain in the sea.|@42.15,9.10|||Corsica|The GR20 is called Europe's hardest trek.
+Patagonia||Argentina|region|Patagonia|12|11-3|Wind, glaciers and the end of the world.|@-50.0,-72.0|||Argentina and Chile|A land as big as France and Germany together.
+Atlas Mountains||Morocco|region|Morocco|5|4-6,9-10|Berber villages below snow peaks.|@31.06,-7.92|||Morocco|Toubkal is the highest peak of North Africa.
+Hokkaido||Japan|region|Japan|7|1-2,6-9|Powder snow in winter, flower fields in summer.|@43.06,141.35|||Japan|The Ainu people's homeland.
+Ha Giang Province|Ha Giang loop|Vietnam|region|Vietnam|4|9-11,3-5|A mountain motorbike loop at the Chinese border.|@23.0,105.0|||Vietnam|Ma Pi Leng pass looks over a 800 m deep gorge.
+Garden Route||South Africa|region|Southern Africa|6|10-4|Coast road of lagoons and forests.|@-33.96,22.46|||South Africa|Whales visit from July to November.
+Big Sur||United States|region|US West|3|4-10|Cliffs of the Pacific Coast Highway.|@36.27,-121.81|||California|Bixby Bridge is one of the most photographed bridges.
+New England||United States|region|US East|7|9-10|Autumn colours and lighthouses.|@44.0,-71.5|||United States|Leaf-peepers follow the colour maps day by day.
+Kimberley (Western Australia)|Kimberley coast|Australia|region|Western Australia|8|5-9|Ancient gorges and wild rivers.|S@-16.0,126.0|||Australia|Larger than Germany with 40,000 people.
+# --- surfing
+Peniche||Portugal|surf|Spain & Portugal|7|4-10|Surf camps for every level, waves in all winds.|@39.356,-9.381|||Beginners to pros|Supertubos hosts a world tour event.
+Ericeira||Portugal|surf|Spain & Portugal|6|9-6|Europe's first World Surfing Reserve.|@38.963,-9.418|||Intermediate|Seven world-class reefs on 8 km of coast.
+Hossegor||France|surf|France|7|5-10|The best beach waves in Europe.|@43.665,-1.433|||Intermediate to pros|The canyon offshore focuses the swell.
+Biarritz||France|surf|France|5|5-10|Where European surfing started in 1957.|@43.483,-1.559|||Beginners|A Hollywood film crew brought the first board.
+Somo|Somo and Cantabria|Spain|surf|Spain & Portugal|5|5-10|Gentle beach waves near Altamira.|@43.452,-3.737|||Beginners|Combine with Ice Age caves.
+Fuerteventura||Spain (Canaries)|surf|Atlantic islands|7|10-4|Surf and kite in winter sunshine.|@28.722,-13.866|||All levels|Corralejo has surf schools on every corner.
+Taghazout||Morocco|surf|Morocco|7|10-3|Winter point breaks and surf villages.|@30.545,-9.709|||Beginners to pros|Anchor Point peels for hundreds of metres.
+Cornwall|Newquay and Cornwall|United Kingdom|surf|Britain & Ireland|5|5-10|Britain's surf capital.|@50.415,-5.074|||Beginners|Fistral beach hosts contests.
+Bundoran||Ireland|surf|Britain & Ireland|5|9-11|Atlantic swell and Mullaghmore's giants.|@54.478,-8.281|||Intermediate|One of the world's top surf towns, says National Geographic.
+Sylt||Germany|surf|Germany|3|5-9|Germany's surf island.|@54.91,8.31|||Beginners|Hosts a windsurf world cup in autumn.
+Klitmøller|Cold Hawaii, Klitmøller|Denmark|surf|Nordics|4|5-10|Cold water waves on the North Sea.|@57.043,8.474|||Intermediate|A fishing village turned surf town.
+Bali||Indonesia|surf|Java & Bali|7|4-10|Reef breaks and warm water.|@-8.81,115.09|||Beginners to pros|Kuta for learning, Uluwatu for experts.
+Siargao||Philippines|surf|Philippines|7|8-11|Cloud 9 and a laid-back island.|@9.81,126.17|||Intermediate|Named after a chocolate bar.
+Gold Coast, Queensland|Gold Coast|Australia|surf|Australia|6|1-12|Point breaks and surf culture.|@-28.016,153.40|||All levels|Snapper Rocks is a legendary right-hand wave.
+North Shore (Oahu)|North Shore of Oahu|United States|surf|North Pacific|7|11-2|Giant winter waves: watch Pipeline from the beach.|@21.664,-158.053|||Spectators and pros|Waves reach 10 m at Waimea Bay.
+Santa Teresa, Costa Rica|Santa Teresa|Costa Rica|surf|Central America|7|12-4|Jungle, sunsets and beach waves.|@9.643,-85.168|||Beginners|One of the best surf towns of Central America.
+Jeffreys Bay||South Africa|surf|Southern Africa|5|6-9|One of the best waves on Earth.|@-34.050,24.922|||Pros|Supertubes runs for 300 m.
+# --- diving and snorkelling
+Dahab||Egypt|dive|Jordan & Sinai|7|3-6,9-11|Desert meets reef: the Blue Hole and Canyon.|@28.510,34.514|||All levels|Free divers train here at the Blue Hole.
+Marsa Alam||Egypt|dive|Egypt & the Nile|7|3-6,9-11|Dugongs, dolphins and wild reefs.|@25.065,34.892|||All levels|Elphinstone reef has oceanic white-tip sharks.
+Thistlegorm|SS Thistlegorm wreck|Egypt|dive|Jordan & Sinai|2|3-11|A Second World War ship full of motorbikes.|@27.814,33.921|||Advanced|Found by Jacques Cousteau in 1955.
+Gozo|Gozo diving|Malta|dive|Sicily & Malta|5|5-11|Caves, arches and clear water.|@36.044,14.24|||All levels|The Azure Window fell in 2017, the arches below remain.
+Port-Cros National Park|Port-Cros underwater trail|France|dive|France|3|6-9|Snorkel trail in a protected sea.|@43.006,6.390|||Beginners|France's first marine park.
+Medes Islands||Spain|dive|Spain & Portugal|3|6-10|Groupers and coral in the Costa Brava.|@42.044,3.222|||All levels|Protected since 1983, full of fish.
+Similan Islands|Similan Islands diving|Thailand|dive|Thailand|5|11-4|Granite reefs and manta rays.|@8.65,97.64|||Intermediate|Liveaboards only, park closed in summer.
+Sipadan||Malaysia|dive|Borneo|5|4-12|Turtles and barracuda tornadoes.|@4.115,118.629|||Intermediate|Only 120 divers a day are allowed.
+Tubbataha Reef|Tubbataha liveaboard|Philippines|dive|Philippines|7|3-6|Remote atolls only reached by liveaboard.|S@8.92,119.89|||Advanced|A World Heritage marine park.
+Komodo National Park|Komodo diving|Indonesia|dive|Eastern Indonesia|6|4-11|Mantas, sharks and currents.|@-8.55,119.49|||Intermediate to advanced|Strong currents bring huge fish.
+Palau|Palau diving|Palau|dive|North Pacific|7|11-4|Blue Corner and Jellyfish Lake.|@7.34,134.48|||Advanced|A whole nation declared a shark sanctuary.
+Great Barrier Reef|Great Barrier Reef diving|Australia|dive|Australia|6|6-11|The largest reef on Earth.|@-16.9,146.2|||All levels|Ribbon reefs and the Cod Hole.
+Maldives|Maldives liveaboard|Maldives|dive|Indian Ocean|8|1-4|Mantas and whale sharks.|@4.17,73.51|||All levels|Hanifaru bay draws hundreds of mantas.
+Galápagos Islands|Galápagos diving|Ecuador|dive|Galápagos|8|6-11|Hammerheads in schools.|@1.68,-91.99|||Advanced|Darwin and Wolf islands are among the best dives anywhere.
+Cozumel||Mexico|dive|Maya world|6|11-4|Drift dives along walls.|@20.42,-86.92|||All levels|Cousteau called it one of the best.
+Cenote|Cenote diving|Mexico|dive|Maya world|4|11-4|Light beams in flooded caves.|@20.73,-87.41|||Intermediate|Dos Ojos is one of the longest flooded caves.
+Belize Barrier Reef|Lighthouse Reef and Blue Hole|Belize|dive|Caribbean|5|12-5|The Great Blue Hole from inside.|@17.32,-87.53|||Advanced|Stalactites hang 40 m down.
+Raja Ampat Islands|Raja Ampat liveaboard|Indonesia|dive|Eastern Indonesia|9|10-4|The richest reefs on the planet.|S@-0.56,130.65|||All levels|More fish species than anywhere else.
+# --- wind and kite
+Tarifa||Spain|wind|Spain & Portugal|6|4-10|Europe's wind capital.|@36.013,-5.603|||All levels|Africa is 14 km away across the strait.
+Torbole|Lake Garda windsurf (Torbole)|Italy|wind|Italy|5|4-10|Thermal winds every morning and afternoon.|@45.873,10.874|||All levels|The Ora wind blows like clockwork.
+Leucate||France|wind|France|5|4-10|Tramontane wind and lagoons.|@42.91,3.05|||All levels|Hosts the Mondial du Vent.
+Sankt Peter-Ording|St. Peter-Ording|Germany|wind|Germany|3|5-9|Kite on a 12 km beach.|@54.30,8.60|||Beginners|One of Europe's widest beaches.
+Fehmarn||Germany|wind|Germany|3|5-9|Germany's wind island on the Baltic.|@54.47,11.13|||All levels|Flat water on one side, waves on the other.
+Ringkøbing Fjord||Denmark|wind|Nordics|4|5-9|Shallow flat water behind dunes.|@56.00,8.20|||Beginners|Stand everywhere: it is waist deep.
+Dakhla|Dakhla|Morocco|wind|Morocco|7|3-10|A desert lagoon with steady wind.|@23.70,-15.94|||All levels|Wind on about 300 days a year.
+Cumbuco||Brazil|wind|Northeast Brazil|7|7-12|Kite towns along the dunes.|@-3.627,-38.734|||All levels|The trade wind blows half the year.
+Hood River, Oregon|Hood River|United States|wind|US West|4|6-9|Columbia Gorge wind tunnel.|@45.705,-121.521|||Advanced|Where modern kiting took off.
+Maui||United States|wind|North Pacific|6|4-10|Ho'okipa, the windsurf mecca.|@20.93,-156.36|||Advanced|Jaws can reach 20 m.
+Mauritius|Le Morne kite lagoon|Mauritius|wind|Indian Ocean|7|5-11|One Eye, a famous kite wave.|@-20.45,57.32|||All levels|A shallow lagoon below Le Morne.
+Prasonisi||Greece|wind|Greek islands|5|6-9|Two seas meet at a sand spit.|@35.88,27.76|||All levels|Flat water on one side, waves on the other.
+# --- kayak and canoe
+Ardèche (river)|Ardèche canoe|France|kayak|France|2|5-9|Paddle under the Pont d'Arc.|@44.37,4.43|||Beginners|30 km of gorge with river camps.
+Beynac-et-Cazenac|Dordogne canoe|France|kayak|France|2|5-9|Glide past castles on cliffs.|@44.82,1.12|||Beginners|Beynac and Castelnaud face each other.
+Soča||Slovenia|kayak|Alps|3|5-9|Emerald whitewater.|@46.34,13.55|||Intermediate|Raft or kayak through gorges.
+Altmühl|Altmühl valley canoe|Germany|kayak|Germany|2|5-9|Lazy river past rocks and castles.|@48.95,11.40|||Beginners|One of Germany's slowest rivers.
+Lahn|Lahn canoe|Germany|kayak|Germany|2|5-9|A canoe classic an hour from home.|@50.38,7.65|||Beginners|Locks you open yourself.
+Spreewald||Germany|kayak|Germany|2|4-10|Hundreds of canals in a forest.|@51.85,13.95|||Beginners|Even the post is delivered by boat.
+Dalsland Canal|Dalsland canoe lakes|Sweden|kayak|Nordics|6|6-8|Lakes, wild camping and moose.|@59.0,12.3|||Beginners|Canoe for a week without meeting a road.
+Masurian Lake District|Krutynia river|Poland|kayak|Central Europe|5|6-8|A famous canoe trail through forest.|@53.68,21.43|||Beginners|100 km from lake to lake.
+Milford Sound|Milford Sound kayak|New Zealand|kayak|New Zealand|1|11-4|Paddle under waterfalls.|@-44.64,167.90|||Beginners|Seals and dolphins visit.
+Abel Tasman National Park||New Zealand|kayak|New Zealand|3|11-4|Golden beaches by sea kayak.|@-40.89,173.03|||Beginners|Camp on beaches reached only by water.
+Glacier Bay National Park and Preserve|Glacier Bay kayak|United States|kayak|Alaska|5|6-8|Paddle among icebergs.|@58.66,-136.9|||Experienced|Whales surface beside you.
+Benagil|Benagil sea cave|Portugal|kayak|Spain & Portugal|1|5-10|Paddle into a cave with a skylight.|@37.087,-8.426|||Beginners|The roof hole lights a hidden beach.
+# --- ski
+Zermatt||Switzerland|ski|Alps|7|12-4|Ski below the Matterhorn into Italy.|@46.020,7.749|||All levels|Summer skiing on the glacier.
+St. Anton am Arlberg|St. Anton|Austria|ski|Alps|7|12-4|Birthplace of modern skiing.|@47.128,10.264|||Advanced|Huge off-piste and lively evenings.
+Ischgl||Austria|ski|Alps|7|12-4|Big circuit into Switzerland.|@46.97,10.29|||All levels|Ski over the border to Samnaun.
+Kitzbühel||Austria|ski|Alps|6|12-3|Famous Hahnenkamm race town.|@47.446,12.392|||All levels|The Streif downhill is the scariest race.
+Val d'Isère||France|ski|Alps|7|12-4|High snow-sure resort with Tignes.|@45.448,6.98|||Advanced|300 km of slopes.
+Les Trois Vallées||France|ski|Alps|7|12-4|The largest linked ski area in the world.|@45.39,6.59|||All levels|600 km of slopes.
+Chamonix|Chamonix (Vallée Blanche)|France|ski|Alps|7|12-4|Ski 20 km down a glacier.|@45.924,6.869|||Advanced|The first Winter Olympics in 1924.
+Verbier||Switzerland|ski|Alps|7|12-4|Freeride capital.|@46.096,7.228|||Advanced|Hosts the Freeride World Tour final.
+St. Moritz||Switzerland|ski|Alps|6|12-4|Glamour and the original winter holiday.|@46.497,9.838|||All levels|Winter tourism began here in 1864 on a bet.
+Dolomiti Superski|Sella Ronda, Dolomites|Italy|ski|Alps|7|12-4|Ski round a mountain massif.|@46.53,11.79|||Intermediate|1,200 km on one pass.
+Cervinia|Breuil-Cervinia|Italy|ski|Alps|6|11-4|Long sunny slopes below the Matterhorn.|@45.934,7.630|||Beginners|Linked to Zermatt.
+Garmisch-Partenkirchen||Germany|ski|Alps|4|12-3|Germany's best known ski town.|@47.49,11.10|||All levels|Skiing on the Zugspitze glacier.
+Feldberg (Black Forest)|Feldberg|Germany|ski|Germany|2|1-3|Weekend skiing close to home.|@47.87,8.00|||Beginners|Highest peak of the Black Forest.
+Åre||Sweden|ski|Nordics|6|12-4|Scandinavia's biggest resort.|@63.40,13.08|||All levels|Ski under the northern lights.
+Niseko||Japan|ski|Japan|7|12-3|Japan's legendary powder snow.|@42.86,140.69|||All levels|Over 15 m of snow a season.
+Whistler Blackcomb||Canada|ski|Canada|7|12-4|North America's largest resort.|@50.09,-122.89|||All levels|The Peak 2 Peak gondola crosses 3 km.
+Aspen, Colorado|Aspen|United States|ski|US West|6|12-3|Four mountains and a famous town.|@39.19,-106.82|||All levels|A silver mining town turned ski icon.
+Jackson Hole Mountain Resort|Jackson Hole|United States|ski|US West|6|12-3|Steep terrain below the Tetons.|@43.587,-110.828|||Advanced|Corbet's Couloir is a famous drop.
+Portillo, Chile|Portillo|Chile|ski|Patagonia|6|7-9|Ski in July by a frozen lagoon.|@-32.835,-70.13|||All levels|Speed records were set here.
+# --- famous treks
+Tour du Mont Blanc||France|trek|Alps|11|7-9|Walk round Western Europe's highest mountain.|@45.83,6.86|||Hikers|170 km through three countries.
+GR 20||France|trek|France|14|6-9|Europe's toughest marked trail, across Corsica.|@42.15,9.10|||Experienced hikers|Rocky ridges and mountain huts.
+Alta Via 1||Italy|trek|Alps|10|7-9|Hut-to-hut through the Dolomites.|@46.62,12.0|||Hikers|Pizza and strudel at 2,500 m.
+Rheinsteig||Germany|trek|Germany|7|4-10|A ridge trail over the Rhine castles.|@50.15,7.68|||Hikers|Starts across the river from home.
+Eifelsteig||Germany|trek|Germany|9|4-10|Through volcanic maars and gorges.|@50.30,6.70|||Hikers|313 km from Aachen to Trier.
+West Highland Way||United Kingdom|trek|Britain & Ireland|7|5-9|Scotland's classic long walk.|@56.4,-4.6|||Hikers|Ends at the foot of Ben Nevis.
+Kungsleden||Sweden|trek|Arctic|7|7-9|The King's Trail through Lapland.|@68.0,18.5|||Hikers|Huts with saunas along the way.
+Landmannalaugar|Laugavegur|Iceland|trek|Nordics|4|7-8|Hot springs, coloured rhyolite and glaciers.|@63.99,-19.06|||Hikers|Landmannalaugar to Þórsmörk.
+Camino de Santiago|Camino Francés|Spain|trek|Spain & Portugal|30|4-6,9-10|Walk across Spain to Santiago.|@42.60,-5.57|||Walkers|About 300,000 people a year receive the certificate.
+Lycian Way||Turkey|trek|Western Turkey|14|3-5,10-11|Coastal path past ancient tombs.|@36.35,29.60|||Hikers|540 km from Fethiye to Antalya.
+Inca Trail|Inca Trail|Peru|trek|Peru & Andes|4|5-9|Arrive at Machu Picchu through the Sun Gate.|@-13.20,-72.50|||Hikers|Permits sell out months ahead.
+Torres del Paine National Park|Torres del Paine Torres del Paine National Park|Chile|trek|Patagonia|5|11-3|The towers, glaciers and the French valley.|@-51.0,-73.0|||Hikers|Wind can knock you over.
+Milford Track||New Zealand|trek|New Zealand|4|11-4|The finest walk in the world, they say.|@-44.83,167.75|||Hikers|Only 90 walkers may start each day.
+Annapurna Circuit||Nepal|trek|Tibet & Nepal|15|10-11,3-4|Over the Thorong La pass at 5,416 m.|@28.79,84.0|||Fit hikers|Through tropical valleys to high desert.
+Kalalau Trail||United States|trek|North Pacific|3|5-9|The Nā Pali coast of Kauai.|@22.17,-159.64|||Fit hikers|Cliffs 1,000 m above the sea.
+
+# --- castles close to home (too small on Wikipedia to be picked automatically)
+Bourscheid Castle||Luxembourg|castle|Benelux|0.5|4-10|The largest castle ruin of Luxembourg, high above the Sûre.|@49.909,6.065|1000|Around 1000 AD|Lords of Bourscheid|Rebuilt from ruins by the state, with a view over three valleys.
+Clervaux Castle||Luxembourg|castle|Benelux|0.5|4-10|A white castle holding the famous photo show The Family of Man.|@50.055,6.031|1100|12th century|Counts of Clervaux|Steichen's 1955 exhibition is listed by UNESCO as Memory of the World.
+Beaufort, Luxembourg|Beaufort castles|Luxembourg|castle|Benelux|0.5|4-10|A medieval ruin and a Renaissance castle side by side.|@49.835,6.290|1150|12th and 17th century|Lords of Beaufort|The castle makes its own blackcurrant liqueur, Cassero.
+Larochette Castle|Larochette castle|Luxembourg|castle|Benelux|0.3|4-10|Ruins on a sandstone cliff over a little town.|@49.787,6.218|1100|11th century|Lords of Larochette|Five noble families once shared the castle.
+Esch-sur-Sûre||Luxembourg|castle|Benelux|0.3|4-10|A tiny village in a river loop below its castle ruin.|@49.911,5.935|927|First castle 927|Lords of Esch|One of the smallest villages in Luxembourg, with a big dam lake above.
+Eltz Castle|Burg Eltz|Germany|castle|Germany|0.5|4-10|A fairytale castle hidden in a forest valley, never destroyed.|@50.205,7.336|1157|Since 1157|The Eltz family|The same family has owned it for 33 generations.
+Cochem Castle|Reichsburg Cochem|Germany|castle|Germany|0.5|4-10|A castle on a vine hill above the Moselle.|@50.147,7.159|1100|About 1100, rebuilt 1868|Holy Roman Emperors, later a Berlin businessman|It was rebuilt in neo-Gothic style after the French burned it.
+Marksburg||Germany|castle|Germany|0.5|4-10|The only Rhine hill castle never destroyed.|@50.271,7.652|1117|Around 1117|Counts of Katzenelnbogen|Home of the German Castles Association.
+Rheinstein Castle|Burg Rheinstein|Germany|castle|Germany|0.3|4-10|A romantic castle on a cliff, a few minutes from Bingen.|@49.997,7.856|1316|1316, rebuilt 1825|Prince Frederick of Prussia|One of the first Rhine castles rebuilt in the Romantic age.
+Pfalzgrafenstein Castle|Pfalzgrafenstein toll castle|Germany|castle|Germany|0.3|4-10|A ship-shaped castle on an island in the Rhine.|@50.085,7.766|1327|1327|Emperor Ludwig the Bavarian|It collected tolls from Rhine ships for 500 years.
+Rheinfels Castle|Burg Rheinfels|Germany|castle|Germany|0.5|4-10|A huge ruin with tunnels to explore with a torch.|@50.157,7.711|1245|1245|Counts of Katzenelnbogen|Once the largest castle on the Rhine.
+Bouillon Castle|Château de Bouillon|Belgium|castle|Benelux|0.5|4-10|Godfrey of Bouillon's castle above a river loop.|@49.794,5.068|988|988|Godfrey of Bouillon|Godfrey sold it to go on the First Crusade.
+Heidelberg Castle||Germany|castle|Germany|0.5|1-12|The famous red ruin above the old university town.|@49.410,8.716|1214|1214|Electors of the Palatinate|It holds one of the largest wine barrels in the world.
+Cochem|Moselle villages: Cochem and Bernkastel|Germany|city|Germany|1|4-10|Half-timbered wine towns along the river loops.|@49.916,7.067|||Moselle|Bernkastel's town square is one of the prettiest in Germany.

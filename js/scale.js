@@ -2,18 +2,20 @@
 import { state, score, ratingOf } from './store.js';
 
 export const LEVELS = [
-  { n: 4, text: 'Must visit fast', short: 'Must' },
-  { n: 3, text: 'Super interesting', short: 'Super' },
-  { n: 2, text: 'Looks great', short: 'Great' },
-  { n: 1, text: 'Cool, not super interested', short: 'Cool' },
+  { n: 5, text: 'Must visit', short: 'Must' },
+  { n: 4, text: 'Interesting', short: 'Interesting' },
+  { n: 3, text: 'Cool', short: 'Cool' },
+  { n: 2, text: 'Maybe', short: 'Maybe' },
+  { n: 1, text: 'Not interested', short: 'No' },
 ];
+export const TOP = 5;
 export const byN = n => LEVELS.find(l => l.n === n);
 
 // The shared level of a place: the average of both people, rounded. 0 means nobody rated it.
-export const levelOf = id => { const s = score(id); return s ? Math.min(4, Math.max(1, Math.round(s))) : 0; };
-// "A place we really want": Super interesting or Must visit fast
-export const wanted = id => levelOf(id) >= 3;
-export const isMatch = id => ratingOf(id, 0) >= 3 && ratingOf(id, 1) >= 3;
+export const levelOf = id => { const s = score(id); return s ? Math.min(TOP, Math.max(1, Math.round(s))) : 0; };
+// "A place we really want": Interesting or Must visit
+export const wanted = id => levelOf(id) >= 4;
+export const isMatch = id => ratingOf(id, 0) >= 4 && ratingOf(id, 1) >= 4;
 
 export function badge(id, empty = '') {
   const l = levelOf(id);

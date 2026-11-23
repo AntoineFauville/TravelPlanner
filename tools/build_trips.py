@@ -5,6 +5,8 @@ hours between bases and to the day trips (OpenStreetMap roads, OSRM public serve
 """
 import hashlib
 import json
+import re
+import unicodedata
 import math
 import os
 import time
@@ -21,6 +23,11 @@ SKIP = {("Jordan: Petra and the desert", x) for x in ("Ancient Jericho", "Old Ci
     ("Jungfrau and Aletsch", "Matterhorn & Zermatt"), ("Peru: Choquequirao trek", "Machu Picchu & Sacred Valley"),
     ("Rwanda and Uganda: gorillas", "Rwenzori, Mountains of the Moon")}
 SERVER = "https://router.project-osrm.org/table/v1/driving/"
+
+
+def slug(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
 def km(a, b):
@@ -75,6 +82,56 @@ def home_table(points):
     return out
 
 
+def atlas():
+    """function (lat, lon) -> country name, nearest coast if the point is in the water"""
+    path = os.path.join(CACHE, "countries-50m.json")
+    if not os.path.exists(path):
+        urllib.request.urlretrieve("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json", path)
+    d = json.load(open(path, encoding="utf-8"))
+    (sx, sy), (tx, ty) = d["transform"]["scale"], d["transform"]["translate"]
+    arcs = []
+    for a in d["arcs"]:
+        x = y = 0
+        pts = []
+        for dx, dy in a:
+            x += dx
+            y += dy
+            pts.append((x * sx + tx, y * sy + ty))
+        arcs.append(pts)
+    rings = []
+    for g in d["objects"]["countries"]["geometries"]:
+        for poly in (g.get("arcs") or []) if g["type"] == "MultiPolygon" else [g.get("arcs") or []]:
+            pts = []
+            for i in poly[0] if poly else []:
+                seg = arcs[i] if i >= 0 else arcs[~i][::-1]
+                pts += seg if not pts else seg[1:]
+            if pts:
+                xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+                rings.append((g["properties"]["name"], pts, min(xs), max(xs), min(ys), max(ys)))
+
+    def where(lat, lon):
+        for n, pts, x0, x1, y0, y1 in rings:
+            if x0 <= lon <= x1 and y0 <= lat <= y1:
+                inside, j = False, len(pts) - 1
+                for i in range(len(pts)):
+                    (xi, yi), (xj, yj) = pts[i], pts[j]
+                    if (yi > lat) != (yj > lat) and lon < (xj - xi) * (lat - yi) / (yj - yi) + xi:
+                        inside = not inside
+                    j = i
+                if inside:
+                    return n
+        best = None
+        for n, pts, x0, x1, y0, y1 in rings:
+            if x0 - 3 <= lon <= x1 + 3 and y0 - 3 <= lat <= y1 + 3:
+                for x, y in pts:
+                    q = (x - lon) ** 2 + (y - lat) ** 2
+                    if best is None or q < best[0]:
+                        best = (q, n)
+        return best[1] if best else None
+
+    return where
+
+
 def months(spec):
     out = set()
     for part in spec.split(","):
@@ -90,7 +147,10 @@ def months(spec):
 
 def main():
     cat = json.load(open(os.path.join(ROOT, "data", "catalog.json"), encoding="utf-8"))
-    by_name = {s["name"]: s for s in cat}
+    cat += json.load(open(os.path.join(ROOT, "data", "catalog_more.json"), encoding="utf-8"))
+    by_name = {}
+    for s in cat:
+        by_name.setdefault(s["name"], s)
     trips = []
 
     def lines(fname):
@@ -144,6 +204,12 @@ def main():
                 d = km((b["lat"], b["lon"]), (s["lat"], s["lon"]))
                 if d <= (25 if t["kind"] == "city" else 75) and (s["name"] not in taken or d < taken[s["name"]][0]):
                     taken[s["name"]] = (d, i)
+        # many places around a base: keep the hand-picked ones and the best known (the road table has a size limit)
+        for i in range(len(t["bases"])):
+            near = [x for x in taken if taken[x][1] == i and taken[x][0] >= 0]
+            near.sort(key=lambda x: ("n" in by_name[x], -by_name[x].get("n", 0), taken[x][0]))
+            for x in near[24:]:
+                del taken[x]
         pts = [(b["lat"], b["lon"]) for b in t["bases"]]
         order = sorted(taken)
         pts += [(by_name[x]["lat"], by_name[x]["lon"]) for x in order]
@@ -214,6 +280,32 @@ def main():
             legs = [b["nm"] for b in t["bases"][1:]] + [t["backNm"]]
             if max(legs) > 48:
                 print("long sail", t["title"], legs)
+    where = atlas()
+    codes = json.load(open(os.path.join(ROOT, "data", "countries.json"), encoding="utf-8"))["names"]
+    lost = set()
+    for t in trips:
+        for b in t["bases"]:
+            n = where(b["lat"], b["lon"])
+            b["c"] = codes.get(n) or t["bases"][0].get("c")
+            if not b["c"]:
+                lost.add((b["name"], n))
+    if lost:
+        print("no country for", sorted(lost, key=str))
+
+    # can you simply drive there? hours from every home city to every place in reach of a car, one file per home
+    near = [s for s in cat if 34.5 < s["lat"] < 71 and -11 < s["lon"] < 36 and s["country"] not in ("Iceland", "Faroe Islands", "Algeria", "Tunisia", "Libya", "Syria", "Lebanon")]
+    drive = {h: {} for h in HOMES}
+    for s, h in zip(near, home_table([(s["lat"], s["lon"]) for s in near])):
+        for k, v in h.items():
+            if v[0] <= 14:
+                drive[k][s["id"]] = [v[0], v[1]]
+    os.makedirs(os.path.join(ROOT, "data", "drive"), exist_ok=True)
+    for home, d in drive.items():
+        with open(os.path.join(ROOT, "data", "drive", slug(home) + ".json"), "w", encoding="utf-8") as f:
+            f.write("{\n" + ",\n".join(json.dumps(k) + ":" + json.dumps(v, separators=(",", ":")) for k, v in d.items()) + "\n}\n")
+    if os.path.exists(os.path.join(ROOT, "data", "drive.json")):
+        os.remove(os.path.join(ROOT, "data", "drive.json"))
+    print("drive times for", len(drive["Bingen am Rhein"]), "places from Bingen")
     with open(os.path.join(ROOT, "data", "trips.json"), "w", encoding="utf-8") as f:
         f.write("[\n" + ",\n".join(json.dumps(t, ensure_ascii=False, separators=(",", ":")) for t in trips) + "\n]\n")
     reach = {p["id"] for t in trips for b in t["bases"] for p in b["places"]}

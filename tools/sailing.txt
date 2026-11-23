@@ -12,6 +12,7 @@ cux|Cuxhaven|Germany (North Sea)|Germany|53.95|8.60|NEU|L|
 ijm|IJmuiden|Netherlands|Netherlands|52.47|4.50|NEU|L|
 kin|Kinsale|Ireland|Ireland|51.65|-8.50|NEU||
 fal|Falmouth|England|United Kingdom|50.10|-5.00|NEU|L|The traditional ocean departure.
+bre|Camaret (Brest)|Brittany|France|48.28|-4.62|NEU|L|
 lar|La Rochelle|France (Atlantic)|France|46.10|-1.30|NEU|L|
 cor|A Coruña|Spain (Galicia)|Spain|43.45|-8.45|NEU|L|Wait here for good weather after Biscay.
 lis|Lisbon|Portugal|Portugal|38.60|-9.50|MED|L|
@@ -133,6 +134,11 @@ ijm-fal:4-9
 kin-fal:5-9
 kin>cor:6-8
 fal-lar:5-9
+ijm-bre:4-9
+fal-bre:5-9
+bre-lar:4-10
+bre-cor:5-9
+hor>bre:5-8
 lar-cor:5-9
 fal>cor:5-8
 cor>fal:5-8:1.2

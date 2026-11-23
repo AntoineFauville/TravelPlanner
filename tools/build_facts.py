@@ -15,7 +15,7 @@ for n, line in enumerate(open(os.path.join(ROOT, "tools", "facts.txt"), encoding
 # the newer lists carry their facts on the same line
 cat = json.load(open(os.path.join(ROOT, "data", "catalog.json"), encoding="utf-8"))
 by_name = {s["name"]: s["id"] for s in cat}
-for fname in ("sites_prehistory.txt", "sites_nature.txt"):
+for fname in ("sites_prehistory.txt", "sites_nature.txt", "sites_extra.txt"):
     for line in open(os.path.join(ROOT, "tools", fname), encoding="utf-8"):
         p = line.strip().split("|")
         if len(p) == 13 and (p[1] or p[0]) in by_name:

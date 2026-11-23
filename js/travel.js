@@ -29,9 +29,9 @@ export function drawTravel() {
     </form>
     <div class="row">
       <select data-u="show" aria-label="Which places" style="flex:1">${opt('all', 'All places', ui.show)}${opt('rated', 'Places we rated', ui.show)}${opt('own', 'Places we added', ui.show)}${opt('seen', 'Visited', ui.show)}</select>
-      <select data-u="v" aria-label="Sail or fly" style="flex:1">${opt('', 'Sail or fly', ui.v)}${Object.entries(LABEL).map(([k, t]) => opt(k, t, ui.v)).join('')}</select>
+      <select data-u="v" aria-label="Sail or fly" style="flex:1">${opt('', 'Sail, drive or fly', ui.v)}${Object.entries(LABEL).map(([k, t]) => opt(k, t, ui.v)).join('')}</select>
     </div>
-    ${sum ? `<p class="sm soft">Everything you find super interesting or a must needs about <b style="color:var(--text)">${days(sum)}</b> on site, without travel.</p>`
+    ${sum ? `<p class="sm soft">Everything you find interesting or a must needs about <b style="color:var(--text)">${days(sum)}</b> on site, without travel.</p>`
     : '<p class="sm soft">Rate a few places in Discover. The list and the pins follow your priorities.</p>'}
     <div>${all.slice(0, ui.limit).map(item).join('') || '<p class="soft">Nothing here yet.</p>'}
       ${all.length > ui.limit ? `<button class="btn" data-more style="margin-top:10px">Show ${all.length - ui.limit} more</button>` : ''}</div>

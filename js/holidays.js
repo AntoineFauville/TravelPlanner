@@ -1,12 +1,13 @@
 // "Next year we have two weeks: what is our priority?"
 // Trips are hand-made: a few bases where you stay put, with real driving times. Nothing is strung together by distance alone.
-import { allPlaces, placeById, verdict, daysFor, trips, HOME, HOMES, setHome } from './data.js';
+import { allPlaces, placeById, verdict, atSea, daysFor, trips, HOME, HOMES, setHome } from './data.js';
 import { state, score, weight, extra, save } from './store.js';
 import { $, esc, km, arc, days, norm, n0, MONTHS, monthRange, toast } from './util.js';
 import { badge, wanted } from './scale.js';
-import { thumb } from './photos.js';
+import { thumb, tiny } from './photos.js';
 import { openDetail } from './detail.js';
 import { packing } from './gear.js';
+import { tripCost, tripCountries, euro, visaLine, visaOf, landName, risky, interest } from './costs.js';
 import { drawRoute, drawBases, fit, setFilter, COLORS } from './map.js';
 
 const SPAN = {
@@ -37,10 +38,11 @@ const q = encodeURIComponent;
 const google = (t, text) => `<a class="btn small" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(t)}">${text}</a>`;
 
 function placeValue(p, sailing) {
-  if (!p || extra(p.id).visited || (p.advice && !ui.advice)) return 0;
+  if (!p || extra(p.id).visited || (risky(p) && !ui.advice)) return 0;
   let w = weight(p.id);
+  if (!score(p.id)) w *= interest(p);                   // not rated yet: follow how much you like that part of the world
   if (ui.month && p.months && !p.months.includes(ui.month)) w *= 0.35;
-  if (!sailing && !ui.sail && verdict(p).v !== 'fly') w *= 0.2;
+  if (!sailing && !ui.sail && atSea(verdict(p).v)) w *= 0.2;
   return w;
 }
 
@@ -97,7 +99,7 @@ function fitTrip(t, taken) {
   bases.forEach((b, i) => {
     let room = b.n - 0.25 - (road && i === 0 && !onWay ? Math.min(0.6, way[0] / 12) : 0);
     b.see = []; b.maybe = [];
-    const list = b.places.map(x => ({ ...x, p: placeById(x.id) })).filter(x => x.p && !taken.has(x.id) && !extra(x.id).visited && (ui.advice || !x.p.advice));
+    const list = b.places.map(x => ({ ...x, p: placeById(x.id) })).filter(x => x.p && !taken.has(x.id) && !extra(x.id).visited && (ui.advice || !risky(x.p)));
     for (const x of list) { x.v = placeValue(x.p); x.rate = x.v / (Math.min(daysFor(x.p), 2) + (x.h || 0)); }
     list.sort((a, c) => c.rate - a.rate);
     for (const x of list) {
@@ -130,6 +132,7 @@ function rightKind(t) {
 function plan() {
   const taken = new Set(state.trips.flatMap(t => t.stops)), done = new Set(state.trips.map(t => t.name));
   const words = norm(ui.q).split(/\s+/).filter(Boolean), all = [];
+  let over = 0;
   trips.forEach((t, i) => {
     if (done.has(t.title) || !rightKind(t)) return;
     if (words.length) {
@@ -143,11 +146,13 @@ function plan() {
     let fill = r.fits ? Math.min(1, 0.4 + 0.6 * r.used / D()) * (r.far > 5500 && D() < 9 ? 0.4 : 1) : 1;
     if (r.fits && r.way && t.kind === 'road') fill *= 1 - 0.5 * Math.min(1, (daysOnWay(r.way[0]) + daysOnWay(r.way[2])) / r.used);
     if (t.kind === 'city' && ui.span !== 'weekend') fill *= 0.6;
-    all.push({ t, i, r, rank: (r.fits ? r.value : whole) * season * fill, whole });
+    const cost = r.fits ? tripCost(t, r) : null;
+    if (cost && state.budget.max && cost.total > state.budget.max) { over++; return; }
+    all.push({ t, i, r, cost, rank: (r.fits ? r.value : whole) * season * fill, whole });
   });
   const ok = all.filter(x => x.r.fits && (words.length || (x.r.count && x.rank > 0.4))).sort((a, b) => b.rank - a.rank);
   const longer = all.filter(x => !x.r.fits && x.r.least < 60 && x.whole > (words.length ? -1 : 4)).sort((a, b) => b.whole - a.whole);
-  return { ok, longer };
+  return { ok, longer, over };
 }
 
 // ---------- the panel
@@ -155,7 +160,7 @@ const seg = (name, opts, cur) => `<div class="tabs" role="group">${Object.entrie
 const opt = (v, t, cur) => `<option value="${esc(v)}" ${String(v) === String(cur) ? 'selected' : ''}>${esc(t)}</option>`;
 
 export function drawHolidays() {
-  const { ok, longer } = plan(), S = SPAN[ui.span];
+  const { ok, longer, over } = plan(), S = SPAN[ui.span];
   let groups;
   if (ui.kind === 'all') {
     groups = Object.keys(HEAD).map(k => [k, ok.filter(x => x.t.kind === k).slice(0, 3)]).filter(g => g[1].length)
@@ -168,7 +173,7 @@ export function drawHolidays() {
   const fresh = ui.open === null && shown.length > 0;
   if (fresh) ui.open = ui.kind === 'all' ? -1 : shown[0].i;       // the overview stays compact until you pick one
   const reach = new Set(trips.flatMap(t => t.bases.flatMap(b => b.places.map(x => x.id)))), planned = new Set(state.trips.flatMap(t => t.stops));
-  const alone = allPlaces().filter(p => wanted(p.id) && !reach.has(p.id) && !planned.has(p.id) && !extra(p.id).visited && (ui.advice || !p.advice)).sort((a, b) => score(b.id) - score(a.id));
+  const alone = allPlaces().filter(p => wanted(p.id) && !reach.has(p.id) && !planned.has(p.id) && !extra(p.id).visited && (ui.advice || !risky(p))).sort((a, b) => score(b.id) - score(a.id));
   const anyRated = allPlaces().some(p => score(p.id)), land = ui.kind !== 'sail';
   $('#panel').innerHTML = `<div class="stack">
     <h2>Holidays</h2>
@@ -182,6 +187,7 @@ export function drawHolidays() {
       ${ui.kind === 'road' ? `<label class="f">Car<select data-u="car">${opt('own', 'Our car, from home', ui.car)}${opt('rent', 'Fly and rent a car', ui.car)}${opt('any', 'Both', ui.car)}</select></label>` : ''}
       ${ui.kind === 'road' || ui.kind === 'all' ? `<label class="f">Starting from<select data-home>${Object.keys(HOMES).map(h => opt(h, h, HOME.name)).join('')}</select></label>` : ''}
     </div>
+    ${budgetBox(over)}
     ${land && ui.kind !== 'city' ? `<div class="stack tight">
       ${ui.kind === 'road' && ui.car === 'own' ? '' : `<label class="check"><input type="checkbox" data-u="sail" ${ui.sail ? 'checked' : ''}>Include places we could save for the world tour</label>`}
       <label class="check"><input type="checkbox" data-u="advice" ${ui.advice ? 'checked' : ''}>Include places with travel warnings</label></div>` : ''}
@@ -191,8 +197,8 @@ export function drawHolidays() {
     ${ui.kind !== 'all' && ok.length > ui.more ? '<button class="btn" data-more>Show more trips</button>' : ''}
     ${longer.length ? `<details><summary>Worth more time than ${D()} days</summary>${longer.slice(0, 10).map(x => `<button class="rowitem" data-grow="${x.r.tooHard ? 0 : x.r.least}" data-i="${x.i}"><div><b>${esc(x.t.title)}</b><small>${x.r.tooHard ? 'Too much driving at this pace' : `Needs at least ${x.r.least} days`}</small></div></button>`).join('')}</details>` : ''}
     ${alone.length && ui.kind !== 'sail' ? `<details><summary>Places you want that are in no trip yet: ${alone.length}</summary>${alone.slice(0, 40).map(p => `<div class="rowitem"><div><b>${esc(p.name)}</b><small>${esc(p.country)}</small></div><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`${p.name} ${p.country} itinerary how many days`)}">Find itineraries</a></div>`).join('')}</details>` : ''}
-    ${state.trips.length ? `<div class="hr"></div><h2>Planned trips</h2><div class="stack">${[...state.trips].sort((a, b) => a.year - b.year || a.month - b.month).map(saved).join('')}</div>` : ''}
-    <p class="credit">Driving times from OpenStreetMap, without traffic or stops. Flight, train and sailing times are approximate.</p>
+    ${state.trips.length ? `<div class="hr"></div><h2>Planned trips</h2>${yearCosts()}<div class="stack">${[...state.trips].sort((a, b) => a.year - b.year || a.month - b.month).map(saved).join('')}</div>` : ''}
+    <p class="credit">Driving times from OpenStreetMap, without traffic or stops. Prices are estimates for two: World Bank price levels, EU fuel prices of November 2026, visas from Wikipedia. Check before you book.</p>
   </div>`;
   paint();
   if (fresh) zoom();
@@ -202,7 +208,7 @@ const BY = { drive: 'drive', fly: 'flight with transfers', train: 'train', boat:
 const near = x => (x.h === null ? 'by boat, train or on foot' : x.h < 0.12 ? 'on the spot' : `${hours(x.h)} drive`);
 const legText = (by, h, dist) => (!h ? BY[by] : by === 'drive' ? `${hours(h)} drive${dist ? `, ${dist} km` : ''}` : `About ${hours(h)} ${BY[by]}`);
 const sailText = nm => `${nm} nm, about ${hours(nm / KNOTS)} of sailing`;
-const pic = p => (thumb(p) ? `<img loading="lazy" alt="" src="${esc(thumb(p).replace('/500px-', '/250px-'))}">` : '<span class="ph"></span>');
+const pic = p => (thumb(p) ? `<img loading="lazy" alt="" src="${esc(tiny(thumb(p)))}">` : '<span class="ph"></span>');
 
 function baseHtml(b, i, sailing) {
   const row = (x, dim) => `<button class="rowitem ${dim ? 'dim' : ''}" data-open="${esc(x.id)}">${pic(x.p)}<div><b>${esc(x.p.name)}</b><small>${sailing ? `${x.km} km away` : near(x)}${ui.month && x.p.months && !x.p.months.includes(ui.month) ? ' · not its best month' : ''}</small></div>${badge(x.id, '<span class="lv">–</span>')}</button>`;
@@ -229,11 +235,37 @@ function facts(t, r) {
   return `<b>${mood(r)}</b>: ${inPlace}.`;
 }
 
-function card({ t, r, i }) {
+// ---------- money
+let budgetOpen = false;
+function budgetBox(over) {
+  const b = state.budget, num = (k, label, min, max, step = 1, ph = '') => `<label class="f">${label}<input type="number" data-b="${k}" min="${min}" max="${max}" step="${step}" value="${b[k] || ''}" placeholder="${ph}"></label>`;
+  return `<details class="budget" ${budgetOpen ? 'open' : ''}><summary>Our budget: ${b.hotel ? `hotel up to €${b.hotel}` : 'average hotels'}, ${b.food ? `food up to €${b.food} each a day` : 'average food'}${b.max ? `, ${euro(b.max)} in all` : ''}</summary>
+    <div class="grid2">
+      ${num('hotel', 'Hotel per night, at most €', 0, 1000, 5, 'average')}
+      ${num('food', 'Food per person and day, at most €', 0, 300, 1, 'average')}
+      <label class="f">How you eat<select data-b="style">${opt('cook', 'Mostly cooking', b.style)}${opt('mix', 'Half cooking, half out', b.style)}${opt('out', 'Eating out', b.style)}</select></label>
+      ${num('max', 'Whole trip, at most €', 0, 50000, 50, 'no limit')}
+      ${num('litres', 'Our car, litres per 100 km', 2, 20, 0.1)}
+      <label class="f">Fuel<select data-b="fuel">${opt('diesel', 'Diesel', b.fuel)}${opt('petrol', 'Petrol', b.fuel)}</select></label>
+    </div>
+    <label class="check"><input type="checkbox" data-b="skipper" ${b.skipper ? 'checked' : ''}>Sailing trips with a hired skipper</label></details>
+    ${over ? `<p class="sm soft">${over} trip${over > 1 ? 's are' : ' is'} above ${euro(b.max)} and hidden.</p>` : ''}`;
+}
+function costHtml(c) {
+  return `<details class="cost"><summary>About ${euro(c.total)} for two, ${euro(c.total / 2)} each</summary>
+    <table>${c.parts.map(([l, e, n]) => `<tr><td>${esc(l)}${n ? `<small>${esc(n)}</small>` : ''}</td><td>${euro(e)}</td></tr>`).join('')}</table>
+    ${c.capped.length ? `<p class="sm warn">Average rooms cost more than your limit: ${esc(c.capped.join(', '))}. Book early or choose simple places.</p>` : ''}</details>`;
+}
+function visaHtml(t) {
+  const list = tripCountries(t).filter(c => [0, 1].some(w => { const v = visaOf(c, w); return v && v.t !== 'free'; }));
+  return list.length ? `<div class="sm">${list.map(c => `<p><span class="soft">Visa ${esc(landName(c))}.</span> ${visaLine(c)}</p>`).join('')}</div>` : '';
+}
+
+function card({ t, r, i, cost }) {
   const on = ui.open === i, off = ui.month && !t.months.includes(ui.month), back = r.legs.find(l => l.back), sailing = t.kind === 'sail';
   const refuel = r.km ? Math.floor(r.km / state.range) : 0;
   return `<div class="card stack tight ${on ? 'on' : ''}">
-    <button class="cardhead" data-show="${i}" aria-expanded="${on}"><h3>${esc(t.title)}</h3><span class="soft">${r.used} days</span></button>
+    <button class="cardhead" data-show="${i}" aria-expanded="${on}"><h3>${esc(t.title)}</h3><span class="soft">${r.used} days<br>${euro(cost.total)}</span></button>
     ${t.why ? `<p class="sm">${esc(t.why)}</p>` : t.kind === 'city' ? `<p class="sm">${esc(t.bases[0].tip)}</p>` : ''}
     ${t.kind === 'city' ? '' : `<p class="sm soft">${r.bases.map(b => `${esc(b.name.replace(/ \(.*\)/, ''))} ${b.n}`).join(', ')} nights</p>`}
     <p class="sm">${facts(t, r)} ${off ? `<span class="warn">Better in ${monthRange(t.months)}.</span>` : `Best in ${monthRange(t.months)}.`}</p>
@@ -246,6 +278,7 @@ function card({ t, r, i }) {
         <p class="sm">About <b>${n0(r.km)} km</b> in all: ${refuel ? `${refuel} refuel${refuel > 1 ? 's' : ''} on the way` : 'one tank is enough'} with ${n0(state.range)} km range.</p>` : ''}
       ${r.dropped ? `<p class="sm soft">Shortened to fit: the full trip has ${t.bases.length} ${sailing ? 'stops' : 'bases'}.</p>` : ''}
       ${r.spare > 0 ? `<p class="sm soft">You have ${days(r.spare)} left over for a longer stay.</p>` : ''}
+      ${costHtml(cost)}${visaHtml(t)}
       <h4>${sailing ? 'Find a boat' : 'Compare with what others do'}</h4>
       <div class="row">${sailing ? google(t.search, 'Charter boats') + google(`${t.search} skipper flotilla`, 'With skipper or flotilla') + (t.level === 'learn' ? google(`sailing course ${t.title} beginner week`, 'Learn to sail here') : '') + google(`${t.title} sailing itinerary one week`, 'Itineraries')
     : google(`${r.used} days ${t.search} itinerary`, 'Itineraries online') + (t.kind === 'city' ? google(`${t.title} archaeological museum tickets`, 'Museums') : t.kind === 'road' ? google(`${t.search} roof tent campsites`, 'Campsites') : google(`${t.search} small group tour ${r.used} days`, 'Organised tours'))}${mapsLinks(t, r)}</div>
@@ -263,10 +296,15 @@ function pack(t, open) {
     <p class="sm soft">Car rules change: check them before you leave. ${t.kind === 'road' ? `<a class="sm" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`ADAC ${t.title} Vignette Maut Vorschriften Auto Ausland`)}">ADAC rules</a> and ` : ''}<a class="sm" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`${t.search} packing list`)}">more packing lists</a></p></details>`;
 }
 
+function yearCosts() {
+  const y = {};
+  for (const t of state.trips) if (t.cost) y[t.year] = (y[t.year] || 0) + t.cost;
+  return Object.keys(y).length ? `<p class="sm">To set aside: ${Object.entries(y).map(([k, v]) => `<b>${euro(v)}</b> for ${k}`).join(', ')}.</p>` : '';
+}
 const saved = t => {
   const full = trips.find(x => x.title === t.name);
   return `<div class="card stack tight"><div class="row" style="justify-content:space-between;flex-wrap:nowrap"><h3>${esc(t.name)}</h3><span class="soft" style="white-space:nowrap">${t.month ? `${MONTHS[t.month - 1]} ` : ''}${t.year}</span></div>
-  <p class="sm soft">${t.days} days${t.stops.length ? `: ${esc(t.stops.map(id => placeById(id)?.name).filter(Boolean).join(', '))}` : ''}</p>
+  <p class="sm soft">${t.days} days${t.cost ? `, about ${euro(t.cost)}` : ''}${t.stops.length ? `: ${esc(t.stops.map(id => placeById(id)?.name).filter(Boolean).join(', '))}` : ''}</p>
   ${full ? pack(full) : ''}
   <div class="row"><button class="link" data-view-trip="${esc(t.id)}">Show</button><button class="link quiet" data-done="${esc(t.id)}">We did it</button><button class="link quiet" data-del="${esc(t.id)}">Remove</button></div></div>`;
 };
@@ -304,6 +342,15 @@ export function initHolidays() {
       save('trips');
       return;
     }
+    if (x.dataset.b) {
+      const k = x.dataset.b;
+      state.budget[k] = x.type === 'checkbox' ? x.checked : k === 'style' || k === 'fuel' ? x.value : Math.max(0, +x.value || 0);
+      if (k === 'litres' && !state.budget.litres) state.budget.litres = 5.5;
+      budgetOpen = true;
+      save('trips');
+      const y = el.scrollTop; ui.open = ui.open === null ? null : ui.open; drawHolidays(); el.scrollTop = y;
+      return;
+    }
     if (x.dataset.sleep !== undefined) { state.sleep = x.value; save('trips'); redraw(); return; }
     if (x.dataset.home !== undefined) { state.home = x.value; setHome(x.value); save('trips'); restart(); return; }
     const k = x.dataset.u;
@@ -328,7 +375,7 @@ export function initHolidays() {
     }
     if (d.save) {
       const c = shown.find(x => x.i === +d.save);
-      state.trips.push({ id: Date.now().toString(36), name: c.t.title, year: ui.year, month: ui.month || c.t.months[0], days: c.r.used, stops: seen(c.r).map(p => p.id) });
+      state.trips.push({ id: Date.now().toString(36), name: c.t.title, year: ui.year, month: ui.month || c.t.months[0], days: c.r.used, cost: Math.round(c.cost.total), stops: seen(c.r).map(p => p.id) });
       ui.open = null;
       toast(`${c.t.title} is planned for ${ui.year}. Its packing list is kept with it.`);
       save('trips');

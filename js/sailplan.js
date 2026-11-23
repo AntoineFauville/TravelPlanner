@@ -2,6 +2,7 @@
 import { legs, portById, ports } from './data.js';
 import { ZONES } from './map.js';
 import { DAY } from './util.js';
+import { landOf, visaHard } from './costs.js';
 
 const month = t => new Date(t).getUTCMonth() + 1;
 const UPWIND = 1.5, UPWIND_MAX = 1300;   // short hops against the wind are possible, but slow and unpleasant
@@ -40,6 +41,11 @@ function nextWindow(leg, t) {
   return Infinity;
 }
 
+let hardMemo = new Map();
+function hardPort(id) {
+  if (!hardMemo.has(id)) hardMemo.set(id, visaHard(landOf(id)));
+  return hardMemo.get(id);
+}
 // Quickest safe way from one port to another, leaving at time t. Waiting in a storm zone counts extra,
 // so the route goes to a safe port (New Zealand, Río Dulce, Trinidad...) when a season has to be waited out.
 function hop(from, to, t, o) {
@@ -57,7 +63,7 @@ function hop(from, to, t, o) {
       const dep = nextWindow(e.leg, ready);
       if (dep === Infinity) continue;
       const nm = e.leg.nm * (e.hard ? UPWIND : 1), sea = nm / (o.knots * 24), arr = dep + sea * DAY;
-      const cost = at.cost + (arr - at.t) / DAY + 2 * stormDays(portById.get(cur).zone, ready, dep) + (e.hard ? sea + 5 : 0);
+      const cost = at.cost + (arr - at.t) / DAY + 2 * stormDays(portById.get(cur).zone, ready, dep) + (e.hard ? sea + 5 : 0) + (o.easyVisa && e.to !== to && hardPort(e.to) ? 15 : 0);
       if (!best.has(e.to) || cost < best.get(e.to).cost) best.set(e.to, { cost, t: arr, dep, sea, nm, prev: cur, e });
     }
   }

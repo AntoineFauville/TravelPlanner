@@ -5,8 +5,9 @@ import { esc } from './util.js';
 let book = {};
 export const setPhotos = b => { book = b; };
 
-const big = u => u.replace('/500px-', '/960px-');
-const small = u => u.replace('/960px-', '/500px-');
+const big = u => u.replace('/500px-', '/960px-').replace('?width=500', '?width=960');
+const small = u => u.replace('/960px-', '/500px-').replace('?width=960', '?width=500');
+export const tiny = u => u.replace('/960px-', '/250px-').replace('/500px-', '/250px-').replace(/\?width=\d+/, '?width=250');
 
 // The photo you picked as main one comes first, then the catalogue photo, then the others.
 export function photosOf(p) {

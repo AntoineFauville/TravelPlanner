@@ -1,0 +1,44 @@
+rules_version = '2';
+
+// Paste this in the Firebase console: Firestore Database > Rules > Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // signed in, with an email address that is confirmed (Google accounts always are)
+    function signedIn() {
+      return request.auth != null && request.auth.token.email_verified == true;
+    }
+    function myEmail() {
+      return request.auth.token.email.lower();
+    }
+    function invitedTo(planId) {
+      return exists(/databases/$(database)/documents/invites/$(myEmail()))
+        && get(/databases/$(database)/documents/invites/$(myEmail())).data.plan == planId;
+    }
+
+    // which plan each person uses: only you see and change your own
+    match /users/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // the shared plan: ratings, trips, the world tour
+    match /plans/{planId} {
+      allow read: if signedIn() && request.auth.uid in resource.data.members;
+      allow create: if signedIn() && request.resource.data.members == [request.auth.uid];
+      // members change everything except who the members are
+      allow update: if signedIn() && request.auth.uid in resource.data.members
+        && request.resource.data.members == resource.data.members;
+      // someone invited may only add themselves
+      allow update: if signedIn() && invitedTo(planId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members'])
+        && request.resource.data.members == resource.data.members.concat([request.auth.uid]);
+    }
+
+    // invitations, one per email address
+    match /invites/{email} {
+      allow read, delete: if signedIn() && myEmail() == email;
+      allow create, update: if signedIn()
+        && request.auth.uid in get(/databases/$(database)/documents/plans/$(request.resource.data.plan)).data.members;
+    }
+  }
+}

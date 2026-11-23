@@ -1,13 +1,15 @@
 // The photo grid, in order of priority. Hover a picture to rate it.
-import { allPlaces, verdict, LABEL, daysFor } from './data.js';
+import { allPlaces, verdict, LABEL, daysFor, TYPES } from './data.js';
 import { state, score, rate, ratingOf, extra } from './store.js';
 import { $, $$, esc, norm, days, monthRange } from './util.js';
 import { LEVELS, levelOf, isMatch, badge, rateBar } from './scale.js';
 import { thumb } from './photos.js';
+import { riskOf, interest } from './costs.js';
 import { openDetail } from './detail.js';
 
-const TYPES = { prehistory: 'Prehistory & early humans', temple: 'Temples', ancient: 'Ancient cities', tomb: 'Tombs & pyramids', sacred: 'Sacred places', fort: 'Forts', city: 'Towns', nature: 'Wonders of nature', own: 'Our own places' };
 const f = { q: '', type: '', region: '', v: '', st: '', sort: 'priority' };
+const PAGE = 120;
+let limit = PAGE;
 let built = false;
 
 function shown() {
@@ -21,7 +23,8 @@ function shown() {
       : f.st === 'both' ? isMatch(p.id) : extra(p.id).visited)));
   const age = p => p.year ?? 9999;
   const by = {
-    priority: (a, b) => score(b.id) - score(a.id),
+    // unrated places: the parts of the world you like and safe countries first
+    priority: (a, b) => score(b.id) - score(a.id) || (!score(a.id) && (interest(b) - interest(a) || riskOf(a).n - riskOf(b).n)),
     old: (a, b) => age(a) - age(b),
     near: (a, b) => verdict(a).dHome - verdict(b).dHome,
     region: (a, b) => (a.region || '').localeCompare(b.region || ''),
@@ -56,11 +59,12 @@ export function drawCatalogue() {
     el.addEventListener('click', e => {
       const o = e.target.closest('[data-open]');
       if (o) openDetail(o.dataset.open);
+      if (e.target.closest('[data-more]')) { limit += PAGE * 2; drawCards(); }
     });
-    el.addEventListener('input', e => { const k = e.target.dataset.f; if (k) { f[k] = e.target.value; drawCards(); } });
-    // hover a photo and press 1 to 4
+    el.addEventListener('input', e => { const k = e.target.dataset.f; if (k) { f[k] = e.target.value; limit = PAGE; drawCards(); } });
+    // hover a photo and press 1 to 5
     addEventListener('keydown', e => {
-      if (el.hidden || e.ctrlKey || e.metaKey || e.altKey || /INPUT|SELECT|TEXTAREA/.test(e.target.tagName) || !/^[1-4]$/.test(e.key)) return;
+      if (el.hidden || e.ctrlKey || e.metaKey || e.altKey || /INPUT|SELECT|TEXTAREA/.test(e.target.tagName) || !/^[1-5]$/.test(e.key)) return;
       const pic = $('.pic:hover', el);
       if (pic) rate(pic.closest('.pc').dataset.id, state.who, +e.key);
     });
@@ -73,21 +77,25 @@ export function drawCatalogue() {
     <select data-f="st" aria-label="Rating status">${opt('', 'Rated and unrated', f.st)}${opt('todo', 'Not rated by you', f.st)}${opt('done', 'Rated by you', f.st)}${opt('both', 'Your matches', f.st)}${opt('seen', 'Already visited', f.st)}</select>
     <select data-f="type" aria-label="Type">${opt('', 'All types', f.type)}${Object.entries(TYPES).map(([k, t]) => opt(k, t, f.type)).join('')}</select>
     <select data-f="region" aria-label="Region">${opt('', 'All regions', f.region)}${regions.map(r => opt(r, r, f.region)).join('')}</select>
-    <select data-f="v" aria-label="Sail or fly">${opt('', 'Sail or fly', f.v)}${Object.entries(LABEL).map(([k, t]) => opt(k, t, f.v)).join('')}</select>
+    <select data-f="v" aria-label="Sail or fly">${opt('', 'Sail, drive or fly', f.v)}${Object.entries(LABEL).map(([k, t]) => opt(k, t, f.v)).join('')}</select>
     <span class="prog"></span>`;
   drawCards();
 }
 
+// only the first cards are drawn: 2,000 photos at once would be slow and heavy
 function drawCards() {
   const el = $('#catalogue'), list = shown();
-  let body = list.map(card).join('');
+  let body = list.slice(0, limit).map(card).join('');
   if (f.sort === 'priority' && list.some(p => levelOf(p.id))) {
     const groups = [...LEVELS, { n: 0, text: 'Not rated yet' }];
+    let left = limit;
     body = groups.map(g => {
-      const of = list.filter(p => levelOf(p.id) === g.n);
-      return of.length ? `<h2 class="group l${g.n}">${g.text}<span>${of.length}</span></h2>${of.map(card).join('')}` : '';
+      const of = list.filter(p => levelOf(p.id) === g.n), now = of.slice(0, Math.max(0, left));
+      left -= now.length;
+      return now.length ? `<h2 class="group l${g.n}">${g.text}<span>${of.length}</span></h2>${now.map(card).join('')}` : '';
     }).join('');
   }
+  if (list.length > limit) body += `<p class="more"><button class="btn" data-more>Show more (${list.length - limit} left)</button></p>`;
   $('.cards', el).innerHTML = body || '<p class="emptynote">No place matches these filters.</p>';
   $('.prog', el).innerHTML = progress();
 }

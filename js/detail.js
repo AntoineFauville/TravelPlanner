@@ -5,7 +5,9 @@ import { $, esc, MONTHS, monthRange } from './util.js';
 import { rateBar, badge } from './scale.js';
 import { gallery } from './photos.js';
 import { facts } from './discover.js';
+import { fillSummary } from './summary.js';
 import { mustButton } from './port.js';
+import { C, isoOf, euro, foodDay, visaLine, riskHtml } from './costs.js';
 import { select, flyTo, pad } from './map.js';
 
 let open = null;
@@ -41,6 +43,14 @@ export function closeDetail() {
 
 const q = encodeURIComponent;
 
+// typical prices and visas in this country
+function money(p) {
+  const iso = isoOf(p.country);
+  if (!iso) return '';
+  const c = C(iso), v = visaLine(iso);
+  return `<div class="stack tight sm"><p><span class="soft">Typical prices:</span> double room ${euro(c.hotel)}, eating out ${euro(c.out)} and groceries ${euro(c.food)} per person and day. With your settings about ${euro(foodDay(c))} for food.</p>${v ? `<p><span class="soft">Visa.</span> ${v}</p>` : ''}</div>`;
+}
+
 export function draw() {
   const p = placeById(open);
   if (!p) return closeDetail();
@@ -55,6 +65,7 @@ export function draw() {
       </div>
       ${p.why ? `<p>${esc(p.why)}</p>` : ''}
       ${facts(p)}
+      <p class="about soft" hidden></p>
       <div class="row">
         <a class="btn main" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(query)}">Google Search</a>
         <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?udm=2&amp;q=${q(query)}">Photos</a>
@@ -69,10 +80,11 @@ export function draw() {
         <span class="tag ${v.v}">${LABEL[v.v]}</span>
         <p class="sm">${esc(v.why)}</p>
         <label class="f">Decide yourselves
-          <select data-x="force">${[['', 'Use the suggestion'], ['sail', LABEL.sail], ['inland', LABEL.inland], ['fly', LABEL.fly]].map(([k, t]) => `<option value="${k}" ${k === (x.force || '') ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
+          <select data-x="force">${[['', 'Use the suggestion'], ['sail', LABEL.sail], ['inland', LABEL.inland], ['drive', LABEL.drive], ['fly', LABEL.fly]].map(([k, t]) => `<option value="${k}" ${k === (x.force || '') ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
       </div>
       ${p.months ? `<div class="stack tight"><div class="sm soft">Best time: ${monthRange(p.months)}</div><div class="months">${MONTHS.map((m, i) => `<span class="${p.months.includes(i + 1) ? 'y' : ''}">${m[0]}</span>`).join('')}</div></div>` : ''}
-      ${p.advice ? `<p class="sm warn">Check the official travel advice before planning this one. <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`Auswärtiges Amt Reisehinweise ${p.country}`)}">Look it up</a></p>` : ''}
+      ${money(p)}
+      ${riskHtml(p)}
       <div class="grid2">
         <label class="f">Days to visit<input type="number" min="0.5" max="90" step="0.5" data-x="days" value="${daysFor(p)}"></label>
         <label class="check" style="align-self:end;height:40px"><input type="checkbox" data-x="visited" ${x.visited ? 'checked' : ''}>We have been here</label>
@@ -81,6 +93,7 @@ export function draw() {
       ${own ? '<button class="link quiet" data-act="remove" style="align-self:flex-start">Remove this place</button>' : ''}
     </div>`;
   gallery($('#detail .gal'), p);
+  fillSummary($('#detail .about'), p);
 }
 
 export function initDetail() {
