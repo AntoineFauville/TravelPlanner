@@ -4,7 +4,7 @@ const KEY = 'travelplanner.v1';
 
 const blank = () => ({
   scale: 5,               // ratings go from 1 (not interested) to 5 (must visit)
-  people: ['Me', 'Partner'],
+  people: ['Antoine', 'Tamari'],
   who: 0,                 // who is rating right now
   ratings: {},            // placeId -> [mine, partner's]
   places: {},             // placeId -> { notes, visited, days, force, cover }
@@ -55,6 +55,7 @@ function linkTours(s) {
 // bring saved data from any version up to date
 function revive(s) {
   if (!s.homeSet) { s.home = 'Bingen am Rhein'; s.homeSet = true; }
+  if (s.people) s.people = s.people.map((n, i) => (['Me', 'Partner', `Person ${i + 1}`].includes(n) ? ['Antoine', 'Tamari'][i] : n));
   toScale5(s);
   if (s.sail && !s.sail.freeDays) { s.sail.stays = {}; s.sail.freeDays = true; }
   const b = blank();
