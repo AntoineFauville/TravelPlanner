@@ -1,9 +1,9 @@
 // "Next year we have two weeks: what is our priority?"
 // Trips are hand-made: a few bases where you stay put, with real driving times. Nothing is strung together by distance alone.
 import { allPlaces, placeById, verdict, atSea, daysFor, trips, HOME, HOMES, setHome } from './data.js';
-import { state, score, weight, extra, save } from './store.js';
+import { state, extra, save } from './store.js';
 import { $, esc, km, arc, days, norm, n0, MONTHS, monthRange, toast } from './util.js';
-import { badge, wanted } from './scale.js';
+import { both, total, sumWeight, bothWant } from './scale.js';
 import { thumb, tiny } from './photos.js';
 import { openDetail } from './detail.js';
 import { packing } from './gear.js';
@@ -39,8 +39,8 @@ const google = (t, text) => `<a class="btn small" target="_blank" rel="noopener"
 
 function placeValue(p, sailing) {
   if (!p || extra(p.id).visited || (risky(p) && !ui.advice)) return 0;
-  let w = weight(p.id);
-  if (!score(p.id)) w *= interest(p);                   // not rated yet: follow how much you like that part of the world
+  // the sum of both ratings; rated by nobody: a little, following how much you like that part of the world
+  let w = sumWeight(p.id) ?? 1.2 * interest(p);
   if (ui.month && p.months && !p.months.includes(ui.month)) w *= 0.35;
   if (!sailing && !ui.sail && atSea(verdict(p).v)) w *= 0.2;
   return w;
@@ -104,7 +104,7 @@ function fitTrip(t, taken) {
     list.sort((a, c) => c.rate - a.rate);
     for (const x of list) {
       const need = Math.min(Math.max(0.5, daysFor(x.p)), Math.max(0.75, b.n - 0.5)) + Math.max(0, (x.h || 0) - 1) * 0.3;
-      const tooFar = x.h !== null && x.h > P.trip && !wanted(x.id);
+      const tooFar = x.h !== null && x.h > P.trip && !bothWant(x.id);
       if (need <= room + 0.3 && !tooFar) {
         b.see.push(x); room -= need; value += x.v; count++;
         if (x.h) { drive += 2 * x.h; dist += 2 * x.km; longest = Math.max(longest, 2 * x.h); }
@@ -173,8 +173,8 @@ export function drawHolidays() {
   const fresh = ui.open === null && shown.length > 0;
   if (fresh) ui.open = ui.kind === 'all' ? -1 : shown[0].i;       // the overview stays compact until you pick one
   const reach = new Set(trips.flatMap(t => t.bases.flatMap(b => b.places.map(x => x.id)))), planned = new Set(state.trips.flatMap(t => t.stops));
-  const alone = allPlaces().filter(p => wanted(p.id) && !reach.has(p.id) && !planned.has(p.id) && !extra(p.id).visited && (ui.advice || !risky(p))).sort((a, b) => score(b.id) - score(a.id));
-  const anyRated = allPlaces().some(p => score(p.id)), land = ui.kind !== 'sail';
+  const alone = allPlaces().filter(p => bothWant(p.id) && !reach.has(p.id) && !planned.has(p.id) && !extra(p.id).visited && (ui.advice || !risky(p))).sort((a, b) => total(b.id) - total(a.id));
+  const anyRated = allPlaces().some(p => total(p.id)), land = ui.kind !== 'sail';
   $('#panel').innerHTML = `<div class="stack">
     <h2>Holidays</h2>
     ${seg('span', SPAN, ui.span)}
@@ -196,7 +196,7 @@ export function drawHolidays() {
     ${shown.length ? '' : '<p class="soft">No trip fits. Try more days, the busier pace, or another month.</p>'}
     ${ui.kind !== 'all' && ok.length > ui.more ? '<button class="btn" data-more>Show more trips</button>' : ''}
     ${longer.length ? `<details><summary>Worth more time than ${D()} days</summary>${longer.slice(0, 10).map(x => `<button class="rowitem" data-grow="${x.r.tooHard ? 0 : x.r.least}" data-i="${x.i}"><div><b>${esc(x.t.title)}</b><small>${x.r.tooHard ? 'Too much driving at this pace' : `Needs at least ${x.r.least} days`}</small></div></button>`).join('')}</details>` : ''}
-    ${alone.length && ui.kind !== 'sail' ? `<details><summary>Places you want that are in no trip yet: ${alone.length}</summary>${alone.slice(0, 40).map(p => `<div class="rowitem"><div><b>${esc(p.name)}</b><small>${esc(p.country)}</small></div><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`${p.name} ${p.country} itinerary how many days`)}">Find itineraries</a></div>`).join('')}</details>` : ''}
+    ${alone.length && ui.kind !== 'sail' ? `<details><summary>Places you both want that are in no trip yet: ${alone.length}</summary>${alone.slice(0, 40).map(p => `<div class="rowitem"><div><b>${esc(p.name)}</b><small>${esc(p.country)}</small></div><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q(`${p.name} ${p.country} itinerary how many days`)}">Find itineraries</a></div>`).join('')}</details>` : ''}
     ${state.trips.length ? `<div class="hr"></div><h2>Planned trips</h2>${yearCosts()}<div class="stack">${[...state.trips].sort((a, b) => a.year - b.year || a.month - b.month).map(saved).join('')}</div>` : ''}
     <p class="credit">Driving times from OpenStreetMap, without traffic or stops. Prices are estimates for two: World Bank price levels, EU fuel prices of November 2026, visas from Wikipedia. Check before you book.</p>
   </div>`;
@@ -211,7 +211,7 @@ const sailText = nm => `${nm} nm, about ${hours(nm / KNOTS)} of sailing`;
 const pic = p => (thumb(p) ? `<img loading="lazy" alt="" src="${esc(tiny(thumb(p)))}">` : '<span class="ph"></span>');
 
 function baseHtml(b, i, sailing) {
-  const row = (x, dim) => `<button class="rowitem ${dim ? 'dim' : ''}" data-open="${esc(x.id)}">${pic(x.p)}<div><b>${esc(x.p.name)}</b><small>${sailing ? `${x.km} km away` : near(x)}${ui.month && x.p.months && !x.p.months.includes(ui.month) ? ' · not its best month' : ''}</small></div>${badge(x.id, '<span class="lv">–</span>')}</button>`;
+  const row = (x, dim) => `<button class="rowitem ${dim ? 'dim' : ''}" data-open="${esc(x.id)}">${pic(x.p)}<div><b>${esc(x.p.name)}</b><small>${sailing ? `${x.km} km away` : near(x)}${ui.month && x.p.months && !x.p.months.includes(ui.month) ? ' · not its best month' : ''}</small></div>${both(x.id)}</button>`;
   return `${i ? `<p class="leg">${sailing ? sailText(b.nm) : legText(b.by, b.h, b.km)}</p>` : ''}
     <div class="base"><h4>${b.n} night${b.n > 1 ? 's' : ''} ${sailing ? 'at' : 'in'} ${esc(b.name)}</h4>${b.tip ? `<p class="sm">${esc(b.tip)}</p>` : ''}${b.see.map(x => row(x)).join('')}${b.free >= 1 ? `<p class="sm soft">${days(b.free)} free to wander or rest</p>` : ''}${b.maybe.length ? `<details><summary class="sm">If you have energy left</summary>${b.maybe.map(x => row(x, true)).join('')}</details>` : ''}</div>`;
 }
@@ -314,7 +314,7 @@ const current = () => shown.find(x => x.i === ui.open);
 const seen = r => r.bases.flatMap(b => b.see.map(x => x.p));
 function paint() {
   const c = current();
-  if (!c) { drawRoute([]); drawBases([]); setFilter(p => wanted(p.id)); return; }
+  if (!c) { drawRoute([]); drawBases([]); setFilter(p => bothWant(p.id)); return; }
   const b = c.r.bases, k = c.t.kind, own = k === 'road', sea = k === 'sail';
   const parts = [{ line: arc(HOME, b[0]), color: '#ffffff', dash: !own }];
   for (let i = 1; i < b.length; i++) parts.push({ line: arc(b[i - 1], b[i]), color: sea ? COLORS.sail : COLORS.fly, dash: !sea && b[i].by !== 'drive' });

@@ -2,24 +2,13 @@
 import { allPlaces, verdict, LABEL, daysFor, TYPES } from './data.js';
 import { state, rate, ratingOf, extra } from './store.js';
 import { $, $$, esc, norm, days, monthRange } from './util.js';
-import { byN, isMatch, rateBar } from './scale.js';
+import { isMatch, rateBar, total, votes, both } from './scale.js';
 import { thumb } from './photos.js';
 import { riskOf, interest } from './costs.js';
 import { fameShort } from './fame.js';
 import { openDetail } from './detail.js';
 
-// Both ratings added up: Must + Must = 10, Must + Not interested = 6, Must alone = 5 (the other has not voted yet).
-const total = id => ratingOf(id, 0) + ratingOf(id, 1);
-const votes = id => (ratingOf(id, 0) ? 1 : 0) + (ratingOf(id, 1) ? 1 : 0);
 const best = id => Math.max(ratingOf(id, 0), ratingOf(id, 1));
-
-// "Antoine: Must" and "Tamari: Cool" on the photo
-function both(id) {
-  return `<div class="both">${state.people.map((name, i) => {
-    const r = ratingOf(id, i), l = r && byN(r);
-    return `<span class="lv l${r}" title="${esc(name)}: ${l ? l.text : 'not rated yet'}">${esc(name)}: ${l ? l.short : '?'}</span>`;
-  }).join('')}</div>`;
-}
 
 const f = { q: '', type: '', region: '', v: '', st: '', sort: 'priority' };
 const PAGE = 120;
