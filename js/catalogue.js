@@ -1,12 +1,25 @@
 // The photo grid, in order of priority. Hover a picture to rate it.
 import { allPlaces, verdict, LABEL, daysFor, TYPES } from './data.js';
-import { state, score, rate, ratingOf, extra } from './store.js';
+import { state, rate, ratingOf, extra } from './store.js';
 import { $, $$, esc, norm, days, monthRange } from './util.js';
-import { LEVELS, levelOf, isMatch, badge, rateBar } from './scale.js';
+import { byN, isMatch, rateBar } from './scale.js';
 import { thumb } from './photos.js';
 import { riskOf, interest } from './costs.js';
 import { fameShort } from './fame.js';
 import { openDetail } from './detail.js';
+
+// Both ratings added up: Must + Must = 10, Must + Not interested = 6, Must alone = 5 (the other has not voted yet).
+const total = id => ratingOf(id, 0) + ratingOf(id, 1);
+const votes = id => (ratingOf(id, 0) ? 1 : 0) + (ratingOf(id, 1) ? 1 : 0);
+const best = id => Math.max(ratingOf(id, 0), ratingOf(id, 1));
+
+// "Antoine: Must" and "Tamari: Cool" on the photo
+function both(id) {
+  return `<div class="both">${state.people.map((name, i) => {
+    const r = ratingOf(id, i), l = r && byN(r);
+    return `<span class="lv l${r}" title="${esc(name)}: ${l ? l.text : 'not rated yet'}">${esc(name)}: ${l ? l.short : '?'}</span>`;
+  }).join('')}</div>`;
+}
 
 const f = { q: '', type: '', region: '', v: '', st: '', sort: 'priority' };
 const PAGE = 120;
@@ -25,7 +38,9 @@ function shown() {
   const age = p => p.year ?? 9999;
   const by = {
     // unrated places: the parts of the world you like and safe countries first
-    priority: (a, b) => score(b.id) - score(a.id) || (!score(a.id) && (interest(b) - interest(a) || riskOf(a).n - riskOf(b).n)),
+    // the sum of both ratings; at the same sum, rated by both first, then the higher single rating
+    priority: (a, b) => total(b.id) - total(a.id) || votes(b.id) - votes(a.id) || best(b.id) - best(a.id)
+      || (!total(a.id) && (interest(b) - interest(a) || riskOf(a).n - riskOf(b).n)),
     old: (a, b) => age(a) - age(b),
     near: (a, b) => verdict(a).dHome - verdict(b).dHome,
     region: (a, b) => (a.region || '').localeCompare(b.region || ''),
@@ -39,7 +54,7 @@ const card = p => {
   const v = verdict(p), img = thumb(p);
   return `<article class="pc" data-id="${esc(p.id)}">
     <div class="pic">${img ? `<img loading="lazy" src="${esc(img)}" alt="">` : ''}
-      ${badge(p.id)}${rateBar(p.id)}</div>
+      ${both(p.id)}${rateBar(p.id)}</div>
     <h3><button data-open="${esc(p.id)}">${esc(p.name)}</button></h3>
     <div class="meta"><span>${esc(p.country)}</span><span>${days(daysFor(p))}</span>${p.months ? `<span>${monthRange(p.months)}</span>` : ''}${fameShort(p) ? `<span class="rk">${esc(fameShort(p))}</span>` : ''}</div>
     ${p.when ? `<p class="sm soft">${esc(p.when[0].toUpperCase() + p.when.slice(1))}, ${esc(p.civ)}</p>` : ''}
@@ -49,8 +64,8 @@ const card = p => {
 };
 
 function progress() {
-  const all = allPlaces(), n = all.filter(p => ratingOf(p.id, state.who)).length;
-  return `${esc(state.people[state.who])}: ${n} of ${all.length} rated`;
+  const all = allPlaces();
+  return state.people.map((name, i) => `${esc(name)}: ${all.filter(p => ratingOf(p.id, i)).length}`).join(' · ') + ` of ${all.length} rated`;
 }
 
 export function drawCatalogue() {
@@ -88,13 +103,14 @@ export function drawCatalogue() {
 function drawCards() {
   const el = $('#catalogue'), list = shown();
   let body = list.slice(0, limit).map(card).join('');
-  if (f.sort === 'priority' && list.some(p => levelOf(p.id))) {
-    const groups = [...LEVELS, { n: 0, text: 'Not rated yet' }];
+  if (f.sort === 'priority' && list.some(p => total(p.id))) {
+    // one heading per score, 10 down to 1, then the places nobody rated
     let left = limit;
-    body = groups.map(g => {
-      const of = list.filter(p => levelOf(p.id) === g.n), now = of.slice(0, Math.max(0, left));
+    body = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map(n => {
+      const of = list.filter(p => total(p.id) === n), now = of.slice(0, Math.max(0, left));
       left -= now.length;
-      return now.length ? `<h2 class="group l${g.n}">${g.text}<span>${of.length}</span></h2>${now.map(card).join('')}` : '';
+      const text = n === 10 ? 'Score 10: both Must visit' : n ? `Score ${n}` : 'Not rated yet';
+      return now.length ? `<h2 class="group l${Math.ceil(n / 2)}">${text}<span>${of.length}</span></h2>${now.map(card).join('')}` : '';
     }).join('');
   }
   if (list.length > limit) body += `<p class="more"><button class="btn" data-more>Show more (${list.length - limit} left)</button></p>`;
@@ -108,8 +124,8 @@ export function refreshCard(id) {
   for (const c of $$('.pc', el)) {
     if (c.dataset.id !== id) continue;
     const pic = $('.pic', c);
-    $('.lv', pic)?.remove();
-    pic.insertAdjacentHTML('beforeend', badge(id));
+    $('.both', pic)?.remove();
+    pic.insertAdjacentHTML('beforeend', both(id));
     const r = ratingOf(id, state.who);
     $$('.rate button', pic).forEach(x => { x.classList.toggle('lit', +x.dataset.n === r); x.setAttribute('aria-pressed', +x.dataset.n === r); });
   }
